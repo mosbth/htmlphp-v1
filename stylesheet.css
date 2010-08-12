@@ -1,0 +1,34 @@
+/* -------------------------------------------------------------------------------------
+/* 
+/* Stylesheet.
+ */
+
+/* -------------------------------------------------------------------------------------
+/* Style for paragraphs */
+p {
+	font-family: Georgia, serif;
+	color: #333333;
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for html5 element footer */
+footer {
+	display: block;
+	padding: 1em;
+	border-top: 1px solid #999999;
+	background: #e3e3df;
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for links */
+
+/* Links in the footer */
+footer a { 
+	font: italic 0.8em Arial, Helvetica, sans-serif;
+	text-decoration:none; 
+	color: #999999;
+}
+footer a:link    { }
+footer a:visited { }
+footer a:hover   { text-decoration:underline;  color: #333333; }
+footer a:active  { }
