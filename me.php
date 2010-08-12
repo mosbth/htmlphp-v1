@@ -4,6 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Me-sidan</title>
+	
+	<link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
