@@ -4,6 +4,31 @@
  */
 
 /* -------------------------------------------------------------------------------------
+/* Top of page with logo and navigation */
+
+/* Top navigation menu */
+nav {
+	display: block;
+	padding: 0.2em 1em 0 1em;
+	background: #e3e3df;
+	border-bottom: 2px solid #999999;
+}
+nav a {
+	padding: 0.3em 1em 0 1em;
+	color: #555555;
+	font-family: Tahoma, Geneva, sans-serif;
+	text-decoration:none; 
+}
+nav a:link    { }
+nav a:visited { }
+nav a:hover   { 
+	color: #111111; 
+	background: #999999;
+}
+nav a:active  { }
+
+
+/* -------------------------------------------------------------------------------------
 /* Style for paragraphs */
 p {
 	font-family: Georgia, serif;
