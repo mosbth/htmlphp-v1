@@ -19,8 +19,7 @@
 				Normalt skriver du ett textstycke om ca 15 meningar. Skriv så bra så att en utomstående, dvs dina 
 				lärare och med-studenter, förstår och kan sätta sig in i de problem och lösningar du jobbat igenom.
 			</p>
-		</header>
-	</section>
+		</section>
 		
 		<section>
 			<header>
