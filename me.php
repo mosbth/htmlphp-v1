@@ -55,7 +55,7 @@ include("header.php");
 				<figure>
 					<img src="img/mikael2.jpg" alt="Närbild Mikael" height="50px">
 				</figure>
-				<p>/Mikael</p>
+				<p>/mos</p>
 			</div>
 			
 		</section>

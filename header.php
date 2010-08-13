@@ -8,7 +8,9 @@
 	<!--	<title>Me-sidan</title> -->
 	<?php echo "<title>$title</title>"; ?>
 	
-	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="style/stylesheet.css" title="Mos standard grey">
+	<link rel="alternative stylesheet" href="style/stylesheet_red.css" title="Mos standard red">
+
 	<link rel="shortcut icon" href="img/favicon.ico" />
 </head>
 

@@ -146,6 +146,6 @@ footer nav a:active  { }
 footer div.final {
 	clear: both;
 	padding-left: 50px;
-	background: url(img/me.png) no-repeat;
+	background: url(../img/me.png) no-repeat;
 	font-size: 0.8em;
 }
