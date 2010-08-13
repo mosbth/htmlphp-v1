@@ -1,5 +1,5 @@
 <?php 
-$title = "Redovisningar av kursmoment i htmlphp-kursen.";
+$title = "Redovisningar av kursmoment i htmlphp-kursen";
 include("header.php"); 
 ?>
 

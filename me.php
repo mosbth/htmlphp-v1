@@ -1,5 +1,5 @@
 <?php 
-$title = "Min Me-sida om mig själv och htmlphp-kursen.";
+$title = "Min Me-sida om mig själv och htmlphp-kursen";
 include("header.php"); 
 ?>
 
