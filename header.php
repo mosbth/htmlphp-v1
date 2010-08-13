@@ -13,8 +13,8 @@
 
 <body>
 	<!-- Top header with logo and navigation -->
-	<div>
-		<img src="logo.png" alt="htmlphp me" width=200 height=100>
+	<div id="top">
+		<img src="img/logo.png" alt="htmlphp me" width=200 height=100>
 		<nav>
 			<a href="me.php">Me</a> 
 			<a href="report.php">Redovisning</a> 
