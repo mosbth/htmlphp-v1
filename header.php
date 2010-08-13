@@ -9,6 +9,7 @@
 	<?php echo "<title>$title</title>"; ?>
 	
 	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="shortcut icon" href="img/favicon.ico" />
 </head>
 
 <body>
