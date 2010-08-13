@@ -5,7 +5,6 @@
 
 <head>
 	<meta charset="utf-8">
-	<!--	<title>Me-sidan</title> -->
 	<?php echo "<title>$title</title>"; ?>
 	
 	<link rel="stylesheet" href="style/stylesheet.css" title="Mos standard grey">
