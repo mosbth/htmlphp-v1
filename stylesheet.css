@@ -29,10 +29,30 @@ nav a:active  { }
 
 
 /* -------------------------------------------------------------------------------------
-/* Style for paragraphs */
-p {
+/* Style for alll body elements that inherit */
+body {
 	font-family: Georgia, serif;
 	color: #333333;
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for paragraphs */
+p {
+/* inherits font and color from body */
+/*
+	font-family: Georgia, serif;
+	color: #333333;
+*/
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for headers */
+h1,h2,h3,h4,h5,h6 {
+/* inherits font and color from body */
+/*
+	font-family: Georgia, serif;
+	color: #333333;
+*/
 }
 
 /* -------------------------------------------------------------------------------------
