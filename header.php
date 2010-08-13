@@ -3,7 +3,8 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Me-sidan</title>
+<!--	<title>Me-sidan</title> -->
+	<?php echo "<title>$title</title>"; ?>
 	
 	<link rel="stylesheet" href="stylesheet.css">
 </head>
