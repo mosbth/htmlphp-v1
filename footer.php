@@ -16,7 +16,15 @@
 			<a href="http://php.net/manual/en/index.php">PHP</a> 
 			<a href="http://catb.org/esr/faqs/hacker-howto.html">How to become a hacker</a>
 		</nav>
-		  
+
+		<nav>
+			<h5>Kmom01</h5>
+				<a href='http://bit.ly/htmlphp_kmom01'>Instruktion för kursmomentet</a>
+				<a href='http://bit.ly/htmlphp_labbmiljo'>Guide för att installera labbmiljön</a>
+				<a href='http://github.com/mosbth/me/tree/v1.02'>Källkod</a>
+				<a href='http://www.student.bth.se/~mos/htmlphp/mom01/me/me.php'>Driftsmiljön</a>
+		</nav>
+
 		<div class="final">
 			<p>
 			Except where otherwise noted, content on this site is licensed under the
