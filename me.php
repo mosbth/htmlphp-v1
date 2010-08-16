@@ -7,7 +7,7 @@ include("header.php");
 <div class="wrap">
 	<aside class="right">
 		<figure class="standard">
-			<img src="img/mikael1.jpg" alt="Bild på Mikael vid datorn" width="300px">
+			<img src="img/mikael1.jpg" alt="Bild på Mikael vid datorn" width="300">
 			<figcaption>
 				Me vid datorn, se så glad jag är!
 			</figcaption>
@@ -53,7 +53,7 @@ include("header.php");
 
 			<div class="byline">
 				<figure>
-					<img src="img/mikael2.jpg" alt="Närbild Mikael" height="50px">
+					<img src="img/mikael2.jpg" alt="Närbild Mikael" height="50">
 				</figure>
 				<p>/mos</p>
 			</div>
