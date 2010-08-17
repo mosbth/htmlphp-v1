@@ -6,7 +6,7 @@ include("header.php");
 <!-- Here is the actual content of the page-->
 <article>
 
-	<!-- ----------------------------- Main section ----------------------------------------- -->
+	<!-- - - - - - - - - - - - - - - - - - Main section - - - - - - - - - - - - - - - - - -->
 	<aside class="right">
 		<aside class="box">
 			<h4>Pareto principen</h4>
@@ -51,52 +51,50 @@ include("header.php");
 	</aside>
 
 	<section class="content">
-		<!-- ----------------------------- Main section ----------------------------------------- -->
-		<section id="start">
-			<header>
-				<h1>Vilka är de vanligaste HTML elementen?</h1>
-					<p class="byline">
-						Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-08-17">17:e augusti 2010</time>
-					</p>
-					<p class="ingress">
-						Vilka är de 20% HTML element som troligtvis står för 80% av användarfallen? Det beror 
-						på vem man frågar och här kommer därför min egen lista på de element som jag anser 
-						<strong>borde vara</strong> de mest använda elementen. Lär dig dessa element och du
-						har kommit en bit på vägen att bemästra HTML.
-					</p>
-					<h4><a href="#part-I">Del I: HTML sidans struktur</a></h4>
-					<ul>
-						<li><a href="#doctype">&lt;!DOCTYPE&gt;</a>
-						<li><a href="#html">&lt;html&gt;</a>
-						<li><a href="#head">&lt;head&gt;</a>
-						<li><a href="#body">&lt;body&gt;</a>
-						<li><a href="#style">&lt;style&gt;</a>
-						<li><a href="#script">&lt;script&gt;</a>
-					</ul>
-					<h4><a href="#part-II">Del II: Struktur av sidans "verkliga" innehåll</a></h4>
-					<ul>
-						<li><a href="#div_id_top">&lt;div id=top&gt; eller &lt;header&gt;</a>
-						<li><a href="#div_id_footer">&lt;div id=footer&gt; eller &lt;footer&gt;</a>
-						<li><a href="#div_id_content">&lt;div id=content&gt; eller &lt;article&gt;</a>
-						<li><a href="#section">&lt;section&gt;</a>
-						<li><a href="#header">&lt;header&gt;</a>
-						<li><a href="#aside">&lt;aside&gt;</a>
-						<li><a href="#div">&lt;div&gt;</a>
-					</ul>
-					<h4><a href="#part-III">Del III: Bra-att-ha element</a></h4>
-					<ul>
-						<li><a href="#h1-h6">&lt;h1&gt; - &lt;h6&gt; och &lt;hgroup&gt;</a>
-						<li><a href="#p">&lt;p&gt;</a>
-						<li><a href="#nav">&lt;nav&gt;</a>
-						<li><a href="#ul-li">&lt;ul&gt; - &lt;li&gt;</a>
-						<li><a href="#blockquote">&lt;blockquote&gt;</a>
-						<li><a href="#figure">&lt;figure&gt;</a>
-						<li><a href="#other">Fler vanliga element</a>
-					</ul>
-			</header>
-		</section>
+		<!-- - - - - - - - - - - - - - - - - - Main section - - - - - - - - - - - - - - - - - -->
+		<header id="start">
+			<h1>Vilka är de vanligaste HTML elementen?</h1>
+				<p class="byline">
+					Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-08-17">17:e augusti 2010</time>
+				</p>
+				<p class="ingress">
+					Vilka är de 20% HTML element som troligtvis står för 80% av användarfallen? Det beror 
+					på vem man frågar och här kommer därför min egen lista på de element som jag anser 
+					<strong>borde vara</strong> de mest använda elementen. Lär dig dessa element och du
+					har kommit en bit på vägen att bemästra HTML.
+				</p>
+				<h4><a href="#part-I">Del I: HTML sidans struktur</a></h4>
+				<ul>
+					<li><a href="#doctype">&lt;!DOCTYPE&gt;</a>
+					<li><a href="#html">&lt;html&gt;</a>
+					<li><a href="#head">&lt;head&gt;</a>
+					<li><a href="#body">&lt;body&gt;</a>
+					<li><a href="#style">&lt;style&gt;</a>
+					<li><a href="#script">&lt;script&gt;</a>
+				</ul>
+				<h4><a href="#part-II">Del II: Struktur av sidans "verkliga" innehåll</a></h4>
+				<ul>
+					<li><a href="#div_id_top">&lt;div id=top&gt; eller &lt;header&gt;</a>
+					<li><a href="#div_id_footer">&lt;div id=footer&gt; eller &lt;footer&gt;</a>
+					<li><a href="#div_id_content">&lt;div id=content&gt; eller &lt;article&gt;</a>
+					<li><a href="#section">&lt;section&gt;</a>
+					<li><a href="#header">&lt;header&gt;</a>
+					<li><a href="#aside">&lt;aside&gt;</a>
+					<li><a href="#div">&lt;div&gt;</a>
+				</ul>
+				<h4><a href="#part-III">Del III: Bra-att-ha element</a></h4>
+				<ul>
+					<li><a href="#h1-h6">&lt;h1&gt; - &lt;h6&gt; och &lt;hgroup&gt;</a>
+					<li><a href="#p">&lt;p&gt;</a>
+					<li><a href="#nav">&lt;nav&gt;</a>
+					<li><a href="#ul-li">&lt;ul&gt; - &lt;li&gt;</a>
+					<li><a href="#blockquote">&lt;blockquote&gt;</a>
+					<li><a href="#figure">&lt;figure&gt;</a>
+					<li><a href="#other">Fler vanliga element</a>
+				</ul>
+		</header>
 
-		<!-- ----------------------------- Main section ----------------------------------------- -->
+		<!-- - - - - - - - - - - - - - - - - - Main section - - - - - - - - - - - - - - - - - -->
 		<section id="part-I">
 			<header>
 				<h2>Del I: HTML sidans struktur</h2>
@@ -106,7 +104,7 @@ include("header.php");
 				</p>
 			</header>
 			
-			<section id="doctype"> <!-- -------------------- Sub section ------------------------- -->
+			<section id="doctype"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;!DOCTYPE&gt;</h3>
 				<p>
 					Är sidan i HTML5, HTML4 eller någon variant av XHTML? Detta anges med DOCTYPE överst
@@ -114,16 +112,14 @@ include("header.php");
 				</p>
 				<p>
 					Exempel på DOCTYPE-deklaration för HTML5.
-					<blockquote>
-						<code>
-							&lt;!DOCTYPE html&gt;
-						</code>
+					<blockquote class="code">
+&lt;!DOCTYPE html&gt;
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 		
-			<section id="html"> <!-- -------------------- Sub section ---------------------------- -->
+			<section id="html"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;html&gt;</h3>
 				<p>
 					Elementet html är root-elementet till en html-sida. Det består av ett &lt;head&gt; och ett 
@@ -132,16 +128,14 @@ include("header.php");
 				</p>
 				<p>
 					Exempel på html-element med språkattributet definerat till svenska.
-					<blockquote>
-						<code>
-							&lt;html lang="sv"&gt;
-						</code>
+					<blockquote class="code">
+&lt;html lang="sv"&gt;
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 		
-			<section id="head"> <!-- -------------------- Sub section ---------------------------- -->
+			<section id="head"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;head&gt;</h3>
 				<p>
 					Sidans head-sektion innehåller information om själva html-sidan. Det är information såsom
@@ -157,11 +151,11 @@ include("header.php");
   &lt;link rel="stylesheet" href="style/stylesheet.css" title="Mos standard grey"&gt;
 &lt;/head&gt;
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 		
-			<section id="body"> <!-- -------------------- Sub section ---------------------------- -->
+			<section id="body"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;body&gt;</h3>
 				<p>
 					Body-sektionen består av själva sidans innehåll, det som visas. Den är en självklar del av
@@ -174,11 +168,11 @@ include("header.php");
   &lt;!-- Här kommer själva sidans innehåll --&gt;
 &lt;/body&gt;
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 	
-			<section id="style"> <!-- -------------------- Sub section ---------------------------- -->
+			<section id="style"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;style&gt;</h3>
 				<p>
 					En sidas style kan anges på flera sätt, i kombination med html-elementet, globalt för en 
@@ -190,7 +184,7 @@ include("header.php");
 					<blockquote class="code">
 &lt;p style="font-size: smaller; font-style: italic;"&gt;Jag är en utmärkt HTML-kodare&lt;/p&gt;
 					</blockquote>
-				</p>
+
 				<p>
 					Exempel på style specificerat för en sida inom head-elementet.
 					<blockquote class="code">
@@ -203,7 +197,7 @@ include("header.php");
   &lt;/style&gt;
 &lt;/head&gt;
 					</blockquote>
-				</p>
+
 				<p>
 					Exempel på länkning till en separat stylesheet.
 					<blockquote class="code">
@@ -211,11 +205,11 @@ include("header.php");
   &lt;link rel="stylesheet" href="style/stylesheet.css" title="Mos standard grey"&gt;
 &lt;/head&gt;
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 
-			<section id="script"> <!-- -------------------- Sub section ---------------------------- -->
+			<section id="script"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;script&gt;</h3>
 				<p>
 					Inom script-elementet finns vanligen JavaScript-kod. Kod som exekveras i webbläsaren
@@ -229,12 +223,12 @@ include("header.php");
   document.write('&lt;p&gt;Jag är en utmärkt HTML-kodare&lt;/p&gt;');
 &lt;/script&gt; 
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 		</section>
 	
-		<!-- ----------------------------- Main section ----------------------------------------- -->
+		<!-- - - - - - - - - - - - - - - - - - Main section - - - - - - - - - - - - - - - - - -->
 		<section id="part-II">
 			<header>
 				<h2>Del II: Struktur av sidans "verkliga" innehåll</h2>
@@ -245,7 +239,7 @@ include("header.php");
 				</p>
 			</header>
 			
-			<section id="div_id_top"> <!-- ------------------ Sub section -------------------------- -->
+			<section id="div_id_top"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;div id=top&gt; eller &lt;header&gt;</h3>
 				<p>
 					Varje sida har oftast en header-sektion med en logo och olika navigeringsval. Kanske 
@@ -279,11 +273,11 @@ include("header.php");
 	
 &lt;/body&gt; 
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 		
-			<section id="div_id_footer"> <!-- ---------------- Sub section ------------------------- -->
+			<section id="div_id_footer"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;div id=footer&gt; eller &lt;footer&gt;</h3>
 				<p>
 					Liksom header-sektion så finns oftast en footer-sektion till varje sida. Footern innehåller
@@ -313,11 +307,11 @@ include("header.php");
 	
 &lt;/body&gt; 
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 		
-			<section id="div_id_content"> <!-- ---------------- Sub section ------------------------- -->
+			<section id="div_id_content"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;div id=content&gt; eller &lt;article&gt;</h3>
 				<p>
 					Sidans huvudsakliga budskap, själva dokumentet, brukar omringas av ett div-element med id satt till #content, 
@@ -354,11 +348,11 @@ include("header.php");
 	
 &lt;/body&gt; 
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 
-			<section id="section"> <!-- ---------------- Sub section ------------------------- -->
+			<section id="section"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;section&gt;</h3>
 				<p>
 					Detta element hjälper att dela in sidan huvudsaklig innehåll i olika fristående 
@@ -389,17 +383,17 @@ include("header.php");
 
 &lt;/article&gt; 
 					</blockquote>
-				</p>
+
 				<p>
 					Exempel på hur direktlänkning sker till en sektion på sidan med hjälp av #.
 					<blockquote>
 						<a href="#section">#section</a>
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 
-			<section id="header"> <!-- ---------------- Sub section ------------------------- -->
+			<section id="header"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;header&gt;</h3>
 				<p>
 					Tidigare (<a href="#div_id_top">div id=top</a>) såg vi användning av elementet header 
@@ -423,17 +417,17 @@ include("header.php");
 
 &lt;/section&gt;
 					</blockquote>
-				</p>
+
 				<p>
 					Exempel på hur direktlänkning sker till en sektion på sidan med hjälp av #.
 					<blockquote>
 						<a href="#section">#section</a>
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 
-			<section id="aside"> <!-- ---------------- Sub section ------------------------- -->
+			<section id="aside"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;aside&gt;</h3>
 				<p>
 					Elementet aside är till för information som är relaterat till själva artikeln/dokumentet
@@ -461,11 +455,11 @@ include("header.php");
 
 &lt;/article&gt; 
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 
-			<section id="div"> <!-- ---------------- Sub section ------------------------- -->
+			<section id="div"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;div&gt;</h3>
 				<p>
 					Detta element är ett av de vanligaste strukturella elementen. Flera HTML5-element
@@ -494,13 +488,13 @@ include("header.php");
 
 &lt;/div&gt; 
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 
 		</section>
 	
-		<!-- ----------------------------- Main section ----------------------------------------- -->
+		<!-- - - - - - - - - - - - - - - - - - Main section - - - - - - - - - - - - - - - - - -->
 		<section id="part-III">
 			<header>
 				<h2>Del III: Bra-att-ha element</h2>
@@ -510,7 +504,7 @@ include("header.php");
 				</p>
 			</header>
 			
-			<section id="h1-h6"> <!-- ------------------ Sub section -------------------------- -->
+			<section id="h1-h6"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;h1&gt; - &lt;h6&gt; och &lt;hgroup&gt;</h3>
 				<p>
 					Använd rubriker för att strukturera innehållet i dokumentet. h1 bör endast användas en
@@ -535,23 +529,25 @@ include("header.php");
 &lt;/hgroup&gt;
 
 &lt;p&gt;Löpande text.&lt;/p&gt;
-
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 		
-			<section id="p"> <!-- ------------------ Sub section -------------------------- -->
+			<section id="p"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;p&gt;</h3>
 				<p>
 					Ange löpande text inom en p-tagg, en paragraf av text. Ange även bilder, figurer, 
 					grafik och liknande inom ramen för taggen, i de fall det passar och är relaterat 
 					till texten. En paragraf kan innehåller fler paragrafer, det går att nästla dem.
+					Det är inte nödvändigt att ha sluttaggen, den kan utelämnas och det kan vara
+					vara att rekommendera. Glöm dock inte dubbelkolla vad specen säger och test-validera 
+					alltid dina sidor. 
 				</p>
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 		
-			<section id="nav"> <!-- ------------------ Sub section -------------------------- -->
+			<section id="nav"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;nav&gt;</h3>
 				<p>
 					Omge navigeringslänkar med nav-elementet. Det förtydligar sektionen och underlättar
@@ -568,11 +564,11 @@ include("header.php");
   &lt;a href="dbwebb.se"&gt;dbwebb.se&lt;/a&gt;
 &lt;/nav&gt;
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 
-			<section id="ul-li"> <!-- ------------------ Sub section -------------------------- -->
+			<section id="ul-li"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;ul&gt; - &lt;li&gt;</h3>
 				<p>
 					Listor är ett vanligt element som är bra att hantera. För min egen del så är det ofta den
@@ -591,11 +587,11 @@ include("header.php");
   &lt;li&gt;listelement
 &lt;/ul&gt;
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 
-			<section id="blockquote"> <!-- ------------------ Sub section -------------------------- -->
+			<section id="blockquote"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;blockquote&gt;</h3>
 				<p>
 					Elementet blockquote gillar jag och använder en hel del. Framförallt för att visa 
@@ -613,11 +609,11 @@ include("header.php");
   &lt;!-- Citat --&gt;
 &lt;/blockquote&gt;
 					</blockquote>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 
-			<section id="figure"> <!-- ------------------ Sub section -------------------------- -->
+			<section id="figure"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>&lt;figure&gt;</h3>
 				<p>
 					Foton, bilder och grafik vill man ofta visa tillsammans med en titel eller bildtext.
@@ -633,11 +629,11 @@ include("header.php");
   &lt;/figcaption&gt;
 &lt;/figure&gt;
 					</blockquote>
-				</p>	
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 
-			<section id="other"> <!-- ------------------ Sub section -------------------------- -->
+			<section id="other"> <!-- - - - - - - - - - - - - Sub section - - - - - - - - - - - -  -->
 				<h3>Fler vanliga element</h3>
 				<p>
 					Det finns ett par element till som jag vill nämna eftersom de är vanliga när man 
@@ -652,7 +648,7 @@ include("header.php");
 						<li>&lt;em&gt;					
 						<li>&lt;time&gt;					
 					</ul>
-				</p>
+
 				<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 			</section>
 	
