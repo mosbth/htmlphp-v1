@@ -41,6 +41,11 @@ div.wrap {
 	width: 950px;
 }
 
+article {
+	display: block;
+	width: 950px;
+}
+
 section {
 	display: block;
 }
@@ -55,6 +60,8 @@ section.columns2 {
 	column-count: 2;
 }
 
+/* -------------------------------------------------------------------------------------
+/* Style for aside elements */
 aside {
 	display: block;
 }
@@ -62,6 +69,16 @@ aside {
 aside.right {
 	float: right;
 }
+
+aside.box {
+	width: 250px;
+	margin: 0 0 1em 0;
+	padding: 0 1em 0 1em;
+	border: 3px dashed #e3e3df;
+	border-top: 3px solid #999999;
+	border-right: 3px solid #999999;
+}
+aside.box p {	font-size: smaller; }
 
 /* -------------------------------------------------------------------------------------
 /* Style for figure/pictures */
@@ -85,6 +102,13 @@ figure.standard figcaption {
 }
 
 /* -------------------------------------------------------------------------------------
+/* Style for displaying code */
+blockquote.code {
+	font-family: monospace;
+	white-space: pre;
+}
+
+/* -------------------------------------------------------------------------------------
 /* Style for byline & signature */
 
 div.byline {
@@ -98,16 +122,37 @@ div.byline figure {
 }
 
 /* -------------------------------------------------------------------------------------
+/* Style for headers */
+h1,h2,h3,h4,h5,h6 {
+/* inherits font and color from body */
+}
+
+/* -------------------------------------------------------------------------------------
 /* Style for paragraphs */
 p {
 /* inherits font and color from body */
 }
 
-/* -------------------------------------------------------------------------------------
-/* Style for headers */
-h1,h2,h3,h4,h5,h6 {
-/* inherits font and color from body */
+p.byline {
+	font-style: italic;
 }
+
+p.ingress { }
+
+p.go-to-start {
+	font-size: smaller;
+	font-style: italic;
+}
+
+/* -------------------------------------------------------------------------------------
+/* Style for a links */
+a {
+	color: inherit;
+}
+a:link    { }
+a:visited { }
+a:hover   { text-decoration: none;  color: #333333; background: #e3e3df;}
+a:active  { }
 
 /* -------------------------------------------------------------------------------------
 /* Style for the footer and related footer elements */

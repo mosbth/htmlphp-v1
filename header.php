@@ -20,5 +20,6 @@
 		<nav>
 			<a href="me.php">Me</a> 
 			<a href="report.php">Redovisning</a> 
+			<a href="de_20_vanligaste_html_elementen.php">HTML-20</a> 
 		</nav>
 	</div>
