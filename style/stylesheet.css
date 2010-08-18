@@ -4,6 +4,13 @@
  */
 
 /* -------------------------------------------------------------------------------------
+/* Style for all body elements that may inherit */
+body {
+	font-family: Georgia, serif;
+	color: #333333;
+}
+
+/* -------------------------------------------------------------------------------------
 /* Top of page with logo and navigation */
 
 /* Top navigation menu */
@@ -26,14 +33,6 @@ div#top nav a:hover   {
 	background: #999999;
 }
 div#top nav a:active  { }
-
-
-/* -------------------------------------------------------------------------------------
-/* Style for all body elements that may inherit */
-body {
-	font-family: Georgia, serif;
-	color: #333333;
-}
 
 /* -------------------------------------------------------------------------------------
 /* Style for main content of the page */

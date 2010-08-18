@@ -1,5 +1,5 @@
 <?php 
-$title = "Enligt 80-20-regeln, vilka är de vanligaste HTML-elementen?";
+$title = "Enligt 80-20-regeln, vilka är de vanligaste CSS-konstruktionerna?";
 include("header.php"); 
 ?>
 
@@ -11,20 +11,18 @@ include("header.php");
 		<?php include("de_20_vanligaste_aside.php"); ?>
 	</aside>
 
-	</aside>
-
 	<section class="content">
 		<!-- - - - - - - - - - - - - - - - - - Main section - - - - - - - - - - - - - - - - - -->
 		<header id="start">
-			<h1>Vilka är de vanligaste HTML-elementen?</h1>
+			<h1>Vilka är de vanligaste CSS-konstruktionerna?</h1>
 				<p class="byline">
 					Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-08-17">17:e augusti 2010</time>
 				</p>
 				<p class="ingress">
-					Vilka är de 20% HTML-element som troligtvis står för 80% av användarfallen? Det beror 
+					Vilka är de 20% HTML element som troligtvis står för 80% av användarfallen? Det beror 
 					på vem man frågar och här kommer därför min egen lista på de element som jag anser 
 					<strong>borde vara</strong> de mest använda elementen. Lär dig dessa element och du
-					har kommit en bit på vägen för att bemästra HTML.
+					har kommit en bit på vägen att bemästra HTML.
 				</p>
 				<h4><a href="#part-I">Del I: HTML sidans struktur</a></h4>
 				<ul>

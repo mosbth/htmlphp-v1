@@ -21,5 +21,6 @@
 			<a href="me.php">Me</a> 
 			<a href="report.php">Redovisning</a> 
 			<a href="de_20_vanligaste_html_elementen.php">HTML-20</a> 
+			<a href="de_20_vanligaste_css_konstruktionerna.php">CSS-20</a> 
 		</nav>
 	</div>
