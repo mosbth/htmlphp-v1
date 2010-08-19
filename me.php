@@ -51,12 +51,10 @@ include("header.php");
 			Eller så gräver jag sten i sommarstugan.
 			</p>
 
-			<div class="byline">
-				<figure>
-					<img src="img/mikael2.jpg" alt="Närbild Mikael" height="50">
-				</figure>
+			<footer class="byline">
+				<img src="img/mikael2.jpg" alt="Närbild Mikael" height="50">
 				<p>/mos</p>
-			</div>
+			</footer>
 			
 		</section>
 	</section>

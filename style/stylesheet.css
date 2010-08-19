@@ -29,10 +29,7 @@ div#top nav a {
 }
 div#top nav a:link    { }
 div#top nav a:visited { }
-div#top nav a:hover   { 
-	color: #111111; 
-	background: #999999;
-}
+div#top nav a:hover   { color: #111111; background: #999999; }
 div#top nav a:active  { }
 
 /* -------------------------------------------------------------------------------------
@@ -119,13 +116,15 @@ blockquote.code {
 /* -------------------------------------------------------------------------------------
 /* Style for byline & signature */
 
-div.byline {
+footer.byline {
+	display:block;
 	border-top: 1px dashed #999999;
+	margin-top:2em;
 	padding: 1em;
 	color: #999999;
 }
 
-div.byline figure {
+footer.byline img {
 	float: right;
 }
 

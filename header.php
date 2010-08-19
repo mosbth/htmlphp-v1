@@ -9,6 +9,7 @@
 	
 	<link rel="stylesheet" href="style/stylesheet.css" title="Mos standard grey">
 	<link rel="alternative stylesheet" href="style/stylesheet_red.css" title="Mos standard red">
+	<link rel="alternative stylesheet" href="style/stylesheet_bth.css" title="Mos BTH-ish">
 
 	<link rel="shortcut icon" href="img/favicon.ico">
 

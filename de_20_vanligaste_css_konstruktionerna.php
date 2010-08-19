@@ -59,10 +59,7 @@ include("header.php");
 
 			<h4><a href="#part-II">Del III: Bra att kunna</a></h4>
 			<ul>
-				<li><a href="#style-alterante">Alternate stylesheet</a>
-				<li><a href="#style-print">Stylesheet för print</a>
-				<li><a href="#style-mobile">Stylesheet för mobil</a>
-				<li><a href="#tools">Verktyg vid utveckling av stylesheet</a>
+				<li><a href="#style-alternate">Alternativa stylesheet</a>
 				<li><a href="#more">Mer jag kanske borde förklara</a>
 			</ul>
 
@@ -562,33 +559,32 @@ EOD;
 		<header>
 			<h2>Del III: Bra att kunna</h2>
 			
-			<p class="ingress">Det handlar om färger, fonter och stilen. Vilken känsla vill vi
-			användarna skall få när de besöker siten? Detta kan vi justera med webbplatsens
-			"look &amp; feel". Det handlar om användarens upplevelse.
+			<p class="ingress">Det finns så mycket bra-att-veta-saker när det rör sig om CSS.
+			Det är ett stort område och oerhört viktigt för att ge användaren en bra upplevelse när de
+			besöker våra webbplatser. nedan följer ett par saker som är bra att kunna. Kanske
+			kan det underlätta ditt arbete med stylesheets.
 			
-			<p>Följande kapitel ger en liten vägledning in i hur webbplatsen kan stylas och hur detta
-			kan ske med några enkla CSS-konstruktioner.
-
 		</header>
 	</section>
 
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="style-alternate"> 
+		<h3>Alternativa stylesheet</h3>
+		
+		<p>I head-elementet går det att specificera alternativa stylesheets. 
+		Detta ger möjlighet att ändra stylesheet i browsern på klientsidan och det blir enkelt
+		att komma åt och testa de olika stylesheeten.
 
-				<li><a href="#style-alterante">Alternate stylesheet</a>
-				<li><a href="#style-print">Stylesheet för print</a>
-				<li><a href="#style-mobile">Stylesheet för mobil</a>
-				<li><a href="#tools">Verktyg vid utveckling av stylesheet</a>
-				<li><a href="#more">Mer jag kanske borde förklara</a>
+		<p>Ett bra sätt, när man konstruerar stylesheets, är att 
+		utgå från en grundstylesheet och sedan lägga till variationer i ytterligare stylesheets.
+		Själva grundstylesheeten kan då importeras in i den nya stylesheeten. 
+		<a href="style/stylesheet_red.css">Se följande länk för ett exempel</a>.
 
+		<p>Till denna sidan finns ett par alternativa stylesheets. Byt dem i din webbläsares
+		meny (Firefox - View - Page Style).
 
-
-
-
-
-
-
-
-
-
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="more"> 
@@ -602,9 +598,21 @@ EOD;
 			<li>aside
 			<li>2 kolumner
 			<li>3 kolumner
+			<li>Tabeller
+			<li>Forms
+			<li>Stylesheet för print/mobil
+			<li>Verktyg vid utveckling av stylesheet (Web Developer och Firebug)
 		</ul>
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a>
 	</section>
 
+<!-- - - - - - - - - - - - - - - - - - footer         - - - - - - - - - - - - - - - - - -->
+	<footer class="byline">
+		<figure><img src="img/mikael2.jpg" alt="Närbild Mikael" height="50"></figure>
+			<p>/mos</p>
+	</footer>
+	
 </article>
 
 </div> <!-- id=wrap -->
