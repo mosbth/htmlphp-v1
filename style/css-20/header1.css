@@ -1,0 +1,5 @@
+header#top1 { display: block; background-color: lightgoldenrodyellow; }
+header#top1 img { float: left; padding-right: 1em; }
+header#top1 p { margin: 0; padding-top: 1em; font-size: 1.5em; }
+header#top1 nav { display: block; clear: both; }
+header#top1 nav a { font-size: 1em; }

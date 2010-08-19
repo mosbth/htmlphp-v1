@@ -10,7 +10,9 @@
 	<link rel="stylesheet" href="style/stylesheet.css" title="Mos standard grey">
 	<link rel="alternative stylesheet" href="style/stylesheet_red.css" title="Mos standard red">
 
-	<link rel="shortcut icon" href="img/favicon.ico" />
+	<link rel="shortcut icon" href="img/favicon.ico">
+
+	<?php if(!empty($head)) echo $head; ?>
 </head>
 
 <body>

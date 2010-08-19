@@ -6,6 +6,7 @@
 /* -------------------------------------------------------------------------------------
 /* Style for all body elements that may inherit */
 body {
+	margin: 0;
 	font-family: Georgia, serif;
 	color: #333333;
 }
@@ -36,20 +37,28 @@ div#top nav a:active  { }
 
 /* -------------------------------------------------------------------------------------
 /* Style for main content of the page */
-div.wrap {
+div#wrap {
 	width: 950px;
+	padding: 0 0 0 16px;
 }
 
 article {
+	float: left
 	display: block;
-	width: 950px;
+	width: 600px;
+}
+
+header {
+	display: block;
+	width: inherit;
 }
 
 section {
 	display: block;
+	width: inherit;
 }
 
-section.content {
+section.content { /* obsolete */
 	padding: 0 1em 2em 1em;
 	width: 600px;
 }
@@ -155,7 +164,7 @@ a:active  { }
 
 /* -------------------------------------------------------------------------------------
 /* Style for the footer and related footer elements */
-footer {
+footer#bottom {
 	display: block;
 	padding: 0 1em 1em 1em;
 	border-top: 1px solid #999999;
@@ -164,32 +173,42 @@ footer {
 }
 
 /* Link-lists in the footer */
-footer nav {
+footer#bottom nav {
 	float: left;
 	width: 8em;
 	margin-bottom: 2em;
 }
 
-footer nav h5 { 
+footer#bottom nav h5 { 
 	margin-bottom: 0.5em;
 }
 
-footer nav a { 
+footer#bottom nav a { 
 	display: list-item;
 	list-style: none;
 	color: inherit;
 	font: 0.8em Arial, Helvetica, sans-serif;
 	text-decoration:none; 
 }
-footer nav a:link    { }
-footer nav a:visited { }
-footer nav a:hover   { text-decoration:underline;  color: #333333; background: none;}
-footer nav a:active  { }
+footer#bottom nav a:link    { }
+footer#bottom nav a:visited { }
+footer#bottom nav a:hover   { text-decoration:underline;  color: #333333; background: none;}
+footer#bottom nav a:active  { }
 
 /* Final message in the footer */
-footer div.final {
+footer#bottom div.final {
 	clear: both;
 	padding-left: 50px;
 	background: url(../img/me.png) no-repeat;
 	font-size: 0.8em;
+}
+
+
+/* -------------------------------------------------------------------------------------
+/* Style for showing example code html/css, with clearer */
+div.example {
+	overflow:auto;
+	padding:0;
+	margin:0;
+	border: 4px solid gray;
 }

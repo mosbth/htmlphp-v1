@@ -1,0 +1,8 @@
+body {
+	background-color: whitesmoke;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: brown;
+}
+h1,h2,h3,h4,h5,h6 { font-family: Courier New, Courier, monospace; }
+p { color: saddlebrown; }
+a { font-size: smaller; }

@@ -1,0 +1,16 @@
+nav#n1 {
+	display: block;
+	width: 8em;
+	margin-bottom: 2em;
+}
+nav#n1 a { 
+	display: list-item;
+	list-style: none;
+	color: inherit;
+	font: 0.8em Arial, Helvetica, sans-serif;
+	text-decoration:none; 
+}
+nav#n1 a:link    { }
+nav#n1 a:visited { }
+nav#n1 a:hover   { text-decoration:underline;  color: #333333; background: none;}
+nav#n1 a:active  { }

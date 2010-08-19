@@ -26,7 +26,7 @@ include("header.php");
 					<strong>borde vara</strong> de mest använda elementen. Lär dig dessa element och du
 					har kommit en bit på vägen för att bemästra HTML.
 				</p>
-				<h4><a href="#part-I">Del I: HTML sidans struktur</a></h4>
+				<h4><a href="#part-I">Del I: Sidans grundstruktur</a></h4>
 				<ul>
 					<li><a href="#doctype">&lt;!DOCTYPE&gt;</a>
 					<li><a href="#html">&lt;html&gt;</a>
@@ -60,7 +60,7 @@ include("header.php");
 		<!-- - - - - - - - - - - - - - - - - - Main section - - - - - - - - - - - - - - - - - -->
 		<section id="part-I">
 			<header>
-				<h2>Del I: HTML sidans struktur</h2>
+				<h2>Del I: Sidans grundstruktur</h2>
 				<p class="ingress">
 					Följande element bygger upp själva grundstrukturen av en html-sida och de innehåller 
 					meta-information om sidan.
@@ -609,6 +609,7 @@ include("header.php");
 						<li>&lt;table&gt;					
 						<li>&lt;strong&gt;					
 						<li>&lt;em&gt;					
+						<li>&lt;code&gt;					
 						<li>&lt;time&gt;					
 					</ul>
 

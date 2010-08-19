@@ -1,0 +1,11 @@
+div#outer {
+	background: azure;
+	border: 4px dashed lightblue;
+}
+
+div#inner {
+	float:left;
+	background: ivory;
+	width:25%;
+	border: 4px solid mistyrose;
+}

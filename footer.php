@@ -1,5 +1,5 @@
 	<!-- This is the standard footer of the page -->
-	<footer>
+	<footer id="bottom">
 		<nav>
 			<h5>Verktyg</h5>
 			<a href="http://validator.w3.org/check/referer">HTML5</a> 
@@ -28,7 +28,8 @@
 		<div class="final">
 			<p>
 			Except where otherwise noted, content on this site is licensed under the
-			Creative Commons Attribution Share-Alike License v3.0 or any later version.
+			<a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Share-Alike License v3.0</a>
+			or any later version.
 			</p>
 <pre>
  .                        

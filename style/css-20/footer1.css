@@ -1,0 +1,5 @@
+footer#bottom1 { display: block; padding: 0 0 5px 55px; background: peru url(img/me.png) no-repeat 5px 5px; border-top: 4px solid burlywood;}
+footer#bottom1 p { color: #555555; font-size: smaller; font-style: italic; }
+footer#bottom1 pre { font-size: smaller; }
+footer#bottom1 nav { display: block; padding-top: 1em; font-size: smaller; }
+footer#bottom1 nav a:hover { text-decoration: none;  color: tomato; background: whitesmoke; }
