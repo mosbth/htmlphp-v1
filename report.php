@@ -1,5 +1,6 @@
 <?php 
 $title = "Redovisningar av kursmoment i htmlphp-kursen";
+$bodyId = "report";
 include("header.php"); 
 ?>
 

@@ -14,6 +14,7 @@ if(isset($_GET['style'])) {
 
 <?php 
 $title = "Enligt 80-20-regeln, vilka är de vanligaste CSS-konstruktionerna?";
+$bodyId = "css20";
 include("header.php"); 
 ?>
 

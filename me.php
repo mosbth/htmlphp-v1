@@ -1,5 +1,6 @@
 <?php 
 $title = "Min Me-sida om mig själv och htmlphp-kursen";
+$bodyId = "me";
 include("header.php"); 
 ?>
 
@@ -48,7 +49,12 @@ include("header.php");
 			<p>
 			Jag bor i Ronneby sedan 1990 med familj. Jag är dock smålänning och kommer från Bankeryd. Hejar på HV71
 			och spelar bowling på fritiden. När jag får tid över så jobbar jag med PHP och MySQL i mina opensource projekt.
-			Eller så gräver jag sten i sommarstugan.
+			Eller så gräver jag sten i sommarstugan. 
+			</p>
+			
+			<p>Till och från spelar jag poker online. Det är mitt senaste nyårslöfte,
+			att lära mig spela poker. Än så länge går det inte så bra... men skam den som ger sig.
+			Jag köpte 4 böcker, läste dem, och nu testar jag. Man kan om man vill.
 			</p>
 
 			<footer class="byline">

@@ -1,5 +1,6 @@
 <?php 
 $title = "Enligt 80-20-regeln, vilka är de vanligaste HTML-elementen?";
+$bodyId = "html20";
 include("header.php"); 
 ?>
 

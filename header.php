@@ -16,14 +16,14 @@
 	<?php if(!empty($head)) echo $head; ?>
 </head>
 
-<body>
+<body<?php  if(!empty($bodyId)) echo " id='$bodyId'"; ?>>
 	<!-- Top header with logo and navigation -->
 	<div id="top">
 		<img src="img/logo.png" alt="htmlphp me" width=200 height=100>
 		<nav>
-			<a href="me.php">Me</a> 
-			<a href="report.php">Redovisning</a> 
-			<a href="de_20_vanligaste_html_elementen.php">HTML-20</a> 
-			<a href="de_20_vanligaste_css_konstruktionerna.php">CSS-20</a> 
+			<a id="me" href="me.php">Me</a> 
+			<a id="report" href="report.php">Redovisning</a> 
+			<a id="html20" href="de_20_vanligaste_html_elementen.php">HTML-20</a> 
+			<a id="css20" href="de_20_vanligaste_css_konstruktionerna.php">CSS-20</a> 
 		</nav>
 	</div>
