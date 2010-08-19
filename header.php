@@ -34,9 +34,9 @@
 	<header id="top">
 		<img src="img/logo.png" alt="htmlphp me" width=200 height=100>
 		<nav>
-			<a id="me" href="me.php">Me</a> 
-			<a id="report" href="report.php">Redovisning</a> 
-			<a id="html20" href="de_20_vanligaste_html_elementen.php">HTML-20</a> 
-			<a id="css20" href="de_20_vanligaste_css_konstruktionerna.php">CSS-20</a> 
+			<a id="me-" href="me.php">Me</a> 
+			<a id="report-" href="report.php">Redovisning</a> 
+			<a id="html20-" href="de_20_vanligaste_html_elementen.php">HTML-20</a> 
+			<a id="css20-" href="de_20_vanligaste_css_konstruktionerna.php">CSS-20</a> 
 		</nav>
 	</header>

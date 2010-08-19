@@ -31,10 +31,10 @@ header#top nav a:hover   { color: #111111; background: #999999; }
 header#top nav a:active  { }
 
 /* Keep current choice/link highlighted */
-body#me     a#me     { color:whitesmoke; background:#999999; }
-body#report a#report { color:whitesmoke; background:#999999; }
-body#html20 a#html20 { color:whitesmoke; background:#999999; }
-body#css20  a#css20  { color:whitesmoke; background:#999999; }
+body#me     a#me-     { color:whitesmoke; background:#999999; }
+body#report a#report- { color:whitesmoke; background:#999999; }
+body#html20 a#html20- { color:whitesmoke; background:#999999; }
+body#css20  a#css20-  { color:whitesmoke; background:#999999; }
 
 
 /* -------------------------------------------------------------------------------------
