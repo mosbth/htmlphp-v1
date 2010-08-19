@@ -13,30 +13,28 @@ body {
 
 /* -------------------------------------------------------------------------------------
 /* Top of page with logo and navigation */
-
-/* Top navigation menu */
-div#top nav {
+header#top nav {
 	display: block;
 	padding: 0.2em 1em 0 1em;
 	background: #e3e3df;
 	border-bottom: 2px solid #999999;
 }
-div#top nav a {
+header#top nav a {
 	padding: 0.3em 1em 0 1em;
 	color: #555555;
 	font-family: Tahoma, Geneva, sans-serif;
 	text-decoration:none; 
 }
-div#top nav a:link    { }
-div#top nav a:visited { }
-div#top nav a:hover   { color: #111111; background: #999999; }
-div#top nav a:active  { }
+header#top nav a:link    { }
+header#top nav a:visited { }
+header#top nav a:hover   { color: #111111; background: #999999; }
+header#top nav a:active  { }
 
 /* Keep current choice/link highlighted */
-body#me div#top nav a#me { color:whitesmoke; background:#999999; }
+body#me     a#me     { color:whitesmoke; background:#999999; }
 body#report a#report { color:whitesmoke; background:#999999; }
 body#html20 a#html20 { color:whitesmoke; background:#999999; }
-body#css20 a#css20 { color:whitesmoke; background:#999999; }
+body#css20  a#css20  { color:whitesmoke; background:#999999; }
 
 
 /* -------------------------------------------------------------------------------------
@@ -47,27 +45,16 @@ div#wrap {
 }
 
 article {
-	float: left
 	display: block;
 	width: 600px;
+	padding-bottom:1em;
 }
 
-header {
-	display: block;
-	width: inherit;
-}
-
-section {
-	display: block;
-	width: inherit;
-}
-
-section.content { /* obsolete */
-	padding: 0 1em 2em 1em;
-	width: 600px;
-}
+header { display: block; }
+section { display: block; }
 
 section.columns2 {
+	width: 100%;
 	-moz-column-count: 2;
 	column-count: 2;
 }
@@ -149,6 +136,7 @@ p {
 
 p.byline {
 	font-style: italic;
+	font-size:smaller;
 }
 
 p.ingress { }
@@ -181,6 +169,7 @@ footer#bottom {
 /* Link-lists in the footer */
 footer#bottom nav {
 	float: left;
+	padding-left:0.3em;
 	width: 8em;
 	margin-bottom: 2em;
 }

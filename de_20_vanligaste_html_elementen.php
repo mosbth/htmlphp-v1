@@ -5,7 +5,7 @@ include("header.php");
 ?>
 
 <!-- Here is the actual content of the page-->
-<article>
+<div id="wrap">
 
 	<!-- - - - - - - - - - - - - - - - - - Main section - - - - - - - - - - - - - - - - - -->
 	<aside class="right">
@@ -14,7 +14,7 @@ include("header.php");
 
 	</aside>
 
-	<section class="content">
+	<article>
 		<!-- - - - - - - - - - - - - - - - - - Main section - - - - - - - - - - - - - - - - - -->
 		<header id="start">
 			<h1>Vilka är de vanligaste HTML-elementen?</h1>
@@ -627,5 +627,7 @@ include("header.php");
 	</section>
 
 </article>
+
+</div> <!-- wrapper -->
 
 <?php include("footer.php"); ?>

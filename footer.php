@@ -21,8 +21,15 @@
 			<h5>Kmom01</h5>
 				<a href='http://bit.ly/htmlphp_kmom01'>Instruktion för kursmomentet</a>
 				<a href='http://bit.ly/htmlphp_labbmiljo'>Guide för att installera labbmiljön</a>
-				<a href='http://github.com/mosbth/me/tree/v1.02'>Källkod</a>
-				<a href='http://www.student.bth.se/~mos/htmlphp/mom01/me/me.php'>Driftsmiljön</a>
+				<a href='http://github.com/mosbth/me/tree/v1.03'>Källkod</a>
+				<a href='http://www.student.bth.se/~mos/htmlphp/mom01/me/me.php'>Me-sidan</a>
+		</nav>
+
+		<nav>
+			<h5>Kmom02</h5>
+				<a href='http://bit.ly/htmlphp_kmom02'>Instruktion för kursmomentet</a>
+				<a href='http://github.com/mosbth/me/tree/v2.0'>Källkod</a>
+				<a href='http://www.student.bth.se/~mos/htmlphp/mom02/me/me.php'>Me-sidan</a>
 		</nav>
 
 		<div class="final">

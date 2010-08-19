@@ -1,24 +1,37 @@
 <?php error_reporting(-1); ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 
 <head>
 	<meta charset="utf-8">
-	<?php echo "<title>$title</title>"; ?>
-	
+
+	<!-- Use meta to ease indexing made by search engines -->
+	<meta name="keywords" content="HTML, CSS, PHP, SQL">
+ 	<meta name="description" content="Distansundervisning av Databaser och Webb">
+ 	<meta name="author" content="Mikael Roos, mos@bth.se">	
+ 	<meta name="copyright" content="Copyright 2010">	
+ 		
+	<!-- Stylesheets -->
 	<link rel="stylesheet" href="style/stylesheet.css" title="Mos standard grey">
 	<link rel="alternative stylesheet" href="style/stylesheet_red.css" title="Mos standard red">
 	<link rel="alternative stylesheet" href="style/stylesheet_bth.css" title="Mos BTH-ish">
 
+	<!-- The small icon displayed by the browser -->
 	<link rel="shortcut icon" href="img/favicon.ico">
 
+	<!-- Use PHP to set the page title dynamic -->
+ 	<?php echo "<title>$title</title>"; ?>
+ 	
+ 	<!-- Use PHP to add style information, used by the CSS-20 page to display examples -->
 	<?php if(!empty($head)) echo $head; ?>
 </head>
 
+<!-- Use PHP to set id of body, used to highlight current page, together with styling information -->
 <body<?php  if(!empty($bodyId)) echo " id='$bodyId'"; ?>>
+
 	<!-- Top header with logo and navigation -->
-	<div id="top">
+	<header id="top">
 		<img src="img/logo.png" alt="htmlphp me" width=200 height=100>
 		<nav>
 			<a id="me" href="me.php">Me</a> 
@@ -26,4 +39,4 @@
 			<a id="html20" href="de_20_vanligaste_html_elementen.php">HTML-20</a> 
 			<a id="css20" href="de_20_vanligaste_css_konstruktionerna.php">CSS-20</a> 
 		</nav>
-	</div>
+	</header>
