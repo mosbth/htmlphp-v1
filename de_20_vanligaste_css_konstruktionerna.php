@@ -53,18 +53,16 @@ include("header.php");
 			<ul>
 				<li><a href="#style-body">body, p och h1-h6</a>
 				<li><a href="#a">a</a>
-				<li><a href="#figure">figure</a>
+				<li><a href="#figure">figure och img</a>
 				<li><a href="#blockquote">blockquote</a>
-				<li><a href="#nav">nav</a>
-				<li><a href="#aside">aside</a>
 			</ul>
 
 			<h4><a href="#part-II">Del III: Bra att kunna</a></h4>
 			<ul>
-				<li><a href="#body-presentation">Alternate stylesheet</a>
-				<li><a href="#div_id_footer">Stylesheet för print</a>
-				<li><a href="#div_id_content">Stylesheet för mobil</a>
-				<li><a href="#section">Verktyg vid utveckling av stylesheet</a>
+				<li><a href="#style-alterante">Alternate stylesheet</a>
+				<li><a href="#style-print">Stylesheet för print</a>
+				<li><a href="#style-mobile">Stylesheet för mobil</a>
+				<li><a href="#tools">Verktyg vid utveckling av stylesheet</a>
 				<li><a href="#more">Mer jag kanske borde förklara</a>
 			</ul>
 
@@ -450,14 +448,8 @@ EOD;
 		att texten blir lättläst utan att länkarna blir svåra att upptäcka.
 		
 		<p>Länkarna stylas olika beroende på vilket läge som gäller för länken. Varje läge kan
-		stylas individuellt.
+		stylas individuellt. Det räcker med att style förändringarna i respektive läge.
 		
-		footer#bottom nav a:link    { }
-footer#bottom nav a:visited { }
-footer#bottom nav a:hover   { text-decoration:underline;  color: #333333; background: none;}
-footer#bottom nav a:active  { }
-
-
 		<p>Exempel 1 med font och bakgrund definerat i body.
 		<a href="?style=a1#a">Testa</a>
 
@@ -465,23 +457,127 @@ footer#bottom nav a:active  { }
 <?php include("$css20/a1.css"); ?>
 		</blockquote>
 
-		<p>Exempel 2 med ändrad font för h1-h6, p och a.
-		<a href="?style=a2#a">Testa</a>
-
-		<blockquote class="code">
-<?php include("$css20/a2.css"); ?>
-		</blockquote>
-
 		<p>Krångla inte till det, det viktigaste är att användaren kan se att det är en klickbar länk.
 		Fundera 2 extra gånger innan du tar bort understrykningen av en länk.
 		
-		<p><a href="?#style-body">Återgå till ursprunglig style</a>	
+		<p><a href="?#a">Återgå till ursprunglig style</a>	
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a>
 	</section>
 		
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="figure"> 
+		<h3>figure och img</h3>
+
+<?php
+$code = <<<EOD
+<figure id="f1">
+	<img src="img/mikael1.jpg">
+	<figcaption>Mos vid datorn, se så glad han är</figcaption>
+</figure>
+
+EOD;
+?>
+		
+		<p>Ofta vill man visa bilder tillsammans med en undertext. HTML-elemenen figure och figcaption
+		är till för detta och genom att styla dem kan man få det som man vill.
+		
+		<blockquote class="code">
+<?php echo htmlspecialchars($code, ENT_NOQUOTES, "UTF-8"); ?>
+		</blockquote>
+
+		<?php echo $code; ?>
+		
+		<p>Exempel 1.
+		<a href="?style=figure1#figure">Testa</a>
+
+		<blockquote class="code">
+<?php include("$css20/figure1.css"); ?>
+		</blockquote>
+
+		<p>Exempel 2.
+		<a href="?style=figure2#figure">Testa</a>
+
+		<blockquote class="code">
+<?php include("$css20/figure2.css"); ?>
+		</blockquote>
+
+		<p><a href="?#figure">Återgå till ursprunglig style</a>	
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a>
+	</section>
+		
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="blockquote"> 
+		<h3>blockquote</h3>
+
+<?php
+$code = <<<EOD
+<blockquote id="b1">
+Det här är källkod eller ett vackert citat, det beror på hur man stylar det.
+</blockquote>
+
+EOD;
+?>
+		
+		<p>När man vill intendera text, i förhållande till den löpande texten, 
+		så är blockquote ett bra element. I sin standardutförande
+		så ger det en viss intendering. Med lite stylning så passar det dessutom bra för att 
+		visa källkod eller citat.
+		
+		<blockquote class="code">
+<?php echo htmlspecialchars($code, ENT_NOQUOTES, "UTF-8"); ?>
+		</blockquote>
+
+		<?php echo $code; ?>
+		
+		<p>Exempel 1, stylad för citat.
+		<a href="?style=block1#blockquote">Testa</a>
+
+		<blockquote class="code">
+<?php include("$css20/block1.css"); ?>
+		</blockquote>
+
+		<p>Exempel 2, stylad för källkod.
+		<a href="?style=block2#blockquote">Testa</a>
+
+		<blockquote class="code">
+<?php include("$css20/block2.css"); ?>
+		</blockquote>
+
+		<p>Exempel 3, stylad för källkod med begränsad bredd.
+		<a href="?style=block3#blockquote">Testa</a>
+
+		<blockquote class="code">
+<?php include("$css20/block3.css"); ?>
+		</blockquote>
+
+		<p><a href="?#blockquote">Återgå till ursprunglig style</a>	
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a>
+	</section>
+		
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="part-III">
+		<header>
+			<h2>Del III: Bra att kunna</h2>
+			
+			<p class="ingress">Det handlar om färger, fonter och stilen. Vilken känsla vill vi
+			användarna skall få när de besöker siten? Detta kan vi justera med webbplatsens
+			"look &amp; feel". Det handlar om användarens upplevelse.
+			
+			<p>Följande kapitel ger en liten vägledning in i hur webbplatsen kan stylas och hur detta
+			kan ske med några enkla CSS-konstruktioner.
+
+		</header>
+	</section>
 
 
+				<li><a href="#style-alterante">Alternate stylesheet</a>
+				<li><a href="#style-print">Stylesheet för print</a>
+				<li><a href="#style-mobile">Stylesheet för mobil</a>
+				<li><a href="#tools">Verktyg vid utveckling av stylesheet</a>
+				<li><a href="#more">Mer jag kanske borde förklara</a>
 
 
 

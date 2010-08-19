@@ -1,0 +1,6 @@
+a         { font-size:smaller; font-style:bold; }
+a:link    { }
+a:visited { }
+a:hover   { text-decoration:underline;  color: #333333; background: palegreen;}
+a:active  { font-size:larger; background:green;}
+

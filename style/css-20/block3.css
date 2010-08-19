@@ -1,0 +1,8 @@
+blockquote#b1 { 
+	padding: 1em; 
+	background: beige;
+	border-left: 2px solid brown;
+	font-family: monospace;
+	white-space: pre;
+	overflow: auto;
+}

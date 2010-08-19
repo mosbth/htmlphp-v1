@@ -1,0 +1,3 @@
+figure#f1 { display:block; text-align:center; }
+figure#f1 figcaption { display:block; font-style:italic; font-size:smaller}
+figure#f1 img {}
