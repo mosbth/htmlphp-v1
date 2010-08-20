@@ -13,9 +13,11 @@
  	<meta name="copyright" content="Copyright 2010">	
  		
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="style/stylesheet.css" title="Mos standard grey">
-	<link rel="alternative stylesheet" href="style/stylesheet_red.css" title="Mos standard red">
-	<link rel="alternative stylesheet" href="style/stylesheet_bth.css" title="Mos BTH-ish">
+	<link rel="stylesheet" media="all" href="style/stylesheet.css" title="Mos standard grey" type="text/css">
+	<link rel="stylesheet" media="print" href="style/print.css" type="text/css">
+	<link rel="alternative stylesheet" href="style/stylesheet_red.css" title="Mos standard red" type="text/css">
+	<link rel="alternative stylesheet" href="style/stylesheet_bth.css" title="Mos BTH-ish" type="text/css">
+	<link rel="alternative stylesheet" href="style/stylesheet_print.css" title="Mos to print" type="text/css">
 
 	<!-- The small icon displayed by the browser -->
 	<link rel="shortcut icon" href="img/favicon.ico">

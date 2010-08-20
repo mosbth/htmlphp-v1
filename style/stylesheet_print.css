@@ -1,0 +1,12 @@
+/* -------------------------------------------------------------------------------------
+/* 
+/* Stylesheet.
+/* 
+/* Print. Used to display the print style, can be used as alternate stylesheet to test 
+/* style for media=print
+ */
+
+/* -------------------------------------------------------------------------------------
+/* Import standard style */
+@import url(stylesheet.css);
+@import url(print.css);

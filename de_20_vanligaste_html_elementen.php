@@ -41,7 +41,8 @@ include("header.php");
 			<ul>
 				<li><a href="#div_id_top">&lt;div id=top&gt; eller &lt;header&gt;</a>
 				<li><a href="#div_id_footer">&lt;div id=footer&gt; eller &lt;footer&gt;</a>
-				<li><a href="#div_id_content">&lt;div id=content&gt; eller &lt;article&gt;</a>
+				<li><a href="#div_id_content">&lt;div id=content&gt;, en wrapper</a>
+				<li><a href="#article">&lt;article&gt;</a>
 				<li><a href="#section">&lt;section&gt;</a>
 				<li><a href="#header">&lt;header&gt;</a>
 				<li><a href="#aside">&lt;aside&gt;</a>
@@ -159,10 +160,10 @@ include("header.php");
 			<blockquote class="code">
 &lt;head&gt;
  &lt;style&gt;
- p {
-	font-size: smaller;
-	font-style: italic;
- }
+  p {
+   font-size: smaller;
+   font-style: italic;
+  }
  &lt;/style&gt;
 &lt;/head&gt;
 			</blockquote>
@@ -221,7 +222,7 @@ include("header.php");
 			Vanligen används en div med ett id, tex #top, för att identifiera den sektion som
 			innehåller sidans header. Med HTML5 går denna div att ersätta med header-elementet.
 			Rimligen kan man fortsätta att använda ett id=#top, även om man använder header-elementet.
-			Det behövs ur stylesheet aspekter.
+			Det kan vara bra från stylesheet aspekter.
 		</p>
 		<p>
 			Jag väljer att använda header-elementet, den ger lite mer semantisk mening till sektionen 
@@ -250,9 +251,9 @@ include("header.php");
 	<section id="div_id_footer"> 
 		<h3>&lt;div id=footer&gt; eller &lt;footer&gt;</h3>
 		<p>
-			Liksom header-sektion så finns oftast en footer-sektion till varje sida. Footern innehåller
-			vanligen copyright information och länkar till webbplatsens publicerare och ägare.
-			Footer-sektion återkommer vanligen på alla sidor som finns
+			Liksom header-sektion så finns oftast en footer-sektion till varje sida. Footern kan innehålla
+			copyright information och länkar till webbplatsens publicerare och ägare.
+			Footer-sektion återkommer på alla sidor som finns
 			inom webbplatsen. Det är, liksom header-sektionen, en del av webbplatsens centrala layout 
 			och återfinns endast en gång på varje sida.
 		</p>
@@ -260,7 +261,7 @@ include("header.php");
 			Vanligen används en div med ett id, tex #footer eller #bottom, för att identifiera sektionen. 
 			Med HTML5 bör man ersätta detta med footer-elementet.
 			Rimligen kan man fortsätta att använda ett id, tex id=#bottom.
-			Det kan behövas ur stylesheet aspekter.
+			Det kan vara bra när elementet skall stylas med stylesheeten.
 		</p>
 		<p>
 			Exempel på hur sidans footer-sektion kan specificeras.
@@ -283,40 +284,63 @@ include("header.php");
 	
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="div_id_content"> 
-		<h3>&lt;div id=content&gt; eller &lt;article&gt;</h3>
+		<h3>&lt;div id=content&gt;, en wrapper</h3>
 		<p>
-			Sidans huvudsakliga budskap, själva dokumentet, brukar omringas av ett div-element med id satt till #content, 
+			Sidans huvudsakliga budskap, själva dokumentet, kan omringas (wrap) av ett div-element med id satt till #content, 
 			#main, #wrap eller liknande. Ofta har detta strukturell påverkan och underlättar hantering i 
-			stylesheet. Vanligen vill man styra sidans bredd, höger- eller vänster-kolumn med länkar,
-			placering av aside-element eller kanske ange antalet kolumner för sidans text.
+			stylesheet. Det kan gälla att man vill styra sidans bredd, höger- eller vänster-kolumn med länkar,
+			placering av aside-element.
 		</p>
 		<p>
-			Sidans layout brukar bero på vilken information som presenteras. 
+			Sidans layout brukar bero på vilken information som presenteras. Så det är bra att ha lite 
+			flexibilitet i hur presentation kan ske.
 		</p>
 		<p>
-			Med HTML5 kan denna div delvis ersättas med article-elementet. Liksom flera av HTML5-elementen
-			så ger detta en bättre semantisk vägledning till vad innehållet är. Rekommendationen 
-			blir såleda att använda elementet article där det passar sig. Men, det beror naturligtvis 
-			på vilken typ av information som visas på sidan. 
+			Det är inte nödvändigt att wrappa sidans innehåll. Är det en liten sida så kanske det inte 
+			behövs. Då kan man ta bort det. Bort med överflödiga element.
 		</p>
 		<p>
-			Det är heller inte nödvändigt att använda 
-			något element alls. Är det en liten sida så kanske det inte behövs och då kan man ta bort det.
-		</p>
-		<p>
-			Exempel på hur sidans article-sektion kan specificeras.
+			Exempel på hur sidans huvud-sektion kan specificeras.
 			<blockquote class="code">
 &lt;body&gt;
 
  &lt;!-- Här kommer sidans header --&gt;
 
- &lt;article&gt;
+ &lt;div id="content"&gt;
   &lt;!-- Sidans "verkliga"innehåll i form av text, bilder, grafik, audio och videdo, etc. --&gt;
- &lt;/article&gt;
+ &lt;/div&gt;
 
  &lt;!-- Här kommer sidans footer --&gt;
 
 &lt;/body&gt; 
+			</blockquote>
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="article"> 
+		<h3>&lt;article&gt;</h3>
+		<p>
+			En sida kan bestå av en eller flera article. I en blogg är varje inlägg en article. I
+			denna text du nu läser så har jag valt att lägga hela dokumentet som en article.
+			Elementet article är HTML5 och ger semantisk vägledning. En article kan innehålla en egen header
+			och footer. Om artikeln är stor kan den delas in i med elementet section.
+		</p>
+		<p>
+			Exempel på hur en article kan struktureras.
+			<blockquote class="code">
+&lt;div id="content"&gt;
+
+ &lt;article&gt;
+
+  &lt;!-- header --&gt;
+  &lt;!-- Det "verkliga" innehållet, indelat i section. --&gt;
+  &lt;!-- footer --&gt;
+
+ &lt;/article&gt;
+
+&lt;/div&gt;
 			</blockquote>
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
@@ -355,12 +379,6 @@ include("header.php");
 &lt;/article&gt; 
 			</blockquote>
 
-		<p>
-			Exempel på hur direktlänkning sker till en sektion på sidan med hjälp av #.
-			<blockquote>
-				<a href="#section">#section</a>
-			</blockquote>
-
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
 
@@ -390,12 +408,6 @@ include("header.php");
 &lt;/section&gt;
 			</blockquote>
 
-		<p>
-			Exempel på hur direktlänkning sker till en sektion på sidan med hjälp av #.
-			<blockquote>
-				<a href="#section">#section</a>
-			</blockquote>
-
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
 
@@ -415,15 +427,15 @@ include("header.php");
 &lt;article&gt;
 
  &lt;aside&gt;
-  &lt;!-- Relaterad information men inte del av huvud-dokumentets innehåll. --&gt;
+  &lt;!-- Relaterad information som kan placeras i anslutning till huvud-dokumentet --&gt;
  &lt;/aside&gt;
 
  &lt;section id="part-1"&gt;
-  &lt;!-- En fristående del av artikeln / dokumentet, med egen header. --&gt;
+  &lt;!-- En fristående del av artikeln / dokumentet, med egen header --&gt;
  &lt;/section&gt;
 
  &lt;section id="part-2"&gt;
-  &lt;!-- En annan fristående del av artikeln / dokumentet, med egen header. --&gt;
+  &lt;!-- En annan fristående del av artikeln / dokumentet, med egen header --&gt;
  &lt;/section&gt;
 
 &lt;/article&gt; 
@@ -438,7 +450,7 @@ include("header.php");
 		<p>
 			Detta element är ett av de vanligaste strukturella elementen. Flera HTML5-element
 			är tänkta att ersätta en del användning av div men det kommer fortsätta vara ett
-			av de mest använda elementen för att uppnå en struktur på sidan.
+			av de mest använda elementen för att uppnå en struktur.
 		</p>
 		<p>
 			Försök att inte överanvända det. Kan du slippa en div så är det bra. Försök att 
@@ -481,7 +493,8 @@ include("header.php");
 		<p>
 			Använd rubriker för att strukturera innehållet i dokumentet. h1 bör endast användas en
 			gång på sidan och den bör klart ange vad dokumentet handlar om. Ofta har h1 ett liknande 
-			innehåll som sidans titel.
+			innehåll som sidans titel. h1 och title är viktiga element, speciellt för sökmotorer, så 
+			använd dem väl.
 		</p>
 		<p>
 			Elementet hgroup finns för att gruppera rubriker i de fall flera rubriker anges efter
@@ -489,7 +502,7 @@ include("header.php");
 			En hgroup kan bara innehålla rubriker.
 		</p>
 		<p>
-			Exempel på rubriker och användning av hgroup elementet.
+			Exempel på rubriker och användning av elementet hgroup.
 			<blockquote class="code">
 &lt;h1&gt;Tydlig rubrik&lt;/h1&gt;
 
@@ -510,13 +523,21 @@ include("header.php");
 	<section id="p"> 
 		<h3>&lt;p&gt;</h3>
 		<p>
-			Ange löpande text inom en p-tagg, en paragraf av text. Ange även bilder, figurer, 
-			grafik och liknande inom ramen för taggen, i de fall det passar och är relaterat 
-			till texten. En paragraf kan innehåller fler paragrafer, det går att nästla dem.
-			Det är inte nödvändigt att ha sluttaggen, den kan utelämnas och det kan vara
-			vara att rekommendera. Glöm dock inte dubbelkolla vad specen säger och test-validera 
-			alltid dina sidor. 
+			Ange löpande text inom en p-tagg, en paragraf av text. Detta är ett av de vanligaste elementen.
 		</p>
+			
+		<p>
+			Det är inte nödvändigt att ha sluttaggen, den kan utelämnas under vissa förutsättningar (läs specen).
+			Rekommendationen blir att använda sluttaggen för att undvika valideringsproblem.
+		</p>
+
+		<p>Exempel på p-elementet, med och utan sluttagg.
+		
+		<blockquote class="code">
+&lt;p&gt;Här är en paragraf utan sluttagg.
+&lt;p&gt;Den följs av denna paragraf med sluttagg.&lt;p&gt;
+		</blockquote>
+
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
 	
@@ -531,13 +552,13 @@ include("header.php");
 		</p>
 		<p>
 			Exempel på användning av nav-elementet tillsammans med länkar.
-			<blockquote class="code">
+		<blockquote class="code">
 &lt;nav&gt;
  &lt;a href="#start"&gt;Till toppen av denna sidan&lt;/a&gt;
  &lt;a href="me.php"&gt;Min me-sida, läs om mig&lt;/a&gt;
  &lt;a href="dbwebb.se"&gt;dbwebb.se&lt;/a&gt;
 &lt;/nav&gt;
-			</blockquote>
+		</blockquote>
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
@@ -549,7 +570,7 @@ include("header.php");
 			Listor är ett vanligt element som är bra att hantera. För min egen del så är det ofta den
 			onumrerade listan (ul) men kolla även så att du kan hantera den numrerade varianten (ol).
 			Listor kan stylas och används ofta för att styla menyer med länkar. Detta ger en bra organisation
-			för länkarna och det är smidigt att styla dem. Just deta användningsområde kan komma att 
+			för länkarna och det är smidigt att styla dem. Just detta användningsområde kan komma att 
 			ersättas mer och mer av nav-elementet.
 			Men för vanliga listor så är elementen oumbärliga.
 		</p>
@@ -631,11 +652,9 @@ include("header.php");
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
 
-	<footer class="byline">
-		<figure><img src="img/mikael2.jpg" alt="Närbild Mikael" height="50"></figure>
-			<p>/mos</p>
-	</footer>
-
+<!-- - - - - - - - - - - - - - - - - - footer         - - - - - - - - - - - - - - - - - -->
+	<?php include("byline.php"); ?>
+	
 </article>
 
 </div> <!-- wrapper -->

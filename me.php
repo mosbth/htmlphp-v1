@@ -49,11 +49,8 @@ include("header.php");
 			Jag köpte 4 böcker, läste dem, och nu testar jag. Man kan om man vill.
 			</p>
 
-			<footer class="byline">
-				<img src="img/mikael2.jpg" alt="Närbild Mikael" height="50">
-				<p>/mos</p>
-			</footer>
-			
+			<?php include("byline.php"); ?>
+				
 		</section>
 	</article>
 	

@@ -84,6 +84,9 @@ include("header.php");
 				</ul>
 		</section>
 	
+<!-- - - - - - - - - - - - - - - - - - footer         - - - - - - - - - - - - - - - - - -->
+		<?php include("byline.php"); ?>
+	
 	</article>
 
 </div> <!-- wrapper -->

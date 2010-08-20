@@ -11,8 +11,8 @@
 
 /* -------------------------------------------------------------------------------------
 /* Make some changes */
-div#top nav {	background: #caecf6; }
-div#top nav a {	background: #52afb0; color:white; }
+header#top nav {	background: #caecf6; }
+header#top nav a {	background: #52afb0; color:white; }
 
 body {
 	background: url(../img/bth_bg.jpg) no-repeat;

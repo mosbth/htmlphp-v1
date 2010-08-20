@@ -58,9 +58,10 @@ include("header.php");
 				<li><a href="#blockquote">blockquote</a>
 			</ul>
 
-			<h4><a href="#part-II">Del III: Bra att kunna</a></h4>
+			<h4><a href="#part-III">Del III: Bra att kunna</a></h4>
 			<ul>
 				<li><a href="#style-alternate">Alternativa stylesheet</a>
+				<li><a href="#print">Stylesheet för print</a>
 				<li><a href="#more">Mer jag kanske borde förklara</a>
 			</ul>
 
@@ -96,7 +97,7 @@ include("header.php");
 <?php include("$css20/body_margin_0.css"); ?>
 		</blockquote>
 
-		<p>Exempel på centrerad sida, ändra läsarens storlek för att testa. 
+		<p>Exempel på centrerad sida. Ändra läsarens storlek för att testa. 
 		<a href="?style=body_margin_auto#struc-body">Testa</a>	
 
 		<blockquote class="code">
@@ -132,11 +133,11 @@ $code = <<<EOD
 EOD;
 ?>
 		
-		<blockquote class="code">
+		<blockquote id="top-example" class="code">
 <?php echo htmlspecialchars($code, ENT_NOQUOTES, "UTF-8"); ?>
 		</blockquote>
 
-		<div id="top-example" class="example">
+		<div class="example">
 			<?php echo $code; ?>
 		</div>
 
@@ -149,17 +150,6 @@ EOD;
 
 		<p><a href="?#top-example">Återgå till ursprunglig style</a>
 		
-		<p>En variant för att hantera header är att ta bort attributet <code>id=top</code>. Man får då peka ut
-		den för styling med det som kallas "direct sibling" i CSS. 
-		Ett sådant förfarande förutsätter att det
-		endast finns en header direkt under body.
-
-		<p>Exempel av header med "direct sibling" istället för <code>id=top</code>. 
-
-		<blockquote class="code">
-body > header { display: block; }
-		</blockquote>
-
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a>
 	</section>
 		
@@ -194,11 +184,11 @@ $code = <<<EOD
 EOD;
 ?>
 		
-		<blockquote class="code">
+		<blockquote id="bottom-example" class="code">
 <?php echo htmlspecialchars($code, ENT_NOQUOTES, "UTF-8"); ?>
 		</blockquote>
 
-		<div id="bottom-example" class="example">
+		<div class="example">
 			<?php echo $code; ?>
 		</div>
 
@@ -210,16 +200,6 @@ EOD;
 		</blockquote>
 
 		<p><a href="?#bottom-example">Återgå till ursprunglig style</a>	
-
-		<p>Liksom i header kan vi använda "direct siblings" för stylning av footer.
-		Det innebär att vi tar bort attributet <code>id=bottom</code> och 
-		förutsätter att det endast finns en footer direkt under body.
-
-		<p>Exempel av footer med "direct sibling" istället för <code>id=bottom</code>. 
-
-		<blockquote class="code">
-body > footer { display: block; }
-		</blockquote>
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a>
 	</section>
@@ -244,11 +224,11 @@ $code = <<<EOD
 EOD;
 ?>
 		
-		<blockquote class="code">
+		<blockquote id="nav-example" class="code">
 <?php echo htmlspecialchars($code, ENT_NOQUOTES, "UTF-8"); ?>
 		</blockquote>
 
-		<div id="nav-example" class="example">
+		<div class="example">
 			<?php echo $code; ?>
 		</div>
 
@@ -301,11 +281,11 @@ $code = <<<EOD
 EOD;
 ?>
 		
-		<blockquote class="code">
+		<blockquote  id="wrapper-example" class="code">
 <?php echo htmlspecialchars($code, ENT_NOQUOTES, "UTF-8"); ?>
 		</blockquote>
 
-		<div id="wrapper-example" class="example">
+		<div class="example">
 			<?php echo $code; ?>
 		</div>
 		
@@ -336,10 +316,10 @@ EOD;
 	<section id="clearer"> 
 		<h3>clearer</h3>
 		
-		<p>Vid användning av flytande divs kan det behövas en och annan "clearer". Det kan behövas
+		<p>Vid användning av flytande divs kan det behövas en och annan "clearer". Det behövs
 		när en div omsluter en annan div vars storlek (höjd) är större än den div som omsluter.
 		Det har presenterats flera lösningar/fixar på detta och för egen del så finner jag en lösning
-		bestående av <overflow:auto</code> som en tilltalande variant. Den tilltalar mig eftersom 
+		bestående av <code>overflow:auto</code> som en tilltalande variant. Den tilltalar mig eftersom 
 		den är ren CSS och jag behöver inte skräpa ned min HTML-kod med extra fix-element.
 		
 		<p>Du kan läsa lite om problemställningen och olika varianter på lösningar i följande artikel.
@@ -364,21 +344,21 @@ $code = <<<EOD
 EOD;
 ?>
 		
-		<blockquote class="code">
+		<blockquote id="clearer-example" class="code">
 <?php echo htmlspecialchars($code, ENT_NOQUOTES, "UTF-8"); ?>
 		</blockquote>
 
-		<div id="clearer-example" class="example">
+		<div class="example">
 			<?php echo $code; ?>
 		</div>
 		
-		<p>Exempel 1 utan <code>overflow:auto;</a>. <a href="?style=clearer1#clearer-example">Testa</a>	
+		<p>Exempel 1 utan <code>overflow:auto;</code>. <a href="?style=clearer1#clearer-example">Testa</a>	
 
 		<blockquote class="code">
 <?php include("$css20/clearer1.css"); ?>
 		</blockquote>
 
-		<p>Exempel 2 med <code>overflow:auto;</a>. <a href="?style=clearer2#clearer-example">Testa</a>	
+		<p>Exempel 2 med <code>overflow:auto;</code>. <a href="?style=clearer2#clearer-example">Testa</a>	
 
 		<blockquote class="code">
 <?php include("$css20/clearer2.css"); ?>
@@ -411,7 +391,7 @@ EOD;
 		<p>Eftersom body är det element som omfamnar hela sidan så kan vi enkelt styla hela webbplatsens
 		grundutseende via body. Kanske med en bakgrundsfärg eller bild.
 		
-		<p>Underliggande taggar ärver ofta (inte alltid) attribut får parents (föräldrar). Det 
+		<p>Underliggande taggar ärver ofta (inte alltid) attribut av parents (föräldrar). Det 
 		innebär att om vi sätter en font i body så gäller denna font även för p, a och h1-h6.
 		
 		<p>Exempel 1 med font och bakgrund definerat i body.
@@ -441,8 +421,8 @@ EOD;
 	<section id="a"> 
 		<h3>a</h3>
 		
-		<p>Ovan har vi sett exempel på hur länkar kans stylas i länksamlingar eller som en
-		navigation-bar. Länkar förekommer också i löpande text och det kan vara bra att styla dem så 
+		<p>Ovan har vi sett exempel på hur länkar kan stylas i länksamlingar eller som en
+		navigationbar. När länkar förekommer i löpande text så är det bra att att styla dem så 
 		att texten blir lättläst utan att länkarna blir svåra att upptäcka.
 		
 		<p>Länkarna stylas olika beroende på vilket läge som gäller för länken. Varje läge kan
@@ -456,7 +436,8 @@ EOD;
 		</blockquote>
 
 		<p>Krångla inte till det, det viktigaste är att användaren kan se att det är en klickbar länk.
-		Fundera 2 extra gånger innan du tar bort understrykningen av en länk.
+		Fundera 2 extra gånger innan du tar bort understrykningen av en länk, det är understrykningen 
+		som kännetecknar länken i ett textflöde.
 		
 		<p><a href="?#a">Återgå till ursprunglig style</a>	
 
@@ -477,8 +458,8 @@ $code = <<<EOD
 EOD;
 ?>
 		
-		<p>Ofta vill man visa bilder tillsammans med en undertext. HTML-elemenen figure och figcaption
-		är till för detta och genom att styla dem kan man få det som man vill.
+		<p>Ofta vill man visa bilder tillsammans med en undertext. HTML-elementen figure och figcaption
+		är till för detta. Genom att styla dem kan man presentera dem på olika sätt.
 		
 		<blockquote class="code">
 <?php echo htmlspecialchars($code, ENT_NOQUOTES, "UTF-8"); ?>
@@ -512,7 +493,7 @@ EOD;
 <?php
 $code = <<<EOD
 <blockquote id="b1">
-Det här är källkod eller ett vackert citat, det beror på hur man stylar det.
+ Det här är källkod eller ett vackert citat, det beror på hur man stylar det.
 </blockquote>
 
 EOD;
@@ -588,11 +569,36 @@ EOD;
 	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="print"> 
+		<h3>Stylesheet för print</h3>
+		
+		<p>Visst vore det bra om det gick att skriva ut denna artikel på en skrivare. Det vore
+		ännu bättre om sidan då var stylad för just det syftet.
+		Detta gör vi med en stylesheet som är dedikerad för printer-syftet.
+
+		<p>Följande kod länkar in stylesheeten och anger vilken media som skall gälla.
+		
+		<blockquote class="code">
+&lt;link rel="stylesheet" media="all" href="style/stylesheet.css" title="Mos standard grey" type="text/css"&gt;
+&lt;link rel="stylesheet" media="print" href="style/print.css" type="text/css"&gt;
+			</blockquote>
+
+		<p>Genom att definera vilken media som skall gälla för stylesheeten så kan vi importera 
+		en speciell stylesheet när sidan skrivs ut. I denna stylesheet, <code>print.css</code>, kan vi ta bort de 
+		element som vi inte vill skriva ut.
+		<a href="style/print.css">Se följande länk för ett exempel på <code>print.css</code></a>.
+
+		<p>Testa att skriva ut denna sida. Det räcker att förhandsgranska utskriften.
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a>
+	</section>
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="more"> 
 		<h3>Mer jag kanske borde förklara</h3>
 		
 		<p>Som min egen kom-ihåg-lista så skriver jag ned de CSS-konstruktioner som kanske borde
-		varit med i denna artikel. Men tills vidare blir de endast omnämnda.
+		haft en egen sektion i denna artikel. Men tills vidare blir de endast omnämnda.
 
 		<ul>
 			<li>article
@@ -601,7 +607,7 @@ EOD;
 			<li>3 kolumner
 			<li>Tabeller
 			<li>Forms
-			<li>Stylesheet för print/mobil
+			<li>Stylesheet för mobil
 			<li>Verktyg vid utveckling av stylesheet (Web Developer och Firebug)
 		</ul>
 
@@ -609,10 +615,7 @@ EOD;
 	</section>
 
 <!-- - - - - - - - - - - - - - - - - - footer         - - - - - - - - - - - - - - - - - -->
-	<footer class="byline">
-		<figure><img src="img/mikael2.jpg" alt="Närbild Mikael" height="50"></figure>
-			<p>/mos</p>
-	</footer>
+	<?php include("byline.php"); ?>
 	
 </article>
 
