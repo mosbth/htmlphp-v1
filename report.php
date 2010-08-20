@@ -74,13 +74,20 @@ include("header.php");
 		<section>
 			<h2>Kmom02: HTML-element och CSS-konstruktioner</h2>
 	
-			<p>TBD.
+			<p>Sådär. Då var kursmoment 02 klart. Även det tog ca 40 timmar att utveckla. Det blev en hel 
+			del skrivande av HTML-20 och CSS-20. Men det känns som det är en bra början på denna kurs.
+			Det blir lite repetition av kmom01 och en möjlighet att djupdyka in i HTML och CSS standarder.
+			
+			<p>En uppdaterad me-sida blev det också. En sådan här struktur på en webbplats är helt ok.
+			I allafall om du frågar mig. Lätt att underhålla och lätt att utveckla.
+			
+			<p>Ytterligare ett steg på vägen mot en "perfekt" webbsida.
 		
 			<h3>Länkar till kursmaterialet</h3>
 				<ul>
 					<li><a href='http://bit.ly/htmlphp_kmom02'>Instruktion för kursmomentet</a>
 					<li><a href='http://github.com/mosbth/me/tree/v2.0'>Källkod</a>
-					<li><a href='http://www.student.bth.se/~mos/htmlphp/mom01/me/me.php'>Driftsmiljön</a>
+					<li><a href='http://www.student.bth.se/~mos/htmlphp/mom02/me/me.php'>Driftsmiljön</a>
 				</ul>
 		</section>
 	
