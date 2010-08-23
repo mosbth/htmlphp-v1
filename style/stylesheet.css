@@ -35,6 +35,33 @@ body#me     a#me-     { color:whitesmoke; background:#999999; }
 body#report a#report- { color:whitesmoke; background:#999999; }
 body#html20 a#html20- { color:whitesmoke; background:#999999; }
 body#css20  a#css20-  { color:whitesmoke; background:#999999; }
+body#proj   a#proj-   { color:whitesmoke; background:#999999; }
+
+
+/* -------------------------------------------------------------------------------------
+/* Subnavigation of projekt */
+nav#project {
+	display:block;
+	padding:0.0em 0.3em 0.3em 0.3em;
+	background:#f1f1ef;
+}
+
+nav#project a {
+	padding: 0.1em 1em 0.4em 1em;
+	color: #555555;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: smaller;
+	text-decoration:none; 
+}
+nav#project a:after {
+	content: " | ";
+}
+
+/* Keep current choice/link highlighted */
+body#proj-proj   a#proj-,
+body#proj-proj   a#proj-proj-  { color:whitesmoke; background:#999999; }
+body#proj-kund   a#proj-,
+body#proj-kund   a#proj-kund-  { color:whitesmoke; background:#999999; }
 
 
 /* -------------------------------------------------------------------------------------
@@ -100,12 +127,22 @@ figure.standard figcaption {
 	font-size: 0.8em;
 }
 
+.right {
+	float:right;
+}
+
 /* -------------------------------------------------------------------------------------
 /* Style for displaying code */
 blockquote.code {
 	font-family: monospace;
 	white-space: pre;
 }
+
+blockquote.quote {
+	padding: 2em 1em 1em 1em;
+	background: beige url(../img/quote.png) top left no-repeat;
+	font-style: italic;
+} 
 
 /* -------------------------------------------------------------------------------------
 /* Style for byline & signature */
@@ -115,7 +152,8 @@ footer.byline {
 	border-top: 1px dashed #999999;
 	margin-top:2em;
 	padding: 1em;
-	color: #999999;
+	color: #555555;
+	font-size: smaller;
 }
 
 footer.byline img {
