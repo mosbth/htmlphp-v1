@@ -22,7 +22,7 @@ include("header_projekt.php");
 			<p>Projektets är indelat i leveranser. Varje leverans har ett syfte och ett innehåll.
 			
 			<hgroup>
-				<h2>L1: En Outline till Begravningsmuseum Online</h2>
+				<h2>1: En Outline till Begravningsmuseum Online</h2>
 				<h3>Syfte</h3>
 			</hgroup>
 			
@@ -57,7 +57,15 @@ include("header_projekt.php");
 			<p>Webbplatsens titel är "Begravningsmuseum Online".
 			
 			<p>Använd din egen kunskap om vad ett traditionellt museum är. Ta denna kunskap och överför till ett museum online.
-			När det gäller förstasidan kan du hämta inspiration från följande förstasidor. Om du har svårt att själv klura ut
+			Museumet är till för att presentera objekt och berätta historier. Detta sker ofta via olika utställningar där
+			varje utställning ofta har ett tema. 
+			
+			<p>Pröva att googla på "Online museum", kanske finns det någon som gjort liknande saker där du kan hämta inspiration?
+			<blockquote>
+				<a href="http://www.google.com/search?q=+museum+online">Googla på Museum Online</a>
+			</blockquote>
+			
+			<p>När det gäller förstasidan kan du hämta inspiration från följande förstasidor. Om du har svårt att själv klura ut
 			en förstasida så kan du helt frankt kopiera upplägget som finns på Firefox förstasida.
 			<ul>
 				<li><a href="http://www.firefox.com">www.firefox.com</a>
@@ -67,7 +75,7 @@ include("header_projekt.php");
 			<p>Gör en enkel about-sida. Skriv att du gör detta som ett studentarbete i kursen htmlphp och vad webbplatsens är till för.
 			Du kan fylla på med text senare.
 			
-			<p>Det finns ett antal texter som du kan använda och utgå ifrån. Du finner dem här:
+			<p>Det finns ett antal texter och objekt som du kan använda och utgå ifrån. Du finner dem här:
 			
 			<ul>
 				<li><a href="begravningsseder_och_bruk.php">Begravningsseder och bruk</a>

@@ -14,26 +14,27 @@ include("header_begravning.php");
 	<article>
 		<section>
 			<header>
-				<p class="background">Följande artikel finns att läsa i "Hakarps Församlingsblad, Höst, Nr 3 - 2008"
-				och den är skriven av Maggy Larsson.
-				
-Mer om gamla traditioner finns att läsa i boken ”Begravningsseder i förändring” eller gör ett besök i 
-Begravningsmuseet i Ljungby.
-				
-
-			<p>lyssna till Ronny Holm ges här ett referat gjort med hjälp av texter från begravningsmuseet i Ljungby och boken ”Begravningsseder i för- ändring”. Boken finns att köpa på Länsmuseet. /ML
-
-
-
-				<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-08-19">19:e 
+				<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-08-23">23:e 
 				augusti 2010</time></p>
+
+				<h3>Bakgrund</h3>
+				<p class="background">Följande artikel är skriven av är skriven av Maggy Larsson och är publicerad i
+				"Hakarps Församlingsblad, Höst, Nr 3 - 2008". Maggy har gett sin tillåtelse att vi använder den.
+				
+				<p>Artikeln skrevs efter att församlingen gjorde en resa till Begravningsmuséet i Ljungby. Därefter 
+				anordnade församlingen en egen utställning. Som avslutning på utställningen berättade kyrkogårdschefen 
+				och grundaren av begravningsmuséet, Ronny Holm, om gamla begravningsseder. 
+				
+				<p>Artikeln bygger på Ronny Holm's anförande och återges med hjälp av texter från Begravningsmuséet 
+				i Ljungby och från boken ”Begravningsseder i förändring”.  
+				
 				<h1>Begravningsseder och bruk</h1>
 			</header>
 			
 <h2>Förr i tiden</h2>
 <p>Så var det förr:
 <p>Begravningen skedde förr i tiden ganska snart efter dödsfallet och den döde bars från hemmet till 
-graven. Kring mitten av 800-talet blev det allt vanligare att man körde den
+graven. Kring mitten av 1800-talet blev det allt vanligare att man körde den
 döde till kyrkan med häst och vagn.
 
 <h2>Den första likvagnen i Hakarp</h2>
@@ -42,7 +43,7 @@ leveranser till hovet, Finland och Ryssland. Vagnarna gjordes helt för hand. K
 Sandström (präst i Hakarp 1903-1923) skänkte vagnen till församlingen 1907. Vagnen användes i Hakarp mellan 
 åren 1907 och 1948. Som ny kostade vagnen ca 700 kronor. Men då vagnen så småningom ansågs ”livsfarlig”
 med dåliga bromsar överlämnades den till länsmuseet. För 1 krona inköptes Huskvarnaförsamlingens likvagn. 
-I Huskvarna anskaffades en likbil år 1947. Den då inköpta likvagnen finns nu i Garpa skans 
+I Huskvarna anskaffades en likbil år 1947. Den då inköpta likvagnen finns nu i Garpa skans 
 (vid Huskvarna kyrkogård).
 
 <h2>Begravningsbyråer</h2>
@@ -93,7 +94,7 @@ klockslaget då döden inträffade.
 <p>Vid tiden kring sekelskiftet kunde man se de första korsen i annonserna, men först vid mitten på
 1900-talet hade korssymbolen slagit igenom helt. Nyårsaftonen 1977 förekom den första
 blomman i en dödsannons 
-och idag har vi många symboler att välja bland, mer än 50 stycken. Valet av symbol motiveras oftast 
+och idag har vi många symboler att välja bland, mer än 250 stycken. Valet av symbol motiveras oftast 
 av att det ska passa in på den döda.
 <p>Det ansågs allmänt att de anhöriga skulle sörja den döde ett år. Under den tiden skulle festliga 
 tillställningar undvikas. Den sörjande borde också bära en särskild klädedräkt för att utåt visa sin 
