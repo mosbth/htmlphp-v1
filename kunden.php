@@ -63,8 +63,7 @@ include("header_projekt.php");
 			i second handbutiker varit på loppmarknader och auktioner.
 			
 			<p>I samband med att man hade en kyrkogårdsvandring arrangerades en liten utställning med föremål från Ronny Holms samling.
-
-			<p>Flera av deltagarna vid rundvandringen tyckte att utställningen var så värdefull att den borde permanentas. 
+			Flera av deltagarna vid rundvandringen tyckte att utställningen var så värdefull att den borde permanentas. 
 			I samband med Alla Helgons Dag, 2004, invigdes så Sveriges första begravningsmuseum. 
 			
 			<p>Redan efter ett par veckor hade man haft över 2000 besökare och intresset var mycket stort från både allmänhet, 
@@ -89,7 +88,7 @@ include("header_projekt.php");
 			Att spara ett kulturarv för framtida generationer, för den goda sakens skull.
 			Här är webben ett utmärkt redskap och nu finns här ett stort antal duktiga webbutvecklare.
 			
-			<p>Ronny såg klurig ut och fundera lite och sammanfattade sina funderingar med:
+			<p>Ronny Holm såg klurig ut, fundera lite och sammanfattade sina funderingar med:
 			
 			<blockquote class="quote">
 				<p>Kan man det?
