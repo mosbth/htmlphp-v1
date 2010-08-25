@@ -33,6 +33,13 @@
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom02/me/me.php'>Me-sidan</a>
 		</nav>
 
+		<nav>
+			<h5>Kmom03</h5>
+				<a href='http://bit.ly/htmlphp_kmom03'>Instruktion för kursmomentet</a>
+				<a href='http://github.com/mosbth/me/tree/v3.0'>Källkod</a>
+				<a href='http://www.student.bth.se/~mos/htmlphp/mom03/me/me.php'>Me-sidan</a>
+		</nav>
+
 		<div class="final">
 			<p>
 			Except where otherwise noted, content on this site is licensed under the
@@ -41,7 +48,7 @@
 			</p>
 <pre>
  .                        
-..:  &copy; 2010 Mikael Roos
+..:  &copy; 2010 Mikael Roos (mos@bth.se)
 </pre>
 		</div>
 

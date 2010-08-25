@@ -9,6 +9,41 @@ include("header_projekt.php");
 <div id="wrap">
 
 	<aside class="right">
+		<aside class="box">
+			<h4>Tyst kunskap</h4>
+			<p>Från Wikipedia:
+			<p class="quote">Med implicit kunskap (tyst eller outtalad kunskap) avses att kunna exempelvis knyta skorna 
+			eller cykla men inte kunna förklara hur det ska gå till utan att först visa hur man faktiskt 
+			gör. Denna kunskap är ofta underförstådd och svår att uttrycka i ord eller till och med okänd 
+			för individen, den är erfarenhetsbaserad, praktisk och erhålls genom övning och erfarenhet. 
+			Det är kunskap som "sitter i väggarna" och lärs in genom socialisering. Dess motsats är explicit 
+			eller uttalad kunskap, som är känd för individen, teoretisk, objektiv  kunskap, lätt att förstå, 
+			samla in och dokumentera.
+
+			<p>Läs om <a href="http://sv.wikipedia.org/wiki/Implicit#Psykologi">Tyst Kunskap på svenska Wikipedia</a>
+			och om <a href="http://en.wikipedia.org/wiki/Tacit_knowledge">Tacit Knowledge på engelska motsvarigheten</a>.
+			</p>
+		</aside>
+
+		<aside class="box">
+			<h4>Software Development</h4>
+			<p>Är den term som Wikipedia använder för att samla allt som rör utvecklingen av programvaror.
+			Här finns en komplett (så gott det går) översikt över de olika processer och metoder som används
+			för utveckling av programvaror.
+
+			<p>Läs om <a href="http://en.wikipedia.org/wiki/Software_development">Software Development på Wikipedia</a>.
+			</p>
+		</aside>
+
+		<aside class="box">
+			<h4>Software Engineering</h4>
+			<p>Är en yrkeskategori som utvecklar programvaror. Några anser att det är ett ingenjörsmässigt yrke medans
+			andra betraktar det mer konstform (engelska: Art).
+
+			<p>Läs om <a href="http://en.wikipedia.org/wiki/Software_engineering">Software Engineer på Wikipedia</a> och läs
+			om vad <a href="http://en.wikipedia.org/wiki/Art">begreppet Art (konst)</a> omfattar.
+			</p>
+		</aside>
 	</aside>
 
 	<article>
@@ -42,7 +77,7 @@ include("header_projekt.php");
 			planerade i följande dokument:
 
 			<blockquote>
-				<a href="planering.php">Leveransplan</a>
+				<a href="leveranser.php">Leveransplan</a>
 			</blockquote>
 			
 

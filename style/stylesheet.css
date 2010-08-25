@@ -36,6 +36,7 @@ body#report a#report- { color:whitesmoke; background:#999999; }
 body#html20 a#html20- { color:whitesmoke; background:#999999; }
 body#css20  a#css20-  { color:whitesmoke; background:#999999; }
 body#proj   a#proj-   { color:whitesmoke; background:#999999; }
+body#begr   a#begr-   { color:whitesmoke; background:#999999; }
 
 
 /* -------------------------------------------------------------------------------------
@@ -75,6 +76,7 @@ body#begr-seder   a#begr-seder-  { color:whitesmoke; background:#999999; }
 /* -------------------------------------------------------------------------------------
 /* Style for main content of the page */
 div#wrap {
+	overflow:auto;
 	width: 950px;
 	padding: 0 0 0 16px;
 }
@@ -101,6 +103,7 @@ aside {
 }
 
 aside.right {
+	padding-top: 1em;
 	float: right;
 }
 
@@ -146,11 +149,19 @@ blockquote.code {
 	white-space: pre;
 }
 
+/* -------------------------------------------------------------------------------------
+/* Style for displaying quotes */
 blockquote.quote {
 	padding: 2em 1em 1em 1em;
-	background: beige url(../img/quote.png) top left no-repeat;
+	background: #f1f1ef url(../img/quote.png) top left no-repeat;
 	font-style: italic;
 } 
+
+p.quote {
+	padding: 2em 1em 1em 1em;
+	background: #f1f1ef url(../img/quote.png) top right no-repeat;
+	font-style: italic;
+}
 
 /* -------------------------------------------------------------------------------------
 /* Style for byline & signature */
