@@ -279,5 +279,5 @@ div.example {
 /* Style for debug output */
 div.debug {
 	border:1px solid black;
-	padding: 0 2em 0 2em;
+	padding: 0 2em 2em 2em;
 }

@@ -2,7 +2,7 @@
 $sessionName = 'htmlphp_mos';
 session_name($sessionName); 
 session_start(); 
-error_reporting(-1); 
+error_reporting(-1);
 ?>
 
 <!DOCTYPE html>
