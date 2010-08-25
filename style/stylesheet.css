@@ -13,6 +13,13 @@ body {
 
 /* -------------------------------------------------------------------------------------
 /* Top of page with logo and navigation */
+header#top form.choose-style {
+	float:right;
+	padding:0.5em 1em 0 0;
+}
+header#top form.choose-style label {
+	font: smaller Arial, Helvetica, sans-serif;
+}
 header#top nav {
 	display: block;
 	padding: 0.2em 1em 0 1em;
@@ -66,6 +73,8 @@ body#proj-proj   a#proj-,
 body#proj-proj   a#proj-proj-  { color:whitesmoke; background:#999999; }
 body#proj-kund   a#proj-,
 body#proj-kund   a#proj-kund-  { color:whitesmoke; background:#999999; }
+body#proj-lev  	 a#proj-,
+body#proj-lev  	 a#proj-lev-  { color:whitesmoke; background:#999999; }
 
 /* Museum submenu: Keep current choice/link highlighted */
 body#begr-seder   a#begr-,
