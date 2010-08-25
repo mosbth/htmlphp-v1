@@ -136,7 +136,7 @@ if(isset($_GET['debug'])) {
 	echo "</pre>";
 	echo "<h3>Change Style</h3>";	
 	echo $formChooseStyle;
-	echo "<div>";
+	echo "</div>";
 }
 
 
