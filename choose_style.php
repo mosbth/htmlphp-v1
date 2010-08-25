@@ -120,7 +120,7 @@ EOD;
 // http://php.net/manual/en/function.echo.php
 //
 if(isset($_GET['debug'])) {
-	echo "<hr>";
+	echo "<div class='debug'>";
 	echo "<h2>Debug</h2>";
 	echo "<p>Style name: $styleName<br>";
 	echo "Style title: $styleTitle<br>";
@@ -136,7 +136,7 @@ if(isset($_GET['debug'])) {
 	echo "</pre>";
 	echo "<h3>Change Style</h3>";	
 	echo $formChooseStyle;
-	echo "<hr>";
+	echo "<div>";
 }
 
 
