@@ -40,7 +40,7 @@ $styles = Array(
 		"standard" 	=> Array("title" => "Mos standard grey", 	"path" => "style/stylesheet.css"),	
 		"red" 			=> Array("title" => "Mos standard red", 	"path" => "style/stylesheet_red.css"),	
 		"bth" 			=> Array("title" => "Mos BTH-ish", 				"path" => "style/stylesheet_bth.css"),	
-		"print" 		=> Array("title" => "Mos to print", 			"path" => "style/stylesheet_print.css"),	
+	//	"print" 		=> Array("title" => "Mos to print", 			"path" => "style/stylesheet_print.css"),	
 	);
 
 
@@ -51,14 +51,14 @@ $styles = Array(
 // http://php.net/manual/en/reserved.variables.get.php
 // http://php.net/manual/en/function.isset.php
 //
-if(isset($_GET['style'])) {
+if(isset($_GET['choose-style'])) {
 
 	// Check if the choosen style is valid, does it exists?
-	if(isset($styles[$_GET['style']])) {
+	if(isset($styles[$_GET['choose-style']])) {
 	
 		// Set the current choice of stylesheet in the session
 		// http://se.php.net/manual/en/reserved.variables.session.php
-		$_SESSION['style'] 	= $_GET['style'];
+		$_SESSION['style'] 	= $_GET['choose-style'];
 	}
 }
 
@@ -104,7 +104,7 @@ $formChooseStyle = <<<EOD
 <!-- Form to choose style -->
 <form class="choose-style" action="?" method="get">
 	<label>Välj stylesheet:
-		<select name="style" onchange="submit();">
+		<select name="choose-style" onchange="submit();">
 			$formOptions
 		</select>
 	</label>
