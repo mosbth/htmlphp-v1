@@ -16,6 +16,11 @@ include("header.php");
 					<h1>Redovisning av htmlphp</h1>
 					<h2>Intro</h2>
 				</hgroup>
+				<ul>
+					<li><a href="kmom01">Kmom01: Kom igång med HTML, CSS och PHP</a>
+					<li><a href="kmom02">Kmom02: HTML-element och CSS-konstruktioner</a>
+					<li><a href="kmom03">Kmom03: Projektstart av Museum Online</a>
+				</ul>
 			</header>
 			
 			<p>Här skriver du de redovisningstexter som anges i slutet av varje kursmoment.
@@ -33,7 +38,7 @@ include("header.php");
 			</p>
 		</section>
 		
-		<section>
+		<section id="kmom01">
 			<h2>Kmom01: Kom igång med HTML, CSS och PHP</h2>
 	
 			<p>Det tog en kalendervecka för att utveckla kursmomentet, ca 40 aktiva timmar och en del oredovisade
@@ -71,7 +76,7 @@ include("header.php");
 				</ul>
 		</section>
 	
-		<section>
+		<section id="kmom02">
 			<h2>Kmom02: HTML-element och CSS-konstruktioner</h2>
 	
 			<p>Sådär. Då var kursmoment 02 klart. Även det tog ca 40 timmar att utveckla. Det blev en hel 
@@ -90,7 +95,34 @@ include("header.php");
 					<li><a href='http://www.student.bth.se/~mos/htmlphp/mom02/me/me.php'>Driftsmiljön</a>
 				</ul>
 		</section>
+
+		<section id="kmom03">
+			<h2>Kmom03: Projektstart av Museum Online</h2>
 	
+			<p>Detta momentet gick lite snabbare att göra, det tog 3-4 dagar. det strulade i slutet när
+			jag skulle göra min stylesheet-väljare. Jag ville göra ett enklare exempelprogram men
+			det krävdes en del kod för att göra det. Dessutom behövs sessioner och det krånglade naturligtvis 
+			för mig. Trots att jag gjort detta ett antal gånger. Jag fick användning av min egen länk
+			som beskriver ett vanligt förekommande problem i PHP-programmering.
+			
+			<blockquote>
+				<a href="http://db-o-webb.blogspot.com/2010/02/warning-cannot-modify-header.html">http://db-o-webb.blogspot.com/2010/02/warning-cannot-modify-header.html</a>
+			</blockquote>
+			
+			<p>Det var kul att speca upp projektet, lite programvaruteknik med ordning och reda. Alltid trevligt.
+			
+			<p>Jag har stuckit ut huvudet lite och lovat kunden att detta är något vi kan fixa. Ska bli
+			spännande att se hur bra Museum Online vi kan göra. Ska bli extra kul att se hur ni tolkar
+			kundens önskemål om Begravningsmuseum Online.
+			
+			<h3>Länkar till kursmaterialet</h3>
+				<ul>
+					<li><a href='http://bit.ly/htmlphp_kmom03'>Instruktion för kursmomentet</a>
+					<li><a href='http://github.com/mosbth/me/tree/v3.04'>Källkod</a>
+					<li><a href='http://www.student.bth.se/~mos/htmlphp/mom03/me/me.php'>Driftsmiljön</a>
+				</ul>
+		</section>
+
 <!-- - - - - - - - - - - - - - - - - - footer         - - - - - - - - - - - - - - - - - -->
 		<?php include("byline.php"); ?>
 	
