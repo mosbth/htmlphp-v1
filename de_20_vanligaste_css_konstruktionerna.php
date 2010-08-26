@@ -7,12 +7,10 @@ if(isset($_GET['style'])) {
 	if(is_readable($file)) {
 		$head = "<style type='text/css'>" . file_get_contents($file) . "</style>"; 
 	} else {
-		die("Failed: File '" . $_GET['style'] . "' does not exists.");
+		die("Failed importing stylesheet: File '" . $_GET['style'] . "' does not exists.");
 	}
 }
-?>
 
-<?php
 $title = "Enligt 80-20-regeln, vilka är de vanligaste CSS-konstruktionerna?";
 $bodyId = "css20";
 include("header.php");
