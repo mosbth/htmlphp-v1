@@ -17,9 +17,9 @@ include("header.php");
 					<h2>Intro</h2>
 				</hgroup>
 				<ul>
-					<li><a href="kmom01">Kmom01: Kom igång med HTML, CSS och PHP</a>
-					<li><a href="kmom02">Kmom02: HTML-element och CSS-konstruktioner</a>
-					<li><a href="kmom03">Kmom03: Projektstart av Museum Online</a>
+					<li><a href="#kmom01">Kmom01: Kom igång med HTML, CSS och PHP</a>
+					<li><a href="#kmom02">Kmom02: HTML-element och CSS-konstruktioner</a>
+					<li><a href="#kmom03">Kmom03: Projektstart av Museum Online</a>
 				</ul>
 			</header>
 			
