@@ -12,6 +12,7 @@ include("header_projekt.php");
 	</aside>
 
 	<article>
+<!-- *********************    Section ******************************************************** -->
 		<section>
 			<header>
 				<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-08-19">19:e 
@@ -21,8 +22,16 @@ include("header_projekt.php");
 			
 			<p>Projektets är indelat i leveranser. Varje leverans har ett syfte och ett innehåll.
 			
+			<ul>
+				<li><a href="#lev01">Leverans 1: En Outline till Begravningsmuseum Online</a>
+				<li><a href="#lev02">Leverans 2: Skapa och Editera Museum Objekt</a>
+			</ul>
+		</section>
+		
+<!-- *********************    Section ******************************************************** -->
+		<section id="lev01">
 			<hgroup>
-				<h2>1: En Outline till Begravningsmuseum Online</h2>
+				<h2>Leverans 1: En Outline till Begravningsmuseum Online</h2>
 				<h3>Syfte</h3>
 			</hgroup>
 			
@@ -30,8 +39,7 @@ include("header_projekt.php");
 			<ul>
 				<li>Ge kunden något att titta på och tycka till om. Vi vill att kunden blir involverad i projektet.
 			</ul>
-			
-			
+					
 			<h3>Innehåll</h3>
 						
 			<p>Leveransens huvudsakliga innehåll är:
@@ -80,12 +88,36 @@ include("header_projekt.php");
 			<ul>
 				<li><a href="begravningsseder_och_bruk.php">Begravningsseder och bruk</a>
 			</ul>
+		</section>
+		
+<!-- *********************    Section ******************************************************** -->
+		<section id="lev02">
+			<hgroup>
+				<h2>Leverans 2: Skapa och Editera Museum Objekt</h2>
+				<h3>Syfte</h3>
+			</hgroup>
+			
+			<p>Leveransens huvudsakliga syfte är att:
+			<ul>
+				<li>Ge kunden möjlighet att själv ladda upp och editera museum-objekt.
+			</ul>
+				
+			<h3>Innehåll</h3>
+						
+			<p>Leveransens huvudsakliga innehåll är:
+			<ul>
+				<li>....		
+			</ul>
 
+			<h3>Tips från coachen</h3>
+			
+			<p>...
+			
+		</section>			
 			
 
-			<?php include("byline.php"); ?>
+		<?php include("byline.php"); ?>
 				
-		</section>
 	</article>
 	
 </div> <!-- wrapper -->

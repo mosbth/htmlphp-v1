@@ -60,6 +60,7 @@ include("header.php");
 			<ul>
 				<li><a href="#style-alternate">Alternativa stylesheet</a>
 				<li><a href="#print">Stylesheet för print</a>
+				<li><a href="#form">Formulär</a>
 				<li><a href="#more">Mer jag kanske borde förklara</a>
 			</ul>
 
@@ -592,6 +593,27 @@ EOD;
 	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="form"> 
+		<h3>Formulär</h3>
+		
+		<p>Använd i första hand CSS för att styla formulären. Använd inte tabeller.
+		Det är möjligt att göra en struktur av HTML elementen och därefter styla på ett par olika sätt.
+		Det kan dock betyda att det underlättar med en eller annan div som wrappar innehållet i formuläret.
+		
+		<p><a href="http://dbwebb.se/htmlphp/mom04/formexample/">Se exempel på ett litet formulär, 
+		stylat med CSS</a>. Klicka på "source" i footern så ser du källkoden till exemplet.
+
+		<p>Testa att styla dina formulär. Utgå ifrån en struktur av HTML elementen och testa olika stylar
+		via följande länk.
+
+		<blockquote>
+			<a href="http://dbwebb.se/htmlphp/mom04/style/">Styla forms</a>
+		</blockquote>
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="more"> 
 		<h3>Mer jag kanske borde förklara</h3>
 		
@@ -599,12 +621,12 @@ EOD;
 		haft en egen sektion i denna artikel. Men tills vidare blir de endast omnämnda.
 
 		<ul>
+			<li>Att sätta flera html5-element som display:block;
 			<li>article
 			<li>aside
 			<li>2 kolumner
 			<li>3 kolumner
 			<li>Tabeller
-			<li>Forms
 			<li>Stylesheet för mobil
 			<li>Verktyg vid utveckling av stylesheet (Web Developer och Firebug)
 		</ul>

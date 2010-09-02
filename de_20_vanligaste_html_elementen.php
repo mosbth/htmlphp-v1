@@ -56,6 +56,7 @@ include("header.php");
 				<li><a href="#ul-li">&lt;ul&gt; - &lt;li&gt;</a>
 				<li><a href="#blockquote">&lt;blockquote&gt;</a>
 				<li><a href="#figure">&lt;figure&gt;</a>
+				<li><a href="#form">&lt;form&gt;, &lt;fieldset&gt; och &lt;label&gt;</a>
 				<li><a href="#other">Fler vanliga element</a>
 			</ul>
 	</header>
@@ -632,6 +633,48 @@ include("header.php");
 	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="form"> 
+		<h3>&lt;form&gt;, &lt;fieldset&gt; och &lt;label&gt;</h3>
+		<p>Det är en varm rekommendation att alltid använda fieldset, legend och label när det gäller forms.
+		Se följande exempel som en liten guide.
+		
+<?php
+$code = <<<EOD
+<form class=form>
+  <fieldset>
+    <legend>legend</legend>
+    <label>text: <input type=text></label>
+    <label>password: <input type=password></label>
+    <label>select: 
+      <select>
+        <option>ett</option>
+        <option>två</option>
+        <option>tre</option>
+      </select>
+    </label>
+    <input type=submit>
+  </fieldset>
+</form>
+
+EOD;
+?>
+		
+		<blockquote class="code">
+<?php echo htmlspecialchars($code, ENT_NOQUOTES, "UTF-8"); ?>
+		</blockquote>
+
+		<div class="example">
+			<?php echo $code; ?>
+		</div>
+		
+		<p><a href="http://dbwebb.se/htmlphp/mom04/forms/">Studera olika typer av form-element</a>.
+
+		<p><a href="de_20_vanligaste_css_konstruktionerna.php#form">Läs om stylning av formuläret på CSS-20</a>.
+		
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="other"> 
 		<h3>Fler vanliga element</h3>
 		<p>
@@ -641,7 +684,6 @@ include("header.php");
 			<ul>
 				<li>&lt;a&gt;
 				<li>&lt;img&gt;
-				<li>&lt;form&gt;
 				<li>&lt;table&gt;					
 				<li>&lt;strong&gt;					
 				<li>&lt;em&gt;					
