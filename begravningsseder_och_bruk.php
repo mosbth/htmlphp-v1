@@ -18,7 +18,7 @@ include("header_begravning.php");
 				augusti 2010</time></p>
 
 				<h3>Bakgrund</h3>
-				<p class="background">Följande artikel är skriven av är skriven av Maggy Larsson och är publicerad i
+				<p class="background">Följande artikel är skriven av Maggy Larsson och är publicerad i
 				"Hakarps Församlingsblad, Höst, Nr 3 - 2008". Maggy har gett sin tillåtelse att vi använder den.
 				
 				<p>Artikeln skrevs efter att församlingen gjorde en resa till Begravningsmuséet i Ljungby. Därefter 
@@ -96,6 +96,8 @@ klockslaget då döden inträffade.
 blomman i en dödsannons 
 och idag har vi många symboler att välja bland, mer än 250 stycken. Valet av symbol motiveras oftast 
 av att det ska passa in på den döda.
+
+<h2>Klädsel</h2>
 <p>Det ansågs allmänt att de anhöriga skulle sörja den döde ett år. Under den tiden skulle festliga 
 tillställningar undvikas. Den sörjande borde också bära en särskild klädedräkt för att utåt visa sin 
 sorg. Svart är av traditionen sorgens färg och den svarta sorgdräkten blev vanlig i slutet
