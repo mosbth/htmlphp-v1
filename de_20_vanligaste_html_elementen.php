@@ -536,7 +536,7 @@ include("header.php");
 		
 		<blockquote class="code">
 &lt;p&gt;Här är en paragraf utan sluttagg.
-&lt;p&gt;Den följs av denna paragraf med sluttagg.&lt;p&gt;
+&lt;p&gt;Den följs av denna paragraf med sluttagg.&lt;/p&gt;
 		</blockquote>
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>

@@ -34,6 +34,12 @@ error_reporting(-1);
  	
  	<!-- Use PHP to add style information, used by the CSS-20 page to display examples -->
 	<?php if(!empty($head)) echo $head; ?>
+
+	<!-- Help Internet Explorer understand HTML5 elements http://code.google.com/p/html5shiv/ -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
 </head>
 
 <!-- Use PHP to set id of body, used to highlight current page, together with styling information -->

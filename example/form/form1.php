@@ -1,24 +1,15 @@
-<?php
-$title = "Formulär för att arbeta med Museum Objekt";
-$bodyId = "begr-form";
-include("header.php");
-include("header_begravning.php"); 
-?>
+<!DOCTYPE html>
+<html lang="sv">
 
-<!-- - - - - - - - - - - - - - - - - - wrap whole content - - - - - - - - - - - - - - -->
-<div id="wrap">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" media="all" type="text/css" href="forms.css" title="Mos standard form layout">
+	<link rel="shortcut icon" href="../../img/favicon.ico">
+ 	<title>Exempel formulär, del 1</title>
+</head>
 
-<!-- - - - - - - - - - - - - - - - - - aside        - - - - - - - - - - - - - - - - - -->
-<aside class="right">
-</aside>
-
-<!-- - - - - - - - - - - - - - - - - - *******      - - - - - - - - - - - - - - - - - -->
-<article>
-
-	<h1>Hantera objekt med formulär</h1>
-	<p>Använd formulär för att låta kunden editera och spara information om objekten.
-
-	<form class=standard method=post>
+<body>
+	<form class="standard w600" method=post>
 	 <fieldset>
 		<legend>Hantera Museum Objekt</legend>
 	
@@ -38,18 +29,14 @@ include("header_begravning.php");
 		<output>
 			<?php
 				if(isset($_POST['submit'])) {
-					echo "Sparat";
+					echo "Sparat med följande värden:<pre>";
+					print_r($_POST);
+					echo "</pre>";
 				}
 			?>
 		</output>
 		
 	 </fieldset>
 	</form>
-
-
-	<?php include("byline.php"); ?>
-
-</article>
-</div> <!-- id=wrap -->
-
-<?php include("footer.php"); ?>
+</body>
+</html>

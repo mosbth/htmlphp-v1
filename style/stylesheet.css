@@ -4,12 +4,18 @@
  */
 
 /* -------------------------------------------------------------------------------------
+/* Import more stylesheets where styles are saved in separate stylesheets */
+@import url(forms.css); /* style for forms and formelements */
+
+
+/* -------------------------------------------------------------------------------------
 /* Style for all body elements that may inherit */
 body {
 	margin: 0;
 	font-family: Georgia, serif;
 	color: #333333;
 }
+
 
 /* -------------------------------------------------------------------------------------
 /* Top of page with logo and navigation */
@@ -84,7 +90,6 @@ body#begr-form   	a#begr-,
 body#begr-form   	a#begr-form-	{ color:#f5f5f5; background:#999999; }
 
 
-
 /* -------------------------------------------------------------------------------------
 /* Style for main content of the page */
 div#wrap {
@@ -108,6 +113,7 @@ section.columns2 {
 	column-count: 2;
 }
 
+
 /* -------------------------------------------------------------------------------------
 /* Style for aside elements */
 aside {
@@ -128,6 +134,7 @@ aside.box {
 	border-right: 3px solid #999999;
 }
 aside.box p {	font-size: smaller; }
+
 
 /* -------------------------------------------------------------------------------------
 /* Style for figure/pictures */
@@ -154,12 +161,14 @@ figure.standard figcaption {
 	float:right;
 }
 
+
 /* -------------------------------------------------------------------------------------
 /* Style for displaying code */
 blockquote.code {
 	font-family: monospace;
 	white-space: pre;
 }
+
 
 /* -------------------------------------------------------------------------------------
 /* Style for displaying quotes */
@@ -174,6 +183,7 @@ p.quote {
 	background: #f1f1ef url(../img/quote.png) top right no-repeat;
 	font-style: italic;
 }
+
 
 /* -------------------------------------------------------------------------------------
 /* Style for byline & signature */
@@ -191,11 +201,13 @@ footer.byline img {
 	float: right;
 }
 
+
 /* -------------------------------------------------------------------------------------
 /* Style for headers */
 h1,h2,h3,h4,h5,h6 {
 /* inherits font and color from body */
 }
+
 
 /* -------------------------------------------------------------------------------------
 /* Style for paragraphs */
@@ -215,6 +227,7 @@ p.go-to-start {
 	font-style: italic;
 }
 
+
 /* -------------------------------------------------------------------------------------
 /* Style for a links */
 a {
@@ -224,6 +237,7 @@ a:link    { }
 a:visited { }
 a:hover   { text-decoration: none;  color: #333333; background: #e3e3df;}
 a:active  { }
+
 
 /* -------------------------------------------------------------------------------------
 /* Style for the footer and related footer elements */
