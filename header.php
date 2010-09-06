@@ -12,7 +12,7 @@ error_reporting(-1);
 	<meta charset="utf-8">
 
 	<!-- Use meta to ease indexing made by search engines -->
-	<meta name="keywords"    content="HTML, CSS, PHP, SQL">
+	<meta name="keywords"    content="HTML, CSS, PHP, SQL, distansundervisning, datavetenskap, programvaruteknik, programmering, webb">
  	<meta name="description" content="Distansundervisning av Databaser och Webb">
  	<meta name="author"      content="Mikael Roos, mos@bth.se">	
  	<meta name="copyright"   content="Copyright 2010">	
@@ -45,7 +45,7 @@ error_reporting(-1);
 		<!-- Use PHP to print the form to choose style -->
 		<?php echo $formChooseStyle; ?>
 
-		<img src="img/logo.png" alt="htmlphp me" width=200 height=100>
+		<a href="hem.php"><img src="img/logo.png" alt="htmlphp me" width=200 height=100></a>
 		<nav>
 			<a id="me-"     href="me.php">Me</a> 
 			<a id="report-" href="report.php">Redovisning</a> 

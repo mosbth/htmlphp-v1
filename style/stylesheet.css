@@ -20,6 +20,7 @@ header#top form.choose-style {
 header#top form.choose-style label {
 	font: smaller Arial, Helvetica, sans-serif;
 }
+header#top a:hover {background:none;} /* No effect when hovering the lika on top image/logo */
 header#top nav {
 	display: block;
 	padding: 0.2em 1em 0 1em;
@@ -38,12 +39,12 @@ header#top nav a:hover   { color: #111111; background: #999999; }
 header#top nav a:active  { }
 
 /* Keep current choice/link highlighted */
-body#me     a#me-     { color:whitesmoke; background:#999999; }
-body#report a#report- { color:whitesmoke; background:#999999; }
-body#html20 a#html20- { color:whitesmoke; background:#999999; }
-body#css20  a#css20-  { color:whitesmoke; background:#999999; }
-body#proj   a#proj-   { color:whitesmoke; background:#999999; }
-body#begr   a#begr-   { color:whitesmoke; background:#999999; }
+body#me     a#me-     { color:#f5f5f5; background:#999999; }
+body#report a#report- { color:#f5f5f5; background:#999999; }
+body#html20 a#html20- { color:#f5f5f5; background:#999999; }
+body#css20  a#css20-  { color:#f5f5f5; background:#999999; }
+body#proj   a#proj-   { color:#f5f5f5; background:#999999; }
+body#begr   a#begr-   { color:#f5f5f5; background:#999999; }
 
 
 /* -------------------------------------------------------------------------------------
@@ -70,15 +71,17 @@ nav#begravning a:after {
 
 /* Project submenu: Keep current choice/link highlighted */
 body#proj-proj   a#proj-,
-body#proj-proj   a#proj-proj-  { color:whitesmoke; background:#999999; }
+body#proj-proj   a#proj-proj- { color:#f5f5f5; background:#999999; }
 body#proj-kund   a#proj-,
-body#proj-kund   a#proj-kund-  { color:whitesmoke; background:#999999; }
+body#proj-kund   a#proj-kund- { color:#f5f5f5; background:#999999; }
 body#proj-lev  	 a#proj-,
-body#proj-lev  	 a#proj-lev-  { color:whitesmoke; background:#999999; }
+body#proj-lev  	 a#proj-lev-	{ color:#f5f5f5; background:#999999; }
 
 /* Museum submenu: Keep current choice/link highlighted */
 body#begr-seder   a#begr-,
-body#begr-seder   a#begr-seder-  { color:whitesmoke; background:#999999; }
+body#begr-seder   a#begr-seder- { color:#f5f5f5; background:#999999; }
+body#begr-form   	a#begr-,
+body#begr-form   	a#begr-form-	{ color:#f5f5f5; background:#999999; }
 
 
 
