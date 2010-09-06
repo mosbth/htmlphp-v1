@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Skyddad del av webbapplikationen"
+AuthUserFile /usr/home/mos/git/htmlphp/example/form/protect/passwords
+Require user doe

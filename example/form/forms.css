@@ -33,6 +33,7 @@ form.standard label {
 }
 
 form.standard textarea,
+form.standard input[type=number],
 form.standard input[type=text],
 form.standard input[type=url]
 {
