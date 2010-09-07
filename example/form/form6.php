@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" media="all" type="text/css" href="forms.css" title="Mos standard form layout">
 	<link rel="shortcut icon" href="../../img/favicon.ico">
- 	<title>Exempel formulär, del 3</title>
+ 	<title>Exempel formulär, del 5</title>
 </head>
 
 <?php
@@ -15,114 +15,101 @@
 // 
 error_reporting(-1);
 
-
-// -------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------
 //
-// Function to open and read a directory, return its content as an array.
+// Create a function to validate incoming values. Makes better code.
 //
-// $aPath: A path to the directory to scan for files. 
-// 
-//	http://php.net/manual/en/function.is-dir.php
-//	http://php.net/manual/en/function.opendir.php
-//	http://php.net/manual/en/function.readdir.php
-//	http://php.net/manual/en/function.is-file.php
-//	http://php.net/manual/en/function.closedir.php
-//	http://php.net/manual/en/function.sort.php
-//	
-function readDirectory($aPath) {
-	$list = Array();
-	if(is_dir($aPath)) {
-		if ($dh = opendir($aPath)) {
-			while (($file = readdir($dh)) !== false) {
-				if(is_file("$aPath/$file") && $file != '.htaccess') {
-					$list[$file] = "$file";
-				}
-			}
-			closedir($dh);
-		}
-	}
-	sort($list, SORT_NUMERIC);
-	return $list;
+//	http://php.net/manual/en/functions.user-defined.php
+//	http://php.net/manual/en/functions.arguments.php
+//	http://php.net/manual/en/functions.returning-values.php
+//
+function validatePost($aEntry, $aDefault) {
+	return (isset($_POST[$aEntry]) && !empty($_POST[$aEntry]) ? strip_tags($_POST[$aEntry]) : $aDefault);
 }
 
 
 // ---------------------------------------------------------------------------------------------
 //
-// Do some initial checking, validating and defining/setting of variables. 
+// Do some initial checking and defining/setting of variables. 
 //
-$output	= "";
+$id 			= validatePost('id', 0);
+$filename = "objects/$id";
+$output 	= "";
 
 
-// ---------------------------------------------------------------------------------------------
 //
-// Create a clickable list of all files saved in the objects-directory.
-// Use $_GET to send the id of the file/object to display.
+// Double check that $id is a number since we will use it as filename
 //
-//	http://php.net/manual/en/language.constants.predefined.php
+//	http://php.net/manual/en/function.is-numeric.php
+//	http://php.net/manual/en/function.die.php
 //
-$files = readDirectory(dirname(__FILE__) . "/objects");
-
-$objects = "";
-foreach($files as $val) {
-	$objects .= "<a href='?id=$val'>$val</a> ";
+if(!(is_numeric($id) && $id >= 0)) {
+	$output = "<p>FEL: Id är inte en siffra. Id måste vara ett positivt heltal eller 0.";
+	die($output);
 }
 
 
 // ---------------------------------------------------------------------------------------------
 //
-// Take action if the form is to be saved
+// Only do this if the form is submitted
+//
+//	http://php.net/manual/en/control-structures.if.php
+//	http://php.net/manual/en/function.empty.php
 //
 if(!empty($_POST['doSave'])) {
 	
+	// ---------------------------------------------------------------------------------------------
 	//
-	// Removed saving in this example, just to reduce the amount of code 
+	// Validate the input, no need to end up in a forum like this: https://www.flashback.org/f16 
+	// Give some default values if appropriate
 	//
-	$output .= "Filen sparas inte i detta exempel. ";
-}
+	$title 			= validatePost('title', 'Titel saknas');
+	$ingress		= validatePost('ingress', 'Ingress saknas');
+	$text 			= validatePost('text', 'Text saknas');
+	$image 			= validatePost('image', 'no-image.png');
+	$year 			= validatePost('year', 'Årtal saknas');
+	$owner 			= validatePost('owner', 'Ägare saknas');
+	$trustee 		= validatePost('trustee', 'Förvaltare saknas');
+	$background	= validatePost('background', 'Bakgrund saknas');
+	
 
+	// ---------------------------------------------------------------------------------------------
+	//
+	// Create an array of all items and write it to disk in the subdirectory named 'objects'.
+	// Change mod to 777 on the directory to enable webserver to create files.
+	//
+	// 	http://php.net/manual/en/function.array.php
+	//	http://php.net/manual/en/function.file-put-contents.php
+	//	http://php.net/manual/en/function.serialize.php
+	//
+	$obj = Array(
+			'id'					=> $id,
+			'title' 			=> $title,
+			'ingress' 		=> $ingress,
+			'text' 				=> $text,
+			'image' 			=> $image,
+			'year' 				=> $year,
+			'owner' 			=> $owner,
+			'trustee' 		=> $trustee,
+			'background' 	=> $background,
+		);
+	file_put_contents($filename, serialize($obj));
+	$output .= "Filen sparades. ";
+}
 
 // ---------------------------------------------------------------------------------------------
 //
-// Read info from file, if the id is set, if the id=0 then do nothing and produce a empty form.
+// Read info from file
 //
 //	http://php.net/manual/en/function.file-get-contents.php
 //	http://php.net/manual/en/function.unserialize.php
-//	http://php.net/manual/en/function.is-file.php
 //
-$id 			= isset($_GET['id']) ? $_GET['id'] : 0;
-$filename = "objects/$id";
-$obj = Array(
-		'id'					=> '',
-		'title' 			=> '',
-		'ingress' 		=> '',
-		'text' 				=> '',
-		'image' 			=> '',
-		'year' 				=> '',
-		'owner' 			=> '',
-		'trustee' 		=> '',
-		'background' 	=> '',
-	);
-
-if(!is_numeric($id) || $id < 0) {
-	// The id is invalid
-	$output .= "Filens id var ej korrekt angivet. ";	
-} else if($id == 0) {
-	// Do nothing, just produce an empty form
-} else if(is_file($filename)) {
-	// Read file into array
-	$obj = unserialize(file_get_contents($filename));
-	$output .= "Filen lästes in från disk. ";
-} else {
-	// The file does not exists
-	$output .= "Filen kunde inte hittas på disken. ";	
-}	
+$obj = unserialize(file_get_contents($filename));
 
 
 ?>
 
 <body>
-	<p>Följande objekt finns sparade:
-	<p><?php echo $objects; ?>
 	<form class="standard w600" method=post>
 	 <fieldset>
 		<legend>Hantera Museum Objekt</legend>

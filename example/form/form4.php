@@ -20,6 +20,8 @@ error_reporting(-1);
 //
 // Function to open and read a directory, return its content as an array.
 //
+// $aPath: A path to the directory to scan for files. 
+// 
 //	http://php.net/manual/en/function.is-dir.php
 //	http://php.net/manual/en/function.opendir.php
 //	http://php.net/manual/en/function.readdir.php
@@ -66,15 +68,39 @@ if(!empty($_POST['doSave'])) {
 
 // ---------------------------------------------------------------------------------------------
 //
-// Read info from file, if the id is set
+// Read info from file, if the id is set, if the id=0 then do nothing and produce a empty form.
 //
 //	http://php.net/manual/en/function.file-get-contents.php
 //	http://php.net/manual/en/function.unserialize.php
+//	http://php.net/manual/en/function.is-file.php
 //
-if(isset($_GET['id']) && is_numeric($_GET['id'])) {
-	$obj = unserialize(file_get_contents("objects/" . $_GET['id']));
+$id 			= isset($_GET['id']) ? $_GET['id'] : 0;
+$filename = "objects/$id";
+$obj = Array(
+		'id'					=> '',
+		'title' 			=> '',
+		'ingress' 		=> '',
+		'text' 				=> '',
+		'image' 			=> '',
+		'year' 				=> '',
+		'owner' 			=> '',
+		'trustee' 		=> '',
+		'background' 	=> '',
+	);
+
+if(!is_numeric($id) || $id < 0) {
+	// The id is invalid
+	$output .= "Filens id var ej korrekt angivet. ";	
+} else if($id == 0) {
+	// Do nothing, just produce an empty form
+} else if(is_file($filename)) {
+	// Read file into array
+	$obj = unserialize(file_get_contents($filename));
 	$output .= "Filen lästes in från disk. ";
-}
+} else {
+	// The file does not exists
+	$output .= "Filen kunde inte hittas på disken. ";	
+}	
 
 
 // ---------------------------------------------------------------------------------------------

@@ -68,8 +68,8 @@ if(!empty($_POST['doSave'])) {
 	//	http://php.net/manual/en/function.is-numeric.php
 	//	http://php.net/manual/en/function.die.php
 	//
-	is_numeric($id) && $id >= 0 
-		or die("<p>FEL: Id är inte en siffra. Id måste vara ett positivt heltal eller 0.");
+	is_numeric($id) && $id > 0 
+		or die("<p>FEL: Id är inte en siffra. Id måste vara ett positivt heltal och större än 0.");
 
 
 	// ---------------------------------------------------------------------------------------------
