@@ -24,7 +24,7 @@
 		<label>Bakgrund:<textarea name=background placeholder="Bakgrund, hur hittade objektet fram till dess nuvarande ägare och förvaltare"></textarea></label>
 				
 		<input type=reset value="Återställ" title="Återställ formuläret till dess ursprunliga läge">
-		<input type=submit name=doSubmit value="Spara" title="Spara alla ändringar">
+		<input type=submit name=doSave value="Spara" title="Spara alla ändringar">
 		
 		<output>
 <?php
@@ -41,7 +41,7 @@ error_reporting(-1);
 //	http://php.net/manual/en/control-structures.if.php
 //	http://php.net/manual/en/function.empty.php
 //
-if(!empty($_POST['doSubmit'])) {
+if(!empty($_POST['doSave'])) {
 	
 	// ---------------------------------------------------------------------------------------------
 	//
@@ -68,8 +68,8 @@ if(!empty($_POST['doSubmit'])) {
 	//	http://php.net/manual/en/function.is-numeric.php
 	//	http://php.net/manual/en/function.die.php
 	//
-	is_numeric($id) && $id > 0 
-		or die("<p>FEL: Id är inte en siffra. Id måste vara ett positivt heltal.");
+	is_numeric($id) && $id >= 0 
+		or die("<p>FEL: Id är inte en siffra. Id måste vara ett positivt heltal eller 0.");
 
 
 	// ---------------------------------------------------------------------------------------------
