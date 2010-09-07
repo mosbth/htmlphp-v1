@@ -39,5 +39,6 @@
 		
 	 </fieldset>
 	</form>
+	<p><a href="../../source.php?dir=example/form&file=<?php echo basename(__FILE__); ?>"><em>Källkod</em></a>
 </body>
 </html>
