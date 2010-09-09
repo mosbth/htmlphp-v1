@@ -18,6 +18,7 @@
 		<label>Ingress:<textarea name=ingress placeholder="Ingress, en kortare och slagkraftig intro till objektet"></textarea></label>
 		<label>Text:<textarea name=text placeholder="Text, en beskrivning av objektet"></textarea></label>
 		<label>Bild:<input type=url name=image placeholder="Bild, en länk till en bild på objektet"></label>
+		<img src="<?php echo $obj['image']; ?>" alt="[Bild saknas]">
 		<label>Årtal:<input type=text name=year placeholder="Årtal, när skapades objektet, årtal, spann av år eller sekel"></label>
 		<label>Ägare:<input type=text name=owner placeholder="Ägare, vem äger objektet"></label>
 		<label>Förvaltare:<input type=text name=trustee placeholder="Förvaltare, vem förvaltar objektet för tillfället"></label>

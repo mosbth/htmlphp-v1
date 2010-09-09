@@ -35,10 +35,18 @@ form.standard label {
 form.standard textarea,
 form.standard input[type=number],
 form.standard input[type=text],
-form.standard input[type=url]
-{
+form.standard input[type=url] {
 	width:100%;
 	font:inherit;
+}
+
+form.standard img[alt] {
+	display:block;
+	padding-bottom:1em;
+	font:inherit;
+	font-style:italic;
+	font-size:smaller;
+	color:#999999;
 }
 
 form.standard textarea {

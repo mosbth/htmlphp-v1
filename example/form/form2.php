@@ -5,114 +5,193 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" media="all" type="text/css" href="forms.css" title="Mos standard form layout">
 	<link rel="shortcut icon" href="../../img/favicon.ico">
- 	<title>Exempel formulär, del 2</title>
+ 	<title>Exempel formulär, del 5</title>
 </head>
 
-<body>
-	<form class="standard w600" method=post>
-	 <fieldset>
-		<legend>Hantera Museum Objekt</legend>
-	
-		<label>Id:<input type=number name=id placeholder="Id på objektet, en siffra "></label>
-		<label>Titel:<input type=text name=title placeholder="Titel/namn på objektet"></label>
-		<label>Ingress:<textarea name=ingress placeholder="Ingress, en kortare och slagkraftig intro till objektet"></textarea></label>
-		<label>Text:<textarea name=text placeholder="Text, en beskrivning av objektet"></textarea></label>
-		<label>Bild:<input type=url name=image placeholder="Bild, en länk till en bild på objektet"></label>
-		<label>Årtal:<input type=text name=year placeholder="Årtal, när skapades objektet, årtal, spann av år eller sekel"></label>
-		<label>Ägare:<input type=text name=owner placeholder="Ägare, vem äger objektet"></label>
-		<label>Förvaltare:<input type=text name=trustee placeholder="Förvaltare, vem förvaltar objektet för tillfället"></label>
-		<label>Bakgrund:<textarea name=background placeholder="Bakgrund, hur hittade objektet fram till dess nuvarande ägare och förvaltare"></textarea></label>
-				
-		<input type=reset value="Återställ" title="Återställ formuläret till dess ursprunliga läge">
-		<input type=submit name=doSave value="Spara" title="Spara alla ändringar">
-		
-		<output>
 <?php
 // ---------------------------------------------------------------------------------------------
 //
+// SET ERROR REPORTING TO ON
 // Always set error reporting to on, will save a load of time during development and testing
 // 
 error_reporting(-1);
 
+
 // ---------------------------------------------------------------------------------------------
 //
-// Only do this if the form is submitted
+// FUNCTION
+// Function to validate incoming values. Reduces code writing.
 //
-//	http://php.net/manual/en/control-structures.if.php
+// $aArray: An array containing the values, for example $_POST or $_GET
+// $aEntry: An entry in the array, for example 'id' or 'title'
+// $aDefault: Default value to use when the array-entry is not set or is empty.
+//
+//	http://www.w3schools.com/php/php_functions.asp
+//
+//	http://php.net/manual/en/functions.user-defined.php
+//	http://php.net/manual/en/functions.arguments.php
+//	http://php.net/manual/en/functions.returning-values.php
+//  http://php.net/manual/en/control-structures.if.php
+//	http://php.net/manual/en/control-structures.else.php
+//	http://php.net/manual/en/language.operators.logical.php
+//	http://php.net/manual/en/function.isset.php
+//	http://php.net/manual/en/function.empty.php
+//	http://php.net/manual/en/function.strip-tags.php
+//
+function validateIncoming($aArray, $aEntry, $aDefault) {
+	if(isset($aArray[$aEntry]) && !empty($aArray[$aEntry])) {
+		return strip_tags($aArray[$aEntry]);
+	} else {
+		return $aDefault;
+	}
+}
+
+
+// ---------------------------------------------------------------------------------------------
+//
+// VALIDATE INCOMING VALUES FROM POST AND GET VARIABLES.
+// Do some initial checking, validating and defining/setting of variables that will be used
+// all through the script. 
+//
+//
+
+//
+// Get id from POST, defaults to 0.
+// This way id will always have a value which may be convienient.
+//
+//	http://www.w3schools.com/php/php_if_else.asp
+//	http://www.w3schools.com/php/php_operators.asp
+//
+//  http://php.net/manual/en/control-structures.if.php
+//	http://php.net/manual/en/language.operators.assignment.php
+//	http://php.net/manual/en/function.is-numeric.php
+//	http://php.net/manual/en/function.die.php
+//
+$id = validateIncoming($_POST, 'id', 0);	// Get id from _POST, use 0 as default
+if(!is_numeric($id) || $id < 0) {
+	die("Id är ej giltigt.");
+}
+
+//
+// Create variables used all over the script
+//
+// $filename: Which file to work with and where to store it.
+// $output: Some text providing feedback to the user on what happened
+// $obj: An array of all form values, to be used to store to and read from file.
+//
+//	http://www.w3schools.com/php/php_variables.asp
+//	http://www.w3schools.com/php/php_arrays.asp
+//	http://www.w3schools.com/php/php_ref_array.asp
+//
+//	http://php.net/manual/en/language.variables.basics.php
+//	http://php.net/manual/en/function.array.php
+//	http://php.net/manual/en/ref.array.php
+//
+$filename = "objects/$id";
+$output		= "";
+$obj = Array(
+		'id'					=> '',
+		'title' 			=> '',
+		'ingress' 		=> '',
+		'text' 				=> '',
+		'image' 			=> '',
+		'year' 				=> '',
+		'owner' 			=> '',
+		'trustee' 		=> '',
+		'background' 	=> '',
+	);
+
+
+// ---------------------------------------------------------------------------------------------
+//
+// SAVE FORM
+// Take action if the form is to be saved, allow numeric id > 0
+//
+if(!empty($_POST['doSave']) && $id > 0) {
+	$output .= "<p><em>SAVE: Ännu inte implementerat.</em> ";
+}
+
+
+// ---------------------------------------------------------------------------------------------
+//
+// CLEAR
+// Clear the form and produce an empty form. Setting id=0 will do this.
+//
+if(!empty($_POST['doClear'])) {	
+	$output .= "<p><em>CLEAR: Ännu inte implementerat.</em> ";
+}
+
+
+// ---------------------------------------------------------------------------------------------
+//
+// ADD
+// Add a new empty object. Give the new object a unique id.
+//
+if(!empty($_POST['doAdd'])) {	
+	$output .= "<p><em>ADD: Ännu inte implementerat.</em> ";
+}
+
+
+// ---------------------------------------------------------------------------------------------
+//
+// READ FROM FILE
+// Read info from file, if the id is set, if the id=0 then do nothing and produce a empty form.
+//
+if($id == 0) {
+	// Do nothing, just produce an empty form
+} else {
+	// Read file from disk
+	$output .= "<p><em>READ FROM FILE: Ännu inte implementerat.</em> ";
+}	
+
+
+// ---------------------------------------------------------------------------------------------
+//
+// DELETE
+// Take action if the object is to be deleted
+//
 //	http://php.net/manual/en/function.empty.php
 //
-if(!empty($_POST['doSave'])) {
-	
-	// ---------------------------------------------------------------------------------------------
-	//
-	// Validate the input, no need to end up in a forum like this: https://www.flashback.org/f16 
-	// Give some default values if appropriate
-	//
-	// 	http://php.net/manual/en/function.isset.php
-	// 	http://php.net/manual/en/function.strip-tags.php
-	// 	http://php.net/manual/en/language.operators.comparison.php#language.operators.comparison.ternary
-	//
-	$id					= isset($_POST['id']) 				&& !empty($_POST['id'])					? strip_tags($_POST['id']) 					: 0;
-	$title 			= isset($_POST['title']) 			&& !empty($_POST['title']) 			? strip_tags($_POST['title'])		 		: 'Titel saknas';
-	$ingress		= isset($_POST['ingress']) 		&& !empty($_POST['ingress']) 		? strip_tags($_POST['ingress'])		 	: 'Ingress saknas';
-	$text 			= isset($_POST['text']) 			&& !empty($_POST['text']) 			? strip_tags($_POST['text'])	 			: 'Text saknas';
-	$image 			= isset($_POST['image']) 			&& !empty($_POST['image']) 			? strip_tags($_POST['image'])	 			: 'no-image.png';
-	$year 			= isset($_POST['year']) 			&& !empty($_POST['year']) 			? strip_tags($_POST['year'])	 			: 'Årtal saknas';
-	$owner 			= isset($_POST['owner']) 			&& !empty($_POST['owner']) 			? strip_tags($_POST['owner'])		 		: 'Ägare saknas';
-	$trustee 		= isset($_POST['trustee']) 		&& !empty($_POST['trustee']) 		? strip_tags($_POST['trustee'])		 	: 'Förvaltare saknas';
-	$background	= isset($_POST['background']) && !empty($_POST['background']) ? strip_tags($_POST['background'])	: 'Bakgrund saknas';
-	
-	//
-	// Double check that $id is a number since we will use it as filename
-	//
-	//	http://php.net/manual/en/function.is-numeric.php
-	//	http://php.net/manual/en/function.die.php
-	//
-	is_numeric($id) && $id > 0 
-		or die("<p>FEL: Id är inte en siffra. Id måste vara ett positivt heltal och större än 0.");
-
-
-	// ---------------------------------------------------------------------------------------------
-	//
-	// Create an array of all items and write it to disk in the subdirectory named 'objects'.
-	// Change mod to 777 on the directory to enable webserver to create files.
-	//
-	// 	http://php.net/manual/en/function.array.php
-	//	http://php.net/manual/en/function.file-put-contents.php
-	//	http://php.net/manual/en/function.serialize.php
-	//
-	$filename = "objects/$id";
-	$obj = Array(
-			'id'					=> $id,
-			'title' 			=> $title,
-			'ingress' 		=> $ingress,
-			'text' 				=> $text,
-			'image' 			=> $image,
-			'year' 				=> $year,
-			'owner' 			=> $owner,
-			'trustee' 		=> $trustee,
-			'background' 	=> $background,
-		);
-	file_put_contents($filename, serialize($obj));
-
-
-	// ---------------------------------------------------------------------------------------------
-	//
-	// Read info back from file
-	//
-	//	http://php.net/manual/en/function.file-get-contents.php
-	//
-	$str = file_get_contents($filename);
-
-	echo "<p>Filen '$filename' innehåller följande:<p><code>$str</code>";
-
-	$obj1 = unserialize($str);
-	echo "<p>Objektet innehåller följande värden:<pre>";
-	print_r($obj1);
-	echo "</pre>";
+if(!empty($_POST['doDelete'])) {	
+	$output .= "<p><em>DELETE: Ännu inte implementerat.</em> ";
 }
+
+
+// ---------------------------------------------------------------------------------------------
+//
+// VIEW ALL
+// Create a clickable list of all files saved in the objects-directory.
+//	
+$objects = "<p><em>VIEW ALL: Ännu inte implementerat.</em> ";		
+
+
 ?>
-		</output>
+
+<body>
+	<p>Följande objekt finns sparade:
+	<p><?php echo $objects; ?>
+	<form class="standard w600" method=post>
+	 <fieldset>
+		<legend>Hantera Museum Objekt</legend>
+	
+		<label>Id:<input type=number name=id placeholder="Id på objektet, en siffra " value="<?php echo $obj['id']; ?>"></label>
+		<label>Titel:<input type=text name=title placeholder="Titel/namn på objektet" value="<?php echo $obj['title']; ?>"></label>
+		<label>Ingress:<textarea name=ingress placeholder="Ingress, en kortare och slagkraftig intro till objektet"><?php echo $obj['ingress']; ?></textarea></label>
+		<label>Text:<textarea name=text placeholder="Text, en beskrivning av objektet"><?php echo $obj['text']; ?></textarea></label>
+		<label>Bild:<input type=url name=image placeholder="Bild, en länk till en bild på objektet" value="<?php echo $obj['image']; ?>"></label>
+		<img src="<?php echo $obj['image']; ?>" alt="[Bild saknas]">
+		<label>Årtal:<input type=text name=year placeholder="Årtal, när skapades objektet, årtal, spann av år eller sekel" value="<?php echo $obj['year']; ?>"></label>
+		<label>Ägare:<input type=text name=owner placeholder="Ägare, vem äger objektet" value="<?php echo $obj['owner']; ?>"></label>
+		<label>Förvaltare:<input type=text name=trustee placeholder="Förvaltare, vem förvaltar objektet för tillfället" value="<?php echo $obj['trustee']; ?>"></label>
+		<label>Bakgrund:<textarea name=background placeholder="Bakgrund, hur hittade objektet fram till dess nuvarande ägare och förvaltare"><?php echo $obj['background']; ?></textarea></label>
+				
+		<input type=submit name=doDelete value="Radera" title="Radera detta objektet från disk genom att ta bort filen.">
+		<input type=submit name=doAdd value="Nytt objekt" title="Skapa ett nytt objekt med ett unikt id.">
+		<input type=submit name=doClear value="Töm formulär" title="Töm formuläret på alla värden, visa ett tomt formulär">
+		<input type=reset value="Återställ" title="Återställ formuläret till dess ursprunliga läge">
+		<input type=submit name=doSave value="Spara" title="Spara alla ändringar">
+		
+		<output><?php echo $output; ?></output>
 		
 	 </fieldset>
 	</form>

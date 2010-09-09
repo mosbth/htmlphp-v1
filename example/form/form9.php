@@ -16,35 +16,14 @@
 // 
 error_reporting(-1);
 
-
 // ---------------------------------------------------------------------------------------------
 //
-// FUNCTION
-// Function to validate incoming values. Reduces code writing.
+// INCLUDE FUNCTIONS
+// Include the functions needed to make this form work.
 //
-// $aArray: An array containing the values, for example $_POST or $_GET
-// $aEntry: An entry in the array, for example 'id' or 'title'
-// $aDefault: Default value to use when the array-entry is not set or is empty.
+//	http://php.net/manual/en/function.require-once.php
 //
-//	http://www.w3schools.com/php/php_functions.asp
-//
-//	http://php.net/manual/en/functions.user-defined.php
-//	http://php.net/manual/en/functions.arguments.php
-//	http://php.net/manual/en/functions.returning-values.php
-//  http://php.net/manual/en/control-structures.if.php
-//	http://php.net/manual/en/control-structures.else.php
-//	http://php.net/manual/en/language.operators.logical.php
-//	http://php.net/manual/en/function.isset.php
-//	http://php.net/manual/en/function.empty.php
-//	http://php.net/manual/en/function.strip-tags.php
-//
-function validateIncoming($aArray, $aEntry, $aDefault) {
-	if(isset($aArray[$aEntry]) && !empty($aArray[$aEntry])) {
-		return strip_tags($aArray[$aEntry]);
-	} else {
-		return $aDefault;
-	}
-}
+require_once("functions.php");
 
 
 // ---------------------------------------------------------------------------------------------
@@ -56,7 +35,7 @@ function validateIncoming($aArray, $aEntry, $aDefault) {
 //
 
 //
-// Get id from POST, defaults to 0.
+// Get id from GET or POST, if set in POST then override GET-value, defaults to 0.
 // This way id will always have a value which may be convienient.
 //
 //	http://www.w3schools.com/php/php_if_else.asp
@@ -67,7 +46,8 @@ function validateIncoming($aArray, $aEntry, $aDefault) {
 //	http://php.net/manual/en/function.is-numeric.php
 //	http://php.net/manual/en/function.die.php
 //
-$id = validateIncoming($_POST, 'id', 0);	// Get id from _POST, use 0 as default
+$id = validateIncoming($_GET, 'id', 0); 		// Get id from _GET or set it to 0 if not set
+$id = validateIncoming($_POST, 'id', $id);	// Get id again from _POST, use the previous value as default
 if(!is_numeric($id) || $id < 0) {
 	die("Id är ej giltigt.");
 }
@@ -108,6 +88,7 @@ $obj = Array(
 // Take action if the form is to be saved, allow numeric id > 0
 //
 if(!empty($_POST['doSave']) && $id > 0) {
+
 	//
 	// Store the values from the form in the array.
 	// Validate the input, no need to end up in a forum like this: https://www.flashback.org/f16 
@@ -144,8 +125,12 @@ if(!empty($_POST['doSave']) && $id > 0) {
 // CLEAR
 // Clear the form and produce an empty form. Setting id=0 will do this.
 //
+//  http://php.net/manual/en/control-structures.if.php
+//	http://php.net/manual/en/function.empty.php
+//
 if(!empty($_POST['doClear'])) {	
-	$output .= "<p><em>CLEAR: Ännu inte implementerat.</em> ";
+	$id=0;
+	$output .= "<p>Formuläret är nu tomt. ";
 }
 
 
@@ -154,8 +139,16 @@ if(!empty($_POST['doClear'])) {
 // ADD
 // Add a new empty object. Give the new object a unique id.
 //
+//  http://php.net/manual/en/control-structures.if.php
+//	http://php.net/manual/en/function.empty.php
+//	http://php.net/manual/en/function.max.php
+//
 if(!empty($_POST['doAdd'])) {	
-	$output .= "<p><em>ADD: Ännu inte implementerat.</em> ";
+	$files 			= readDirectory(dirname(__FILE__) . "/objects");
+	$id 				= max($files) + 1;
+	$obj['id'] 	= $id;
+	$filename 	= "objects/$id";
+	$output .= "<p>Nytt objekt med id=$id. Klicka på spara för att spara objektet. ";
 }
 
 
@@ -164,11 +157,25 @@ if(!empty($_POST['doAdd'])) {
 // READ FROM FILE
 // Read info from file, if the id is set, if the id=0 then do nothing and produce a empty form.
 //
+//	http://www.w3schools.com/php/php_ref_filesystem.asp
+//	http://www.w3schools.com/php/php_if_else.asp
+//	http://www.w3schools.com/php/php_operators.asp
+//
+//	http://php.net/manual/en/control-structures.elseif.php
+//	http://php.net/manual/en/language.operators.assignment.php
+//	http://php.net/manual/en/language.operators.php
+//	http://php.net/manual/en/function.file-get-contents.php
+//	http://php.net/manual/en/function.unserialize.php
+//
 if($id == 0) {
 	// Do nothing, just produce an empty form
+} else if(is_file($filename)) {
+	// Read file into array
+	$obj = unserialize(file_get_contents($filename));
+	$output .= "Filen lästes in från disk. ";
 } else {
-	// Read file from disk
-	$output .= "<p><em>READ FROM FILE: Ännu inte implementerat.</em> ";
+	// The file does not exists
+	$output .= "Filen kunde inte hittas på disken. ";	
 }	
 
 
@@ -177,10 +184,18 @@ if($id == 0) {
 // DELETE
 // Take action if the object is to be deleted
 //
-//	http://php.net/manual/en/function.empty.php
+//	http://www.w3schools.com/php/php_if_else.asp
+//
+//	http://php.net/manual/en/function.is-file.php
+//	http://php.net/manual/en/function.unlink.php
 //
 if(!empty($_POST['doDelete'])) {	
-	$output .= "<p><em>DELETE: Ännu inte implementerat.</em> ";
+	if(is_file($filename)) {
+		unlink($filename);		
+		$output .= "<p>Filen raderades från disken. ";
+	} else {
+		$output .= "<p>Filen kunde inte raderas, filen fanns ej.";		
+	}
 }
 
 
@@ -188,8 +203,18 @@ if(!empty($_POST['doDelete'])) {
 //
 // VIEW ALL
 // Create a clickable list of all files saved in the objects-directory.
+// Use $_GET (?id=x) to send the id of the file/object to display.
+//
+//	http://php.net/manual/en/language.constants.predefined.php
+//	http://php.net/manual/en/function.dirname.php
+//	http://php.net/manual/en/control-structures.foreach.php
 //	
-$objects = "<p><em>VIEW ALL: Ännu inte implementerat.</em> ";		
+$files = readDirectory(dirname(__FILE__) . "/objects");
+
+$objects = "";
+foreach($files as $val) {
+	$objects .= "<a href='?id=$val'>$val</a> ";
+}
 
 
 ?>
