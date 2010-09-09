@@ -94,7 +94,7 @@ body#begr-form   	a#begr-form-	{ color:#f5f5f5; background:#999999; }
 /* Style for main content of the page */
 div#wrap {
 	overflow:auto;
-	width: 950px;
+	width: 960px;
 	padding: 0 0 0 16px;
 }
 
@@ -121,7 +121,7 @@ aside {
 }
 
 aside.right {
-	padding-top: 1em;
+	padding: 1em 0em 0em 2em;
 	float: right;
 }
 

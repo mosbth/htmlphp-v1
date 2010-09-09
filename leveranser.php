@@ -49,8 +49,8 @@ include("header_projekt.php");
 				<li>Utkast på webbplatsens info sida (about).
 				<li>Utkast på sidor som presenterar potentiella objekt och historier.
 				<ul>
-					<li>Begravningsseder och bruk
-					<li>
+					<li><a href="begravningsseder_och_bruk.php">Begravningsseder och bruk</a>
+					<li><a href="http://dbwebb.se/htmlphp/me/objekt_begravningsmuseum">Objekt till Begravningsmuseum</a>
 				</ul>
 				<li>Tre utkast till varianter på stylesheets.
 				<ul>
@@ -83,10 +83,12 @@ include("header_projekt.php");
 			<p>Gör en enkel about-sida. Skriv att du gör detta som ett studentarbete i kursen htmlphp och vad webbplatsens är till för.
 			Du kan fylla på med text senare.
 			
-			<p>Det finns ett antal texter och objekt som du kan använda och utgå ifrån. Du finner dem här:
+			<p>Det finns ett antal texter och objekt som du kan använda och utgå ifrån. 
+			Använd några några av dem (3-5 stycken) för att fylla på med information i ditt museum. Du finner dem här:
 			
 			<ul>
 				<li><a href="begravningsseder_och_bruk.php">Begravningsseder och bruk</a>
+				<li><a href="http://dbwebb.se/htmlphp/me/objekt_begravningsmuseum">Objekt till Begravningsmuseum</a>
 			</ul>
 		</section>
 		
@@ -99,19 +101,31 @@ include("header_projekt.php");
 			
 			<p>Leveransens huvudsakliga syfte är att:
 			<ul>
-				<li>Ge kunden möjlighet att själv ladda upp och editera museum-objekt.
+				<li>Ge kunden möjlighet att själv ladda upp och editera objekt till muséet.
 			</ul>
 				
 			<h3>Innehåll</h3>
 						
 			<p>Leveransens huvudsakliga innehåll är:
 			<ul>
-				<li>....		
+				<li>Ett formulär för hantering av Museum Objekt, integrerad i siten Begravningsmuseum Online.
+				<li>Med formuläret kan kunden skapa nya objekt och spara dem på disk.
+				<li>Objekten kan editeras och uppdateras av kunden.
+				<li>Det skall finnas en enkel sida som presenterar ett Museum Objekt utifrån dess innehåll.
 			</ul>
 
 			<h3>Tips från coachen</h3>
 			
-			<p>...
+			<p>Gör hela kursmomentet innan du hoppar på leveransen. Gör formuläret så som det görs i kursmomentet.
+			
+			<p>Gör ytterligare en vanlig sida som läser in ett objekt utifrån en $_GET-variabel (id). Denna sidan
+			presenterar sedan objektet i html-kod, inte som formulär.
+			
+			<p>Bygg ut ditt Begravningsmuseum och visa upp minst 3 av de objekt som finns tillgängliga på följande länk. 
+			<a href="http://dbwebb.se/htmlphp/me/objekt_begravningsmuseum">Objekt till Begravningsmuseum</a>
+			
+			<p>Att ladda upp filer (bilder) eller skydda inmatningen med lösenord (se instruktionen för kursmomentet) 
+			är ren överkurs och görs bara av de som vill, vågar och orkar.
 			
 		</section>			
 			

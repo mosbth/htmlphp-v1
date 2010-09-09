@@ -597,8 +597,8 @@ EOD;
 		<h3>Formulär</h3>
 		
 		<p>Använd i första hand CSS för att styla formulären. Använd inte tabeller.
-		Det är möjligt att göra en struktur av HTML elementen och därefter styla på ett par olika sätt.
-		Det kan dock betyda att det underlättar med en eller annan div som wrappar innehållet i formuläret.
+		Det är möjligt att göra en struktur av HTML elementen och därefter styla olika variationer med CSS.
+		Det kan betyda att det underlättar med en eller annan div som wrappar innehållet i formuläret.
 		
 		<p><a href="http://dbwebb.se/htmlphp/mom04/formexample/">Se exempel på ett litet formulär, 
 		stylat med CSS</a>. Klicka på "source" i footern så ser du källkoden till exemplet.
