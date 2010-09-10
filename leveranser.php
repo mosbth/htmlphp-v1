@@ -53,7 +53,7 @@ include("header_projekt.php");
 				</ul>
 				<li>Tre utkast till varianter på stylesheets.
 				<ul>
-					<li>Development: Enkel och ren. Vit bakgrund, inga bilder eller grafiska objekt.
+					<li>Development: Enkel och ren. Vit bakgrund, inga bakgrundsbilder eller grafiska objekt.
 					<li>SKKF: Samma färg, font, look&amp;feel som finns på SKKF's hemsida.
 					<li>Personal: En vågad stylesheet efter ditt eget tycke och smak. Utmanande, stilig eller urflippad. Du väljer själv. 
 				</ul>
