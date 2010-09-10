@@ -118,7 +118,7 @@ include("header.php");
 			<h3>Länkar till kursmaterialet</h3>
 				<ul>
 					<li><a href='http://bit.ly/htmlphp_kmom03'>Instruktion för kursmomentet</a>
-					<li><a href='http://github.com/mosbth/me/tree/v3.05'>Källkod</a>
+					<li><a href='http://github.com/mosbth/htmlphp/tree/v3.06'>Källkod</a>
 					<li><a href='http://www.student.bth.se/~mos/htmlphp/mom03/me/me.php'>Driftsmiljön</a>
 				</ul>
 		</section>
