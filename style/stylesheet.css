@@ -84,20 +84,15 @@ body#begr-seder   a#begr-seder-  { color:whitesmoke; background:#999999; }
 
 /* -------------------------------------------------------------------------------------
 /* Style for main content of the page */
-div#wrap {
-	overflow:auto;
-	width: 950px;
-	padding: 0 0 0 16px;
-}
+header {display:block;}
 
-article {
-	display: block;
-	width: 600px;
-	padding-bottom:1em;
-}
+div#wrap {overflow:auto;width:960px;padding:0 0 0 16px;}
 
-header { display: block; }
-section { display: block; }
+article 					{display:block;width:600px;padding-bottom:1em;}
+article.fullwidth {width:100%;}
+
+section 			{display:block;}
+section.w600 	{width:600px;}
 
 section.columns2 {
 	width: 100%;
@@ -105,20 +100,16 @@ section.columns2 {
 	column-count: 2;
 }
 
+
 /* -------------------------------------------------------------------------------------
 /* Style for aside elements */
-aside {
-	display: block;
-}
-
-aside.right {
-	padding-top: 1em;
-	float: right;
-}
+aside 			{display:block;margin:0;padding:0;}
+aside.right {float:right;}
+aside.plain {width:300px;font-size:smaller;}
 
 aside.box {
 	width: 250px;
-	margin: 0 0 1em 0;
+	margin: 2em 0 1em 0;
 	padding: 0 1em 0 1em;
 	border: 3px dashed #e3e3df;
 	border-top: 3px solid #999999;
@@ -126,30 +117,21 @@ aside.box {
 }
 aside.box p {	font-size: smaller; }
 
+
 /* -------------------------------------------------------------------------------------
 /* Style for figure/pictures */
-figure {
-	display: block;
-}
+figure 						{display:block;margin:2em 0 1em 0;padding:0.5em;}
+figure.right 			{float:right;}
+figure.standard 	{border:4px ridge #999999;}
+figure.strict 		{border:2px solid #eee;}
+figure.inline 		{margin:0;font-size:smaller;}
+figure.w300 			{width:300px;}
 
-figure figcaption {
-	display: block;
-}
+figure img {display:block;margin:auto;}
 
-figure.standard {
-	padding: 5px;
-	border: 4px ridge #999999;
-}
+figure figcaption 					{display:block;margin:0 auto;padding:0.5em;}
+figure.standard figcaption 	{text-align:center;font-style:italic;font-size:normal;}
 
-figure.standard figcaption {
-	text-align: center;
-	font-style: italic;
-	font-size: 0.8em;
-}
-
-.right {
-	float:right;
-}
 
 /* -------------------------------------------------------------------------------------
 /* Style for displaying code */

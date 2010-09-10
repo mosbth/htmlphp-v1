@@ -39,14 +39,13 @@ include("header_projekt.php");
 				<li>Ett skal till webbplatsen med header, navigering och footer.		
 				<li>Utkast på webbplatsens första sida (home).
 				<li>Utkast på webbplatsens info sida (about).
-				<li>Utkast på sidor som presenterar potentiella objekt och historier.
+				<li>Använd material från följande artikel för att komma igång.
 				<ul>
-					<li>Begravningsseder och bruk
-					<li>
+					<li><a href="begravningsseder_och_bruk.php">Begravningsseder och bruk</a>
 				</ul>
 				<li>Tre utkast till varianter på stylesheets.
 				<ul>
-					<li>Development: Enkel och ren. Vit bakgrund, inga bilder eller grafiska objekt.
+					<li>Development: Enkel och ren. Vit bakgrund, inga bakgrundsbilder eller grafiska objekt.
 					<li>SKKF: Samma färg, font, look&amp;feel som finns på SKKF's hemsida.
 					<li>Personal: En vågad stylesheet efter ditt eget tycke och smak. Utmanande, stilig eller urflippad. Du väljer själv. 
 				</ul>
@@ -75,13 +74,10 @@ include("header_projekt.php");
 			<p>Gör en enkel about-sida. Skriv att du gör detta som ett studentarbete i kursen htmlphp och vad webbplatsens är till för.
 			Du kan fylla på med text senare.
 			
-			<p>Det finns ett antal texter och objekt som du kan använda och utgå ifrån. Du finner dem här:
-			
-			<ul>
-				<li><a href="begravningsseder_och_bruk.php">Begravningsseder och bruk</a>
-			</ul>
-
-			
+			<p>Använd material från texten om <a href="begravningsseder_och_bruk.php">Begravningsseder och bruk</a>
+			för att hämta inspiration samt skapa ett första utkast till Begravningsmuseum Online.
+			</p>			
+				
 
 			<?php include("byline.php"); ?>
 				
