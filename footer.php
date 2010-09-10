@@ -36,7 +36,7 @@
 		<nav>
 			<h5>Kmom03</h5>
 				<a href='http://bit.ly/htmlphp_kmom03'>Instruktion för kursmomentet</a>
-				<a href='http://github.com/mosbth/me/tree/v3.04'>Källkod</a>
+				<a href='http://github.com/mosbth/me/tree/v3.05'>Källkod</a>
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom03/me/me.php'>Me-sidan</a>
 		</nav>
 
