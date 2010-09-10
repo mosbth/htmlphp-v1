@@ -47,10 +47,9 @@ include("header_projekt.php");
 				<li>Ett skal till webbplatsen med header, navigering och footer.		
 				<li>Utkast på webbplatsens första sida (home).
 				<li>Utkast på webbplatsens info sida (about).
-				<li>Utkast på sidor som presenterar potentiella objekt och historier.
+				<li>Använd material från följande artikel för att komma igång.
 				<ul>
 					<li><a href="begravningsseder_och_bruk.php">Begravningsseder och bruk</a>
-					<li><a href="http://dbwebb.se/htmlphp/me/objekt_begravningsmuseum">Objekt till Begravningsmuseum</a>
 				</ul>
 				<li>Tre utkast till varianter på stylesheets.
 				<ul>
@@ -83,13 +82,9 @@ include("header_projekt.php");
 			<p>Gör en enkel about-sida. Skriv att du gör detta som ett studentarbete i kursen htmlphp och vad webbplatsens är till för.
 			Du kan fylla på med text senare.
 			
-			<p>Det finns ett antal texter och objekt som du kan använda och utgå ifrån. 
-			Använd några några av dem (3-5 stycken) för att fylla på med information i ditt museum. Du finner dem här:
-			
-			<ul>
-				<li><a href="begravningsseder_och_bruk.php">Begravningsseder och bruk</a>
-				<li><a href="http://dbwebb.se/htmlphp/me/objekt_begravningsmuseum">Objekt till Begravningsmuseum</a>
-			</ul>
+			<p>Använd material från texten om <a href="begravningsseder_och_bruk.php">Begravningsseder och bruk</a>
+			för att hämta inspiration samt skapa ett första utkast till Begravningsmuseum Online.
+			</p>			
 		</section>
 		
 <!-- *********************    Section ******************************************************** -->

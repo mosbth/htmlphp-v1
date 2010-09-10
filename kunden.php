@@ -9,7 +9,11 @@ include("header_projekt.php");
 <div id="wrap">
 
 	<aside class="right">
-	</aside>
+			<figure class="standard strict inline right">
+				<img src="img/ronny_holm_200.jpg" alt="Bild på Ronny Holm" width="200">
+				<figcaption>Ronny Holm, vår kund</figcaption>
+			</figure>
+		</aside>
 
 	<article>
 		<section>
@@ -19,11 +23,6 @@ include("header_projekt.php");
 				<h1>Kund: Ronny Holm</h1>
 			</header>
 			
-			<figure class="standard right">
-				<img src="img/ronny_holm_200.jpg" alt="Bild på Ronny Holm" width="200">
-				<figcaption>Ronny Holm, vår kund</figcaption>
-			</figure>
-	
 			<p>Ronny Holm är vår kund, låt oss säga hej till Ronny och se vad han sysslar med.
 
 			<p>Vi börjar med en bakgrundssökning på Ronny Holm, bara för att vi kan göra det. 

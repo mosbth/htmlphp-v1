@@ -9,24 +9,22 @@
 
 
 /* -------------------------------------------------------------------------------------
-/* Style for all body elements that may inherit */
-body {
-	margin: 0;
-	font-family: Georgia, serif;
-	color: #333333;
-}
+/* Some generic style that is valid for whole stylesheet */
+body 	{margin:0;padding:0;font-family:Georgia, serif;color:#333333;}
+img 	{margin:0;padding:0;border:0;}
 
 
 /* -------------------------------------------------------------------------------------
 /* Top of page with logo and navigation */
-header#top form.choose-style {
-	float:right;
-	padding:0.5em 1em 0 0;
-}
-header#top form.choose-style label {
-	font: smaller Arial, Helvetica, sans-serif;
-}
-header#top a:hover {background:none;} /* No effect when hovering the lika on top image/logo */
+
+/* Change to block since inline style adds line-height for qpgy and euqals */
+header#top img	{display:block;} 
+
+/* For style chooser */
+header#top form.choose-style 				{float:right;padding:0.5em 1em 0 0;}
+header#top form.choose-style label 	{font:smaller Arial, Helvetica, sans-serif;}
+
+/* The navbar */
 header#top nav {
 	display: block;
 	padding: 0.2em 1em 0 1em;
@@ -92,20 +90,15 @@ body#begr-form   	a#begr-form-	{ color:#f5f5f5; background:#999999; }
 
 /* -------------------------------------------------------------------------------------
 /* Style for main content of the page */
-div#wrap {
-	overflow:auto;
-	width: 960px;
-	padding: 0 0 0 16px;
-}
+header {display:block;}
 
-article {
-	display: block;
-	width: 600px;
-	padding-bottom:1em;
-}
+div#wrap {overflow:auto;width:960px;padding:0 0 0 16px;}
 
-header { display: block; }
-section { display: block; }
+article 					{display:block;width:600px;padding-bottom:1em;}
+article.fullwidth {width:100%;}
+
+section 			{display:block;}
+section.w600 	{width:600px;}
 
 section.columns2 {
 	width: 100%;
@@ -116,18 +109,13 @@ section.columns2 {
 
 /* -------------------------------------------------------------------------------------
 /* Style for aside elements */
-aside {
-	display: block;
-}
-
-aside.right {
-	padding: 1em 0em 0em 2em;
-	float: right;
-}
+aside 			{display:block;margin:0;padding:0;}
+aside.right {float:right;}
+aside.plain {width:300px;font-size:smaller;}
 
 aside.box {
 	width: 250px;
-	margin: 0 0 1em 0;
+	margin: 2em 0 1em 0;
 	padding: 0 1em 0 1em;
 	border: 3px dashed #e3e3df;
 	border-top: 3px solid #999999;
@@ -138,28 +126,18 @@ aside.box p {	font-size: smaller; }
 
 /* -------------------------------------------------------------------------------------
 /* Style for figure/pictures */
-figure {
-	display: block;
-}
+figure 						{display:block;margin:2em 0 1em 0;padding:0.5em;}
+figure.right 			{float:right;}
+figure.standard 	{border:4px ridge #999999;}
+figure.strict 		{border:2px solid #eee;}
+figure.inline 		{margin:0;font-size:smaller;}
+figure.w300 			{width:300px;}
 
-figure figcaption {
-	display: block;
-}
+figure img {display:block;margin:auto;}
 
-figure.standard {
-	padding: 5px;
-	border: 4px ridge #999999;
-}
+figure figcaption 					{display:block;margin:0 auto;padding:0.5em;}
+figure.standard figcaption 	{text-align:center;font-style:italic;font-size:normal;}
 
-figure.standard figcaption {
-	text-align: center;
-	font-style: italic;
-	font-size: 0.8em;
-}
-
-.right {
-	float:right;
-}
 
 
 /* -------------------------------------------------------------------------------------

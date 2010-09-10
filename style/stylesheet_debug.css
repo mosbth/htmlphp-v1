@@ -1,0 +1,27 @@
+/* -------------------------------------------------------------------------------------
+/* 
+/* Stylesheet.
+/* 
+/* For debug purpose, some borders.
+ */
+
+/* -------------------------------------------------------------------------------------
+/* Import standard style */
+@import url(stylesheet.css);
+
+/* -------------------------------------------------------------------------------------
+/* Make some changes */
+header {border:4px dotted palevioletred;}
+hgroup {border:4px dotted peru ;}
+footer {border:4px dotted palegreen;}
+
+header#top {border:4px dashed #000000;}
+footer#bottom {border:4px dashed #000000;}
+nav {border:4px dashed #000000;}
+div#wrap {border:4px dashed #000000;}
+
+article {border:4px dotted red;}
+section {border:4px dotted green;}
+aside {border:4px dotted blue;}
+figure, figure.standard, figure.strict {border:4px dotted yellow;}
+

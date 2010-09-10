@@ -37,10 +37,12 @@
 // http://php.net/manual/en/language.types.array.php
 //
 $styles = Array(
-		"standard" 	=> Array("title" => "Mos standard grey", 	"path" => "style/stylesheet.css"),	
-		"red" 			=> Array("title" => "Mos standard red", 	"path" => "style/stylesheet_red.css"),	
+		"standard" 	=> Array("title" => "Mos Standard Grey", 	"path" => "style/stylesheet.css"),	
+		"red" 			=> Array("title" => "Mos Standard Red", 	"path" => "style/stylesheet_red.css"),	
 		"bth" 			=> Array("title" => "Mos BTH-ish", 				"path" => "style/stylesheet_bth.css"),	
-	//	"print" 		=> Array("title" => "Mos to print", 			"path" => "style/stylesheet_print.css"),	
+		"debug" 		=> Array("title" => "Mos Debug", 					"path" => "style/stylesheet_debug.css"),	
+		"bth" 			=> Array("title" => "Mos No Style", 			"path" => "style/stylesheet_nostyle.css"),	
+	//	"print" 		=> Array("title" => "Mos to print", 		"path" => "style/stylesheet_print.css"),	
 	);
 
 
