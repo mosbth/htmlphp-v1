@@ -20,6 +20,7 @@ include("header.php");
 					<li><a href="#kmom01">Kmom01: Kom igång med HTML, CSS och PHP</a>
 					<li><a href="#kmom02">Kmom02: HTML-element och CSS-konstruktioner</a>
 					<li><a href="#kmom03">Kmom03: Projektstart av Museum Online</a>
+					<li><a href="#kmom04">Kmom04: HTML Formulär och PHP</a>
 				</ul>
 			</header>
 			
@@ -69,7 +70,7 @@ include("header.php");
 	
 			<h3>Länkar till kursmaterialet</h3>
 				<ul>
-					<li><a href='http://bit.ly/htmlphp_kmom01'>Instruktion för kursmomentet</a>
+					<li><a href='http://dbwebb.se/kmom01/instruction'>Instruktion för kursmomentet</a>
 					<li><a href='http://bit.ly/htmlphp_labbmiljo'>Guide för att installera labbmiljön</a>
 					<li><a href='http://github.com/mosbth/me/tree/v1.03'>Källkod</a>
 					<li><a href='http://www.student.bth.se/~mos/htmlphp/mom01/me/me.php'>Driftsmiljön</a>
@@ -90,7 +91,7 @@ include("header.php");
 		
 			<h3>Länkar till kursmaterialet</h3>
 				<ul>
-					<li><a href='http://bit.ly/htmlphp_kmom02'>Instruktion för kursmomentet</a>
+					<li><a href='http://dbwebb.se/kmom02/instruction'>Instruktion för kursmomentet</a>
 					<li><a href='http://github.com/mosbth/me/tree/v2.0'>Källkod</a>
 					<li><a href='http://www.student.bth.se/~mos/htmlphp/mom02/me/me.php'>Driftsmiljön</a>
 				</ul>
@@ -117,9 +118,27 @@ include("header.php");
 			
 			<h3>Länkar till kursmaterialet</h3>
 				<ul>
-					<li><a href='http://bit.ly/htmlphp_kmom03'>Instruktion för kursmomentet</a>
+					<li><a href='http://dbwebb.se/kmom03/instruction'>Instruktion för kursmomentet</a>
 					<li><a href='http://github.com/mosbth/me/tree/v3.04'>Källkod</a>
 					<li><a href='http://www.student.bth.se/~mos/htmlphp/mom03/me/me.php'>Driftsmiljön</a>
+				</ul>
+		</section>
+
+
+		<section id="kmom04">
+			<h2>Kmom04: HTML Formulär och PHP</h2>
+	
+			<p>Nu körde det ihop sig. Det visade sig att detta kursmomentet tog nästan dubbelt så lång tid som de andra att utveckla. 
+			Nästan 2 kalender veckor. Trixet var att göra exemplet för formuläret så enkelt och rent som möjligt så att de som är
+			nybörjare på PHP kan klara det.
+			Det skall bli spännande att se om jag lyckades.
+			Jag lade till några extra uppgifter (file upload och skydda med htaccess) så att de som anser sig redan kunna detta fick lite extra kodning att syssla med.
+		
+			<h3>Länkar till kursmaterialet</h3>
+				<ul>
+					<li><a href='http://dbwebb.se/kmom04/instruction'>Instruktion för kursmomentet</a>
+					<li><a href='http://github.com/mosbth/me/tree/v4.0'>Källkod</a>
+					<li><a href='http://www.student.bth.se/~mos/htmlphp/mom04/me/me.php'>Driftsmiljön</a>
 				</ul>
 		</section>
 

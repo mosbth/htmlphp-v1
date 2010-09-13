@@ -41,7 +41,7 @@ $styles = Array(
 		"red" 			=> Array("title" => "Mos Standard Red", 	"path" => "style/stylesheet_red.css"),	
 		"bth" 			=> Array("title" => "Mos BTH-ish", 				"path" => "style/stylesheet_bth.css"),	
 		"debug" 		=> Array("title" => "Mos Debug", 					"path" => "style/stylesheet_debug.css"),	
-		"bth" 			=> Array("title" => "Mos No Style", 			"path" => "style/stylesheet_nostyle.css"),	
+		"nostyle"		=> Array("title" => "Mos No Style", 			"path" => "style/stylesheet_nostyle.css"),	
 	//	"print" 		=> Array("title" => "Mos to print", 		"path" => "style/stylesheet_print.css"),	
 	);
 

@@ -59,6 +59,7 @@ error_reporting(-1);
 			<a id="report-" href="report.php">Redovisning</a> 
 			<a id="html20-" href="de_20_vanligaste_html_elementen.php">HTML-20</a> 
 			<a id="css20-"  href="de_20_vanligaste_css_konstruktionerna.php">CSS-20</a> 
+			<a id="forms-"  href="forms.php">Formulär</a> 
 			<a id="proj-"   href="projekt.php">Projekt</a> 
 			<a id="begr-"   href="begravningsseder_och_bruk.php">Begravningsmuseum</a> 
 		</nav>

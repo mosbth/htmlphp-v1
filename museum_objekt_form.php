@@ -221,22 +221,12 @@ foreach($files as $val) {
 
 <!-- - - - - - - - - - - - - - - - - - aside        - - - - - - - - - - - - - - - - - -->
 <aside class="right">
-		<aside class="box">
-			<h4>Trial-and-error</h4>
-			<p>När man kodar nya saker, när man inte riktigt vet hur lösningen skall se ut, då är
-			trial-and-error ett lysande sätt att testa sig fram. Pröva och se hur det blev. Blev det 
-			inte bra så läs på, gör om och gör bättre.
-			<p>Ibland funkar det helt enkelt inte med ordning och reda, analys & design. När man utforskar
-			nya marker så är vanlig hederlig "testa och se hur det blir" en bra utvecklingsmetod.
-			<p><a href="http://en.wikipedia.org/wiki/Trial_and_error">Läs om Trial-and-error på Wikipedia</a>.
-			</p>
-		</aside>
-	</aside>
+</aside>
 
 <!-- - - - - - - - - - - - - - - - - - *******      - - - - - - - - - - - - - - - - - -->
 <article>
 
-	<h1>Hantera objekt med formulär</h1>
+	<h1>Museum Objekt</h1>
 	<p>Följande objekt finns sparade:
 	<p><?php echo $objects; ?>
 	<form class="standard" method=post>
