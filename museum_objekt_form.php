@@ -205,11 +205,16 @@ if(!empty($_POST['doDelete'])) {
 //	http://php.net/manual/en/function.dirname.php
 //	http://php.net/manual/en/control-structures.foreach.php
 //	
-$files = readDirectory(dirname(__FILE__) . "/objects");
+$dir = dirname(__FILE__) . "/objects/";
+$files = readDirectory($dir);
 
 $objects = "";
+// Scan all files for the name of the object
 foreach($files as $val) {
-	$objects .= "<a href='?id=$val'>$val</a> ";
+	if(is_file("$dir/$val")) {
+		$i = unserialize(file_get_contents("$dir/$val"));
+		$objects .= "<a href='?id=$val'>{$i['title']} ({$i['id']})</a> ";
+	}
 }
 
 
@@ -219,44 +224,53 @@ foreach($files as $val) {
 <!-- - - - - - - - - - - - - - - - - - wrap whole content - - - - - - - - - - - - - - -->
 <div id="wrap">
 
-<!-- - - - - - - - - - - - - - - - - - aside        - - - - - - - - - - - - - - - - - -->
-<aside class="right">
-</aside>
-
 <!-- - - - - - - - - - - - - - - - - - *******      - - - - - - - - - - - - - - - - - -->
-<article>
+<article class=fullwidth>
 
-	<h1>Museum Objekt</h1>
-	<p>Följande objekt finns sparade:
-	<p><?php echo $objects; ?>
-	<form class="standard" method=post>
-	 <fieldset>
-		<legend>Hantera Museum Objekt</legend>
+<!-- - - - - - - - - - - - - - - - - - aside        - - - - - - - - - - - - - - - - - -->
+	<aside class="right">
+		<aside class="box">
+			<p>Följande objekt finns sparade:
+			<p><?php echo $objects; ?></p>
+		</aside>
+		
+		<aside class="box">
+			<p>Filer upload:
+			<p><?php echo $objects; ?></p>
+		</aside>
+	</aside>
 	
-		<label>Id:<input type=number name=id placeholder="Id på objektet, en siffra " value="<?php echo $obj['id']; ?>"></label>
-		<label>Titel:<input type=text name=title placeholder="Titel/namn på objektet" value="<?php echo $obj['title']; ?>"></label>
-		<label>Ingress:<textarea name=ingress placeholder="Ingress, en kortare och slagkraftig intro till objektet"><?php echo $obj['ingress']; ?></textarea></label>
-		<label>Text:<textarea name=text placeholder="Text, en beskrivning av objektet"><?php echo $obj['text']; ?></textarea></label>
-		<label>Bild:<input type=url name=image placeholder="Bild, en länk till en bild på objektet" value="<?php echo $obj['image']; ?>"></label>
-		<img src="<?php echo $obj['image']; ?>" alt="[Bild saknas]">
-		<label>Årtal:<input type=text name=year placeholder="Årtal, när skapades objektet, årtal, spann av år eller sekel" value="<?php echo $obj['year']; ?>"></label>
-		<label>Ägare:<input type=text name=owner placeholder="Ägare, vem äger objektet" value="<?php echo $obj['owner']; ?>"></label>
-		<label>Förvaltare:<input type=text name=trustee placeholder="Förvaltare, vem förvaltar objektet för tillfället" value="<?php echo $obj['trustee']; ?>"></label>
-		<label>Bakgrund:<textarea name=background placeholder="Bakgrund, hur hittade objektet fram till dess nuvarande ägare och förvaltare"><?php echo $obj['background']; ?></textarea></label>
-				
-		<input type=submit name=doDelete value="Radera" title="Radera detta objektet från disk genom att ta bort filen.">
-		<input type=submit name=doAdd value="Nytt objekt" title="Skapa ett nytt objekt med ett unikt id.">
-		<input type=submit name=doClear value="Töm formulär" title="Töm formuläret på alla värden, visa ett tomt formulär">
-		<input type=reset value="Återställ" title="Återställ formuläret till dess ursprunliga läge">
-		<input type=submit name=doSave value="Spara" title="Spara alla ändringar">
+	<section class=w600>
+		<h1>Museum Objekt</h1>
+		<form class="standard" method=post>
+		 <fieldset>
+			<legend>Hantera Museum Objekt</legend>
 		
-		<output><?php echo $output; ?></output>
-		
-	 </fieldset>
-	</form>
-
-	<?php include("byline.php"); ?>
-
+			<label>Id:<input type=number name=id placeholder="Id på objektet, en siffra " value="<?php echo $obj['id']; ?>"></label>
+			<label>Titel:<input type=text name=title placeholder="Titel/namn på objektet" value="<?php echo $obj['title']; ?>"></label>
+			<label>Ingress:<textarea name=ingress placeholder="Ingress, en kortare och slagkraftig intro till objektet"><?php echo $obj['ingress']; ?></textarea></label>
+			<label>Text:<textarea name=text placeholder="Text, en beskrivning av objektet"><?php echo $obj['text']; ?></textarea></label>
+			<label>Bild:<input type=url name=image placeholder="Bild, en länk till en bild på objektet" value="<?php echo $obj['image']; ?>"></label>
+			<img src="<?php echo $obj['image']; ?>" alt="[Bild saknas]">
+			<label>Årtal:<input type=text name=year placeholder="Årtal, när skapades objektet, årtal, spann av år eller sekel" value="<?php echo $obj['year']; ?>"></label>
+			<label>Ägare:<input type=text name=owner placeholder="Ägare, vem äger objektet" value="<?php echo $obj['owner']; ?>"></label>
+			<label>Förvaltare:<input type=text name=trustee placeholder="Förvaltare, vem förvaltar objektet för tillfället" value="<?php echo $obj['trustee']; ?>"></label>
+			<label>Bakgrund:<textarea name=background placeholder="Bakgrund, hur hittade objektet fram till dess nuvarande ägare och förvaltare"><?php echo $obj['background']; ?></textarea></label>
+					
+			<input type=submit name=doDelete value="Radera" title="Radera detta objektet från disk genom att ta bort filen.">
+			<input type=submit name=doAdd value="Nytt objekt" title="Skapa ett nytt objekt med ett unikt id.">
+			<input type=submit name=doClear value="Töm formulär" title="Töm formuläret på alla värden, visa ett tomt formulär">
+			<input type=reset value="Återställ" title="Återställ formuläret till dess ursprunliga läge">
+			<input type=submit name=doSave value="Spara" title="Spara alla ändringar">
+			
+			<output><?php echo $output; ?></output>
+			
+		 </fieldset>
+		</form>
+	
+		<?php include("byline.php"); ?>
+	
+	</section>
 </article>
 </div> <!-- id=wrap -->
 

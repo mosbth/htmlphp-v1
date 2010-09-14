@@ -53,7 +53,7 @@ error_reporting(-1);
 		<!-- Use PHP to print the form to choose style -->
 		<?php echo $formChooseStyle; ?>
 
-		<a href="me.php"><img src="img/logo.png" alt="htmlphp me" width=200 height=100></a>
+		<img src="img/logo.png" alt="htmlphp me" width=200 height=100>
 		<nav>
 			<a id="me-"     href="me.php">Me</a> 
 			<a id="report-" href="report.php">Redovisning</a> 

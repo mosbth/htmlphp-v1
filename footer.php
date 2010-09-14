@@ -20,7 +20,7 @@
 
 		<nav>
 			<h5>Kmom01</h5>
-				<a href='http://bit.ly/htmlphp_kmom01'>Instruktion för kursmomentet</a>
+				<a href='http://dbwebb.se/kmom01/instruction'>Instruktion för kursmomentet</a>
 				<a href='http://bit.ly/htmlphp_labbmiljo'>Guide för att installera labbmiljön</a>
 				<a href='http://github.com/mosbth/me/tree/v1.03'>Källkod</a>
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom01/me/me.php'>Me-sidan</a>
@@ -28,16 +28,23 @@
 
 		<nav>
 			<h5>Kmom02</h5>
-				<a href='http://bit.ly/htmlphp_kmom02'>Instruktion för kursmomentet</a>
+				<a href='http://dbwebb.se/kmom02/instruction'>Instruktion för kursmomentet</a>
 				<a href='http://github.com/mosbth/me/tree/v2.0'>Källkod</a>
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom02/me/me.php'>Me-sidan</a>
 		</nav>
 
 		<nav>
 			<h5>Kmom03</h5>
-				<a href='http://bit.ly/htmlphp_kmom03'>Instruktion för kursmomentet</a>
-				<a href='http://github.com/mosbth/me/tree/v3.04'>Källkod</a>
+				<a href='http://dbwebb.se/kmom03/instruction'>Instruktion för kursmomentet</a>
+				<a href='http://github.com/mosbth/me/tree/v3.06'>Källkod</a>
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom03/me/me.php'>Me-sidan</a>
+		</nav>
+
+		<nav>
+			<h5>Kmom04</h5>
+				<a href='http://dbwebb.se/kmom04/instruction'>Instruktion för kursmomentet</a>
+				<a href='http://github.com/mosbth/me/tree/v4.01'>Källkod</a>
+				<a href='http://www.student.bth.se/~mos/htmlphp/mom04/me/me.php'>Me-sidan</a>
 		</nav>
 
 		<div class="final">
