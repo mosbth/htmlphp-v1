@@ -44,6 +44,9 @@ require_once("functions.php");
 //
 $id = validateIncoming($_GET, 'id', 0); 		// Get id from _GET or set it to 0 if not set
 $id = validateIncoming($_POST, 'id', $id);	// Get id again from _POST, use the previous value as default
+if($id == -1) {
+	$id = 0;
+}
 if(!is_numeric($id) || $id < 0) {
 	die("Id är ej giltigt.");
 }
@@ -63,7 +66,9 @@ if(!is_numeric($id) || $id < 0) {
 //	http://php.net/manual/en/function.array.php
 //	http://php.net/manual/en/ref.array.php
 //
-$filename = "objects/$id";
+$dirname	= "museum/objects";
+$imageDir	= "museum/img";
+$filename = "$dirname/$id";
 $output		= "";
 $obj = Array(
 		'id'					=> '',
@@ -140,11 +145,33 @@ if(!empty($_POST['doClear'])) {
 //	http://php.net/manual/en/function.max.php
 //
 if(!empty($_POST['doAdd'])) {	
-	$files 			= readDirectory(dirname(__FILE__) . "/objects");
+	$files 			= readDirectory(dirname(__FILE__) . "/$dirname");
 	$id 				= max($files) + 1;
 	$obj['id'] 	= $id;
-	$filename 	= "objects/$id";
-	$output .= "<p>Nytt objekt med id=$id. Klicka på spara för att spara objektet. ";
+	$obj['title'] 	= "Titel saknas";
+	$filename 	= "$dirname/$id";
+	file_put_contents($filename, serialize($obj));
+	$output .= "<p>Nytt objekt med id=$id. ";
+}
+
+
+// ---------------------------------------------------------------------------------------------
+//
+// DELETE
+// Take action if the object is to be deleted
+//
+//	http://www.w3schools.com/php/php_if_else.asp
+//
+//	http://php.net/manual/en/function.is-file.php
+//	http://php.net/manual/en/function.unlink.php
+//
+if(!empty($_POST['doDelete'])) {	
+	if(is_file($filename)) {
+		unlink($filename);		
+		$output .= "<p>Filen raderades från disken. ";
+	} else {
+		$output .= "<p>Filen kunde inte raderas, filen fanns ej.";		
+	}
 }
 
 
@@ -177,45 +204,84 @@ if($id == 0) {
 
 // ---------------------------------------------------------------------------------------------
 //
-// DELETE
-// Take action if the object is to be deleted
+// VIEW ALL
+// Create a clickable list of all files saved in the objects-directory.
+// Use $_GET (?id=x) to send the id of the file/object to display.
 //
-//	http://www.w3schools.com/php/php_if_else.asp
+// Also create a select/option list to be used in the form
 //
-//	http://php.net/manual/en/function.is-file.php
-//	http://php.net/manual/en/function.unlink.php
+//	http://php.net/manual/en/language.constants.predefined.php
+//	http://php.net/manual/en/function.dirname.php
+//	http://php.net/manual/en/control-structures.foreach.php
+//	
+$dir = dirname(__FILE__) . "/$dirname/";
+$files = readDirectory($dir);
+
+$objects = "";
+$select	= "<select name='id' onChange='submit();'><option value=-1>Välj objekt</option>";
+// Scan all files for the name of the object
+foreach($files as $val) {
+	if(is_file("$dir/$val")) {
+		$i = unserialize(file_get_contents("$dir/$val"));
+		$objects	.= "<a href='?id=$val'>{$i['title']} ({$i['id']})</a> ";
+		$select		.= "<option value='$val'" . ($val == $id ? " selected " : "") . ">{$i['title']} ({$i['id']})</option>";
+	}
+}
+$select .= "</select>";
+
+
+// ---------------------------------------------------------------------------------------------
 //
-if(!empty($_POST['doDelete'])) {	
-	if(is_file($filename)) {
-		unlink($filename);		
-		$output .= "<p>Filen raderades från disken. ";
+// UPLOAD IMAGES
+// Upload images to the server.
+//
+//	http://php.net/manual/en/features.file-upload.post-method.php
+//	
+if(!empty($_POST['doFileUpload'])) {
+	$uploaddir = dirname(__FILE__) . "/$imageDir/";
+	$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+
+	if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
+    $output .= "Filen laddas upp. ";
 	} else {
-		$output .= "<p>Filen kunde inte raderas, filen fanns ej.";		
+    $output .= "Något gick fel när filen laddades upp. ";
+	}
+	
+	// To debug
+	//echo "<pre>"; print_r($_FILES); echo "</pre>";
+}
+
+
+// ---------------------------------------------------------------------------------------------
+//
+// DELETE IMAGES
+// Delete images from the server.
+//	
+if(!empty($_GET['doRemoveImage'])) {
+	$dir 	= dirname(__FILE__) . "/$imageDir/";
+	$file = basename(strip_tags($_GET['doRemoveImage']));
+	if(is_file("$dir/$file")) {
+		unlink("$dir/$file");
+    $output .= "Bilden $dir/$file raderas. ";
 	}
 }
 
 
 // ---------------------------------------------------------------------------------------------
 //
-// VIEW ALL
-// Create a clickable list of all files saved in the objects-directory.
-// Use $_GET (?id=x) to send the id of the file/object to display.
+// DISPLAY LIST OF IMAGES
+// Display the images that were uploaded.
 //
-//	http://php.net/manual/en/language.constants.predefined.php
-//	http://php.net/manual/en/function.dirname.php
-//	http://php.net/manual/en/control-structures.foreach.php
-//	
-$dir = dirname(__FILE__) . "/objects/";
+$dir = dirname(__FILE__) . "/$imageDir/";
 $files = readDirectory($dir);
 
-$objects = "";
-// Scan all files for the name of the object
+$images = "";
 foreach($files as $val) {
 	if(is_file("$dir/$val")) {
-		$i = unserialize(file_get_contents("$dir/$val"));
-		$objects .= "<a href='?id=$val'>{$i['title']} ({$i['id']})</a> ";
+		$images	.= "<a href='$imageDir/$val' title='Visa bilden'>$imageDir/$val</a> <a href='?id=$id&amp;doRemoveImage=$val' title='Radera bilden'>x</a><br>";
 	}
 }
+
 
 
 ?>
@@ -235,18 +301,31 @@ foreach($files as $val) {
 		</aside>
 		
 		<aside class="box">
-			<p>Filer upload:
-			<p><?php echo $objects; ?></p>
+			<form enctype="multipart/form-data" action="?id=<?php echo $id; ?>" method="POST">
+				<!-- MAX_FILE_SIZE must precede the file input field -->
+				<input type="hidden" name="MAX_FILE_SIZE" value="9000000" />
+				<!-- Name of input element determines name in $_FILES array -->
+				Ladda upp bilder: <input name="userfile" type="file" />
+				<input type="submit" name="doFileUpload" value="Ladda upp" />
+			</form>
+
+			<p><?php echo $images; ?></p>
 		</aside>
 	</aside>
 	
 	<section class=w600>
 		<h1>Museum Objekt</h1>
-		<form class="standard" method=post>
+		<form class="standard" action="?id=<?php echo $id; ?>" method=post>
 		 <fieldset>
 			<legend>Hantera Museum Objekt</legend>
 		
+			<!--
 			<label>Id:<input type=number name=id placeholder="Id på objektet, en siffra " value="<?php echo $obj['id']; ?>"></label>
+			-->
+			<?php echo $select; ?>
+			<input type=submit name=doAdd value="Nytt objekt" title="Skapa ett nytt objekt med ett unikt id.">
+			<input type=submit name=doDelete value="Radera" title="Radera detta objektet från disk genom att ta bort filen.">
+
 			<label>Titel:<input type=text name=title placeholder="Titel/namn på objektet" value="<?php echo $obj['title']; ?>"></label>
 			<label>Ingress:<textarea name=ingress placeholder="Ingress, en kortare och slagkraftig intro till objektet"><?php echo $obj['ingress']; ?></textarea></label>
 			<label>Text:<textarea name=text placeholder="Text, en beskrivning av objektet"><?php echo $obj['text']; ?></textarea></label>
@@ -257,9 +336,7 @@ foreach($files as $val) {
 			<label>Förvaltare:<input type=text name=trustee placeholder="Förvaltare, vem förvaltar objektet för tillfället" value="<?php echo $obj['trustee']; ?>"></label>
 			<label>Bakgrund:<textarea name=background placeholder="Bakgrund, hur hittade objektet fram till dess nuvarande ägare och förvaltare"><?php echo $obj['background']; ?></textarea></label>
 					
-			<input type=submit name=doDelete value="Radera" title="Radera detta objektet från disk genom att ta bort filen.">
-			<input type=submit name=doAdd value="Nytt objekt" title="Skapa ett nytt objekt med ett unikt id.">
-			<input type=submit name=doClear value="Töm formulär" title="Töm formuläret på alla värden, visa ett tomt formulär">
+			<!--<input type=submit name=doClear value="Töm formulär" title="Töm formuläret på alla värden, visa ett tomt formulär">-->
 			<input type=reset value="Återställ" title="Återställ formuläret till dess ursprunliga läge">
 			<input type=submit name=doSave value="Spara" title="Spara alla ändringar">
 			

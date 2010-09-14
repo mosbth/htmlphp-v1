@@ -119,8 +119,7 @@ include("header_projekt.php");
 			<p>Bygg ut ditt Begravningsmuseum och visa upp minst 3 av de objekt som finns tillgängliga på följande länk. 
 			<a href="museum_objekt_form.php">Objekt till Begravningsmuseum</a>
 			
-			<p>Att ladda upp filer (bilder) eller skydda inmatningen med lösenord (se instruktionen för kursmomentet) 
-			är ren överkurs och görs bara av de som vill, vågar och orkar.
+			<p>Att ladda upp filer (bilder) är ren överkurs och görs bara av de som vill, vågar och orkar.
 			
 		</section>			
 			

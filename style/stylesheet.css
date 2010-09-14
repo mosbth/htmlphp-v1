@@ -85,6 +85,8 @@ body#proj-lev  	 a#proj-lev-	{ color:#f5f5f5; background:#999999; }
 /* Museum submenu: Keep current choice/link highlighted */
 body#begr-seder   a#begr-,
 body#begr-seder   a#begr-seder- { color:#f5f5f5; background:#999999; }
+body#begr-obj   	a#begr-,
+body#begr-obj   	a#begr-obj-		{ color:#f5f5f5; background:#999999; }
 body#begr-form   	a#begr-,
 body#begr-form   	a#begr-form-	{ color:#f5f5f5; background:#999999; }
 
