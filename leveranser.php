@@ -24,7 +24,7 @@ include("header_projekt.php");
 			
 			<ul>
 				<li><a href="#lev01">Leverans 1: En Outline till Begravningsmuseum Online</a>
-				<li><a href="#lev02">Leverans 2: Skapa och Editera Museum Objekt</a>
+				<!--<li><a href="#lev02">Leverans 2: Skapa och Editera Museum Objekt</a>-->
 			</ul>
 		</section>
 		
@@ -88,6 +88,7 @@ include("header_projekt.php");
 		</section>
 		
 <!-- *********************    Section ******************************************************** -->
+<!--
 		<section id="lev02">
 			<hgroup>
 				<h2>Leverans 2: Skapa och Editera Museum Objekt</h2>
@@ -122,7 +123,7 @@ include("header_projekt.php");
 			<p>Att ladda upp filer (bilder) är ren överkurs och görs bara av de som vill, vågar och orkar.
 			
 		</section>			
-			
+-->			
 
 		<?php include("byline.php"); ?>
 				

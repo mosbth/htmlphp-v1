@@ -60,7 +60,7 @@ error_reporting(-1);
 			<a id="html20-" href="de_20_vanligaste_html_elementen.php">HTML-20</a> 
 			<a id="css20-"  href="de_20_vanligaste_css_konstruktionerna.php">CSS-20</a> 
 			<a id="php20-"  href="20_steg_for_att_komma_igang_med_php.php">PHP-20</a> 
-			<a id="forms-"  href="forms.php">Formulär</a> 
+			<!--<a id="forms-"  href="forms.php">Formulär</a> -->
 			<a id="proj-"   href="projekt.php">Projekt</a> 
 			<a id="begr-"   href="begravningsseder_och_bruk.php">Begravningsmuseum</a> 
 		</nav>

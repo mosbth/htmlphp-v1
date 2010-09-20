@@ -34,14 +34,14 @@ $refToThisPage .= $_SERVER["SERVER_NAME"] . $serverPort . $_SERVER["REQUEST_URI"
 			<h5>Kmom01</h5>
 				<a href='http://dbwebb.se/htmlphp/kmom01/instruction'>Instruktion för kursmomentet</a>
 				<a href='http://dbwebb.se/htmlphp/install_lab_environment'>Guide för att installera labbmiljön</a>
-				<a href='http://github.com/mosbth/me/tree/v1.03'>Källkod</a>
+				<a href='http://github.com/mosbth/htmlphp/tree/v1.03'>Källkod</a>
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom01/me/me.php'>Me-sidan</a>
 		</nav>
 
 		<nav>
 			<h5>Kmom02</h5>
 				<a href='http://dbwebb.se/htmlphp/kmom02/instruction'>Instruktion för kursmomentet</a>
-				<a href='http://github.com/mosbth/me/tree/v2.0'>Källkod</a>
+				<a href='http://github.com/mosbth/htmlphp/tree/v2.0'>Källkod</a>
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom02/me/me.php'>Me-sidan</a>
 		</nav>
 
@@ -55,8 +55,10 @@ $refToThisPage .= $_SERVER["SERVER_NAME"] . $serverPort . $_SERVER["REQUEST_URI"
 		<nav>
 			<h5>Kmom04</h5>
 				<a href='http://dbwebb.se/htmlphp/kmom04/instruction'>Instruktion för kursmomentet</a>
-				<a href='http://github.com/mosbth/me/tree/v4.01'>Källkod</a>
+				<a href='http://www.student.bth.se/~mos/htmlphp/mom04/museum'>Museum Online, mos leverans 1</a>
+				<a href='http://github.com/mosbth/MuseumOnline/tree/v0.1'>Museum Online Källkod</a>
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom04/me/me.php'>Me-sidan</a>
+				<a href='http://github.com/mosbth/htmlphp/tree/v4.01'>Källkod</a>
 		</nav>
 
 		<div class="final">
