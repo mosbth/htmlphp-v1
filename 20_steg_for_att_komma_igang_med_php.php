@@ -10,13 +10,20 @@ include("header.php");
 <!-- - - - - - - - - - - - - - - - - - aside        - - - - - - - - - - - - - - - - - -->
 <aside class="right">
 	<aside class=box>
-		<p>PHP-manualen, din bästa vän.</p>
+		<h4>PHP-manualen, din bästa vän</h4>
+		<p>Lär känna PHP-manualen och lär dig hitta i den. Både i innehållsförteckningen och via sökfunktionen.
+		Lär dig hur de olika funktionerna beskrivs
+		och manualen kommer till slut att bli din bästa vän och nästan den enda resursen du behöver
+		för ditt PHP-programmerande.</p>
+		<p><a href="http://php.net/manual/en/">PHP Manualen</a>
+		</p>
 	</aside>
 	<aside class=box>
-		<p>W3Schools har enklare kom-igång-guider.</p>
-	</aside>
-	<aside class=box>
-		<p>Kodstandarder.</p>
+		<h4>W3Schools hjälper dig på vägen</h4>
+		<p>Här finns enkla guider som hjälper dig att komma igång. korta beskrivningar av det viktigaste
+		tillsammans med kodexempel. OM du är osäker så ta en titt i W3Schools tutorials och se om de kan hjälpa dig.</p>
+		<p><a href="http://w3schools.com/PHP">PHP på W3Schools</a>
+		</p>
 	</aside>
 </aside>
 
@@ -50,14 +57,14 @@ include("header.php");
 				<li><a href="#s17">Filhantering</a>
 				<li><a href="#s18">Databaser</a>
 				<li><a href="#s19">Vad är installerat med <code>phpinfo()</code></a>
-				<li><a href="#s20">Grön programmering</a>
+				<li><a href="#s20">Grön programmering och kodstandarder</a>
 			</ol>
 	</header>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s1">
 		<h2>1. Om PHP</h2>			
-		<p>PHP är ett skriptspråk som främts används tillsammans med webbservrar för att skapa dynamiska
+		<p>PHP är ett skriptspråk som främst används tillsammans med webbservrar för att skapa dynamiska
 		webbsidor. Läs om PHP och dess historia på Wikipedia.
 		
 		<blockquote class=links>
@@ -85,9 +92,9 @@ include("header.php");
 		<h2>2. PHP som skriptspråk i HTML</h2>			
 		<p>Ett vanligt sätt att börja med PHP är att stoppa in lite skript-taggar här och var i en 
 		HTML-sida. Det är så vi använder PHP i denna kursen. Det är främst HTML-koden som bygger upp sidan
-		och PHP-skripten stoppas in där det passar. Ett exempel på detta är till exempel header-sidan.
+		och PHP-skripten stoppas in där det passar. Ett exempel på detta är header-sidan, <code>header.php</code>.
 		
-		<p><a href="source.php?file=header.php">Exempel på HTML mixat med PHP-skript</a>
+		<p><a href="source.php?file=header.php#L1">Exempel på HTML mixat med PHP-skript</a>
 		
 		<p>Man kan säga att HTML står för strukturen och PHP för viss dynamik.
 
@@ -98,13 +105,13 @@ include("header.php");
 	<section id="s3">
 		<h2>3. PHP som programmeringsspråk tillsammans med HTML</h2>			
 		<p>Ett alternativt sätt att bygga webbapplikationer är att betrakta PHP som ett rent programmeringsspråk 
-		och bygga strukturen med PHP och sedan skriva ut HTML-koden.
+		och bygga strukturen med PHP för att sedan skriva ut HTML-resultatet.
 		
 		<p>Ett exempel på detta är <code>source.php</code>, ett PHP-skript som visar innehållet i en katalog och källkoden
-		för de filer som finns där. I den filen används PHP som ett programmeringsspråk för att bygga upp sidan. I
+		för de filer som finns där. Här används PHP som ett programmeringsspråk för att bygga upp sidan. I
 		slutet av skriptet så skrivs HTML-koden ut.
 		
-		<p><a href="source.php?file=source.php">Exempel på PHP programmering i <code>source.php</code></a>
+		<p><a href="source.php?file=source.php#L1">Exempel på PHP programmering i <code>source.php</code></a>
 		
 		<p>Vilket är bäst? Ingen aning. Det beror på vad man skall göra. Det beror på helt enkelt. Det är viktigt
 		att lära sig båda varianterna så att man kan förstå dess fördelar och nackdelar. I ett jobb som PHP-programmerare
@@ -118,7 +125,7 @@ include("header.php");
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s4">
 		<h2>4. Skriv ut text med <code>echo</code></h2>			
-		<p>I PHP handlar det mycket om strängar och att skriva ut dem. Studera följande exempel 
+		<p>I PHP handlar det mycket om strängar, stränghantering och att skriva ut dem. Studera följande exempel 
 		för att se hur <code>echo</code>, <code>printf()</code> och <code>die()</code> används för utskrifter.
 		
 		<p><a href="example/php/php2.php">Exempel på <code>echo</code> och <code>printf()</code></a>
@@ -127,9 +134,10 @@ include("header.php");
 		<p>Använd sökfunktionen i <a href="http://php.net/manual/en/">PHP-manualen</a> för att slå upp respektive funktion.
 
 		<p>Notera att strängar kan vara omringade med antingen " (dubbelfnutt) eller ' (enkelfnutt). Den stora skillnaden
-		mellan dessa fnuttar är hur variabler i strängar hanteras, låt oss återkomma till det.
+		mellan dessa fnuttar är hur variabler i strängar hanteras. Med dubbelfnuttar skrivs värdet av variabeln ut, med enkelfnutt 
+		skrivs texten ut som den är, den tolkas inte som en variabel.
 		
-		<p>Om du kan ett annat programmeringsspråk sedan tidigare så kommer du känna igen dig. Framförallt om du kan C eller C++.
+		<p>Om du kan andra programmeringsspråk sedan tidigare så kommer du känna igen dig. Framförallt om du kan C eller C++.
 		Syntax och semantik är liknande och C-funktioner för utskrifter återfinns i PHP.
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
@@ -139,9 +147,9 @@ include("header.php");
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s5">
 		<h2>5. Utskrift av felmeddelanden</h2>			
-		<p>Innan vi skriver någon PHP-kod så är det lika bra att sätta på utskriften av felmeddelandena.
-		Annars kan vi ägna låååång tid till felsökning. Använd funktioner <code>error_reporting(-1);</code>
-		för att göra så att alla felutskrifter och varningar skrivs ut.
+		<p>Innan vi skriver någon PHP-kod så är det bäst att sätta på utskriften av felmeddelandena.
+		Annars kan vi ägna låååång tid till felsökning. Använd funktionen <code>error_reporting(-1)</code>
+		för att ställa in så att alla felutskrifter och varningar skrivs ut.
 		
 		<p><a href="example/php/php4.php">Sida som genererar felmeddelanden</a>
 		
@@ -177,10 +185,10 @@ include("header.php");
 		<h2>7. Variabler och typer</h2>			
 		<p>Variabler är en lagringsplats för information. Variabler i PHP föregås av ett $-tecken.
 		Ett värde i en variabel kan vara av en viss typ. PHP är ett språk som är svagt typat och 
-		den är variablens innehåll som anger hur värdet skall tolkas och vilken typ det har.
+		det är variablens innehåll som anger hur värdet skall tolkas och bestämmer vilken typ det har.
 		
-		<p>Detta innebär att en sträng kan vara en siffra och en siffra kan adderas till en sträng.
-		Dett kan både vara kraftfullt och delvis förvirrande, iallafall om man är van vid starkt typade språk
+		<p>I PHP innebär detta att en sträng kan vara en siffra och en siffra kan adderas till en sträng.
+		Detta kan både vara kraftfullt och delvis förvirrande, iallafall om man är van vid starkt typade språk
 		där en variabel är av en viss typ och därmed punkt.
 		
 		<p><a href="example/php/php7.php">Exempel med variabler och typning av dem</a>
@@ -200,11 +208,12 @@ include("header.php");
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s8">
 		<h2>8. Uttryck och operatorer</h2>			
-		<p>Uttryck en en grundsten i PHP och de flesta programmeringsspråk. Nästan allt som skrivs 
-		är ett uttryck. Om du vill lägga ihop värdet av två variabler så är det ett uttryck.
+		<p>Uttryck en en grundsten i PHP såväl som i de flesta programmeringsspråk. Nästan allt som skrivs 
+		är ett uttryck. Om du vill lägga ihop värdet av två variabler så är det ett uttryck och anropar
+		du en funktion så är det ett uttryck.
 		
-		<p>I samband med uttrycken så används operatorer. En operator kan vara tilldelningsoperatorn =
-		eller operatorer för addition (+) och subtraktion (-).
+		<p>I samband med uttrycken så kan operatorer användas. En operator kan till exempel vara tilldelningsoperatorn (=)
+		eller operatorer för addition (+) eller subtraktion (-).
 		
 		<p><a href="example/php/php8.php">Exempel med uttryck och operatorer</a>
 		
@@ -223,7 +232,7 @@ include("header.php");
 	<section id="s9">
 		<h2>9. Villkorssatser</h2>			
 		<p>If-satser används för att testa villkor, <em>"om ett villkor är uppfyllt så gör följande annars gör något annat"</em>.
-		<p>Med switch-case-satser kan flera villkor testas med en struktur.
+		<p>Med switch-case-satser kan ett uttryck testas mot flera värden.
 		
 		<p><a href="example/php/php9.php">Exempel med villkorssatser</a>
 		
@@ -245,7 +254,7 @@ include("header.php");
 		
 		<p><a href="example/php/php10.php">Exempel med loopar</a>
 		
-		<p>Liksom if-satser och switch-satser så är loopar definerade som en kontrollstruktur i PHP.
+		<p>Liksom if-satser och switch-satser så är loopar definerade som kontrollstrukturer i PHP.
 		
 		<blockquote class=links>
 			<p><a href="http://php.net/manual/en/control-structures.for.php">PHP-manualen med <code>for</code></a>
@@ -262,7 +271,7 @@ include("header.php");
 	<section id="s11">
 		<h2>11. Arrayer</h2>			
 		<p>Arrayer är en kraftfull konstruktion i PHP. Det fungerar som en lista, eller mängd av värden.
-		Lär dig använda arrayer, det kommer spara mängder av tid och kodrader.
+		Lär dig använda arrayer och du kommer spara mängder av tid och kodrader.
 		
 		<p><a href="example/php/php11.php">Exempel med arrayer</a>
 		
@@ -283,7 +292,7 @@ include("header.php");
 		<p>När en fil blir för stor så är det dags att dela upp den i mindre filer. Det är ett bra sätt
 		att strukturera sin kod och underlättar återanvändning. En fil blir en modul av kod. Ett exempel 
 		på hur uppdelningen av kod kan fungera är style-väljaren. Koden för style-väljaren ligger i en
-		fil och det räcker att inkludera den filen för att få med dess funktion.
+		fil och det räcker att inkludera den filen för att få med dess funktion i en webbsida.
 		
 		<p><a href="source.php?dir=&file=header.php#L21">Se hur stilväljaren inkluderas i filen <code>header.php</code> (rad 21)</a> och
 		<a href="source.php?dir=&file=header.php#L53">hur den används längre ned i filen (rad 53)</a>
@@ -304,14 +313,13 @@ include("header.php");
 
 		<p><a href="example/php/php12.php">Se exempel på utskrift av <code>$_SERVER</code></a>
 
-		<p><code>$_SESSION</code>, innehåller information om själva sessionen och om det finns någon 
-		information lagrad i sessionen. Sessionsvariablen kan du använda för att lagra information 
+		<p><code>$_SESSION</code>, innehåller information om det som finns lagrat i sessionen. Sessionsvariablen kan du använda för att lagra information 
 		mellan anropen till webbsidorna. Du kan läsa mer om <a href="http://php.net/manual/en/book.session.php">sessionshantering i manualen</a>.
 
 		<p><a href="example/php/php13.php">Se exempel på utskrift av <code>$_SESSION</code></a>
 
-		<p>Om sessionsvariabeln inte innehåller något så kan du byta style med styleväljaren och sedan köra exempelt igen.
-		Då kommer du se stylens namn i sessionen. Testa även att göra reload på exempelsidan så ser du hur variabelns värde ökar.
+		<p>Om sessionsvariabeln inte innehåller något så kan du byta style med styleväljaren och sedan köra exemplet igen.
+		Då kommer du att se stylens namn i sessionen. Testa även att göra reload på exempelsidan så ser du hur variabelns värde ökar.
 		
 		<p><code>$_GET</code> och <code>$_POST</code> innehåller formulärdata som postats via ett formulär eller
 		skickats via urlen.
@@ -354,8 +362,8 @@ include("header.php");
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s16">
 		<h2>16. Klasser och Objekt</h2>			
-		<p>PHP har stöd för att skapa klasser och objekt. Det finns stöd för flera vanliga 
-		objektorienterade konstruktioner. Kursen oophp har objektorienterad PHP-programmering
+		<p>PHP har stöd för att skapa klasser och objekt. Det finns stöd för de vanligaste 
+		objektorienterade konstruktionerna. Kursen oophp har objektorienterad PHP-programmering
 		som sitt huvudsakliga fokus och det är inget vi kommer använda i htmlphp-kursen.
 		Men det kan ju inte skada att tjuvkika på ett exempel. 
 		
@@ -375,7 +383,7 @@ include("header.php");
 		på disk istället för i databas.
 		
 		<p> Filen som visar källkod, <code>source.php</code>, använder ett antal funktioner för att 
-		visa innehållet på disk och jobba mot filer. Studera kodstycket som läser upp alla filer i
+		visa innehållet på disk och jobba mot filer. Studera kodstycket som visar alla filer i
 		en viss katalog.
 		
 		<p><a href="source.php?file=source.php#L110">Exempel att läsa innehållet i en katalog (start rad 110) i <code>source.php</code></a>
@@ -399,6 +407,8 @@ include("header.php");
 		
 		<p><a href="http://db-o-webb.blogspot.com/2009/10/att-koppla-php-mot-databas.html">Exempel på PHP-koppling mot databaserna MySQL och SQL Server</a>
 
+		<p><a href="http://php.net/manual/en/book.pdo.php">Läs på om PHP Data Objects, PDO</a>
+
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
 
@@ -407,8 +417,8 @@ include("header.php");
 	<section id="s19">
 		<h2>19. Vad är installerat med <code>phpinfo()</code></h2>			
 		<p>Det finns flera versioner av PHP och ibland vill man verkligen veta vilken av dessa som är installerad.
-		Dessutom finns det flera optioner, moduler, som kan vara instalerade i en PHP-installation och 
-		själva konfigureringen av init-filen för PHP (<code>php.ini</code>) kan innehålla viktig information.
+		Dessutom finns det flera optioner och moduler som kan vara installerade i en PHP-installation.  
+		PHP-konfigureringen i init-filen (<code>php.ini</code>) kan också innehålla viktig information.
 		
 		<p>Ett enkelt sätt att få reda på denna information är att använda funktionen <code>phpinfo()</code> 
 		(<a href="http://php.net/manual/en/function.phpinfo.php">länk till manualen</a>).
@@ -433,12 +443,12 @@ include("header.php");
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s20">
-		<h2>20. Kodstandarder</h2>			
+		<h2>20. Grön programmering och kodstandarder</h2>			
 		<p>Det finns olika sätt att skriva sin kod på. Det underlättar om man använder kodningskonventioner
 		som är liknande överallt. För att underlätta detta brukar man använda kodstandarder. Du kan läsa om kodstandarder för 
-		PHP och se exempel på ett par alternativa kodstandarder som är vanliga för PHP på följande länk.
+		PHP och se exempel på ett par alternativa kodstandarder via följande länk.
 			
-		<p><a href="http://db-o-webb.blogspot.com/2010/03/gron-programmering-en.html">Exempel på PHP-koppling mot databaserna MySQL och SQL Server</a>
+		<p><a href="http://db-o-webb.blogspot.com/2010/03/gron-programmering-en.html">Programmeringsfilosofi och kodstandarder</a>
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>

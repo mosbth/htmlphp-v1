@@ -23,7 +23,7 @@ echo "$value is a integer? " . is_int($value) . "<br><br>";
 $value = 4.2;
 echo $value . "<br>";
 echo gettype($value) . "<br>";
-echo "$value is a float? " . is_float($value) . "<br><br>";
+echo "$value is a double? " . is_double($value) . "<br><br>";
 
 // Test a string
 $value = "42";
