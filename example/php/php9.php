@@ -30,6 +30,33 @@ if($v == 42 && is_string($v)) {
 	echo "Hmm, the variable is 42 OR its type is string<br>";
 }
 
+switch($v) {
+
+	case 41: { 
+		echo "Do nothing"; 
+	} break;
+	
+	case 42: { 
+		echo "Yep, should print this.<br>"; 
+	} break;
+
+	default: { 
+		echo "Always use default, it´s good practise"; 
+	} break;
+}
+
+
+switch($v) {
+
+	case 41:  
+	case 42: { 
+		echo "Yep, should print this also.<br>"; 
+	} break;
+
+	default: { 
+		echo "Always use default, it´s good practise"; 
+	} break;
+}
 
 ?>
 

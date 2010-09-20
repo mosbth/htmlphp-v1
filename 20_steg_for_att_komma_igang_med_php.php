@@ -39,12 +39,12 @@ include("header.php");
 				<li><a href="#s6">Kommentarer</a>
 				<li><a href="#s7">Variabler och typer</a>
 				<li><a href="#s8">Uttryck och operatorer</a>
-				<li><a href="#s9">Villkorssatser med <code>if</code></a>
+				<li><a href="#s9">Villkorssatser</a>
 				<li><a href="#s10">Loopar</a>
+				<li><a href="#s11">Arrayer</a>
+				<li><a href="#s12">Filer och <code>include()</code></a>
+				<li><a href="#s13">Fördefinerade variabler, <code>$_SERVER</code>, <code>$_GET</code>, <code>$_POST</code>, <code>$_SESSION</code></a>
 				<li><a href="#s2">Inbyggda funktioner</a>
-				<li><a href="#s2">Arrayer</a>
-				<li><a href="#s2">Fördefinerade variabler, _SERVER, _GET, _POST, _SESSION</a>
-				<li><a href="#s2">Filer och include()</a>
 				<li><a href="#s2">Funktioner</a>
 				<li><a href="#s2">Klasser och Objekt</a>
 				<li><a href="#s2">Systemkommandon</a>
@@ -223,19 +223,93 @@ include("header.php");
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s9">
-		<h2>9. Villkorssatser med <code>if</code></h2>			
+		<h2>9. Villkorssatser</h2>			
 		<p>If-satser används för att testa villkor, <em>"om ett villkor är uppfyllt så gör följande annars gör något annat"</em>.
+		<p>Med switch-case-satser kan flera villkor testas med en struktur.
 		
-		<p><a href="example/php/php9.php">Exempel med if-satser</a>
+		<p><a href="example/php/php9.php">Exempel med villkorssatser</a>
 		
-		<p>I PHP-manualen finns ett stycke som beskriver i detalj beskriver uttryck och operatorer.
+		<p>I PHP-manualen finns ett stycke som beskriver PHP och dess kontrollstrukturer.
 		
 		<blockquote class=links>
-			<p><a href="http://php.net/manual/en/control-structures.if.php">PHP-manualen villkorsuttryck</a>
+			<p><a href="http://php.net/manual/en/control-structures.if.php">PHP-manualen med <code>if</code></a>
+			<p><a href="http://php.net/manual/en/control-structures.switch.php">PHP-manualen med <code>switch</code></a>
 		</blockquote>		
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
+
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s10">
+		<h2>10. Loopar</h2>			
+		<p>Det finns både while, do-while och for-loopar i PHP.
+		
+		<p><a href="example/php/php10.php">Exempel med loopar</a>
+		
+		<p>Liksom if-satser och switch-satser så är loopar definerade som en kontrollstruktur i PHP.
+		
+		<blockquote class=links>
+			<p><a href="http://php.net/manual/en/control-structures.for.php">PHP-manualen med <code>for</code></a>
+			<p><a href="http://php.net/manual/en/control-structures.while.php">PHP-manualen med <code>while</code></a>
+			<p><a href="http://php.net/manual/en/control-structures.do.while.php">PHP-manualen med <code>do-while</code></a>
+		</blockquote>		
+
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s11">
+		<h2>11. Arrayer</h2>			
+		<p>Arrayer är en kraftfull konstruktion i PHP. Det fungerar som en lista, eller mängd av värden.
+		Lär dig använda arrayer, det kommer spara mängder av tid och kodrader.
+		
+		<p><a href="example/php/php11.php">Exempel med arrayer</a>
+		
+		<p>Studera manualstycket om arrayer och se vilka inbyggda funktioner som finns till stöd när du jobbar med arrayer.
+		
+		<blockquote class=links>
+			<p><a href="http://php.net/manual/en/book.array.php">PHP-manualen med arrayer</a>
+		</blockquote>		
+
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s12">
+		<h2>12. Filer och <code>include()</code</h2>			
+		<p>När en fil blir för stor så är det dags att dela upp den i mindre filer. Det är ett bra sätt
+		att strukturera sin kod och underlättar återanvändning. En fil blir en modul av kod. Ett exempel 
+		på hur uppdelningen av kod kan fungera är style-väljaren. Koden för style-väljaren ligger i en
+		fil och det räcker att inkludera den filen för att få med dess funktion.
+		
+		<p><a href="source.php?dir=&file=header.php#L21">Se hur stilväljaren inkluderas i filen <code>header.php</code> (rad 21)</a> och
+		<a href="source.php?dir=&file=header.php#L53">hur den används längre ned i filen (rad 53)</a>
+		<p><a href="source.php?dir=&file=choose_style.php">Se källkoden för stilväljaren</a>
+		
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s13">
+		<h2>13. Fördefinerade variabler, <code>$_SERVER</code>, <code>$_GET</code>, <code>$_POST</code>, <code>$_SESSION</code></h2>			
+		<p>Det finns ett antal fördefinerade variabler i PHP, ett par av dem ligger i gränslandet mellan 
+		webbservern och PHP-koden.
+		
+		<p><code>$_SERVER</code>, innehåller information om själva http-requesten, själva anropet till 
+		webbsidan.
+
+		<p><a href="example/php/php12.php"></a>Se exempel på utskrift av <code>$_SERVER</code></a>
+
+		
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
 
 
 
