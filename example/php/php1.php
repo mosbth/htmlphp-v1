@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="../../img/glider.ico">
- 	<title>Exempel PHP, del 0</title>
+ 	<title>Exempel PHP, phpinfo()</title>
 </head>
 
 <body>

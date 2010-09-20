@@ -629,6 +629,8 @@ EOD;
 			<li>Tabeller
 			<li>Stylesheet för mobil
 			<li>Verktyg vid utveckling av stylesheet (Web Developer och Firebug)
+			<li>Kommentarer i CSS är /* */
+			<li>En CSS-konstruktion går att skriva över/definera om, ju närmare HTML elementet du kommer.
 		</ul>
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a>

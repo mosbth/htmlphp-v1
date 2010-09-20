@@ -689,6 +689,7 @@ EOD;
 				<li>&lt;em&gt;					
 				<li>&lt;code&gt;					
 				<li>&lt;time&gt;					
+				<li>Kommenterar i HTML görs med &lt!-- ... --&gt; 					
 			</ul>
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
