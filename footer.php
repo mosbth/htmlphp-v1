@@ -1,4 +1,14 @@
 	<!-- This is the standard footer of the page -->
+<?php
+// Create link to current page
+$refToThisPage = "http";
+$refToThisPage .= (@$_SERVER["HTTPS"] == "on") ? 's' : '';
+$refToThisPage .= "://";
+$serverPort = ($_SERVER["SERVER_PORT"] == "80") ? '' :
+(($_SERVER["SERVER_PORT"] == 443 && @$_SERVER["HTTPS"] == "on") ? '' : ":{$_SERVER['SERVER_PORT']}");
+$refToThisPage .= $_SERVER["SERVER_NAME"] . $serverPort . $_SERVER["REQUEST_URI"];
+?>
+
 	<footer id="bottom">
 		<nav>
 			<h5>Verktyg</h5>
@@ -6,8 +16,10 @@
 			<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
 			<a href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance">Unicorn</a>
 			<a href="http://www.w3.org/2009/cheatsheet/">Cheatsheet</a>
+			<a href="http://validator.w3.org/checklink?uri=<?php echo $refToThisPage; ?>">Link Checker</a>
 			<a href="source.php">source.php</a>
-		</nav>
+
+	</nav>
 		
 		<nav>
 			<h5>Manualer</h5>

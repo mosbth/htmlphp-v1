@@ -44,15 +44,13 @@ include("header.php");
 				<li><a href="#s11">Arrayer</a>
 				<li><a href="#s12">Filer och <code>include()</code></a>
 				<li><a href="#s13">Fördefinerade variabler, <code>$_SERVER</code>, <code>$_GET</code>, <code>$_POST</code>, <code>$_SESSION</code></a>
-				<li><a href="#s2">Inbyggda funktioner</a>
-				<li><a href="#s2">Funktioner</a>
-				<li><a href="#s2">Klasser och Objekt</a>
-				<li><a href="#s2">Systemkommandon</a>
-				<li><a href="#s2">Filhantering</a>
-				<li><a href="#s2">Databaser</a>
-				<li><a href="#s18">Vad är installerat med <code>phpinfo()</code></a>
-				<li><a href="#s2">Vanliga felmeddelanden och problem</a>
-				<li><a href="#s2">Grön programmering</a>
+				<li><a href="#s14">Inbyggda funktioner</a>
+				<li><a href="#s15">Funktioner</a>
+				<li><a href="#s16">Klasser och Objekt</a>
+				<li><a href="#s17">Filhantering</a>
+				<li><a href="#s18">Databaser</a>
+				<li><a href="#s19">Vad är installerat med <code>phpinfo()</code></a>
+				<li><a href="#s20">Grön programmering</a>
 			</ol>
 	</header>
 
@@ -304,26 +302,110 @@ include("header.php");
 		<p><code>$_SERVER</code>, innehåller information om själva http-requesten, själva anropet till 
 		webbsidan.
 
-		<p><a href="example/php/php12.php"></a>Se exempel på utskrift av <code>$_SERVER</code></a>
+		<p><a href="example/php/php12.php">Se exempel på utskrift av <code>$_SERVER</code></a>
 
+		<p><code>$_SESSION</code>, innehåller information om själva sessionen och om det finns någon 
+		information lagrad i sessionen. Sessionsvariablen kan du använda för att lagra information 
+		mellan anropen till webbsidorna. Du kan läsa mer om <a href="http://php.net/manual/en/book.session.php">sessionshantering i manualen</a>.
+
+		<p><a href="example/php/php13.php">Se exempel på utskrift av <code>$_SESSION</code></a>
+
+		<p>Om sessionsvariabeln inte innehåller något så kan du byta style med styleväljaren och sedan köra exempelt igen.
+		Då kommer du se stylens namn i sessionen. Testa även att göra reload på exempelsidan så ser du hur variabelns värde ökar.
+		
+		<p><code>$_GET</code> och <code>$_POST</code> innehåller formulärdata som postats via ett formulär eller
+		skickats via urlen.
+
+		<p><a href="http://dbwebb.se/htmlphp/mom05/selfsubmit/">Se exempel på formulär med <code>$_GET</code> och <code>$_POST</code></a>
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s14">
+		<h2>14. Inbyggda funktioner</h2>			
+		<p>Det finns ett stort antal inbyggda funktioner i PHP. Manualsidan för <a href="http://php.net/manual/en/funcref.php">"Function Reference"</a> 
+		ger en översikt.
+		
+		<p><a href="example/php/php14.php">Se exempel på inbyggda funktioner för stränghantering</a>
+
+		<p><a href="http://php.net/manual/en/book.strings.php">Stränghantering har ett eget stycke i manualen</a>.
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
 
 
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s15">
+		<h2>15. Funktioner</h2>			
+		<p>Ett bra sätt att strukturera sin kod är att dela in den i funktioner. Funktioner kan ta
+		argument och returnera värden. En funktion kan även ta in-argument och ändra dess innehåll, 
+		så kallade in/out-argument eller skicka-argument-via-referens.
+		
+		<p><a href="example/php/php15.php">Se exempel på funktioner</a>
+
+		<p><a href="http://php.net/manual/en/language.functions.php">Läs om funktioner och argument i manualen</a>.
+		
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
-	<section id="s2">
-		<h2>X. Filhantering</h2>			
-		<p>__FILE__
+	<section id="s16">
+		<h2>16. Klasser och Objekt</h2>			
+		<p>PHP har stöd för att skapa klasser och objekt. Det finns stöd för flera vanliga 
+		objektorienterade konstruktioner. Kursen oophp har objektorienterad PHP-programmering
+		som sitt huvudsakliga fokus och det är inget vi kommer använda i htmlphp-kursen.
+		Men det kan ju inte skada att tjuvkika på ett exempel. 
+		
+		<p><a href="example/php/php16.php">Se exempel på klasser och objekt</a>
+
+		<p><a href="http://php.net/manual/en/language.oop5.php">Läs om klasser och objekt i manualen</a>.
+		
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s17">
+		<h2>17. Filhantering</h2>			
+		<p>Med tanke på PHP och webbapplikationer så är det vanligen naturligt att lagra information i databaser.
+		Men, det funkar också bra att lagra i filer. Ibland är det till och med bättre att lagra information
+		på disk istället för i databas.
+		
+		<p> Filen som visar källkod, <code>source.php</code>, använder ett antal funktioner för att 
+		visa innehållet på disk och jobba mot filer. Studera kodstycket som läser upp alla filer i
+		en viss katalog.
+		
+		<p><a href="source.php?file=source.php#L110">Exempel att läsa innehållet i en katalog (start rad 110) i <code>source.php</code></a>
+
+		<p><a href="example/php/php17.php">Se exempel på hur man lagrar en array på disk med <code>serialize()</code></a>
+		
+		<p>Tekniken med <code>serialize()</code> går även att använda på objekt. Ett annat användningsområde för <code>serialize()</code>
+		är när man vill lagra objekt eller arrayer i sessionen. Mycket användbart.
+		
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s18">
+		<h2>18. Databaser</h2>			
+		<p>Med PHP kan man koppla sig till flertalet olika databaser. Två vanliga databaser som används tillsammans
+		med PHP är MySQL och SQLite. MySQL-kopplingen och MySQLi används i kurserna oophp, dbwebb1 och dbwebb2. 
+		I kursen htmlphp använder vi SQLite och PDO. PDO är ett lager som gör att användandet av en databas är likadan oavsett
+		vilken databasmotor som ligger under.
+		
+		<p><a href="http://db-o-webb.blogspot.com/2009/10/att-koppla-php-mot-databas.html">Exempel på PHP-koppling mot databaserna MySQL och SQL Server</a>
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
 
+
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
-	<section id="s18">
-		<h2>18. Vad är installerat med <code>phpinfo()</code></h2>			
+	<section id="s19">
+		<h2>19. Vad är installerat med <code>phpinfo()</code></h2>			
 		<p>Det finns flera versioner av PHP och ibland vill man verkligen veta vilken av dessa som är installerad.
 		Dessutom finns det flera optioner, moduler, som kan vara instalerade i en PHP-installation och 
 		själva konfigureringen av init-filen för PHP (<code>php.ini</code>) kan innehålla viktig information.
@@ -344,6 +426,19 @@ include("header.php");
 
 		<p>En riktigt duktig PHP-programmerare har koll på sin omgivning och vet vad som krävs och vilka begränsningar som finns.
 		Skript såsom <code>check_php_config.php</code> underlättar sådan hantering. 
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s20">
+		<h2>20. Kodstandarder</h2>			
+		<p>Det finns olika sätt att skriva sin kod på. Det underlättar om man använder kodningskonventioner
+		som är liknande överallt. För att underlätta detta brukar man använda kodstandarder. Du kan läsa om kodstandarder för 
+		PHP och se exempel på ett par alternativa kodstandarder som är vanliga för PHP på följande länk.
+			
+		<p><a href="http://db-o-webb.blogspot.com/2010/03/gron-programmering-en.html">Exempel på PHP-koppling mot databaserna MySQL och SQL Server</a>
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>

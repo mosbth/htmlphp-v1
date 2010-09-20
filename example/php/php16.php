@@ -4,18 +4,31 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="../../img/glider.ico">
- 	<title>Exempel PHP, $_SERVER</title>
+ 	<title>Exempel PHP, klasser och objekt</title>
 </head>
 
 <body>
 
 <?php 
+
 error_reporting(-1); 
 
-echo "<pre>";
-print_r($_SERVER);
-echo "</pre>";
+// A class with one member variable and one method
+class CMyClass {
 
+	public $i;
+	
+	public function f1() {
+		return 42;
+	}
+
+};
+
+// Create an object of the class
+$obj = new CMyClass();
+$obj->i = 42;
+
+echo $obj->i . " == " . $obj->f1() . "<br>";
 
 
 ?>

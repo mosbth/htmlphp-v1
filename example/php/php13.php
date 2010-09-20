@@ -4,16 +4,20 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="../../img/glider.ico">
- 	<title>Exempel PHP, $_SERVER</title>
+ 	<title>Exempel PHP, $_SESSION</title>
 </head>
 
 <body>
 
 <?php 
+$sessionName = 'htmlphp_mos';
+session_name($sessionName); 
+session_start(); 
 error_reporting(-1); 
 
+$_SESSION['value'] += 1;
 echo "<pre>";
-print_r($_SERVER);
+print_r($_SESSION);
 echo "</pre>";
 
 
