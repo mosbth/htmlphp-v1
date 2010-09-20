@@ -33,7 +33,7 @@ $refToThisPage .= $_SERVER["SERVER_NAME"] . $serverPort . $_SERVER["REQUEST_URI"
 		<nav>
 			<h5>Kmom01</h5>
 				<a href='http://dbwebb.se/htmlphp/kmom01/instruction'>Instruktion för kursmomentet</a>
-				<a href='http://bit.ly/htmlphp_labbmiljo'>Guide för att installera labbmiljön</a>
+				<a href='http://dbwebb.se/htmlphp/install_lab_environment'>Guide för att installera labbmiljön</a>
 				<a href='http://github.com/mosbth/me/tree/v1.03'>Källkod</a>
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom01/me/me.php'>Me-sidan</a>
 		</nav>
