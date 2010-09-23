@@ -190,9 +190,17 @@ if(!empty($_POST['doDelete'])) {
 //	http://php.net/manual/en/function.file-get-contents.php
 //	http://php.net/manual/en/function.unserialize.php
 //
+$isReadonly = " disabled ";
+
 if($id == 0) {
 	// Do nothing, just produce an empty form
 } else if(is_file($filename)) {
+	if(is_writable($filename)) {
+		$isReadonly = "";
+	} else {
+		$output .= "Filen är skrivskyddad. ";	
+	}
+	
 	// Read file into array
 	$obj = unserialize(file_get_contents($filename));
 	$output .= "Filen lästes in från disk. ";
@@ -278,7 +286,11 @@ $files = readDirectory($dir);
 $images = "";
 foreach($files as $val) {
 	if(is_file("$dir/$val")) {
-		$images	.= "<a href='$imageDir/$val' title='Visa bilden'>$imageDir/$val</a> <a href='?id=$id&amp;doRemoveImage=$val' title='Radera bilden'>x</a><br>";
+		$del = "";
+		if(is_writeable("$dir/$val")) {
+			$del = " <a href='?id=$id&amp;doRemoveImage=$val' title='Radera bilden'>x</a>";
+		}
+		$images	.= "<a href='$imageDir/$val' title='Visa bilden'>$imageDir/$val</a>{$del}<br>";
 	}
 }
 
@@ -296,23 +308,34 @@ foreach($files as $val) {
 <!-- - - - - - - - - - - - - - - - - - aside        - - - - - - - - - - - - - - - - - -->
 	<aside class="right">
 		<aside class="box">
+			<h4>Vissa objekt är skrivskyddade</h4>
+			<p>De objekt som jag lagt dit går ej att uppdatera eller radera. De bilder som jag lagt dit går ej att radera. 
+			Testar du att skapa egna objekt eller ladda upp egna bilder så går det att radera dem.
+			Det är fritt fram att testa. Du kan inte förstöra något.
+			</p>
+		</aside>
+		
+		<aside class="box">
+			<h4>Museum Objekt</h4>
 			<p>Följande objekt finns sparade:
 			<p><?php echo $objects; ?></p>
 		</aside>
 		
 		<aside class="box">
+			<h4>Ladda upp egna bilder</h4>
 			<form enctype="multipart/form-data" action="?id=<?php echo $id; ?>" method="POST">
 				<!-- MAX_FILE_SIZE must precede the file input field -->
 				<input type="hidden" name="MAX_FILE_SIZE" value="9000000" />
 				<!-- Name of input element determines name in $_FILES array -->
-				Ladda upp bilder: <input name="userfile" type="file" />
+				<input name="userfile" type="file" />
 				<input type="submit" name="doFileUpload" value="Ladda upp" />
 			</form>
 
 			<p><?php echo $images; ?></p>
 		</aside>
+
 	</aside>
-	
+
 	<section class=w600>
 		<h1>Museum Objekt</h1>
 		<form class="standard" action="?id=<?php echo $id; ?>" method=post>
@@ -338,7 +361,7 @@ foreach($files as $val) {
 					
 			<!--<input type=submit name=doClear value="Töm formulär" title="Töm formuläret på alla värden, visa ett tomt formulär">-->
 			<input type=reset value="Återställ" title="Återställ formuläret till dess ursprunliga läge">
-			<input type=submit name=doSave value="Spara" title="Spara alla ändringar">
+			<input type=submit name=doSave value="Spara" <?php echo $isReadonly; ?> title="Spara alla ändringar">
 			
 			<output><?php echo $output; ?></output>
 			

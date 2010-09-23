@@ -153,8 +153,6 @@ $select .= "</select>";
 		<aside class="box">
 			<p>Du kan uppdatera och spara nya objekt samt ändra bilderna via följande länk:
 			<p><a href="museum_objekt_form.php">Administrera museum objekt</a> 
-			<p>Logga in genom att 
-			ange doe:doe (användare doe och lösenord doe). 
 			</p>
 		</aside>
 	</aside>
