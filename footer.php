@@ -55,10 +55,17 @@ $refToThisPage .= $_SERVER["SERVER_NAME"] . $serverPort . $_SERVER["REQUEST_URI"
 		<nav>
 			<h5>Kmom04</h5>
 				<a href='http://dbwebb.se/htmlphp/kmom04/instruction'>Instruktion för kursmomentet</a>
-				<a href='http://www.student.bth.se/~mos/htmlphp/mom04/museum'>Museum Online, mos leverans 1</a>
+				<a href='http://dbwebb.se/htmlphp/mom04/museum'>Museum Online, mos leverans 1</a>
 				<a href='http://github.com/mosbth/MuseumOnline/tree/v0.1'>Museum Online Källkod</a>
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom04/me/me.php'>Me-sidan</a>
 				<a href='http://github.com/mosbth/htmlphp/tree/v4.01'>Källkod</a>
+		</nav>
+
+		<nav>
+			<h5>Kmom05</h5>
+				<a href='http://dbwebb.se/htmlphp/kmom05/instruction'>Instruktion för kursmomentet</a>
+				<a href='http://dbwebb.se/htmlphp/mom05/me/me.php'>Me-sidan</a>
+				<a href='http://github.com/mosbth/htmlphp/tree/v5.01'>Källkod</a>
 		</nav>
 
 		<div class="final">
