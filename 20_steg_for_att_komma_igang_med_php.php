@@ -59,6 +59,13 @@ include("header.php");
 				<li><a href="#s19">Vad är installerat med <code>phpinfo()</code></a>
 				<li><a href="#s20">Grön programmering och kodstandarder</a>
 			</ol>
+			
+			<p>Läs mer när du väl kommit igång. 
+			
+			<ul>
+				<li><a href="#form">PHP och HTML-formulär</a>
+			</ul>
+	
 	</header>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
@@ -450,6 +457,18 @@ include("header.php");
 			
 		<p><a href="http://db-o-webb.blogspot.com/2010/03/gron-programmering-en.html">Programmeringsfilosofi och kodstandarder</a>
 
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="form">
+		<h2>PHP och HTML-formulär</h2>			
+		<p>PHP används för att bearbeta och lagra information från HTML-formulär. När ett formulär
+		kommer till en php-sida finns dess innehåll antingen i <code>$_GET</code> eller i <code>$_POST</code>.
+		
+		<p><a href="http://dbwebb.se/htmlphp/mom05/selfsubmit/">Exempel på ett formulär med både <code>$_GET</code> och <code>$_POST</code>
+		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
 

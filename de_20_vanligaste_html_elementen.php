@@ -640,7 +640,7 @@ include("header.php");
 		
 <?php
 $code = <<<EOD
-<form class=form>
+<form action="#form" class=form method=post>
   <fieldset>
     <legend>legend</legend>
     <label>text: <input type=text></label>
@@ -667,9 +667,11 @@ EOD;
 			<?php echo $code; ?>
 		</div>
 		
-		<p><a href="http://dbwebb.se/htmlphp/mom04/forms/">Studera olika typer av form-element</a>.
+		<p><a href="http://dbwebb.se/htmlphp/mom05/forms/">Studera olika typer av form-element</a>.
 
 		<p><a href="de_20_vanligaste_css_konstruktionerna.php#form">Läs om stylning av formuläret på CSS-20</a>.
+
+		<p><a href="20_steg_for_att_komma_igang_med_php.php#form">Läs om forumlärhantering med PHP på PHP-20</a>.
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>

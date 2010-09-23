@@ -41,11 +41,11 @@ include("header.php");
 			<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-09-13">13:e 
 			september 2010</time></p>
 
-			<h1>Att spara HTML formulär med PHP</h1>
+			<h1>HTML formulär och PHP</h1>
 			<p>Här följer en stegvis guide till hur man bygger upp ett formulär, stylar det och sparar 
-			information på disk med hjälp av PHP. Informationen är samma som finns att läsa i kursmomentet, fast betydligt mer kortfattad.
-			<p><a href="http://dbwebb.se/htmlphp/kmom04/instruction">Samma information finns i kursmomentet, mer utförligt förklarad</a>
-			<p><a href="example/form">Här ligger alla filer som finns i exemplet</a>
+			information på disk med hjälp av PHP. Informationen är samma som finns att läsa i kursmomentets instruktion, fast betydligt mer kortfattad.
+			<p><a href="http://dbwebb.se/htmlphp/kmom05/instruction">Samma information finns i kursmomentet, mer utförligt förklarad</a>
+			<p><a href="example/form">Här ligger alla exempel-filer som används</a>
 			<p><a href="source.php?dir=example/form">Här kan du se källkoden till alla filerna</a>
 			
 			</p>
@@ -64,13 +64,16 @@ include("header.php");
 		<p><a href="example/form/forms.css">En stylesheet för att snygga till formuläret</a>
 		<p><a href="example/form/form1.php">Uppdaterat formulär, nu med stylesheet</a>
 
-		<p>Titta på källkoden så ser du PHP-kod som skriver ut innehållet i formuläret.
+		<p>Skriv in något i formuläret och klicka på spara så ser du vad som händer.
+		<p>Titta på källkoden så ser du PHP-koden som skriver ut innehållet i formuläret.
 		
 
 		<h2>En skiss över formulärets funktion</h2>
 		
-		<p>Vi tänker till lite extra och skissar upp vad fomruläret skall klara av. Följande lista får vi ihop.
+		<p>Vi tänker till lite extra och skissar upp vad formuläret skall klara av. Följande lista får vi ihop.
 		
+<?php
+$theMasterPlan = <<<EOD
 		<ol>
 			<li>Validera innehållet i formuläret för att hindra säkerhetshål.
 			<li>Spara formuläret på disk.
@@ -80,9 +83,11 @@ include("header.php");
 			<li>Radera en fil från disk.
 			<li>Skapa ett nytt tomt objekt.
 		</ol>
-		
+EOD;
+echo $theMasterPlan;
+?>
 		<p>Jag uppdaterar formuläret och lägger till kodstruktur med kommentarer om det som 
-		komma skall.
+		komma skall. Studera källkoden. I fortsättningen så bör du studera källkoden för varje ny funktion som kommer till.
 		
 		<p><a href="example/form/form2.php">Formulär, nu med PHP-kodstubbar, enligt arbetsplanen ovan</a>
 
@@ -90,21 +95,22 @@ include("header.php");
 		<h2>Validera inkommande och spara på disk</h2>
 		
 		<p>All formulärdata valideras för att trygga säkerheten. Formulärets data sparas på disk
-		i katalogen "objects" som måste vara skrivbar för webbservern (chmod 777). Ange ett id och klicka på knappen "Spara" för att testa.
+		i katalogen <code>objects/</code> som måste vara skrivbar för webbservern (chmod 777). Ange ett id och klicka på knappen "Spara" för att testa.
 		
-		<p><a href="example/form/form3.php">Formulär som sparar informationen till filer på disk</a>
+		<p><a href="example/form/form3.php">Formulär som sparar informationen till filer på disk (du måste ange ett id som är större än 0)</a>
 		
 
 		<h2>Läs tillbaka infon från disk</h2>
 		
-		<p>Nu går det ändra i formuläret, spara på disk och ändringarna visas i formuläret.
+		<p>Nu går det ändra i formuläret, spara på disk och läsa upp från disk samt att ändringarna visas i formuläret.
+		<p> Pröva att ange ett id&gt;0, spara, ändra värdet i ett fält, spara igen. Den ändrade informationen syns i formuläret.
 		
 		<p><a href="example/form/form4.php">Läs upp filerna från disk och visa innehållet i formuläret</a>
 		
 		
 		<h2>Visa alla objekt på disk</h2>
 		
-		<p>Visa alla filerna i katalogen "objects" och gör dem klickbara så det går se vad som sparats sedan tidigare.
+		<p>Visa alla filerna i katalogen <code>objects/</code> och gör dem klickbara.
 		Klicka på en fil för att se dess innehåll.
 		
 		<p><a href="example/form/form5.php">Visa alla filerna som tidigare sparats</a>
@@ -112,7 +118,7 @@ include("header.php");
 		
 		<h2>Rensa formuläret från värden</h2>
 		
-		<p>Klicka på knappen "Töm formulär" för att tömma formuläret.
+		<p>Välj att visa ett objekt. Klicka sedan på knappen "Töm formulär" för att tömma formuläret.
 		
 		<p><a href="example/form/form6.php">Töm formuläret på data</a>
 		
@@ -134,7 +140,11 @@ include("header.php");
 		
 		<h2>Städa koden</h2>
 		
-		<p>Rensar koden och flyttar funktionerna till en egen fil.
+		<p>Nu börjar det bli klart. Lika bra att rensa i koden och flytta funktionerna till en egen fil
+		som jag sedan inkluderar.
+
+		<p>Testa gärna att allt fungerar som det var tänkt enligt planen:
+		<?php echo $theMasterPlan; ?>
 		
 		<p><a href="example/form/form9.php">Formulär, nu städat i koden</a>
 		<p><a href="http://dev.phpersia.org/htmlphp/source.php?dir=example/form&file=functions.php">Funktionerna är flyttade till egen fil</a>

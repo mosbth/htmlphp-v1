@@ -600,14 +600,14 @@ EOD;
 		Det är möjligt att göra en struktur av HTML elementen och därefter styla olika variationer med CSS.
 		Det kan betyda att det underlättar med en eller annan div som wrappar innehållet i formuläret.
 		
-		<p><a href="http://dbwebb.se/htmlphp/mom04/formexample/">Se exempel på ett litet formulär, 
+		<p><a href="http://dbwebb.se/htmlphp/mom05/formexample/">Se exempel på ett litet formulär, 
 		stylat med CSS</a>. Klicka på "source" i footern så ser du källkoden till exemplet.
 
 		<p>Testa att styla dina formulär. Utgå ifrån en struktur av HTML elementen och testa olika stylar
 		via följande länk.
 
 		<blockquote>
-			<a href="http://dbwebb.se/htmlphp/mom04/style/">Styla forms</a>
+			<a href="http://dbwebb.se/htmlphp/mom05/style/">Styla forms</a>
 		</blockquote>
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>

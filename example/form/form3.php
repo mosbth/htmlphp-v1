@@ -135,7 +135,7 @@ if(!empty($_POST['doSave']) && $id > 0) {
 	//	http://php.net/manual/en/function.serialize.php
 	//
 	file_put_contents($filename, serialize($obj));
-	$output = "Filen sparades. ";
+	$output .= "Filen sparades. ";
 }
 
 
