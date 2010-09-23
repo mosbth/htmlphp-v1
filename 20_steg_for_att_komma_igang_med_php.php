@@ -467,7 +467,9 @@ include("header.php");
 		<p>PHP används för att bearbeta och lagra information från HTML-formulär. När ett formulär
 		kommer till en php-sida finns dess innehåll antingen i <code>$_GET</code> eller i <code>$_POST</code>.
 		
-		<p><a href="http://dbwebb.se/htmlphp/mom05/selfsubmit/">Exempel på ett formulär med både <code>$_GET</code> och <code>$_POST</code>
+		<p><a href="http://dbwebb.se/htmlphp/mom05/selfsubmit/">Exempel på ett formulär med <code>$_GET</code> och <code>$_POST</code></a>
+		
+		<p>Här följer <a href="example/php/php18.php">ytterligare ett exempel på ett formulär och hur dess innehåll skickas via <code>$_GET</code> eller <code>$_POST</code></a>.
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>

@@ -24,7 +24,7 @@ include("header_projekt.php");
 			
 			<ul>
 				<li><a href="#lev01">Leverans 1: En Outline till Begravningsmuseum Online</a>
-				<!--<li><a href="#lev02">Leverans 2: Skapa och Editera Museum Objekt</a>-->
+				<li><a href="#lev02">Leverans 2: Skapa och Editera Museum Objekt</a>
 			</ul>
 		</section>
 		
@@ -88,7 +88,7 @@ include("header_projekt.php");
 		</section>
 		
 <!-- *********************    Section ******************************************************** -->
-<!--
+
 		<section id="lev02">
 			<hgroup>
 				<h2>Leverans 2: Skapa och Editera Museum Objekt</h2>
@@ -113,17 +113,18 @@ include("header_projekt.php");
 			<h3>Tips från coachen</h3>
 			
 			<p>Gör hela kursmomentet innan du hoppar på leveransen. Gör formuläret så som det görs i kursmomentet.
+			Kopiera och snygga till det, om tiden tillåter.
 			
-			<p>Gör ytterligare en vanlig sida som läser in ett objekt utifrån en $_GET-variabel (id). Denna sidan
+			<p>Gör en vanlig sida som läser in ett objekt utifrån en $_GET-variabel (id). Denna sidan
 			presenterar sedan objektet i html-kod, inte som formulär.
 			
 			<p>Bygg ut ditt Begravningsmuseum och visa upp minst 3 av de objekt som finns tillgängliga på följande länk. 
 			<a href="museum_objekt_form.php">Objekt till Begravningsmuseum</a>
 			
-			<p>Att ladda upp filer (bilder) är ren överkurs och görs bara av de som vill, vågar och orkar.
+			<p>Att ladda upp filer (bilder) är ren överkurs och görs bara av de som vill, vågar, orkar och har tiden.
 			
 		</section>			
--->			
+		
 
 		<?php include("byline.php"); ?>
 				
