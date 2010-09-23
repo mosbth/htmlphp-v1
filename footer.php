@@ -34,22 +34,22 @@ $refToThisPage .= $_SERVER["SERVER_NAME"] . $serverPort . $_SERVER["REQUEST_URI"
 			<h5>Kmom01</h5>
 				<a href='http://dbwebb.se/htmlphp/kmom01/instruction'>Instruktion för kursmomentet</a>
 				<a href='http://dbwebb.se/htmlphp/install_lab_environment'>Guide för att installera labbmiljön</a>
-				<a href='http://github.com/mosbth/htmlphp/tree/v1.03'>Källkod</a>
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom01/me/me.php'>Me-sidan</a>
+				<a href='http://github.com/mosbth/htmlphp/tree/v1.03'>Källkod</a>
 		</nav>
 
 		<nav>
 			<h5>Kmom02</h5>
 				<a href='http://dbwebb.se/htmlphp/kmom02/instruction'>Instruktion för kursmomentet</a>
-				<a href='http://github.com/mosbth/htmlphp/tree/v2.0'>Källkod</a>
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom02/me/me.php'>Me-sidan</a>
+				<a href='http://github.com/mosbth/htmlphp/tree/v2.0'>Källkod</a>
 		</nav>
 
 		<nav>
 			<h5>Kmom03</h5>
 				<a href='http://dbwebb.se/htmlphp/kmom03/instruction'>Instruktion för kursmomentet</a>
-				<a href='http://github.com/mosbth/htmlphp/tree/v3.06'>Källkod</a>
 				<a href='http://www.student.bth.se/~mos/htmlphp/mom03/me/me.php'>Me-sidan</a>
+				<a href='http://github.com/mosbth/htmlphp/tree/v3.06'>Källkod</a>
 		</nav>
 
 		<nav>

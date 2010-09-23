@@ -95,15 +95,16 @@ if(!empty($_POST['doSave']) && $id > 0) {
 	// Validate the input, no need to end up in a forum like this: https://www.flashback.org/f16 
 	// Give some default values if appropriate.
 	//
+	$allowedTags = "<p>";
 	$obj['id'] 					= validateIncoming($_POST, 'id', 					0);
 	$obj['title']				= validateIncoming($_POST, 'title', 			'Titel saknas');
-	$obj['ingress']			= validateIncoming($_POST, 'ingress', 		'Ingress saknas');
-	$obj['text']				= validateIncoming($_POST, 'text', 				'Text saknas');
+	$obj['ingress']			= validateIncoming($_POST, 'ingress', 		'Ingress saknas', $allowedTags);
+	$obj['text']				= validateIncoming($_POST, 'text', 				'Text saknas', $allowedTags);
 	$obj['image'] 			= validateIncoming($_POST, 'image', 			'img/noimage.png');
 	$obj['year'] 				= validateIncoming($_POST, 'year', 				'Årtal saknas');
 	$obj['owner'] 			= validateIncoming($_POST, 'owner', 			'Ägare saknas');
 	$obj['trustee']			= validateIncoming($_POST, 'trustee', 		'Förvaltare saknas');
-	$obj['background']	= validateIncoming($_POST, 'background', 	'Bakgrund saknas');
+	$obj['background']	= validateIncoming($_POST, 'background', 	'Bakgrund saknas', $allowedTags);
 	
 	if(!is_numeric($obj['id']) || $obj['id'] <= 0) {
 		die("Id = " . $obj['id'] . " är ej giltigt.");

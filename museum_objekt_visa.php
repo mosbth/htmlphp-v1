@@ -162,14 +162,22 @@ $select .= "</select>";
 		<h1><?php echo $obj['title']; ?></h1>
 
 		<img src="<?php echo $obj['image']; ?>" alt="[Bild saknas]">
+
+		<h2>Om objektet</h2>		
 		<p class=ingress><?php echo $obj['ingress']; ?></p>
 		<p><?php echo $obj['text']; ?></p>
+
+		<h2>Tidsperiod och årtal</h2>		
 		<p><?php echo $obj['year']; ?></p>
-		<p><?php echo $obj['owner']; ?></p>
-		<p><?php echo $obj['trustee']; ?></p>
+
+		<h2>Ägare och förvaltare</h2>
+		<p>Ägare av objektet: <?php echo $obj['owner']; ?></p>
+		<p>Förvaltare av objektet:<?php echo $obj['trustee']; ?></p>
+		
+		<h2>Bakgrund</h2>
 		<p><?php echo $obj['background']; ?></p>
 
-		<output><?php echo $output; ?></output>
+		<output><em><?php echo $output; ?></em></output>
 	
 		<?php include("byline.php"); ?>
 	

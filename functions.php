@@ -20,9 +20,9 @@
 //	http://php.net/manual/en/function.empty.php
 //	http://php.net/manual/en/function.strip-tags.php
 //
-function validateIncoming($aArray, $aEntry, $aDefault) {
+function validateIncoming($aArray, $aEntry, $aDefault, $aAllowedTags="") {
 	if(isset($aArray[$aEntry]) && !empty($aArray[$aEntry])) {
-		return strip_tags($aArray[$aEntry]);
+		return strip_tags($aArray[$aEntry], $aAllowedTags);
 	} else {
 		return $aDefault;
 	}
