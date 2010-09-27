@@ -142,7 +142,10 @@ figure img {display:block;margin:auto;}
 figure figcaption 					{display:block;margin:0 auto;padding:0.5em;}
 figure.standard figcaption 	{text-align:center;font-style:italic;font-size:normal;}
 
-
+/*
+box-shadow: 10px 10px 5px #888;
+padding: 5px 5px 5px 15px;
+*/
 
 /* -------------------------------------------------------------------------------------
 /* Style for displaying code */

@@ -480,6 +480,13 @@ EOD;
 <?php include("$css20/figure2.css"); ?>
 		</blockquote>
 
+		<p>Exempel 3.
+		<a href="?style=figure3#figure">Testa</a>
+
+		<blockquote class="code">
+<?php include("$css20/figure3.css"); ?>
+		</blockquote>
+
 		<p><a href="?#figure">Återgå till ursprunglig style</a>	
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a>
