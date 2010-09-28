@@ -210,7 +210,7 @@ INSERT INTO "Jetty" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
 			<figcaption>Sök ut rader i tabellen som matchar vissa sökvillkor.</figcaption>
 		</figure>
 
-		<p>Hur ser då en <code>SELECT</code>-fråga ut för att göra samma urval. ett kort och snabbt svar är följande:
+		<p>Hur ser då en <code>SELECT</code>-fråga ut för att göra samma urval. Ett kort och snabbt svar är följande:
 
 		<blockquote class=code>
 SELECT * FROM Jetty
@@ -230,7 +230,7 @@ WHERE
 		<p>Låt oss bryta ned <code>SELECT</code>-satsen i dess beståndsdelar för att bättre förstå vad den gör.
 		
 		<p><code>SELECT * FROM Jetty</code> säger att "välj alla kolumner från tabellen Jetty". Pröva att
-		byta ut <code>*</code> mot namnet på två av kolumnerna, tex <code>boatType, ownerName</code> och exekvera frågan. 
+		byta ut <code>*</code> mot namnet på två av kolumnerna, tex <code>boatType, ownerName</code> och exekvera frågan igen. 
 
 		<figure class="standard strict inline">
 			<a href="img/sqlite-20/select1.png"><img src="img/sqlite-20/select1.png" alt="[Bild: SQLite Manager Select again]"></a>
@@ -272,43 +272,30 @@ WHERE
 	<section id="s6">
 		<h2>6. Aggregerande funktioner</h2>
 		
-		<p>Låt oss lägga till ett par båtar i tabellen. Du kan använda följande båtar om du vill.
+		<p>SQLite har ett par inbyggda aggregerande funktioner.
 		
+		<p><a href="http://www.sqlite.org/lang_aggfunc.html">http://www.sqlite.org/lang_aggfunc.html</a>
+		
+		<p>Med dessa funktioner kan man tex beräkna antalet rader i en tabell, medelvärdet eller summan
+		av en kolumn eller max/min värde i en kolumn.
+		
+		<p>Testa följande SQL satser och se vilket resultat du får.
+	
 		<ul>
-			<li>Båt: Buster XXL, motor: Yamaha 115hk, längd: 635, bredd: 240, ägare: Adam
-			<li>Båt: Buster M, motor: Yamaha 40hk, längd: 460, bredd: 186, ägare: Berit
-			<li>Båt: Linder 440, motor: Tohatsu 4hk, längd: 431, bredd: 164, ägare: Ceasar
+			<li><code>SELECT COUNT(jettyPosition) FROM Jetty</code> (Räkna antalet rader i tabellen)
+			<li><code>SELECT MAX(boatLength) FROM Jetty</code> (Visa största båtlängden)
+			<li><code>SELECT MIN(boatWidth) FROM Jetty</code> (Visa den minsta bredden)
+			<li><code>SELECT SUM(boatWidth) FROM Jetty</code> (Visa summan av samtliga båtars bredd)
+			<li><code>SELECT AVG(boatLength) FROM Jetty</code> (Visa medellängden av samtliga båtar)
 		</ul>
-		
-		<p>Klicka på "Add" för att lägga till en ny rad. Du behöver inte ange en siffra för "jettyPosition", det automatgenereras
-		eftersom kolumnen är specificerad som PRIMARY KEY och INTEGER. Så här ser det ut för mig.
-		
-		<p>Lägg till en båt som en ny rad i tabellen.
 
 		<figure class="standard strict inline">
-			<a href="img/sqlite-20/add-row.png"><img src="img/sqlite-20/add-row.png" alt="[Bild: SQLite Manager Add Rows]"></a>
-			<figcaption>Lägga till rader i tabellen via knappen "Add".</figcaption>
+			<a href="img/sqlite-20/aggregate.png"><img src="img/sqlite-20/aggregate.png" alt="[Bild: SQLite Manager Aggregate]"></a>
+			<figcaption>Beräkna medellängden av alla båtar med aggregat-funktionen <code>AVG()</code>.</figcaption>
 		</figure>
 
-		<p>Så här ser det ut när de tre båtarna finns inlagda i tabellen.
-		
-		<figure class="standard strict inline">
-			<a href="img/sqlite-20/rows-added.png"><img src="img/sqlite-20/rows-added.png" alt="[Bild: SQLite Manager Rows Added]"></a>
-			<figcaption>Så här ser en tom tabell ut, ännu finns inga rader av värden i tabellen.</figcaption>
-		</figure>
+		<p>Aggregat-funktioner är ett viktigt verktyg för databasprogrammeraren.
 
-		<p>Som du kanske märkte så använde sig verktyget återigen av SQL-kod för att lägga till rader i tabellen.
-		SQL är centralt när man pratar om databaser (relationsdatabaser). SQL-koden för att lägga till dessa 3 rader följer.
-		
-		<blockquote class=code>
-INSERT INTO "Jetty" VALUES(1,'Buster XXL','Yamaha 115hk',635,240,'Adam');
-INSERT INTO "Jetty" VALUES(2,'Buster M','Yamaha 40hk',460,186,'Berit');
-INSERT INTO "Jetty" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
-		</blockquote>
-		
-		<p>Testa att klicka runt på följande knappar "Duplicate", "Edit" och "Delete". Se vad som händer
-		och studera SQL-koden som används.
-		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
 
@@ -316,11 +303,88 @@ INSERT INTO "Jetty" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
 	<section id="s7">
 		<h2>7. Inbyggda funktioner</h2>
 		
+		<p>SQLite har inbyggda funktioner som kan hjälpa vid beräkningar eller för att förbereda resultatet
+		för presentation.
+		
+		<p><a href="http://www.sqlite.org/lang_corefunc.html">http://www.sqlite.org/lang_corefunc.html</a>
+		
+		<p>Med dessa funktioner kan du göra bearbeta datamängden för att få bra rapporter. Ibland är det 
+		bättre att bearbeta datamängden via SQL och dess funktioner, istället för att låta PHP bearbeta datat.
+		Försök att använda SQL för att göra så korrekta rapporter som möjligt, det minimerar kodandet i PHP
+		och är ofta ett effektift sätt att programmera.
+		
+		<p>Testa följande SQL satser och se vilket resultat du får.
+	
+		<ul>
+			<li><code>SELECT round(AVG(boatLength), 2) FROM Jetty</code> (Visa medellängden av samtliga båtar, avrunda till två decimaler)
+			<li><code>SELECT length(ownerName) FROM Jetty</code> (Räkna antalet tecken i namnet)
+			<li><code>SELECT random()</code> (Välj ett slumpvärde)
+			<li><code>SELECT hex(random())</code> (Välj ett slumpvärde och visa som hexadecimalt tal)
+			<li><code>SELECT upper(ownerName) FROM Jetty</code> (Omvandla till stora bokstäver)
+		</ul>
+
+		<figure class="standard strict inline">
+			<a href="img/sqlite-20/functions.png"><img src="img/sqlite-20/functions.png" alt="[Bild: SQLite Manager Functions]"></a>
+			<figcaption>Beräkna medellängden av alla båtar med aggregat-funktionen <code>AVG()</code>.</figcaption>
+		</figure>
+
+		<p>Inbyggda funktioner är viktiga för att kunna bearbeta och komplettera resultatet från
+		<code>SELECT</code>-satserna.
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s8">
 		<h2>8. Import och export av data</h2>
 		
+		<p>Det går att exportera hela databasen till en textfil bestående av SQL-kommandon. Det är bra om
+		man vill ta backup eller om man vill dela med sig av sin data. 
+		
+		<p>Välj fliken "Structure" och klicka på knappen "Export" eller välj fliken "Export Wizard".
+		Välj Att exportera din tabell som SQL och klicka för checkboxen "Include CREATE TABLE statement".
+		Klicka "OK" och spara filen på ditt skrivbord. 
+
+		<figure class="standard strict inline">
+			<a href="img/sqlite-20/export.png"><img src="img/sqlite-20/export.png" alt="[Bild: SQLite Manager Export]"></a>
+			<figcaption>Exportera databasen som SQL-kommandon.</figcaption>
+		</figure>
+
+		<p>Innehållet i min egen fil följer (observera att jag har bytt namn på
+		min tabell från "Jetty" till "Jetty_mos"). <a href="example/sqlite/Jetty_mos.sql">Du kan även ladda ned en kopia av filen</a>
+		(högerklicka och välj "Spara länk som").
+		
+		<blockquote class=code>
+DROP TABLE IF EXISTS "Jetty_mos";
+CREATE TABLE "Jetty_mos" (
+"jettyPosition" INTEGER PRIMARY KEY  NOT NULL  UNIQUE , 
+"boatType" VARCHAR(20) NOT NULL , "boatEngine" VARCHAR(20) NOT NULL , 
+"boatLength" INTEGER, 
+"boatWidth" INTEGER, 
+"ownerName" VARCHAR(20)
+);
+INSERT INTO "Jetty_mos" VALUES(1,'Buster XXL','Yamaha 115hk',635,240,'Adam');
+INSERT INTO "Jetty_mos" VALUES(2,'Buster M','Yamaha 40hk',460,186,'Berit');
+INSERT INTO "Jetty_mos" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
+		</blockquote>
+		
+		<p>Testa nu att importera min exporterade data in i din egen databas. Spara ned ovanstående data
+		i en egen fil och döp den till <code>Jetty_mos.sql</code>.
+		
+		<p>Välj "Import" från toolbaren, eller välj fliken "Import Wizard". Välj "SQL", peka ut filen
+		och klicka "OK".
+	
+		<figure class="standard strict inline">
+			<a href="img/sqlite-20/import.png"><img src="img/sqlite-20/import.png" alt="[Bild: SQLite Manager Import]"></a>
+			<figcaption>Importera en tabell med värden via SQL-kommandon.</figcaption>
+		</figure>
+
+		<p>Sådär, nu finns både tabell och värden i min databas igen. Precis som om jag skapat dem själv.
+		Nåja, typ.
+
+		<p>Denna typen av import och export av värden i en databas är bra att ha koll på. Det visar 
+		hur man kan utbyta information med ren SQL i text-filer.
+		
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s9">
@@ -378,21 +442,34 @@ INSERT INTO "Jetty" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s16">
-		<h2>16. Lägg till rader</h2>
+		<h2>16. Lägga till rader</h2>
 		
 		<p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s17">
-		<h2>17. Ta bort rader</h2>
+		<h2>17. Updatera rader</h2>
 		
 		<p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s18">
-		<h2>18. Ett formulärexempel och en SQLite databas</h2>
+		<h2>18. Ta bort rader</h2>
 		
 		<p>
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s19">
+		<h2>19. Ett formulärexempel och en SQLite databas</h2>
+		
+		<p>
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s20">
+		<h2>20. Kombinera resultat från två tabeller</h2>
+		
+		<p>
+
 
 
 
