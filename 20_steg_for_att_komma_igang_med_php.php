@@ -21,7 +21,7 @@ include("header.php");
 	<aside class=box>
 		<h4>W3Schools hjälper dig på vägen</h4>
 		<p>Här finns enkla guider som hjälper dig att komma igång. korta beskrivningar av det viktigaste
-		tillsammans med kodexempel. OM du är osäker så ta en titt i W3Schools tutorials och se om de kan hjälpa dig.</p>
+		tillsammans med kodexempel. Om du är osäker så ta en titt i W3Schools tutorials och se om de kan hjälpa dig.</p>
 		<p><a href="http://w3schools.com/PHP">PHP på W3Schools</a>
 		</p>
 	</aside>
