@@ -1,0 +1,13 @@
+/* -------------------------------------------------------------------------------------
+/* 
+/* Stylesheet.
+ */
+
+/* -------------------------------------------------------------------------------------
+/* Import more stylesheets where styles are saved in separate stylesheets */
+/*@import url(forms.css); 
+*/
+
+/* -------------------------------------------------------------------------------------
+/* Some generic style that is valid for whole stylesheet */
+p {font-family:Verdana;color:#333333;}

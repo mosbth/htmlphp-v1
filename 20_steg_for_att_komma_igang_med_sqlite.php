@@ -390,31 +390,117 @@ INSERT INTO "Jetty_mos" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
 	<section id="s9">
 		<h2>9. Flytta databas mellan maskiner</h2>
 		
-		<p>Flytta till www.student.bth.se.
+		<p>En fördel med SQLite är att den är just en filbaserad databas. Det är enkelt att flytta hela databasen 
+		till en annan plats eller dator. Börja med att kopiera din databas och lägg den i en egen katalog
+		så att din lokala webbserver kommer åt den.
+	
+<!--
+		<figure class="standard strict inline">
+			<a href="img/sqlite-20/move-to-server.png"><img src="img/sqlite-20/move-to-server.png" alt="[Bild: SQLite Manager Move To Server]"></a>
+			<figcaption>Flytta (kopiera) databasen till ssh.student.bth.se.</figcaption>
+		</figure>
+
+		<p>Nu finns databasen tillgänglig på webbservern, men hur kommer vi nu åt den? 
+-->		
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+<!--
 	<section id="s10">
 		<h2>10. Textbaserat gränssnitt till SQLite</h2>
 		
+		<p>SQLite har ett textbaserat gränssnitt där all kommunikation med databasen kan ske.
+		
+		<p>Om du har tillgång till en xterminal (xterm på Mac eller Linux/Unix) eller putty (Windows)
+		så kan du logga in på ssh.student.bth.se. Om du ännu inte har installerat xterm/putty, och vill göra det, 
+		så kan du läsa lite om det här, <a href="http://dbwebb.se/oophp/install_lab_environment">http://dbwebb.se/oophp/install_lab_environment</a>, läs stycket om ssh-klienter.
+
+		<p>Om du nu har tillgång till xterm/putty, och har loggat in på ssh.student.bth.se, så kan du
+		komma åt databasen med kommandot <code>sqlite3 boats.sqlite</code>. Se nedanstående bild för detaljer.
+
 		<figure class="standard strict inline">
-			<a href="img/sqlite-20/cu-help.png"><img src="img/sqlite-20/cu-help.png" alt="[Bild: SQLite cu-help]"></a>
+			<a href="img/sqlite-20/cu-ssh_student.png"><img src="img/sqlite-20/cu-ssh_student.png" alt="[Bild: SQLite cu-ssh.student]"></a>
 			<figcaption>Den textbaserade verktyget för att jobba med SQLite. Visa den inbyggda hjälpen med <code>.help</code></figcaption>
 		</figure>
 
 		
-		<p>SQLite har ett textbaserat gränssnitt där all kommunikation med databasen kan ske.
 		Skriv in <code>sqlite3 test.db</code> för att skapa en ny databas. Använd den inbyggda hjälpen för 
 		att se vilka funktioner som finns tillgängliga. Skriv kommandot <code>.help</code> för att visa 
 		den inbyggda hjälpen.
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
+-->
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s10">
+		<h2>10. PHP och SQLite</h2>
+		
+		<p>Via PHP kan man komma åt en SQLite-databas. Det finns olika PHP-interface för att jobba
+		mot SQLite. Du kan läsa mer om dessa i PHP-manualen.
+		
+		<blockquote class=links>
+			<a href="http://php.net/manual/en/book.sqlite.php">http://php.net/manual/en/book.sqlite.php</a><br>
+			<a href="http://php.net/manual/en/book.sqlite3.php">http://php.net/manual/en/book.sqlite3.php</a><br>
+			<a href="http://php.net/manual/en/ref.pdo-sqlite.php">http://php.net/manual/en/ref.pdo-sqlite.php</a><br>
+		</blockquote>				
+		
+		<p>I denna kursen kommer vi att använda interfacet PDO för att jobba mot SQLite. PHP Data Objects (PDO) är ett generiskt gränssnitt för att
+		jobba mot olika databaser. 
+		
+		<p>Med lite PHP-kod kan du kontrollera om din PHP-installation har stöd för PDO och SQLite.
+		Lägg följande kod i en PHP-fil och kör den på din webbserver för att se om det finns stöd för PDO
+		och SQLite.
+
+<?php
+$code = <<<EOD
+if(class_exists('PDO') && in_array("sqlite", PDO::getAvailableDrivers())) {
+	echo "<p style='color:green'>sqlite PDO driver IS enabled";
+} else {
+	echo "<p style='color:red'>sqlite PDO driver IS NOT enabled";
+}
+EOD;
+?>
+		
+		<blockquote class=code>
+<?php echo htmlspecialchars($code, ENT_NOQUOTES, "UTF-8"); ?>
+		</blockquote>		
+		
+		<p>Ovanstående kod finns med som en del av Utility/check_php_config.php. Det finns
+		installerad på www.student.bth.se och på dbwebb.se. Du kan testköra dem här:
+		
+		<blockquote class=link>
+			<a href="http://www.student.bth.se/~mos/utility/check_php_config.php">http://www.student.bth.se/~mos/utility/check_php_config.php</a><br>
+			<a href="http://dbwebb.se/utility/check_php_config.php">http://dbwebb.se/utility/check_php_config.php</a><br>
+		</blockquote>		
+		
+		<p>WAMPServer (Windows) och MAMP (Mac) har SQLite enablad från början.
+
+		<p>Vi dubbelkollar konfigurationen på WAMPServer och Windows.
+
+		<figure class="standard strict inline">
+			<a href="img/sqlite-20/pdo-sqlite-enabled-wamp.png"><img src="img/sqlite-20/pdo-sqlite-enabled-wamp.png" alt="[Bild: SQLite enabled on WAMPServer]"></a>
+			<figcaption>PDO och SQLite är enablat i WAMPServer (Windows)</figcaption>
+		</figure>
+
+		<p>Lika bra att dubbelkolla konfigurationen på MAMP och MacOS också.
+
+		<figure class="standard strict inline">
+			<a href="img/sqlite-20/pdo-sqlite-enabled-mamp.png"><img src="img/sqlite-20/pdo-sqlite-enabled-mamp.png" alt="[Bild: SQLite enabled on MAMP]"></a>
+			<figcaption>PDO och SQLite är enablat i MAMP (Mac)</figcaption>
+		</figure>
+
+		<p>Fint, PHP, PDO och SQLite verkar vara en kombination som kan fungera. Men, jag tror det när jag ser det. Låt oss testa.
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s11">
-		<h2>11. PHP och SQLite</h2>
+		<h2>11. Koppla ett PHP-skript till en SQLite databas</h2>
 		
-		<p>Olika sätt att komma åt en SQLite databas
+		<p>
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s12">
@@ -470,6 +556,35 @@ INSERT INTO "Jetty_mos" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
 		
 		<p>
 
+
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+<!--
+	<section id="s10">
+		<h2>10. Textbaserat gränssnitt till SQLite</h2>
+		
+		<p>SQLite har ett textbaserat gränssnitt där all kommunikation med databasen kan ske.
+		
+		<p>Om du har tillgång till en xterminal (xterm på Mac eller Linux/Unix) eller putty (Windows)
+		så kan du logga in på ssh.student.bth.se. Om du ännu inte har installerat xterm/putty, och vill göra det, 
+		så kan du läsa lite om det här, <a href="http://dbwebb.se/oophp/install_lab_environment">http://dbwebb.se/oophp/install_lab_environment</a>, läs stycket om ssh-klienter.
+
+		<p>Om du nu har tillgång till xterm/putty, och har loggat in på ssh.student.bth.se, så kan du
+		komma åt databasen med kommandot <code>sqlite3 boats.sqlite</code>. Se nedanstående bild för detaljer.
+
+		<figure class="standard strict inline">
+			<a href="img/sqlite-20/cu-ssh_student.png"><img src="img/sqlite-20/cu-ssh_student.png" alt="[Bild: SQLite cu-ssh.student]"></a>
+			<figcaption>Den textbaserade verktyget för att jobba med SQLite. Visa den inbyggda hjälpen med <code>.help</code></figcaption>
+		</figure>
+
+		
+		Skriv in <code>sqlite3 test.db</code> för att skapa en ny databas. Använd den inbyggda hjälpen för 
+		att se vilka funktioner som finns tillgängliga. Skriv kommandot <code>.help</code> för att visa 
+		den inbyggda hjälpen.
+		
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+-->
 
 
 

@@ -1,0 +1,11 @@
+/* -------------------------------------------------------------------------------------
+/* 
+/* Stylesheet.
+/* 
+/* For printing. Remove some elements, not needed for print. Reduce colors. 
+/* Change width and margins.
+ */
+
+/* -------------------------------------------------------------------------------------
+/* Make some changes */
+.noprint {display:none;}
