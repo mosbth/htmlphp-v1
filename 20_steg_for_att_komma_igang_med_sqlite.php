@@ -490,29 +490,69 @@ EOD;
 			<figcaption>PDO och SQLite är enablat i MAMP (Mac)</figcaption>
 		</figure>
 
-		<p>Fint, PHP, PDO och SQLite verkar vara en kombination som kan fungera. Men, jag tror det när jag ser det. Låt oss testa.
+		<p>Fint, PHP, PDO och SQLite verkar vara en kombination som kan fungera. Kolla din egna maskin så att allt är ok.
+		Använd ovanstående PHP-kod för att kontrollera att PHP PDO och SQLite är installerat.
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s11">
-		<h2>11. Koppla ett PHP-skript till en SQLite databas</h2>
+		<h2>11. PHP och PDO</h2>
 		
-		<p>
+		<p>PHP Data Objects (PDO) är ett interface för att accessa databaser i PHP. Varje databas-driver
+		som implementerar ett PDO-interface kan nås via PDO. SQLite har ett sådant PDO-interface.
+		
+		<p>Läs kort introduktionen om PDO <a href="http://www.php.net/manual/en/intro.pdo.php">http://www.php.net/manual/en/intro.pdo.php</a>.
+		
+		<p>En feature som stöds av många databaser är "Prepared Statements". Med dessa är det enkelt 
+		att ställa SQL-frågor till databasen. Prepared statements har också ett säkert sätt att 
+		hantera argument, ett sätt som undviker vanliga säkerhetshål som SQL injections.
+		
+		<p><a href="http://www.php.net/manual/en/pdo.prepared-statements.php">Läs stycket om prepared statements och studera översiktligt exemplen</a>.
+		
+		<p><a href="http://php.net/manual/en/ref.pdo-sqlite.php">http://php.net/manual/en/ref.pdo-sqlite.php</a><br>
+
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s12">
-		<h2>12. PHP och PDO</h2>
+		<h2>12. SQL injections</h2>
+
+		<p>Låt oss säga några ord om säkerhetshål och SQL injections innan vi fortsätter. 
 		
-		<p>
+		<figure class="standard strict inline">
+			<a href="http://2.bp.blogspot.com/__5n6ix43i0g/SvktSAi22MI/AAAAAAAAAgM/sJcRtgAvDpQ/s400/exploits_of_a_mom.png"><img src="http://2.bp.blogspot.com/__5n6ix43i0g/SvktSAi22MI/AAAAAAAAAgM/sJcRtgAvDpQ/s400/exploits_of_a_mom.png" alt="[Bild: SQL injections strip]"></a>
+			<figcaption>Strip om SQL injections från <a href="http://xkcd.com/327/">http://xkcd.com/327/</a>.</figcaption>
+		</figure>
+
+		<p>SQL injections är ett sätt för en "cracker" att "bryta sig in" i en webbapplikation
+		genom att via URL:en, eller formulär, modifiera SQL-satserna. Ett sådant säkerhetshål 
+		kan ge en inbrytare tillgång till alla användare och lösenord i en databas, för att ge 
+		ett exempel.
+		
+		<p><a href="http://en.wikipedia.org/wiki/SQL_injection">Läs lite snabbt om SQL Injections på Wikipedia</a>.
+
+		<p>I bloggen finns en <a href="http://db-o-webb.blogspot.com/2009/11/sakerhet-i-webbapplikationer-undvik-sql.html">kortare artikel om SQL injections och hur man kan skydda sig mot 
+		dem i PHP</a>.
+
+		<p>Om du är intresserad av att se hur det går till i praktiken, när webbplatser crackas och
+		resultatet publiceras, så surfar du in till flashback.org. Där finns ett <a href="https://www.flashback.org/f16">forum
+		där information (IT-säkerhet) om crackade webbplatser och listor med lösenord, användarid och mailadresser
+		publiceras</a>.
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s13">
-		<h2>13. Koppla ett PHP-skript till en databas</h2>
+		<h2>13. Koppla ett PHP-skript till en SQLite databas via PDO</h2>
 		
-		<p>
+		<p>Vi gör ett minsta möjliga skript som skapar en SQLite databas via PHP. Därefter fyller vi på med kod för
+		att skapa en tabell i databasen. 
+		
+		<p><a href="example/sqlite/sqlite1.php">Exempel för att skapa en databas med en tabell</a>
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s14">

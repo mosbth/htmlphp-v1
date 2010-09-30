@@ -21,12 +21,12 @@ error_reporting(-1);
 	<?php include("choose_style.php"); ?>
 	<link rel="stylesheet" media="all"   type="text/css" href="<?php echo $stylePath; ?>"  		title="<?php echo $styleTitle; ?>">
 	<link rel="stylesheet" media="print" type="text/css" href="style/print.css">
-	<link rel="alternative stylesheet"   type="text/css" href="style/stylesheet.css"       		title="Mos Standard Grey">
-	<link rel="alternative stylesheet"   type="text/css" href="style/stylesheet_red.css"   		title="Mos Standard Red">
-	<link rel="alternative stylesheet"   type="text/css" href="style/stylesheet_bth.css"   		title="Mos BTH-ish">
-	<link rel="alternative stylesheet"   type="text/css" href="style/stylesheet_debug.css"   	title="Mos Debug">
-	<link rel="alternative stylesheet"   type="text/css" href="style/stylesheet_nostyle.css"	title="Mos No Style">
-	<link rel="alternative stylesheet"   type="text/css" href="style/stylesheet_print.css" 		title="Mos to print">
+	<link rel="alternate stylesheet"   type="text/css" href="style/stylesheet.css"       		title="Mos Standard Grey">
+	<link rel="alternate stylesheet"   type="text/css" href="style/stylesheet_red.css"   		title="Mos Standard Red">
+	<link rel="alternate stylesheet"   type="text/css" href="style/stylesheet_bth.css"   		title="Mos BTH-ish">
+	<link rel="alternate stylesheet"   type="text/css" href="style/stylesheet_debug.css"   	title="Mos Debug">
+	<link rel="alternate stylesheet"   type="text/css" href="style/stylesheet_nostyle.css"	title="Mos No Style">
+	<link rel="alternate stylesheet"   type="text/css" href="style/stylesheet_print.css" 		title="Mos to print">
 
 	<!-- The small icon displayed by the browser next to the link -->
 	<link rel="shortcut icon" href="img/favicon.ico">
