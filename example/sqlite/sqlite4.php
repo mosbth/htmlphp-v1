@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="../../img/glider.ico">
- 	<title>Exempel PHP PDO och SQLite. Att koppla mot en SQLite databas</title>
+ 	<title>Exempel PHP PDO och SQLite. Ger fel, försöker skapa en tabell som redan finns</title>
 </head>
 
 <body>
@@ -54,7 +54,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //  http://php.net/manual/en/pdostatement.execute.php
 //
 $stmt = $db->prepare('
-	CREATE TABLE IF NOT EXISTS Jetty
+	CREATE TABLE Jetty
 	(
 		jettyPosition INTEGER PRIMARY KEY  NOT NULL  UNIQUE, 
 		boatType VARCHAR(20) NOT NULL, 

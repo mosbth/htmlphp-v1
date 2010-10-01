@@ -138,7 +138,7 @@ echo $theMasterPlan;
 		<p><a href="example/form/form8.php">Skapa nytt tomt objekt</a>
 		
 		
-		<h2>Städa koden</h2>
+		<h2 id='klar'>Städa koden</h2>
 		
 		<p>Nu börjar det bli klart. Lika bra att rensa i koden och flytta funktionerna till en egen fil
 		som jag sedan inkluderar.

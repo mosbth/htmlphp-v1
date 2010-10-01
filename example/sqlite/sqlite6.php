@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="../../img/glider.ico">
- 	<title>Exempel PHP PDO och SQLite. Att koppla mot en SQLite databas</title>
+ 	<title>Exempel PHP PDO och SQLite. Skapa nya rader med INSERT</title>
 </head>
 
 <body>
@@ -53,6 +53,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //  http://php.net/manual/en/pdo.prepare.php
 //  http://php.net/manual/en/pdostatement.execute.php
 //
+/*
 $stmt = $db->prepare('
 	CREATE TABLE IF NOT EXISTS Jetty
 	(
@@ -67,6 +68,65 @@ $stmt = $db->prepare('
 
 echo "<p>Executing SQL statement:<pre>" . $stmt->queryString . "</pre>";
 $stmt->execute();
+*/
+
+
+// ---------------------------------------------------------------------------------------------
+//
+// Insert values into a table. An exception is thrown if
+// something fails.
+//
+//  http://www.sqlite.org/lang_insert.html
+//  http://php.net/manual/en/pdo.prepared-statements.php
+//  http://php.net/manual/en/pdo.prepare.php
+//  http://php.net/manual/en/pdostatement.bindparam.php
+//  http://php.net/manual/en/pdostatement.execute.php
+//
+$stmt = $db->prepare('
+	INSERT INTO Jetty
+		(boatType, boatEngine, boatLength, boatWidth, ownerName) 
+		VALUES
+		(:boatType, :boatEngine, :boatLength, :boatWidth, :ownerName);
+');
+
+// Bind SQL parameters to PHP variables
+$stmt->bindParam(':boatType', 	$boatType);
+$stmt->bindParam(':boatEngine', $boatEngine);
+$stmt->bindParam(':boatLength', $boatLength);
+$stmt->bindParam(':boatWidth', 	$boatWidth);
+$stmt->bindParam(':ownerName', 	$ownerName);
+
+// Display debuginfo of the statement
+echo "<p>Dump debuginfo of the statement:<pre>";
+$stmt->debugDumpParams();
+echo "</pre>";
+
+// INSERT INTO Jetty VALUES(1,'Buster XXL','Yamaha 115hk',635,240,'Adam');
+$boatType 	= "Buster XXL";
+$boatEngine = "Yamaha 115hk";
+$boatLength = 635;
+$boatWidth 	= 240;
+$ownerName 	= "Adam";
+$stmt->execute();
+echo "<p>Inserted '$boatType'. Rowcount is = " . $stmt->rowCount();
+
+// INSERT INTO Jetty VALUES(2,'Buster M','Yamaha 40hk',460,186,'Berit');
+$boatType 	= "Buster M";
+$boatEngine = "Yamaha 40hk";
+$boatLength = 460;
+$boatWidth 	= 186;
+$ownerName 	= "Berit";
+$stmt->execute();
+echo "<p>Inserted '$boatType'. Rowcount is = " . $stmt->rowCount();
+
+// INSERT INTO Jetty VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
+$boatType 	= "Linder 440";
+$boatEngine = "Tohatsu 4hk";
+$boatLength = 431;
+$boatWidth 	= 164;
+$ownerName 	= "Ceasar";
+$stmt->execute();
+echo "<p>Inserted '$boatType'. Rowcount is = " . $stmt->rowCount();
 
 
 // ---------------------------------------------------------------------------------------------

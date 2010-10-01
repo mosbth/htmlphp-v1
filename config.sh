@@ -10,3 +10,7 @@ chmod 644 museum/img/*
 
 chmod 777 example/form/objects
 chmod 666 example/form/objects/*
+
+chmod 777 example/sqlite
+chmod 666 example/sqlite/*.sqlite
+

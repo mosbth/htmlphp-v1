@@ -541,6 +541,9 @@ EOD;
 		där information (IT-säkerhet) om crackade webbplatser och listor med lösenord, användarid och mailadresser
 		publiceras</a>.
 
+		<p>PDO och prepared statements är en teknik som undviker SQL injections. Det kan du läsa
+		om i <a href="http://www.php.net/manual/en/pdo.prepared-statements.php">stycket om prepared statements</a>.
+
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
@@ -552,49 +555,130 @@ EOD;
 		
 		<p><a href="example/sqlite/sqlite1.php">Exempel för att skapa en databas med en tabell</a>
 
+		<p>Studera källkoden för exemplet och försök förstå vad den gör. Läs kommentarerna. Försök 
+		förstå flödet i filen. Kopiera koden till din egna fil och gör ett eget exempel.
+
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s14">
-		<h2>14. Prepared statements</h2>
+		<h2>14. Vanliga felmeddelanden</h2>
 		
-		<p>
+		<p>I exemplet ovan används exception-hantering om något går fel. Det betyder att ett 
+		felmeddelande "kastas" och hanteras av närmaste felhanterare. I exemplet finns det en global
+		felhanterare <code>exceptionHandler()</code> som fångar dessa fel och skriver ut dess feltext.
+		Därefter avbryts skriptet.
+		
+		<p>Denna exception-hantering är vanlig även i andra språk, till exempel i Java och C++.
+		Ofta hanteras koden inom ett try-block och ett catch-block, men i våra exempel använder
+		vi endast en global exception-hanterare.
+		
+		<p>Här följer ett par exempel på vanliga felkoder som kan uppkomma i samband med SQLite.
+		
+		<p><a href="example/sqlite/sqlite2.php">Försöker skapa en databasfil men har inte rättigheter på katalogen (ändra rättigheter till 777)</a>
+
+		<p><a href="example/sqlite/sqlite5.php">Försöker skriva till en databas-fil som är skrivskyddad (ändra rättigheter till 666)</a>
+
+		<p><a href="example/sqlite/sqlite3.php">Fel i SQL-satsen (ändra SQL-koden och/eller testkör den i Firefox SQLite Manager)</a>
+
+		<p><a href="example/sqlite/sqlite4.php">Försöker skapa en tabell som redan finns (radera tabellen med DROP eller använd <code>CREATE TABLE IF NOT EXISTS</code></a>
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s15">
-		<h2>15. Välj och presentera data med <code>SELECT</code></h2>
+		<h2>15. Skapa nya rader i tabellen med <code>INSERT</code></h2>
 		
-		<p>
+		<p>Vi utökar testskriptet med att lägga in ett antal värden i databasen med SQL-satsen <code>INSERT</code>.
+		
+		<p><a href="http://www.sqlite.org/lang_insert.html">Läs om SQL-satsen <code>INSERT</code> på www.sqlite.org</a>
+
+		<p><a href="example/sqlite/sqlite6.php">Exempel för att lägga till rader i en tabell</a>
+
+		<p>Studera källkoden för exemplet och försök förstå vad den gör. Läs kommentarerna. Försök 
+		förstå flödet i filen. Kopiera koden till din egna fil och gör ett eget exempel.
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s16">
-		<h2>16. Lägga till rader</h2>
+		<h2>16. Ta bort rader med <code>DELETE</code></h2>
 		
-		<p>
+		<p>Vi utökar testskriptet med att ta bort samtliga rader med SQL-satsen <code>DELETE</code>.
+		Det innebär att vi tömmer tabellen på värden innan vi börjar lägga in värden. 
+		
+		<p><a href="http://www.sqlite.org/lang_delete.html">Läs om SQL-satsen <code>DELETE</code> på www.sqlite.org</a>
+
+		<p><a href="example/sqlite/sqlite7.php">Exempel för att ta bort rader från en tabell</a>
+
+		<p>Studera källkoden för exemplet och försök förstå vad den gör. Läs kommentarerna. Försök 
+		förstå flödet i filen. Kopiera koden till din egna fil och gör ett eget exempel.
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s17">
-		<h2>17. Updatera rader</h2>
+		<h2>17. Visa innehållet i tabellen med <code>SELECT</code></h2>
 		
-		<p>
+		<p>Vi fortsätter med att utöka testskriptet. Nu vill vi visa värden från tabellen med hjälp
+		<code>SELECT</code>. 
+
+		<p><a href="http://www.sqlite.org/lang_select.html">Läs om SQL-satsen <code>SELECT</code> på www.sqlite.org</a>
+
+		<p><a href="example/sqlite/sqlite8.php">Exempel för att visa alla rader från en tabell</a>
+
+		<p><a href="example/sqlite/sqlite9.php">Uppdaterat exempel som skriver ut resultatet i en <code>&lt;table&gt;</code></a>
+
+		<p><a href="example/sqlite/sqlite10.php">Exempel som skriver ut rader som matchar en viss söksträng</a>
+
+		<p>Studera källkoden för exemplet och försök förstå vad den gör. Läs kommentarerna. Försök 
+		förstå flödet i filen. Kopiera koden till din egna fil och gör ett eget exempel.
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s18">
-		<h2>18. Ta bort rader</h2>
+		<h2>18. Updatera rader och värden med <code>UPDATE</code></h2>
 		
-		<p>
+		<p>Vi förändrar testskriptet för att uppdatera värden i raderna med <code>UPDATE</code>. Vi 
+		skapar en ny databas med några extra kolumner i tabellen. Dels lägger vi dit en
+		status-kolumn där man kan skriva lite status om båten. Vi lägger till en kolumn som anger
+		vem som ändrade statusraden och vi lägger till en kolumn med en datum för när statusraden senast
+		ändrades.
+		
+		<p><a href="http://www.sqlite.org/lang_update.html">Läs om SQL-satsen <code>UPDATE</code> på www.sqlite.org</a>
+
+		<p><a href="example/sqlite/sqlite12.php">Visa värden i den nya databasen och uppdatera statusraden</a>
+
+		<p>Studera källkoden för exemplet och försök förstå vad den gör. Läs kommentarerna. Försök 
+		förstå flödet i filen. Kopiera koden till din egna fil och gör ett eget exempel.
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s19">
 		<h2>19. Ett formulärexempel och en SQLite databas</h2>
 		
-		<p>
+		<p>Sådär, redo för ett exempel där vi använder allt vi pratat om hittills? Jag tar och uppdaterar
+		mitt form-exempel. Där använde jag tidigare filhantering. Låt se hur det kan se ut om
+		vi byter ut filhanteringen mot SQL, PDO och SQLite.
+		
+		<p><a href="forms.php#klar">Det kompletta form-exemplet där formulärdata sparades på disk</a>
+
+		<p><a href="example/sqlite/sqlite13.php">Form-exemplet, nu med SQL, PDO och SQLite</a>
+
+		<p>Studera källkoden för exemplet och försök förstå vad den gör. Läs kommentarerna. Försök 
+		förstå flödet i filen.
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s20">
 		<h2>20. Kombinera resultat från två tabeller</h2>
 		
 		<p>
+
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 
 
