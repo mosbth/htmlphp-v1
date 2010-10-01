@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" media="all" type="text/css" href="forms.css" title="Mos standard form layout">
+	<link rel="stylesheet" media="all" type="text/css" href="../form/forms.css" title="Mos standard form layout">
 	<link rel="shortcut icon" href="../../img/favicon.ico">
 	<title>Exempel SQLite med formulär</title>
 </head>
@@ -93,7 +93,7 @@ $obj = Array(
 //  http://php.net/manual/en/pdo.connections.php
 //  http://php.net/manual/en/pdo.setattribute.php
 //
-$db = new PDO("sqlite:database4.sqlite");
+$db = new PDO("sqlite:museum.sqlite");
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
@@ -102,6 +102,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 // SAVE FORM
 // Take action if the form is to be saved, allow numeric id > 0
 //
+/*
 if(!empty($_POST['doSave']) && $id > 0) {
 
 	//
@@ -133,6 +134,37 @@ if(!empty($_POST['doSave']) && $id > 0) {
 	file_put_contents($filename, serialize($obj));
 	$output = "Filen sparades. ";
 }
+*/
+
+if(!empty($_POST['doSave']) && $id > 0) {
+	
+	$stmt = $db->prepare('
+		UPDATE Object 
+		SET 
+			title = :title,
+			ingress = :ingress,
+			text = :text,
+			image = :image,
+			year = :year,
+			owner = :owner,
+			trustee = :trustee,
+			background = :background
+		WHERE
+			id = :id;
+	');
+	$stmt->bindValue(':id', 				validateIncoming($_POST, 'id', 					0));
+	$stmt->bindValue(':title', 			validateIncoming($_POST, 'title', 			'Titel saknas'));
+	$stmt->bindValue(':ingress', 		validateIncoming($_POST, 'ingress', 		'Ingress saknas'));
+	$stmt->bindValue(':text', 			validateIncoming($_POST, 'text', 				'Text saknas'));
+	$stmt->bindValue(':image', 			validateIncoming($_POST, 'image', 			'../../img/noimage.png'));
+	$stmt->bindValue(':year', 			validateIncoming($_POST, 'year', 				'Årtal saknas'));
+	$stmt->bindValue(':owner', 			validateIncoming($_POST, 'owner', 			'Ägare saknas'));
+	$stmt->bindValue(':trustee', 		validateIncoming($_POST, 'trustee', 		'Förvaltare saknas'));
+	$stmt->bindValue(':background', validateIncoming($_POST, 'background', 	'Bakgrund saknas'));
+	$stmt->execute();
+		
+	$output = "Objektet sparades. " . $stmt->rowCount() . " rader påverkades.";
+}
 
 
 // ---------------------------------------------------------------------------------------------
@@ -158,6 +190,7 @@ if(!empty($_POST['doClear'])) {
 //	http://php.net/manual/en/function.empty.php
 //	http://php.net/manual/en/function.max.php
 //
+/*
 if(!empty($_POST['doAdd'])) {	
 	$files 			= readDirectory(dirname(__FILE__) . "/objects");
 	$id 				= max($files) + 1;
@@ -165,6 +198,16 @@ if(!empty($_POST['doAdd'])) {
 	$filename 	= "objects/$id";
 	$output .= "<p>Nytt objekt med id=$id. Klicka på spara för att spara objektet. ";
 }
+*/
+
+if(!empty($_POST['doAdd'])) {	
+	$stmt = $db->prepare('INSERT INTO Object (title) VALUES ("Titel ej vald");');
+	$stmt->execute();
+	$id	= $db->lastInsertId();
+	$obj['id'] 	= $id;
+	$output .= "<p>Nytt objekt skapades med id={$obj['id']}. Klicka på spara för att spara objektet. ";
+}
+
 
 
 // ---------------------------------------------------------------------------------------------
@@ -182,6 +225,7 @@ if(!empty($_POST['doAdd'])) {
 //	http://php.net/manual/en/function.file-get-contents.php
 //	http://php.net/manual/en/function.unserialize.php
 //
+/*
 if($id == 0) {
 	// Do nothing, just produce an empty form
 } else if(is_file($filename)) {
@@ -192,6 +236,17 @@ if($id == 0) {
 	// The file does not exists
 	$output .= "Filen kunde inte hittas på disken. ";	
 }	
+*/
+
+//
+// Read the row that has choosen id
+//
+$stmt = $db->prepare('SELECT * FROM Object WHERE id = ?;');
+$stmt->execute(array($id));
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+if(isset($res[0])) {
+	$obj = $res[0];
+}
 
 
 // ---------------------------------------------------------------------------------------------
@@ -204,6 +259,7 @@ if($id == 0) {
 //	http://php.net/manual/en/function.is-file.php
 //	http://php.net/manual/en/function.unlink.php
 //
+/*
 if(!empty($_POST['doDelete'])) {	
 	if(is_file($filename)) {
 		unlink($filename);		
@@ -211,6 +267,16 @@ if(!empty($_POST['doDelete'])) {
 	} else {
 		$output .= "<p>Filen kunde inte raderas, filen fanns ej.";		
 	}
+}
+*/
+
+//
+// Delete the row that has choosen id
+//
+if(!empty($_POST['doDelete'])) {	
+	$stmt = $db->prepare('DELETE FROM Object WHERE id = ?;');
+	$stmt->execute(array($id));
+	$output .= "<p>" . $stmt->rowCount() . " objekt raderades. ";
 }
 
 
@@ -224,17 +290,34 @@ if(!empty($_POST['doDelete'])) {
 //	http://php.net/manual/en/function.dirname.php
 //	http://php.net/manual/en/control-structures.foreach.php
 //	
+/*
 $files = readDirectory(dirname(__FILE__) . "/objects");
 
 $objects = "";
 foreach($files as $val) {
 	$objects .= "<a href='?id=$val'>$val</a> ";
 }
+*/
+
+//
+// Read all values from database and show their title
+//
+$stmt = $db->prepare('SELECT * FROM Object;');
+$stmt->execute();
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$objects = "";
+foreach($res as $val) {
+	$objects .= "<a href='?id={$val['id']}'>{$val['title']}</a> ";
+}
 
 
 ?>
 
 <body>
+	<p><a href="../../source.php?dir=example/sqlite&file=<?php echo basename(__FILE__); ?>"><em>Källkod</em></a>
+	<a href=sqlite14.php>Skapa om databasen med default-innehåll</a>
+
 	<p>Följande objekt finns sparade:
 	<p><?php echo $objects; ?>
 	<form class="standard w600" method=post>
@@ -262,6 +345,6 @@ foreach($files as $val) {
 		
 	 </fieldset>
 	</form>
-	<p><a href="../../source.php?dir=example/form&file=<?php echo basename(__FILE__); ?>"><em>Källkod</em></a>
+
 </body>
 </html>

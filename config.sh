@@ -13,4 +13,5 @@ chmod 666 example/form/objects/*
 
 chmod 777 example/sqlite
 chmod 666 example/sqlite/*.sqlite
+chmod 755 example/sqlite/test_errors
 

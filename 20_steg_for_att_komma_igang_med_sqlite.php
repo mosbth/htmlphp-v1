@@ -668,7 +668,8 @@ EOD;
 		<p><a href="example/sqlite/sqlite13.php">Form-exemplet, nu med SQL, PDO och SQLite</a>
 
 		<p>Studera källkoden för exemplet och försök förstå vad den gör. Läs kommentarerna. Försök 
-		förstå flödet i filen.
+		förstå flödet i filen. Studera koden som gör jobbet mot databasen och studera koden som jobbar mot filer.
+		Vilken kod tycker du verkar enklast att förstå och vilken verkar effektivast att använda?
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
