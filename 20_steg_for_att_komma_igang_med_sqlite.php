@@ -16,12 +16,10 @@ include("header.php");
 		</p>
 	</aside>
 	<aside class=box>
-		<h4>PHP-manualen, din bästa vän</h4>
-		<p>Lär känna PHP-manualen och lär dig hitta i den. Både i innehållsförteckningen och via sökfunktionen.
-		Lär dig hur de olika funktionerna beskrivs
-		och manualen kommer till slut att bli din bästa vän och nästan den enda resursen du behöver
-		för ditt PHP-programmerande.</p>
-		<p><a href="http://php.net/manual/en/">PHP Manualen</a>
+		<h4>Databasboken ger bakgrunden</h4>
+		<p>I systerkurserna används boken Databasteknik. Denna bok har även en webbplats med 
+		en webbkurs. Via den webbkursen kan du få lite mer bakgrund till SQL.
+		<p><a href="http://www.databasteknik.se/webbkursen/sql/index.html">Databasteknik: Webbkursen om SQL</a>
 		</p>
 	</aside>
 </aside>
@@ -31,39 +29,37 @@ include("header.php");
 	<header id="start">
 		<h1>20 steg för att komma igång med SQLite</h1>
 
-			<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-09-29">29:e 
-			september 2010</time>
+			<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-10-10">1:e 
+			oktober 2010</time>
 
-			<p class="ingress">En introduktion till att komma igång med PHP på 20 steg.
+			<p class="ingress">En introduktion till att komma igång med SQLite, SQL och PHP PDO på 20 steg.
+
+			<p>Bästa sättet att genomföra övningen är att du själv gör alla stegen och kopierar eller skriver om
+			kodexemplen till ditt egna fungerande exempel.
+			Läsa är bra men man måste göra själv, "kan själv", för att lära sig.
 			
 			<ol>
-				<li><a href="#s1">Om PHP</a>
-				<li><a href="#s2">PHP som skriptspråk i HTML</a>
-				<li><a href="#s3">PHP som programmeringssspråk tillsammans med HTML</a>
-				<li><a href="#s4">Skriv ut text med <code>echo</code></a>
-				<li><a href="#s5">Utskrift av felmeddelande</a>
-				<li><a href="#s6">Kommentarer</a>
-				<li><a href="#s7">Variabler och typer</a>
-				<li><a href="#s8">Uttryck och operatorer</a>
-				<li><a href="#s9">Villkorssatser</a>
-				<li><a href="#s10">Loopar</a>
-				<li><a href="#s11">Arrayer</a>
-				<li><a href="#s12">Filer och <code>include()</code></a>
-				<li><a href="#s13">Fördefinerade variabler, <code>$_SERVER</code>, <code>$_GET</code>, <code>$_POST</code>, <code>$_SESSION</code></a>
-				<li><a href="#s14">Inbyggda funktioner</a>
-				<li><a href="#s15">Funktioner</a>
-				<li><a href="#s16">Klasser och Objekt</a>
-				<li><a href="#s17">Filhantering</a>
-				<li><a href="#s18">Databaser</a>
-				<li><a href="#s19">Vad är installerat med <code>phpinfo()</code></a>
-				<li><a href="#s20">Grön programmering och kodstandarder</a>
+				<li><a href="#s1">Om SQLite</a>
+				<li><a href="#s2">SQLite Manager</a>
+				<li><a href="#s3">Skapa en tabell</a>
+				<li><a href="#s4">Lägg till rader i en tabell</a>
+				<li><a href="#s5">Visa rader i en tabell med <code>SELECT</code></a>
+				<li><a href="#s6">Aggregerande funktioner</a>
+				<li><a href="#s7">Inbyggda funktioner</a>
+				<li><a href="#s8">Import och export av data</a>
+				<li><a href="#s9">Flytta databas mellan maskiner</a>
+				<li><a href="#s10">PHP och SQLite</a>
+				<li><a href="#s11">PHP och PDO</a>
+				<li><a href="#s12">SQL injections</a>
+				<li><a href="#s13">Koppla ett PHP-skript till en SQLite databas via PDO</a>
+				<li><a href="#s14">Vanliga felmeddelanden</a>
+				<li><a href="#s15">Skapa nya rader i tabellen med <code>INSERT</code></a>
+				<li><a href="#s16">Ta bort rader med <code>DELETE</code></a>
+				<li><a href="#s17">Visa innehållet i tabellen med <code>SELECT</code></a>
+				<li><a href="#s18">Updatera rader och värden med <code>UPDATE</code></a>
+				<li><a href="#s19">Ett komplett exempel med formulär och en SQLite databas</a>
+				<li><a href="#s20">Andas</a>
 			</ol>
-			
-			<p>Läs mer när du väl kommit igång. 
-			
-			<ul>
-				<li><a href="#form">PHP och HTML-formulär</a>
-			</ul>
 	
 	</header>
 
@@ -84,7 +80,7 @@ include("header.php");
 		<h2>2. SQLite Manager</h2>
 		
 		<p>SQLite Manager är ett användargränssnitt för SQLite databaser. Med verktyget kan du skapa
-		nya databaser, skapa tabeller, editera data i tabellerna och söka. 
+		nya databaser, skapa tabeller, editera data i tabellerna och söka i dem. 
 		
 		<p>SQLite Manager är en Firefox AddOn. Ladda ned och installera det. Starta upp det via menyn "Firefox - Tools - SQLite Manager".
 		
@@ -111,9 +107,9 @@ include("header.php");
 		En tabell består av rader av värden. Det är bra om varje rad har ett unikt värde, ett värde som identifierar
 		just den raden.
 		Det åstakoms med en nyckel för varje rad. Denna nyckel kallas primärnyckel och definerar
-		vilken kolumn som gör raden unik. En primärnyckel kan också vara en kombination av flera kolumner.
+		vilken kolumn som gör raden unik. En primärnyckel kan vara en kombination av flera kolumner.
 		
-		<p>Låt oss testa lite genom att göra en databas till den lokala båtklubben. Skapa en ny databas (<code>boats.sqlite</code>) med en tabell
+		<p>Låt oss testa genom att göra en databas till den lokala båtklubben. Skapa en ny databas (<code>boats.sqlite</code>) med en tabell
 		(<code>Jetty</code>) där alla båtar och deras respektive bryggplats lagras. Låt bryggplatsens id vara primärnyckel.
 		Skapa kolumner för att spara båttyp, motor, längd, bredd och ägarens namn.
 		
@@ -159,7 +155,7 @@ include("header.php");
 			<li>Båt: Linder 440, motor: Tohatsu 4hk, längd: 431, bredd: 164, ägare: Ceasar
 		</ul>
 		
-		<p>Klicka på "Add" för att lägga till en ny rad. Du behöver inte ange en siffra för "jettyPosition", det automatgenereras
+		<p>Klicka på "Add" för att lägga till en ny rad. Du behöver inte ange en siffra för "jettyPosition". Det automatgenereras
 		eftersom kolumnen är specificerad som PRIMARY KEY och INTEGER. Så här ser det ut för mig.
 		
 		<p>Lägg till en båt som en ny rad i tabellen.
@@ -239,6 +235,7 @@ WHERE
 
 		<p>Om du vill ha bättre namn på kolumn-rubrikerna så kan du ange det med <code>AS</code>-konstruktionen.
 		Testa att ändra din fråga till följande: <code>SELECT boatType AS Typ, ownerName AS Namn FROM Jetty</code>.
+		Titta på kolumnrubrikerna i bilden så ser du att de ändrades.
 
 		<figure class="standard strict inline">
 			<a href="img/sqlite-20/select2.png"><img src="img/sqlite-20/select2.png" alt="[Bild: SQLite Manager Select again2]"></a>
@@ -246,7 +243,7 @@ WHERE
 		</figure>
 
 		<p>I <code>WHERE</code>-delen görs urvalet av raderna. Endast de rader som matchar <code>WHERE</code>-kriteriat kommer
-		att visas i resultatet. Testa att uppdatera <code>WHERE</code>-delen med följande satser, får du förväntat svar?
+		att visas i resultatet. Testa att uppdatera <code>WHERE</code>-delen med följande satser.
 		
 		<ul>
 			<li><code>SELECT * FROM Jetty</code> (Ta bort samtliga villkor för att visa alla rader i tabellen)
@@ -259,7 +256,7 @@ WHERE
 
 		<figure class="standard strict inline">
 			<a href="img/sqlite-20/select3.png"><img src="img/sqlite-20/select3.png" alt="[Bild: SQLite Manager Select again3]"></a>
-			<figcaption>Ett "krångligt" sätt att visa alla rader i tabellen, en lite mer avancerad konstruktion med <code>AND</code>, <code>OR</code> och paranteser.</figcaption>
+			<figcaption>Ett "krångligt" sätt att visa alla rader i tabellen i form av en lite mer avancerad konstruktion med <code>AND</code>, <code>OR</code> och paranteser.</figcaption>
 		</figure>
 
 		<p>Att välja ur värden från tabeller är kärnan i databasbearbetning. Det är bra att ha koll på sina
@@ -308,10 +305,10 @@ WHERE
 		
 		<p><a href="http://www.sqlite.org/lang_corefunc.html">http://www.sqlite.org/lang_corefunc.html</a>
 		
-		<p>Med dessa funktioner kan du göra bearbeta datamängden för att få bra rapporter. Ibland är det 
+		<p>Med dessa funktioner kan du bearbeta datamängden för att få bra rapporter. Ibland är det 
 		bättre att bearbeta datamängden via SQL och dess funktioner, istället för att låta PHP bearbeta datat.
 		Försök att använda SQL för att göra så korrekta rapporter som möjligt, det minimerar kodandet i PHP
-		och är ofta ett effektift sätt att programmera.
+		och är ofta ett effektivt sätt att programmera.
 		
 		<p>Testa följande SQL satser och se vilket resultat du får.
 	
@@ -325,7 +322,7 @@ WHERE
 
 		<figure class="standard strict inline">
 			<a href="img/sqlite-20/functions.png"><img src="img/sqlite-20/functions.png" alt="[Bild: SQLite Manager Functions]"></a>
-			<figcaption>Beräkna medellängden av alla båtar med aggregat-funktionen <code>AVG()</code>.</figcaption>
+			<figcaption>Omvandla alla namn till stora bokstäver med inbyggda funktionen <code>upper()</code>.</figcaption>
 		</figure>
 
 		<p>Inbyggda funktioner är viktiga för att kunna bearbeta och komplettera resultatet från
@@ -378,7 +375,7 @@ INSERT INTO "Jetty_mos" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
 			<figcaption>Importera en tabell med värden via SQL-kommandon.</figcaption>
 		</figure>
 
-		<p>Sådär, nu finns både tabell och värden i min databas igen. Precis som om jag skapat dem själv.
+		<p>Sådär, nu finns både tabell och värden i min (och i din) databas igen. Precis som om jag skapat dem själv.
 		Nåja, typ.
 
 		<p>Denna typen av import och export av värden i en databas är bra att ha koll på. Det visar 
@@ -391,8 +388,10 @@ INSERT INTO "Jetty_mos" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
 		<h2>9. Flytta databas mellan maskiner</h2>
 		
 		<p>En fördel med SQLite är att den är just en filbaserad databas. Det är enkelt att flytta hela databasen 
-		till en annan plats eller dator. Börja med att kopiera din databas och lägg den i en egen katalog
+		till en annan plats eller dator. Ta och kopiera din databas och lägg kopian den i en katalog
 		så att din lokala webbserver kommer åt den.
+		
+		<p>Nu är vi redo att börja leka lite med PHP för att komma åt databasen.
 	
 <!--
 		<figure class="standard strict inline">
@@ -405,39 +404,11 @@ INSERT INTO "Jetty_mos" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
-<!--
-	<section id="s10">
-		<h2>10. Textbaserat gränssnitt till SQLite</h2>
-		
-		<p>SQLite har ett textbaserat gränssnitt där all kommunikation med databasen kan ske.
-		
-		<p>Om du har tillgång till en xterminal (xterm på Mac eller Linux/Unix) eller putty (Windows)
-		så kan du logga in på ssh.student.bth.se. Om du ännu inte har installerat xterm/putty, och vill göra det, 
-		så kan du läsa lite om det här, <a href="http://dbwebb.se/oophp/install_lab_environment">http://dbwebb.se/oophp/install_lab_environment</a>, läs stycket om ssh-klienter.
-
-		<p>Om du nu har tillgång till xterm/putty, och har loggat in på ssh.student.bth.se, så kan du
-		komma åt databasen med kommandot <code>sqlite3 boats.sqlite</code>. Se nedanstående bild för detaljer.
-
-		<figure class="standard strict inline">
-			<a href="img/sqlite-20/cu-ssh_student.png"><img src="img/sqlite-20/cu-ssh_student.png" alt="[Bild: SQLite cu-ssh.student]"></a>
-			<figcaption>Den textbaserade verktyget för att jobba med SQLite. Visa den inbyggda hjälpen med <code>.help</code></figcaption>
-		</figure>
-
-		
-		Skriv in <code>sqlite3 test.db</code> för att skapa en ny databas. Använd den inbyggda hjälpen för 
-		att se vilka funktioner som finns tillgängliga. Skriv kommandot <code>.help</code> för att visa 
-		den inbyggda hjälpen.
-		
-		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
-	</section>
--->
-
-<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s10">
 		<h2>10. PHP och SQLite</h2>
 		
 		<p>Via PHP kan man komma åt en SQLite-databas. Det finns olika PHP-interface för att jobba
-		mot SQLite. Du kan läsa mer om dessa i PHP-manualen.
+		mot SQLite. Du kan läsa mer om dessa i PHP-manualen (översiktligt).
 		
 		<blockquote class=links>
 			<a href="http://php.net/manual/en/book.sqlite.php">http://php.net/manual/en/book.sqlite.php</a><br>
@@ -509,9 +480,6 @@ EOD;
 		hantera argument, ett sätt som undviker vanliga säkerhetshål som SQL injections.
 		
 		<p><a href="http://www.php.net/manual/en/pdo.prepared-statements.php">Läs stycket om prepared statements och studera översiktligt exemplen</a>.
-		
-		<p><a href="http://php.net/manual/en/ref.pdo-sqlite.php">http://php.net/manual/en/ref.pdo-sqlite.php</a><br>
-
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
@@ -528,8 +496,7 @@ EOD;
 
 		<p>SQL injections är ett sätt för en "cracker" att "bryta sig in" i en webbapplikation
 		genom att via URL:en, eller formulär, modifiera SQL-satserna. Ett sådant säkerhetshål 
-		kan ge en inbrytare tillgång till alla användare och lösenord i en databas, för att ge 
-		ett exempel.
+		kan ge en inbrytare tillgång till alla användare och lösenord i en databas.
 		
 		<p><a href="http://en.wikipedia.org/wiki/SQL_injection">Läs lite snabbt om SQL Injections på Wikipedia</a>.
 
@@ -641,7 +608,7 @@ EOD;
 		<h2>18. Updatera rader och värden med <code>UPDATE</code></h2>
 		
 		<p>Vi förändrar testskriptet för att uppdatera värden i raderna med <code>UPDATE</code>. Vi 
-		skapar en ny databas med några extra kolumner i tabellen. Dels lägger vi dit en
+		skapar en ny databas med några extra kolumner i tabellen. Vi skapar en
 		status-kolumn där man kan skriva lite status om båten. Vi lägger till en kolumn som anger
 		vem som ändrade statusraden och vi lägger till en kolumn med en datum för när statusraden senast
 		ändrades.
@@ -657,7 +624,7 @@ EOD;
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s19">
-		<h2>19. Ett formulärexempel och en SQLite databas</h2>
+		<h2>19. Ett komplett exempel med formulär och en SQLite databas</h2>
 		
 		<p>Sådär, redo för ett exempel där vi använder allt vi pratat om hittills? Jag tar och uppdaterar
 		mitt form-exempel. Där använde jag tidigare filhantering. Låt se hur det kan se ut om
@@ -668,16 +635,30 @@ EOD;
 		<p><a href="example/sqlite/sqlite13.php">Form-exemplet, nu med SQL, PDO och SQLite</a>
 
 		<p>Studera källkoden för exemplet och försök förstå vad den gör. Läs kommentarerna. Försök 
-		förstå flödet i filen. Studera koden som gör jobbet mot databasen och studera koden som jobbar mot filer.
-		Vilken kod tycker du verkar enklast att förstå och vilken verkar effektivast att använda?
+		förstå flödet i filen. Studera koden som gör jobbet mot databasen och studera koden som jobbar mot filer (bortkommenterad i exemplet).
+
+		<p><a href="source.php?dir=example/sqlite&file=sqlite13.php">Källkod för exemplet med PDO, SQL och SQLite kontra filhantering</a>
+
+		<p>Vilken kod tycker du verkar enklast att förstå och vilken verkar effektivast att använda?
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s20">
-		<h2>20. Kombinera resultat från två tabeller</h2>
+		<h2>20. Andas</h2>
 		
-		<p>
+		<p>Ta ett djupt andetag. Du har precis gått igenom grunderna i SQL, SQLite, PHP PDO och 
+		Prepared Statements. Det är en hel del som ska falla på plats. Iallafall om detta var
+		en av dina första bekantskaper med databaser. Andas. Slappna av. Var nöjd.
+
+		<p>Bästa sättet att genomföra övningen var att du själv gjorde alla stegen och själv kopierade över koden till ett eget fungerande exempel.
+		Läsa är bra men man måste göra själv, "kan själv", för att lära sig.
+		
+		<p>Om detta verkar svårt och kryptiskt så föreslår jag att du låter det vara en dag eller två.
+		Kom sedan tillbaka hit och skumma igenom artikeln igen. Nu har du iallafall
+		detta dokument som du kan använda som uppslagsverk framöver.
+		
+		<p>Bra jobbat!
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 
