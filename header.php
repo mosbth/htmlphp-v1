@@ -21,12 +21,12 @@ error_reporting(-1);
 	<?php include("choose_style.php"); ?>
 	<link rel="stylesheet" media="all"   type="text/css" href="<?php echo $stylePath; ?>"  		title="<?php echo $styleTitle; ?>">
 	<link rel="stylesheet" media="print" type="text/css" href="style/print.css">
-	<link rel="alternate stylesheet"   type="text/css" href="style/stylesheet.css"       		title="Mos Standard Grey">
-	<link rel="alternate stylesheet"   type="text/css" href="style/stylesheet_red.css"   		title="Mos Standard Red">
-	<link rel="alternate stylesheet"   type="text/css" href="style/stylesheet_bth.css"   		title="Mos BTH-ish">
-	<link rel="alternate stylesheet"   type="text/css" href="style/stylesheet_debug.css"   	title="Mos Debug">
-	<link rel="alternate stylesheet"   type="text/css" href="style/stylesheet_nostyle.css"	title="Mos No Style">
-	<link rel="alternate stylesheet"   type="text/css" href="style/stylesheet_print.css" 		title="Mos to print">
+	<link rel="alternative stylesheet"   type="text/css" href="style/stylesheet.css"       		title="Mos Standard Grey">
+	<link rel="alternative stylesheet"   type="text/css" href="style/stylesheet_red.css"   		title="Mos Standard Red">
+	<link rel="alternative stylesheet"   type="text/css" href="style/stylesheet_bth.css"   		title="Mos BTH-ish">
+	<link rel="alternative stylesheet"   type="text/css" href="style/stylesheet_debug.css"   	title="Mos Debug">
+	<link rel="alternative stylesheet"   type="text/css" href="style/stylesheet_nostyle.css"	title="Mos No Style">
+	<link rel="alternative stylesheet"   type="text/css" href="style/stylesheet_print.css" 		title="Mos to print">
 
 	<!-- The small icon displayed by the browser next to the link -->
 	<link rel="shortcut icon" href="img/favicon.ico">
@@ -55,14 +55,15 @@ error_reporting(-1);
 
 		<img src="img/logo.png" alt="htmlphp me" width=200 height=100>
 		<nav>
-			<a id="me-"     href="me.php">Me</a> 
-			<a id="report-" href="report.php">Redovisning</a> 
-			<a id="html20-" href="de_20_vanligaste_html_elementen.php">HTML-20</a> 
-			<a id="css20-"  href="de_20_vanligaste_css_konstruktionerna.php">CSS-20</a> 
-			<a id="php20-"  href="20_steg_for_att_komma_igang_med_php.php">PHP-20</a> 
-			<a id="forms-"  href="forms.php">Formulär</a>
-			<a id="sqlite20-"  href="20_steg_for_att_komma_igang_med_sqlite.php">SQLite-20</a> 
-			<a id="proj-"   href="projekt.php">Projekt</a> 
-			<a id="begr-"   href="begravningsseder_och_bruk.php">Begravningsmuseum</a> 
+			<a id="htmlphp-"  href="htmlphp.php">htmlphp</a> 
+			<a id="me-"     	href="me.php">Me</a> 
+			<a id="report-" 	href="report.php">Redovisning</a> 
+			<a id="html20-" 	href="de_20_vanligaste_html_elementen.php">HTML-20</a> 
+			<a id="css20-"  	href="de_20_vanligaste_css_konstruktionerna.php">CSS-20</a> 
+			<a id="php20-"  	href="20_steg_for_att_komma_igang_med_php.php">PHP-20</a> 
+			<a id="forms-"  	href="forms.php">Formulär</a>
+			<a id="sqlite20-" href="20_steg_for_att_komma_igang_med_sqlite.php">SQLite-20</a> 
+			<a id="proj-"   	href="projekt.php">Projekt</a> 
+			<a id="begr-"   	href="begravningsseder_och_bruk.php">Begravningsmuseum</a> 
 		</nav>
 	</header>

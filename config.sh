@@ -5,6 +5,9 @@
 chmod 777 museum/objects 
 chmod 644 museum/objects/*
 
+chmod 777 museum/objects_fil 
+chmod 644 museum/objects_fil/*
+
 chmod 777 museum/img 
 chmod 644 museum/img/*
 
