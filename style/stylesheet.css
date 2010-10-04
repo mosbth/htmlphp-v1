@@ -43,6 +43,7 @@ header#top nav a:hover   { color: #111111; background: #999999; }
 header#top nav a:active  { }
 
 /* Keep current choice/link highlighted */
+body#htmlphp a#htmlphp-,
 body#me     a#me-,
 body#report a#report-,
 body#html20 a#html20-,

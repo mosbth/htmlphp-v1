@@ -112,14 +112,14 @@ include("header_projekt.php");
 
 			<h3>Tips från coachen</h3>
 			
-			<p>Gör hela kursmomentet innan du hoppar på leveransen. Gör formuläret så som det görs i kursmomentet.
+			<p>Gör hela kursmomentet innan du hoppar på leveransen. Använd det du lär dig i formulär-exemplet.
 			Kopiera och snygga till det, om tiden tillåter.
 			
 			<p>Gör en vanlig sida som läser in ett objekt utifrån en $_GET-variabel (id). Denna sidan
-			presenterar sedan objektet i html-kod, inte som formulär.
+			presenterar sedan objektet i html-kod, inte som formulär. 
 			
-			<p>Bygg ut ditt Begravningsmuseum och visa upp minst 3 av de exempel-objekt som finns tillgängliga på följande länk. 
-			<a href="museum_objekt_visa.php">Objekt till Begravningsmuseum</a>
+			<p>Bygg ut ditt Begravningsmuseum och visa upp 3-5 av de exempel-objekt som finns tillgängliga på följande länk. 
+			<a href="museum_objekt_fil_visa.php">Objekt till Begravningsmuseum</a>
 			
 			<p>Att ladda upp filer (bilder) är ren överkurs och görs bara av de som vill, vågar, orkar och har tiden.
 			

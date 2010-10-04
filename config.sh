@@ -6,7 +6,7 @@ chmod 777 museum/objects
 chmod 644 museum/objects/*
 
 chmod 777 museum/objects_fil 
-chmod 644 museum/objects_fil/*
+chmod 444 museum/objects_fil/*
 
 cd museum/img && php resize_images.php doit
 cd ../..
@@ -31,4 +31,5 @@ rm -rf download
 mkdir download
 zip -r download/img_begravningsmuseum.zip img/begravningmuseum/
 zip -r download/img_objekt.zip museum/img/
+zip -r download/objekt.zip museum/objects_fil/
 cp museum/db/museum.sqlite download

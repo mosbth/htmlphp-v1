@@ -357,7 +357,7 @@ foreach($files as $val) {
 			-->
 			<?php echo $select; ?>
 			<input type=submit name=doAdd value="Nytt objekt" title="Skapa ett nytt objekt med ett unikt id.">
-			<input type=submit name=doDelete value="Radera" title="Radera detta objektet från disk genom att ta bort filen.">
+			<input type=submit name=doDelete value="Radera" <?php echo $isReadonly; ?> title="Radera detta objektet från disk genom att ta bort filen.">
 
 			<label>Titel:<input type=text name=title placeholder="Titel/namn på objektet" value="<?php echo $obj['title']; ?>"></label>
 			<label>Kategori:<input type=text name=category placeholder="Kategori/gruppering" value="<?php echo $obj['category']; ?>"></label>
