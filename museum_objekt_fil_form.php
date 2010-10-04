@@ -290,7 +290,8 @@ sort($files);
 
 $images = "";
 foreach($files as $val) {
-	if(is_file("$dir/$val")) {
+	$parts = pathinfo("$dir/$val");
+	if(is_file("$dir/$val") && isset($parts['extension']) && $parts['extension'] != 'php') {
 		$del = "";
 		if(is_writeable("$dir/$val")) {
 			$del = " <a href='?id=$id&amp;doRemoveImage=$val' title='Radera bilden'>x</a>";

@@ -75,13 +75,9 @@ $obj = Array(
 		'id'					=> '',
 		'title' 			=> '',
 		'category'		=> '',
-//		'ingress' 		=> '',
 		'text' 				=> '',
 		'image' 			=> '',
-//		'year' 				=> '',
 		'owner' 			=> '',
-//		'trustee' 		=> '',
-//		'background' 	=> '',
 	);
 
 
@@ -149,7 +145,7 @@ if(!empty($_POST['doSave']) && $id > 0) {
 			category = :category,
 			text = :text,
 			image = :image,
-			owner = :owner,
+			owner = :owner
 		WHERE
 			id = :id;
 	');
@@ -323,9 +319,12 @@ $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $objects = "";
+$select	= "<select name='id' onChange='submit();'><option value=-1>Välj objekt</option>";
 foreach($res as $val) {
-	$objects .= "<a href='?id={$val['id']}'>{$val['title']}</a> ";
+	$objects 	.= "<a href='?id={$val['id']}'>{$val['title']}</a> ";
+	$select		.= "<option value='{$val['id']}'" . ($val['id'] == $id ? " selected " : "") . ">{$val['title']} ({$val['id']})</option>";
 }
+$select .= "</select>";
 
 
 // ---------------------------------------------------------------------------------------------
@@ -376,7 +375,8 @@ sort($files);
 
 $images = "";
 foreach($files as $val) {
-	if(is_file("$dir/$val")) {
+	$parts = pathinfo("$dir/$val");
+	if(is_file("$dir/$val") && isset($parts['extension']) && $parts['extension'] != 'php') {
 		$del = "";
 		if(is_writeable("$dir/$val")) {
 			$del = " <a href='?id=$id&amp;doRemoveImage=$val' title='Radera bilden'>x</a>";
@@ -399,10 +399,18 @@ foreach($files as $val) {
 <!-- - - - - - - - - - - - - - - - - - aside        - - - - - - - - - - - - - - - - - -->
 	<aside class="right">
 		<aside class="box">
-			<h4>Vissa objekt är skrivskyddade</h4>
-			<p>De objekt som jag lagt dit går ej att uppdatera eller radera. De bilder som jag lagt dit går ej att radera. 
-			Testar du att skapa egna objekt eller ladda upp egna bilder så går det att radera dem.
-			Det är fritt fram att testa. Du kan inte förstöra något.
+			<h4>Återskapa databasen och fyll den med värden</h4>
+			<p>Databasen kan återskapas genom att radera tabellen och återskapa den. Därefter
+			läses all data in från filerna igen. Testa och lek. Du kan inte förstöra något.
+			<p><a href='museum_objekt_db_populate.php'>Återskapa databasen</a>
+			</p>
+		</aside>
+		
+		<aside class="box">
+			<h4>Ladda ned kopia av databasen</h4>
+			<p>Du kan ladda ned en egen kopia av databasen och använda i ditt begravningsmuseum online.
+			På så vis får du del av samtliga objekt utan att behöva skriva in dem för hand.
+			<p><a href='download/museum.sqlite'>Ladda hem databasen</a>
 			</p>
 		</aside>
 		
@@ -459,7 +467,7 @@ foreach($files as $val) {
 					
 			<!--<input type=submit name=doClear value="Töm formulär" title="Töm formuläret på alla värden, visa ett tomt formulär">-->
 			<input type=reset value="Återställ" title="Återställ formuläret till dess ursprunliga läge">
-			<input type=submit name=doSave value="Spara" <?php echo $isReadonly; ?> title="Spara alla ändringar">
+			<input type=submit name=doSave value="Spara" title="Spara alla ändringar">
 			
 			<output><?php echo $output; ?></output>
 			

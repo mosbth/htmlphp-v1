@@ -64,20 +64,17 @@ if(isset($_GET['doit'])) {
 		(
 			id INTEGER PRIMARY KEY  NOT NULL  UNIQUE, 
 			title TEXT, 
-			ingress TEXT, 
+			category TEXT, 
 			text TEXT,
 			image TEXT,
-			year TEXT,
-			owner TEXT,
-			trustee TEXT,
-			background TEXT
+			owner TEXT
 		);
 	');
-	output .= "<p>Executing SQL statement:<pre>" . $stmt->queryString . "</pre>";
+	$output .= "<p>Executing SQL statement:<pre>" . $stmt->queryString . "</pre>";
 	$stmt->execute();
 
 	// Read all files
-	$dir = dirname(__FILE__) . "/objects_fil/";
+	$dir = dirname(__FILE__) . "/museum/objects_fil/";
 	$files = readDirectory($dir);
 	
 	foreach($files as $val) {
@@ -85,7 +82,6 @@ if(isset($_GET['doit'])) {
 			$obj = unserialize(file_get_contents("$dir/$val"));
 
 			$stmt = $db->prepare('INSERT INTO Object (title, category, text, image, owner) VALUES (:title, :category, :text, :image, :owner);');
-			$stmt->bindParam(':id', 				$obj['id']);
 			$stmt->bindValue(':title', 			$obj['title']);
 			$stmt->bindValue(':category', 	$obj['category']);
 			$stmt->bindValue(':text', 			$obj['text']);
@@ -93,59 +89,43 @@ if(isset($_GET['doit'])) {
 			$stmt->bindValue(':owner', 			$obj['owner']);
 			$stmt->execute();
 
+			$obj['id'] 	= $db->lastInsertId();
 		}
 	}
 
-
-
-
-
-	$stmt = $db->prepare('
-		UPDATE Object 
-		SET 
-			title = :title,
-			category = :category,
-			text = :text,
-			image = :image,
-			owner = :owner,
-		WHERE
-			id = :id;
-	');
-	$stmt->bindValue(':id', 				validateIncoming($_POST, 'id', 					0));
-	$stmt->bindValue(':title', 			validateIncoming($_POST, 'title', 			'Titel saknas'));
-	$stmt->bindValue(':category', 	validateIncoming($_POST, 'category', 		'Kategori/gruppering saknas'));
-	$stmt->bindValue(':text', 			validateIncoming($_POST, 'text', 				'Text saknas'));
-	$stmt->bindValue(':image', 			validateIncoming($_POST, 'image', 			'../../img/noimage.png'));
-	$stmt->bindValue(':owner', 			validateIncoming($_POST, 'owner', 			'Ägare saknas'));
+	//
+	// Select rows from a table. An exception is thrown if something fails.
+	//
+	$stmt = $db->prepare('SELECT * FROM Object;');	
 	$stmt->execute();
-		
-	$output = "Objektet sparades. " . $stmt->rowCount() . " rader påverkades.";
+	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	
+	$output .= "<table style='border:1px solid #999'><tr style='background:#999'>";
+	// Get all columnnames and use for table header
+	foreach($res[0] AS $key => $val) {
+		$output .=  "<th>$key</th>";
+	}
+	$output .=  "</tr>";
+	
+	// Get all rows, one by one
+	foreach($res AS $val) {
+		$output .=  "<tr>";
+		foreach($val AS $val1) {
+			$output .=  "<td>$val1</td>";
+		}
+		$output .=  "</tr>";
+	}
+	$output .=  "</table>";
+
 }
-
-
-
-if(!empty($_POST['doAdd'])) {	
-	$stmt = $db->prepare('INSERT INTO Object (title) VALUES ("Titel ej vald");');
-	$stmt->execute();
-	$id	= $db->lastInsertId();
-	$obj['id'] 	= $id;
-	$output .= "<p>Nytt objekt skapades med id={$obj['id']}. Klicka på spara för att spara objektet. ";
-}
-
 
 
 // ---------------------------------------------------------------------------------------------
 //
-// VIEW ALL
-// Create a clickable list of all files saved in the objects-directory.
-// Use $_GET (?id=x) to send the id of the file/object to display.
+// Close the connection by setting it to null
 //
-// Also create a select/option list to be used in the form
-//
-//	http://php.net/manual/en/language.constants.predefined.php
-//	http://php.net/manual/en/function.dirname.php
-//	http://php.net/manual/en/control-structures.foreach.php
-//	
+$db = null;
+
 
 ?>
 
@@ -156,13 +136,22 @@ if(!empty($_POST['doAdd'])) {
 <!-- - - - - - - - - - - - - - - - - - *******      - - - - - - - - - - - - - - - - - -->
 <article class=fullwidth>
 
-	<section class=w600>
-		<h1>Museum Objekt, initiera databasen från filerna</h1>
+	<section>
 
-		<p>Initiera databasen och fyll den med information från filerna genom att klicka på följande länk.
-		
-		<p><a href="?doit">Initiera databasen</a>
-	
+<?php
+if(!isset($_GET['doit'])) {
+	$out = <<<EOD
+<h1>Museum Objekt, initiera databasen från filerna</h1>
+<p>Initiera databasen och fyll den med information från filerna genom att klicka på följande länk.
+<p><a href="?doit">Initiera databasen</a>
+EOD;
+	echo $out;
+} else {
+	echo "<h1>Museum Objekt, databasen är initierad</h1>";
+	echo "<p><a href='museum_objekt_db_form.php'>Gå vidare och jobba med objekten</a>";
+	echo $output;
+}
+?>	
 		<?php include("byline.php"); ?>
 	
 	</section>

@@ -62,9 +62,9 @@ if(!is_numeric($id) || $id < 0) {
 //	http://php.net/manual/en/function.array.php
 //	http://php.net/manual/en/ref.array.php
 //
-$dirname	= "museum/objects_fil";
+//$dirname	= "museum/objects_fil";
 $imageDir	= "museum/img";
-$filename = "$dirname/$id";
+//$filename = "$dirname/$id";
 $output		= "";
 $obj = Array(
 		'id'					=> '',
@@ -74,6 +74,21 @@ $obj = Array(
 		'image' 			=> '',
 		'owner' 			=> '',
 	);
+
+
+// ---------------------------------------------------------------------------------------------
+//
+// Create a object that connects to the database file "database.sqlite". The database-file is 
+// created if it does not exist. The database file must be writable by the webserver (chmod 666) 
+// and so must the directory in which the file resides (chmod 777). 
+// Create an empty database-file by using Firefox SQLite Manager.
+// Set attributes to use exception handling.
+//
+//  http://php.net/manual/en/pdo.connections.php
+//  http://php.net/manual/en/pdo.setattribute.php
+//
+$db = new PDO("sqlite:museum/db/museum.sqlite");
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
 // ---------------------------------------------------------------------------------------------
@@ -91,6 +106,7 @@ $obj = Array(
 //	http://php.net/manual/en/function.file-get-contents.php
 //	http://php.net/manual/en/function.unserialize.php
 //
+/*
 if($id == 0) {
 	// Do nothing, just produce an empty form
 } else if(is_file($filename)) {
@@ -101,6 +117,16 @@ if($id == 0) {
 	// The file does not exists
 	$output .= "Filen kunde inte hittas på disken. ";	
 }	
+*/
+//
+// Read the row that has choosen id
+//
+$stmt = $db->prepare('SELECT * FROM Object WHERE id = ?;');
+$stmt->execute(array($id));
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+if(isset($res[0])) {
+	$obj = $res[0];
+}
 
 
 // ---------------------------------------------------------------------------------------------
@@ -115,6 +141,7 @@ if($id == 0) {
 //	http://php.net/manual/en/function.dirname.php
 //	http://php.net/manual/en/control-structures.foreach.php
 //	
+/*
 $dir = dirname(__FILE__) . "/$dirname/";
 $files = readDirectory($dir);
 
@@ -129,6 +156,22 @@ foreach($files as $val) {
 	}
 }
 $select .= "</select>";
+*/
+//
+// Read all values from database and show their title
+//
+$stmt = $db->prepare('SELECT * FROM Object;');
+$stmt->execute();
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$objects = "";
+$select	= "<select name='id' onChange='submit();'><option value=-1>Välj objekt</option>";
+foreach($res as $val) {
+	$objects 	.= "<a href='?id={$val['id']}'>{$val['title']}</a> ";
+	$select		.= "<option value='{$val['id']}'" . ($val['id'] == $id ? " selected " : "") . ">{$val['title']} ({$val['id']})</option>";
+}
+$select .= "</select>";
+
 
 
 ?>
@@ -147,11 +190,6 @@ $select .= "</select>";
 			<p><?php echo $objects; ?></p>
 		</aside>
 
-		<aside class="box">
-			<p>Du kan uppdatera och spara nya objekt samt ändra bilderna via följande länk:
-			<p><a href="museum_objekt_fil_form.php">Administrera museum objekt</a> 
-			</p>
-		</aside>
 	</aside>
 	
 	<section class=w600>

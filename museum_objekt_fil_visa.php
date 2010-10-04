@@ -147,11 +147,6 @@ $select .= "</select>";
 			<p><?php echo $objects; ?></p>
 		</aside>
 
-		<aside class="box">
-			<p>Du kan uppdatera och spara nya objekt samt ändra bilderna via följande länk:
-			<p><a href="museum_objekt_fil_form.php">Administrera museum objekt</a> 
-			</p>
-		</aside>
 	</aside>
 	
 	<section class=w600>
