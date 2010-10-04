@@ -11,6 +11,9 @@ chmod 644 museum/objects_fil/*
 chmod 777 museum/img 
 chmod 644 museum/img/*
 
+chmod 777 museum/db 
+chmod 666 museum/db/*
+
 chmod 777 example/form/objects
 chmod 666 example/form/objects/*
 

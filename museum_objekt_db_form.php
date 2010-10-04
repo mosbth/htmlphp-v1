@@ -1,6 +1,6 @@
 <?php
-$title = "Formulär (fil) för att arbeta med Museum Objekt";
-$bodyId = "begr-form";
+$title = "Formulär (SQLite) för att arbeta med Museum Objekt";
+$bodyId = "begr-formdb";
 include("header.php");
 include("header_begravning.php"); 
 
@@ -67,9 +67,9 @@ if(!is_numeric($id) || $id < 0) {
 //	http://php.net/manual/en/ref.array.php
 //
 //$dirname	= "museum/objects";
-$dirname	= "museum/objects_fil";
+//$dirname	= "museum/objects_fil";
 $imageDir	= "museum/img";
-$filename = "$dirname/$id";
+//$filename = "$dirname/$id";
 $output		= "";
 $obj = Array(
 		'id'					=> '',
@@ -87,9 +87,25 @@ $obj = Array(
 
 // ---------------------------------------------------------------------------------------------
 //
+// Create a object that connects to the database file "database.sqlite". The database-file is 
+// created if it does not exist. The database file must be writable by the webserver (chmod 666) 
+// and so must the directory in which the file resides (chmod 777). 
+// Create an empty database-file by using Firefox SQLite Manager.
+// Set attributes to use exception handling.
+//
+//  http://php.net/manual/en/pdo.connections.php
+//  http://php.net/manual/en/pdo.setattribute.php
+//
+$db = new PDO("sqlite:museum/db/museum.sqlite");
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+// ---------------------------------------------------------------------------------------------
+//
 // SAVE FORM
 // Take action if the form is to be saved, allow numeric id > 0
 //
+/*
 if(!empty($_POST['doSave']) && $id > 0) {
 
 	//
@@ -123,6 +139,30 @@ if(!empty($_POST['doSave']) && $id > 0) {
 	file_put_contents($filename, serialize($obj));
 	$output = "Filen sparades. ";
 }
+*/
+if(!empty($_POST['doSave']) && $id > 0) {
+	
+	$stmt = $db->prepare('
+		UPDATE Object 
+		SET 
+			title = :title,
+			category = :category,
+			text = :text,
+			image = :image,
+			owner = :owner,
+		WHERE
+			id = :id;
+	');
+	$stmt->bindValue(':id', 				validateIncoming($_POST, 'id', 					0));
+	$stmt->bindValue(':title', 			validateIncoming($_POST, 'title', 			'Titel saknas'));
+	$stmt->bindValue(':category', 	validateIncoming($_POST, 'category', 		'Kategori/gruppering saknas'));
+	$stmt->bindValue(':text', 			validateIncoming($_POST, 'text', 				'Text saknas'));
+	$stmt->bindValue(':image', 			validateIncoming($_POST, 'image', 			'../../img/noimage.png'));
+	$stmt->bindValue(':owner', 			validateIncoming($_POST, 'owner', 			'Ägare saknas'));
+	$stmt->execute();
+		
+	$output = "Objektet sparades. " . $stmt->rowCount() . " rader påverkades.";
+}
 
 
 // ---------------------------------------------------------------------------------------------
@@ -133,10 +173,12 @@ if(!empty($_POST['doSave']) && $id > 0) {
 //  http://php.net/manual/en/control-structures.if.php
 //	http://php.net/manual/en/function.empty.php
 //
+/*
 if(!empty($_POST['doClear'])) {	
 	$id=0;
 	$output .= "<p>Formuläret är nu tomt. ";
 }
+*/
 
 
 // ---------------------------------------------------------------------------------------------
@@ -148,6 +190,7 @@ if(!empty($_POST['doClear'])) {
 //	http://php.net/manual/en/function.empty.php
 //	http://php.net/manual/en/function.max.php
 //
+/*
 if(!empty($_POST['doAdd'])) {	
 	$files 			= readDirectory(dirname(__FILE__) . "/$dirname");
 	$id 				= max($files) + 1;
@@ -157,25 +200,13 @@ if(!empty($_POST['doAdd'])) {
 	file_put_contents($filename, serialize($obj));
 	$output .= "<p>Nytt objekt med id=$id. ";
 }
-
-
-// ---------------------------------------------------------------------------------------------
-//
-// DELETE
-// Take action if the object is to be deleted
-//
-//	http://www.w3schools.com/php/php_if_else.asp
-//
-//	http://php.net/manual/en/function.is-file.php
-//	http://php.net/manual/en/function.unlink.php
-//
-if(!empty($_POST['doDelete'])) {	
-	if(is_file($filename)) {
-		unlink($filename);		
-		$output .= "<p>Filen raderades från disken. ";
-	} else {
-		$output .= "<p>Filen kunde inte raderas, filen fanns ej.";		
-	}
+*/
+if(!empty($_POST['doAdd'])) {	
+	$stmt = $db->prepare('INSERT INTO Object (title) VALUES ("Titel ej vald");');
+	$stmt->execute();
+	$id	= $db->lastInsertId();
+	$obj['id'] 	= $id;
+	$output .= "<p>Nytt objekt skapades med id={$obj['id']}. Klicka på spara för att spara objektet. ";
 }
 
 
@@ -194,6 +225,7 @@ if(!empty($_POST['doDelete'])) {
 //	http://php.net/manual/en/function.file-get-contents.php
 //	http://php.net/manual/en/function.unserialize.php
 //
+/*
 $isReadonly = " disabled ";
 
 if($id == 0) {
@@ -212,6 +244,47 @@ if($id == 0) {
 	// The file does not exists
 	$output .= "Filen kunde inte hittas på disken. ";	
 }	
+*/
+
+//
+// Read the row that has choosen id
+//
+$stmt = $db->prepare('SELECT * FROM Object WHERE id = ?;');
+$stmt->execute(array($id));
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+if(isset($res[0])) {
+	$obj = $res[0];
+}
+
+
+// ---------------------------------------------------------------------------------------------
+//
+// DELETE
+// Take action if the object is to be deleted
+//
+//	http://www.w3schools.com/php/php_if_else.asp
+//
+//	http://php.net/manual/en/function.is-file.php
+//	http://php.net/manual/en/function.unlink.php
+//
+/*
+if(!empty($_POST['doDelete'])) {	
+	if(is_file($filename)) {
+		unlink($filename);		
+		$output .= "<p>Filen raderades från disken. ";
+	} else {
+		$output .= "<p>Filen kunde inte raderas, filen fanns ej.";		
+	}
+}
+*/
+//
+// Delete the row that has choosen id
+//
+if(!empty($_POST['doDelete'])) {	
+	$stmt = $db->prepare('DELETE FROM Object WHERE id = ?;');
+	$stmt->execute(array($id));
+	$output .= "<p>" . $stmt->rowCount() . " objekt raderades. ";
+}
 
 
 // ---------------------------------------------------------------------------------------------
@@ -226,6 +299,7 @@ if($id == 0) {
 //	http://php.net/manual/en/function.dirname.php
 //	http://php.net/manual/en/control-structures.foreach.php
 //	
+/*
 $dir = dirname(__FILE__) . "/$dirname/";
 $files = readDirectory($dir);
 
@@ -240,6 +314,18 @@ foreach($files as $val) {
 	}
 }
 $select .= "</select>";
+*/
+//
+// Read all values from database and show their title
+//
+$stmt = $db->prepare('SELECT * FROM Object;');
+$stmt->execute();
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$objects = "";
+foreach($res as $val) {
+	$objects .= "<a href='?id={$val['id']}'>{$val['title']}</a> ";
+}
 
 
 // ---------------------------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 <?php
-$title = "Formulär för att arbeta med Museum Objekt";
-$bodyId = "begr-obj";
+$title = "Formulär (SQLite) för att arbeta med Museum Objekt";
+$bodyId = "begr-objdb";
 include("header.php");
 include("header_begravning.php"); 
 

@@ -62,4 +62,32 @@ function readDirectory($aPath) {
 }
 
 
+// ---------------------------------------------------------------------------------------------
+//
+// FUNCTION
+// Create a default handler for exceptions (when things go wrong).
+//
+//  http://php.net/manual/en/function.set-exception-handler.php
+// 
+function exceptionHandler($aException) {
+	die("<p>Uncaught exception: " . $aException->getMessage());
+}
+set_exception_handler('exceptionHandler');
+
+
+// -------------------------------------------------------------------------------------------
+//
+// FUNCTION
+// Function which takes a img-rul as inputargument together with a size.
+// Changes theimg-url and prepends the size as a subdirectory.
+//
+// $aImg: The img url
+// $aSize: The size to prepend, should be a directory
+//
+function modifyImgUrl($aImg, $aSize) {
+	$parts = pathinfo($aImg);
+	return $parts['dirname'] . "/$aSize/" . $parts['basename'];
+}
+
+
 ?>
