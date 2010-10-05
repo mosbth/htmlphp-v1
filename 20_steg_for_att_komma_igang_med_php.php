@@ -37,6 +37,14 @@ include("header.php");
 
 			<p class="ingress">En introduktion till att komma igång med PHP på 20 steg.
 			
+			<p>Bästa sättet att genomföra övningen är att du själv gör alla stegen och kopierar eller 
+			skriver om kodexemplen till ditt egna fungerande exempel. Läsa är bra men man måste göra 
+			själv, "kan själv", för att lära sig.
+			
+			<p><a href="20_steg_for_att_komma_igang_med_php_labb.php">Du kan använda följande övningar (labb) om du vill ha lite praktisk guidning till PHP</a>.
+			Svaren till övningarna hittar du i exempelkoden i detta dokument. Om du är praktiskt lagd så kan
+			det vara ett bra sätt att utgå i från labben och sedan försöka leta reda på svaren i PHP-20.
+			
 			<ol>
 				<li><a href="#s1">Om PHP</a>
 				<li><a href="#s2">PHP som skriptspråk i HTML</a>
