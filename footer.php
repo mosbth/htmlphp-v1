@@ -27,6 +27,8 @@ $refToThisPage .= $_SERVER["SERVER_NAME"] . $serverPort . $_SERVER["REQUEST_URI"
 			<a href="http://www.w3.org/TR/CSS2/">CSS2</a> 
 			<a href="http://www.w3.org/Style/CSS/current-work#CSS3">CSS3</a> 
 			<a href="http://php.net/manual/en/index.php">PHP</a> 
+			<a href="http://www.sqlite.org/lang.html">SQL (SQLite)</a>
+			<a href="http://www.w3schools.com/">W3Schools tutorials</a>
 			<a href="http://catb.org/esr/faqs/hacker-howto.html">How to become a hacker</a>
 		</nav>
 
@@ -72,7 +74,7 @@ $refToThisPage .= $_SERVER["SERVER_NAME"] . $serverPort . $_SERVER["REQUEST_URI"
 			<h5>Kmom06</h5>
 				<a href='http://dbwebb.se/htmlphp/kmom06/instruction'>Instruktion för kursmomentet</a>
 				<a href='http://dbwebb.se/htmlphp/mom06/me/me.php'>Me-sidan</a>
-				<a href='http://github.com/mosbth/htmlphp/tree/v6.0'>Källkod</a>
+				<a href='http://github.com/mosbth/htmlphp/tree/v6.01'>Källkod</a>
 		</nav>
 
 		<div class="final">

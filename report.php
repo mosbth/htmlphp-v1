@@ -195,7 +195,7 @@ include("header.php");
 			<h3>Länkar till kursmaterialet</h3>
 				<ul>
 					<li><a href='http://dbwebb.se/htmlphp/kmom06/instruction'>Instruktion för kursmomentet</a>
-					<li><a href='http://github.com/mosbth/me/tree/v6.0'>Källkod</a>
+					<li><a href='http://github.com/mosbth/me/tree/v6.01'>Källkod</a>
 					<li><a href='http://dbwebb.se/htmlphp/mom06/me/me.php'>Min Me-sida och kurssidan</a>
 				</ul>
 		</section>

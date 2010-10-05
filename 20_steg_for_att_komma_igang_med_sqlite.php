@@ -17,8 +17,8 @@ include("header.php");
 	</aside>
 	<aside class=box>
 		<h4>Databasboken ger bakgrunden</h4>
-		<p>I systerkurserna används boken Databasteknik. Denna bok har även en webbplats med 
-		en webbkurs. Via den webbkursen kan du få lite mer bakgrund till SQL.
+		<p>I systerkurserna används boken Databasteknik. Denna bok har en webbplats med 
+		en webbkurs. Via den kan du få lite bakgrund om SQL och en mindre introduktion.
 		<p><a href="http://www.databasteknik.se/webbkursen/sql/index.html">Databasteknik: Webbkursen om SQL</a>
 		</p>
 	</aside>
@@ -56,7 +56,7 @@ include("header.php");
 				<li><a href="#s15">Skapa nya rader i tabellen med <code>INSERT</code></a>
 				<li><a href="#s16">Ta bort rader med <code>DELETE</code></a>
 				<li><a href="#s17">Visa innehållet i tabellen med <code>SELECT</code></a>
-				<li><a href="#s18">Updatera rader och värden med <code>UPDATE</code></a>
+				<li><a href="#s18">Uppdatera rader och värden med <code>UPDATE</code></a>
 				<li><a href="#s19">Ett komplett exempel med formulär och en SQLite databas</a>
 				<li><a href="#s20">Andas</a>
 			</ol>
@@ -605,7 +605,7 @@ EOD;
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s18">
-		<h2>18. Updatera rader och värden med <code>UPDATE</code></h2>
+		<h2>18. Uppdatera rader och värden med <code>UPDATE</code></h2>
 		
 		<p>Vi förändrar testskriptet för att uppdatera värden i raderna med <code>UPDATE</code>. Vi 
 		skapar en ny databas med några extra kolumner i tabellen. Vi skapar en
