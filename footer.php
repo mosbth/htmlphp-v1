@@ -65,7 +65,7 @@ $refToThisPage .= $_SERVER["SERVER_NAME"] . $serverPort . $_SERVER["REQUEST_URI"
 			<h5>Kmom05</h5>
 				<a href='http://dbwebb.se/htmlphp/kmom05/instruction'>Instruktion för kursmomentet</a>
 				<a href='http://dbwebb.se/htmlphp/mom05/me/me.php'>Me-sidan</a>
-				<a href='http://github.com/mosbth/htmlphp/tree/v5.02'>Källkod</a>
+				<a href='http://github.com/mosbth/htmlphp/tree/v5.03'>Källkod</a>
 		</nav>
 
 		<div class="final">
