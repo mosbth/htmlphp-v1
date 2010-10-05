@@ -126,7 +126,7 @@ få en bättre formattering.
 
 <p>2. $_GET. Länka till ditt testprogram och skicka med argument i länken. Skriv ut innehållet
 i $_GET på samma sätt som du gjorde med $_SERVER.
-<p>Testa följande länkar till ditt exempelprogram:
+<p>Testa följande länk till ditt exempelprogram:
 <ul>
 <li>testprogram.php?hej=da&amp;moped=snabb
 </ul>
