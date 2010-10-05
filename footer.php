@@ -68,6 +68,13 @@ $refToThisPage .= $_SERVER["SERVER_NAME"] . $serverPort . $_SERVER["REQUEST_URI"
 				<a href='http://github.com/mosbth/htmlphp/tree/v5.02'>Källkod</a>
 		</nav>
 
+		<nav>
+			<h5>Kmom06</h5>
+				<a href='http://dbwebb.se/htmlphp/kmom06/instruction'>Instruktion för kursmomentet</a>
+				<a href='http://dbwebb.se/htmlphp/mom06/me/me.php'>Me-sidan</a>
+				<a href='http://github.com/mosbth/htmlphp/tree/v6.0'>Källkod</a>
+		</nav>
+
 		<div class="final">
 			<p>
 			Except where otherwise noted, content on this site is licensed under the

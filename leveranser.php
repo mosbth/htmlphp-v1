@@ -15,8 +15,8 @@ include("header_projekt.php");
 <!-- *********************    Section ******************************************************** -->
 		<section>
 			<header>
-				<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-08-19">19:e 
-				augusti 2010</time></p>
+				<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-10-06">6:e 
+				oktober 2010</time></p>
 				<h1>Leveransplanering</h1>
 			</header>
 			
@@ -25,6 +25,7 @@ include("header_projekt.php");
 			<ul>
 				<li><a href="#lev01">Leverans 1: En Outline till Begravningsmuseum Online</a>
 				<li><a href="#lev02">Leverans 2: Skapa och Editera Museum Objekt</a>
+				<li><a href="#lev03">Leverans 3: Uppgradera till databas och SQLite</a>
 			</ul>
 		</section>
 		
@@ -122,7 +123,49 @@ include("header_projekt.php");
 			<a href="museum_objekt_fil_visa.php">Objekt till Begravningsmuseum</a>
 			
 			<p>Att ladda upp filer (bilder) är ren överkurs och görs bara av de som vill, vågar, orkar och har tiden.
+			</p>
+		</section>			
+		
+
+<!-- *********************    Section ******************************************************** -->
+
+		<section id="lev03">
+			<hgroup>
+				<h2>Leverans 3: Uppgradera till databas och SQLite</h2>
+				<h3>Syfte</h3>
+			</hgroup>
 			
+			<p>Leveransens huvudsakliga syfte är att:
+			<ul>
+				<li>Skapa en stabil kod som grund för museum online med hjälp av databasen SQLite.
+				<li>Inkludera samtliga museumobjekt i siten Begravningsmuseum Online.
+			</ul>
+				
+			<h3>Innehåll</h3>
+						
+			<p>Leveransens huvudsakliga innehåll är:
+			<ul>
+				<li>Integrera formuläret för museumobjekt med databasen SQLite.
+				<li>Ett uppdaterat formulär för hantering av Museum Objekt, integrerad i siten Begravningsmuseum Online.
+				<li>Uppdatera sidan som visar museumobjekten.
+				<li>Samtliga museumobjekt skall finnas med.
+			</ul>
+
+			<h3>Tips från coachen</h3>
+			
+			<p>Gör SQLite-20 och uppdatera sedan ditt formulär till att använda databasen. Ta en kopia av
+			min objekt-databas så får du samtliga objekt att leka med. Ladda ned bilderna så bör det inte bli några 
+			större problem att integrera med din egen site.
+			
+			<p>Vi närmar oss slutleveransen så lägg lite extra tid på formuläret och visningen av objekten.
+			Gör det bra nu så är en grundsten klar i den kommande slutleveransen.
+			
+			<p>Kunden har ju jobbat med sina objekt så se till at de visas på ett bra sätt. Plocka även in Maggys artikel
+			i siten, tillsammans med dess bilder. Det är bra att få in den text som vi har, nu när vi närmar oss
+			slutet.
+			
+			<p>Nu närmar vi oss slutputsningen och slutrycket. Se till att vi har en bra grund att stå på.
+			</p>
 		</section>			
 		
 

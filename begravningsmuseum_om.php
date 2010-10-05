@@ -28,17 +28,18 @@ include("header_begravning.php");
 	<p><a href='download/img_begravningsmuseum.zip'>Bilderna till Maggys artikel kan du ladda ned via denna länk</a>.
 	Spara dem i img/begravningsmuseum så fungerar bild-länkarna.
 	
-<!--
-	<p><a href="download/museum.sqlite">Databasen med samtliga objekt går att ladda ned via denna länk</a>.
--->
-	<p><a href="download/objekt.zip">Du kan ladda hem alla objekt-filer i en zip-fil</a>.
+	<p><a href="download/museum.sqlite">[SQLite] Databasen med samtliga objekt går att ladda ned via denna länk</a>.
+
+	<p><a href="download/objekt.zip">[Filer] Du kan ladda hem alla objekt-filer i en zip-fil</a>.
 	
 	<p>Bilderna till objekten finns sparade i en egen katalog. <a href="download/img_objekt.zip">Du kan ladda ned bild-katalogen 
 	som en zip-fil</a>. Den är ca 23MB så den är lite större. Det kan ta lite tid att ladda ned den.
 
-<!--
+	<p>Koden för att "resiza" bilderna till olika storlekar följer med. Det är ren överkurs och studeras
+	endast av de som så känner.
+
 	<p><a href="download">Du hittar allt som går att ladda ned i katalogen download</a>.
--->
+
 <!-- - - - - - - - - - - - - - - - - - footer         - - - - - - - - - - - - - - - - - -->
 	<?php include("byline.php"); ?>
 	

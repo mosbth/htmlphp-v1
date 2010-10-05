@@ -22,6 +22,7 @@ include("header.php");
 					<li><a href="#kmom03">Kmom03: Projektstart av Museum Online</a>
 					<li><a href="#kmom04">Kmom04: Projektet, CSS och PHP</a>
 					<li><a href="#kmom05">Kmom05: HTML Formulär och PHP</a>
+					<li><a href="#kmom06">Kmom06: PHP och SQLite</a>
 				</ul>
 			</header>
 			
@@ -164,6 +165,38 @@ include("header.php");
 					<li><a href='http://dbwebb.se/htmlphp/kmom05/instruction'>Instruktion för kursmomentet</a>
 					<li><a href='http://github.com/mosbth/me/tree/v5.02'>Källkod</a>
 					<li><a href='http://dbwebb.se/htmlphp/mom05/me/me.php'>Min Me-sida och kurssidan</a>
+				</ul>
+		</section>
+
+
+		<section id="kmom06">
+			<h2>Kmom06: PHP och SQLite</h2>
+	
+			<p>Kursen närmar sig slutet. Det näst sista kursmomentet, innan projektet, och jag har nu en klarare bild av vad vi hinner 
+			med. 
+			
+			<p>SQLite var en trevlig bekantskap. Det var första gången för mig men det gav mersmak av en enklare filbaserad databas 
+			istället för server-baserade MySQL som jag brukar jobba med. Jag kan se flera fördelar med SQLite, speciellt 
+			i mindre webbapplikationer. Naturligtvis är det kanske ingen databas där många transaktioner skriver och läser
+			mot databasen. Men, för en enklare webbplats med lite konfigureringar och en enkel blog så behövs knappast mer.
+			
+			<p>Jämför man koden mellan filhantering och databashantering (formuläret) så ser man att det blir mindre kodrader med SQLite.
+			Det var bra. Det kräver ju att man kan SQL för att kunna nyttja detta men de konstruktioner som används i kursmomentet
+			bör inte vålla några större problem i sig.
+			
+			<p>Det som kan vara problematiskt är att SQL är ytterligare en teknik, en syntax, en semantik och ett nytt sätt att
+			lösa programmeringsproblem. Tillsammans med PHP, HTML och CSS så har vi fyra olika tekniker. Det krävs en del 
+			för att bemästra samtliga tekniker. Men, det finns inga genvägar för den som så vill. Bara att öva och öva igen.
+			Till slut faller det på plats.
+			
+			<p>Måste bara säga att PHP PDO och prepared statements var även det en trevlig bekantskap. Även denna teknik
+			var första gången som jag själv prövade på. Det finns alltid något nytt att lära sig...
+	
+			<h3>Länkar till kursmaterialet</h3>
+				<ul>
+					<li><a href='http://dbwebb.se/htmlphp/kmom06/instruction'>Instruktion för kursmomentet</a>
+					<li><a href='http://github.com/mosbth/me/tree/v6.0'>Källkod</a>
+					<li><a href='http://dbwebb.se/htmlphp/mom06/me/me.php'>Min Me-sida och kurssidan</a>
 				</ul>
 		</section>
 
