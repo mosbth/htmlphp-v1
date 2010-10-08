@@ -55,14 +55,8 @@ error_reporting(-1);
 
 		<img src="img/logo.png" alt="htmlphp me" width=200 height=100>
 		<nav>
-			<a id="htmlphp-"  href="htmlphp.php">htmlphp</a> 
-			<a id="me-"     	href="me.php">Me</a> 
-			<a id="report-" 	href="report.php">Redovisning</a> 
-			<a id="html20-" 	href="de_20_vanligaste_html_elementen.php">HTML-20</a> 
-			<a id="css20-"  	href="de_20_vanligaste_css_konstruktionerna.php">CSS-20</a> 
-			<a id="php20-"  	href="20_steg_for_att_komma_igang_med_php.php">PHP-20</a> 
-			<a id="forms-"  	href="forms.php">Formulär</a>
-			<a id="sqlite20-" href="20_steg_for_att_komma_igang_med_sqlite.php">SQLite-20</a>
+			<a id="kursen-"  	href="kursen.php">Kursen</a> 
+			<a id="guide-"  	href="guider_om.php">Guider</a> 
 			<a id="proj-"   	href="projekt.php">Projekt</a> 
 			<a id="begr-"   	href="begravningsmuseum_om.php">Begravningsmuseum</a> 
 		</nav>

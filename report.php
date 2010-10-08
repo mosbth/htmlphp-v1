@@ -1,7 +1,8 @@
 <?php 
 $title = "Redovisningar av kursmoment i htmlphp-kursen";
-$bodyId = "report"; // Set id of the body to enable tracking current poge and display in navbar
+$bodyId = "kursen-report"; // Set id of the body to enable tracking current poge and display in navbar
 include("header.php"); 
+include("header_kursen.php"); 
 ?>
 
 <!-- Here is the actual content of the page-->

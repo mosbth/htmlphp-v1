@@ -1,7 +1,8 @@
 <?php
 $title = "Om htmlphp-kursen";
-$bodyId = "htmlphp";
+$bodyId = "kursen-om";
 include("header.php");
+include("header_kursen.php");
 ?>
 
 <!-- - - - - - - - - - - - - - - - - - wrap whole content - - - - - - - - - - - - - - -->

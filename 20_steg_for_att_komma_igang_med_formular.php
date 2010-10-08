@@ -1,7 +1,8 @@
 <?php 
 $title = "HTML Forms. Formulär och PHP, steg för steg";
-$bodyId = "forms"; // Set id of the body to enable tracking current page and display in navbar
+$bodyId = "guide-forms20"; // Set id of the body to enable tracking current page and display in navbar
 include("header.php"); 
+include("header_guider.php"); 
 ?>
 
 <!-- Here is the actual content of the page-->
@@ -38,10 +39,11 @@ include("header.php");
 	
 	<section class=w600>
 		<header>
+			<h1>HTML formulär och PHP</h1>
+
 			<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-09-13">13:e 
 			september 2010</time></p>
 
-			<h1>HTML formulär och PHP</h1>
 			<p>Här följer en stegvis guide till hur man bygger upp ett formulär, stylar det och sparar 
 			information på disk med hjälp av PHP. Informationen är samma som finns att läsa i kursmomentets instruktion, fast betydligt mer kortfattad.
 			<p><a href="http://dbwebb.se/htmlphp/kmom05/instruction">Samma information finns i kursmomentet, mer utförligt förklarad</a>

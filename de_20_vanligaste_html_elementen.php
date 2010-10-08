@@ -1,7 +1,8 @@
 <?php 
 $title = "Enligt 80-20-regeln, vilka är de vanligaste HTML-elementen?";
-$bodyId = "html20";
+$bodyId = "guide-html20";
 include("header.php"); 
+include("header_guider.php"); 
 ?>
 
 <!-- Here is the actual content of the page-->

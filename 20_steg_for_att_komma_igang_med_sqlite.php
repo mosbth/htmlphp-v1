@@ -1,7 +1,8 @@
 <?php
 $title = "20 steg för att komma igång med SQLite";
-$bodyId = "sqlite20";
+$bodyId = "guide-sqlite20";
 include("header.php");
+include("header_guider.php");
 ?>
 
 <!-- - - - - - - - - - - - - - - - - - wrap whole content - - - - - - - - - - - - - - -->

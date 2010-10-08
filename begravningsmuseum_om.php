@@ -19,6 +19,7 @@ include("header_begravning.php");
 	<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-10-05">5:e 
 	oktober 2010</time>
 
+	<h2>Ladda ned material och återanvänd</h2>
 	<p>Här finns material som du kan använda i ditt begravningsmuseum online.
 	
 	<p>Maggys artikel, "Seder och Bruk", får du kopiera den hårda vägen, gör view source och kopiera html-koden eller

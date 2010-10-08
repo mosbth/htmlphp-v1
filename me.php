@@ -1,7 +1,8 @@
 <?php 
 $title = "Min Me-sida om mig själv och htmlphp-kursen";
-$bodyId = "me"; // Set id of the body to enable tracking current poge and display in navbar
+$bodyId = "kursen-me"; // Set id of the body to enable tracking current poge and display in navbar
 include("header.php"); 
+include("header_kursen.php"); 
 ?>
 
 <!-- Here is the actual content of the page-->

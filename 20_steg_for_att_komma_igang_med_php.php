@@ -1,7 +1,8 @@
 <?php
 $title = "20 steg för att komma igång med PHP";
-$bodyId = "php20";
+$bodyId = "guide-php20";
 include("header.php");
+include("header_guider.php");
 ?>
 
 <!-- - - - - - - - - - - - - - - - - - wrap whole content - - - - - - - - - - - - - - -->
