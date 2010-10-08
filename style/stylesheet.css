@@ -24,45 +24,44 @@ header#top img	{display:block;}
 header#top form.choose-style 				{float:right;padding:0.5em 1em 0 0;}
 header#top form.choose-style label 	{font:smaller Arial, Helvetica, sans-serif;}
 
-/* The navbar */
-header#top nav {
-	display: block;
-	padding: 0.2em 1em 0 1em;
-	background: #e3e3df;
-	border-bottom: 2px solid #999999;
+/* -------------------------------------------------------------------------------------
+/* The main navbar */
+header#top nav {display:block;margin:0;padding:4px 0px 4px 0px;background:#e3e3df;border-bottom:2px solid #999999;}
+header#top nav a {margin:0;padding:8px 1em 4px 1em;color:#555555;font-family:Tahoma,Geneva,sans-serif;text-decoration:none;}
+header#top nav a:link    {}
+header#top nav a:visited {}
+header#top nav a:active  {}
+header#top nav a:hover {
+	color:#111111;background:#999999;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
-header#top nav a {
-	padding: 0.3em 1em 0 1em;
-	color: #555555;
-	font-family: Tahoma, Geneva, sans-serif;
-	text-decoration:none; 
-}
-header#top nav a:link    { }
-header#top nav a:visited { }
-header#top nav a:hover   { color: #111111; background: #999999; }
-header#top nav a:active  { }
 
 
 /* -------------------------------------------------------------------------------------
 /* Subnavigation */
-nav.submenu {
-	display:block;
-	padding:0.0em 0.3em 0.3em 0.3em;
-	background:#f1f1ef;
+nav.submenu {display:block;margin:0;padding:2px 0px 6px 0px;}
+nav.submenu {font-family:Tahoma,Geneva,sans-serif;font-size:smaller;background:#f1f1ef;}
+nav.submenu a {margin:0;padding:2px 1em 8px 1em;color:#555555;text-decoration:none;}
+nav.submenu a:hover {
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
-nav.submenu a {
-	padding: 0.1em 1em 0.4em 1em;
-	color: #555555;
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: smaller;
-	text-decoration:none; 
-}
-/*
-nav.submenu a:after {
-	content: " | ";
-}
-*/
+/* -------------------------------------------------------------------------------------
+/* Subnavigation by breadcrumb */
+nav.breadcrumb {display:block;margin:0;padding:1em 0 0 1em;}
+nav.breadcrumb {font-family:ariel;font-size:smaller;}
+nav.breadcrumb a:after {content:" \00BB ";}
+
 
 /* -------------------------------------------------------------------------------------
 /* Top navbar/menu, use combination of body-id and a-id to keep current choice highlighted
@@ -81,14 +80,29 @@ body#guide-forms20 	a#guide-,
 body#guide-sqlite20 a#guide-,
 
 /* Menu choice 3 */
-body#proj   a#proj-,
+body#proj-proj   a#proj-,
+body#proj-kund   a#proj-,
+body#proj-lev  	 a#proj-,
 
 /* Menu choice 4 */
-body#begr   a#begr- 
+body#begr-om 		  	a#begr-,
+body#begr-artiklar  a#begr-,
+body#begr-seder		  a#begr-,
+body#begr-obj   		a#begr-,
+body#begr-form  	 	a#begr-,
+body#begr-objdb 	 	a#begr-,
+body#begr-formdb 		a#begr-
 
 /* Style for all choosen menu choices */
-{color:#f5f5f5; background:#999999; }
-
+{
+	color:#f5f5f5; background:#999999; 
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
 
 /* -------------------------------------------------------------------------------------
 /* Submenu/navbar, use combination of body-id and a-id to keep current choice highlighted
@@ -104,32 +118,30 @@ body#guide-html20  	a#guide-html20,
 body#guide-css20   	a#guide-css20,
 body#guide-php20   	a#guide-php20,
 body#guide-forms20  a#guide-forms20,
-body#guide-sqlite20 a#guide-sqlite20
-
-{ color:#f5f5f5; background:#999999; }
-
+body#guide-sqlite20 a#guide-sqlite20,
 
 /* Project submenu: Keep current choice/link highlighted */
-body#proj-proj   a#proj-,
-body#proj-proj   a#proj-proj- { color:#f5f5f5; background:#999999; }
-body#proj-kund   a#proj-,
-body#proj-kund   a#proj-kund- { color:#f5f5f5; background:#999999; }
-body#proj-lev  	 a#proj-,
-body#proj-lev  	 a#proj-lev-	{ color:#f5f5f5; background:#999999; }
+body#proj-proj   a#proj-proj,
+body#proj-kund   a#proj-kund,
+body#proj-lev  	 a#proj-lev,
 
 /* Museum submenu: Keep current choice/link highlighted */
-body#begr-om   		a#begr-,
-body#begr-om 		  a#begr-om- { color:#f5f5f5; background:#999999; }
-body#begr-seder   a#begr-,
-body#begr-seder   a#begr-seder- { color:#f5f5f5; background:#999999; }
-body#begr-obj   	a#begr-,
-body#begr-obj   	a#begr-obj-		{ color:#f5f5f5; background:#999999; }
-body#begr-form   	a#begr-,
-body#begr-form   	a#begr-form-	{ color:#f5f5f5; background:#999999; }
-body#begr-objdb  	a#begr-,
-body#begr-objdb  	a#begr-objdb-		{ color:#f5f5f5; background:#999999; }
-body#begr-formdb 	a#begr-,
-body#begr-formdb 	a#begr-formdb-	{ color:#f5f5f5; background:#999999; }
+body#begr-om 		  	a#begr-om,
+body#begr-artiklar  a#begr-artiklar,
+body#begr-seder		  a#begr-artiklar,
+body#begr-obj   		a#begr-obj,
+body#begr-form  	 	a#begr-form,
+body#begr-objdb 	 	a#begr-objdb,
+body#begr-formdb 		a#begr-formdb
+
+{ color:#f5f5f5; background:#999999; 
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
 
 
 /* -------------------------------------------------------------------------------------

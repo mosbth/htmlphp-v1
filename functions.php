@@ -90,4 +90,39 @@ function modifyImgUrl($aImg, $aSize) {
 }
 
 
+// -------------------------------------------------------------------------------------------
+//
+// FUNCTION
+// Function which takes a img-rul as inputargument together with a size.
+// Changes theimg-url and prepends the size as a subdirectory.
+//
+// $aBodyId:  Current id of the body tag.
+// $aHistory: Array with links that is the history
+// $aCurrent: Array with selection of current links. Will choose the one matching the current 
+//            $aBodyId.
+//
+function createBreadCrumb($aBodyId, $aHistory, $aCurrent) {
+	
+	$history = "";
+	foreach($aHistory as $val) {
+		$history .= "<a href='{$val['href']}'>{$val['text']}</a>";
+	}
+	
+	$current = "";
+	if(isset($aCurrent[$aBodyId])) {
+		//$current .= "<a href='{$aCurrent[$aBodyId]['href']}'>{$aCurrent[$aBodyId]['text']}</a>";
+		$current .= $aCurrent[$aBodyId]['text'];
+	}
+	
+	$html = <<<EOD
+<nav class=breadcrumb>
+	{$history}
+	{$current}
+</nav>
+
+EOD;
+	return $html;
+}
+
+
 ?>

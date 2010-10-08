@@ -50,7 +50,7 @@ include("header_projekt.php");
 				<li>Utkast på webbplatsens info sida (about).
 				<li>Använd material från följande artikel för att komma igång.
 				<ul>
-					<li><a href="begravningsseder_och_bruk.php">Begravningsseder och bruk</a>
+					<li><a href="artikel_begravningsseder_och_bruk.php">Begravningsseder och bruk</a>
 				</ul>
 				<li>Tre utkast till varianter på stylesheets.
 				<ul>

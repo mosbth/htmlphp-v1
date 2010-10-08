@@ -68,13 +68,11 @@ include("header_begravning.php");
 
 	<section class=w600>
 		<header>
+			<h1>Begravningsseder och bruk</h1>
 			<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-09-10">10:e 
 			september 2010</time></p>
 
-			<hgroup>
-				<h1>Begravningsseder och bruk</h1>
-				<h3>Bakgrund</h3>
-			</hgroup>
+			<h3>Bakgrund</h3>
 			<p class="background">Följande artikel är skriven av Maggy Larsson och är publicerad i
 			"Hakarps Församlingsblad, Höst, Nr 3 - 2008". Maggy har gett sin tillåtelse att vi använder den.
 				
