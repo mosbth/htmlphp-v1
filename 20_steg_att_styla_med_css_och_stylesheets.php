@@ -29,14 +29,14 @@ include("header_guider.php");
 			<ol>
 				<li><a href="#s1">Style! på dbwebb.se/style</a>
 				<li><a href="#s2">Struktur och modulärt tänkande med stylesheets</a>
-				<li><a href="#s3"></a>
-				<li><a href="#s4"></a>
-				<li><a href="#s5"></a>
-				<li><a href="#s6"></a>
-				<li><a href="#s7"></a>
-				<li><a href="#s8"></a>
-				<li><a href="#s9"></a>
-				<li><a href="#s10"></a>
+				<li><a href="#s3">CSS box modell</a>
+				<li><a href="#s4">CSS floating</a>
+				<li><a href="#s5">Storlekar i CSS</a>
+				<li><a href="#s6">Skapa sidans grundstruktur</a>
+				<li><a href="#s7">Kolumner eller en kolumnlös style?</a>
+				<li><a href="#s8">Varianter på header</a>
+				<li><a href="#s9">Varianter på footer</a>
+				<li><a href="#s10">Varianter på navigation bar</a>
 				<li><a href="#s11"></a>
 				<li><a href="#s12"></a>
 				<li><a href="#s13"></a>
@@ -49,6 +49,12 @@ include("header_guider.php");
 				<li><a href="#s20">Andas</a>
 			</ol>
 	
+	<p>subnavigation bar
+	<p>crumb
+	<p>menu
+	<p>borders
+	<p>buttons
+	<p>forms
 	</header>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
@@ -76,9 +82,42 @@ include("header_guider.php");
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s3">
-		<h2>3. </h2>
+		<h2>3. CSS box modell</h2>
 		
-		<p>Text.
+		<p>Visa hur CSS box modell funkar, margin, border, padding, outline.
+		
+		<p><a href="http://dbwebb.se/style/?id=1">Exempel</a>		
+		
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s4">
+		<h2>4. CSS floating</h2>
+		
+		<p>Visa hur CSS floating fungerar.
+		
+		<p><a href="http://dbwebb.se/style/?id=1">Exempel</a>		
+		
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+	
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s5">
+		<h2>5. Storlekar i CSS</h2>
+		
+		<p>, px em
+		
+		<p><a href="http://dbwebb.se/style/?id=1">Exempel</a>
+				
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+	
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="s6">
+		<h2>6. Skapa sidans grundstruktur</h2>
+		
+		<p>header, footer och content. olika sätt att visa sidan, centrerad, fixed width och till vänster.
 		
 		<p><a href="http://dbwebb.se/style/?id=1">Exempel</a>
 				
@@ -86,51 +125,19 @@ include("header_guider.php");
 	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
-	<section id="s4">
-		<h2>4. </h2>
-		
-		<p>Text.
-		
-		<p><a href="http://dbwebb.se/style/?id=1">Exempel</a>		
-		
-		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
-	</section>
-
-<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
-	<section id="s5">
-		<h2>5. </h2>
-		
-		<p>Text.
-		
-		<p><a href="http://dbwebb.se/style/?id=1">Exempel</a>		
-		
-		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
-	</section>
-
-<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
-	<section id="s6">
-		<h2>6. </h2>
-		
-		<p>Text.
-		
-		<p><a href="http://dbwebb.se/style/?id=1">Exempel</a>
-		
-		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
-	</section>
-
-<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s7">
-		<h2>7. </h2>
+		<h2>7. Kolumner eller en kolumnlös style?</h2>
 		
-		<p>Text.
+		<p>Visa på en kolumnlös style med aside samt 2-3 kolumners layout.
 		
-		<p><a href="http://dbwebb.se/style/?id=1">Exempel</a>
+		<p><a href="http://dbwebb.se/style/?id=1">Exempel</a>		
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s8">
-		<h2>8. </h2>
+		<h2>8. Varianter på header</h2>
 		
 		<p>Text.
 		
@@ -140,7 +147,7 @@ include("header_guider.php");
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s9">
-		<h2>9. </h2>
+		<h2>9. Varianter på footer</h2>
 		
 		<p>Text.
 		
@@ -150,7 +157,7 @@ include("header_guider.php");
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s10">
-		<h2>10.</h2>
+		<h2>10. Varianter på navigation bar</h2>
 		
 		<p>Text.
 		
