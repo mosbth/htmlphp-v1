@@ -30,6 +30,8 @@ include("header_guider.php");
 	<p><a href="20_steg_for_att_komma_igang_med_formular.php">Forms-20, en stegvis guide för att skapa formulär och spara på disk med PHP</a>
 	
 	<p><a	href="20_steg_for_att_komma_igang_med_sqlite.php">SQLite-20, 20 steg för att komma igång med SQLite och uppgradera formuläret till att använda SQLite</a>
+
+	<p><a	href="20_steg_att_styla_med_css_och_stylesheets.php">Style-20, en introduktion för att styla din webbplats med CSS och stylesheets</a>
 	
 
 <!-- - - - - - - - - - - - - - - - - - footer         - - - - - - - - - - - - - - - - - -->

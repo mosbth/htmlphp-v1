@@ -1,5 +1,5 @@
 <?php
-$title = "En introduktion till att styla din webbplats med CSS och stylesheets";
+$title = "En introduktion till att styla din webbplats med CSS och Stylesheets";
 $bodyId = "guide-style20";
 include("header.php");
 include("header_guider.php");
@@ -10,6 +10,14 @@ include("header_guider.php");
 
 <!-- - - - - - - - - - - - - - - - - - aside        - - - - - - - - - - - - - - - - - -->
 <aside class="right">
+	<aside class=box>
+		<h4>Style! på dbwebb.se/style</h4>
+		<p>Ett verktyg för att underlätta utveckling av html och css-kod. Skriv in dina konstruktioner
+		och skicka länken till en kollega för att få feedback, hjälp eller bara för att dela med dig
+		av en schysst css-konstruktion.
+		<p><a href="http://dbwebb.se/style">Style! på dbwebb.se</a>
+		</p>
+	</aside>
 	<aside class=box>
 		<h4>Firebug</h4>
 		<p>Firebug är en addon till Firefox som hjälper dig vid webbutveckling. Med Firebug kan du
@@ -39,7 +47,7 @@ include("header_guider.php");
 			<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-10-14">14:e 
 			oktober 2010</time>
 
-			<p class="ingress">En introduktion för att styla din webbplats med CSS och stylesheets.
+			<p class="ingress">En introduktion för att styla din webbplats med CSS och Stylesheets.
 			
 			<p>Style-20 visar hur du kan tänka när du stylar din webbplats. Med hjälp av <a href="http://dbwebb.se/style">
 			verktyget Style!</a> kan du se och testa varianter på stylning. Ett exempel gås igenom
