@@ -26,6 +26,7 @@ include("header_projekt.php");
 				<li><a href="#lev01">Leverans 1: En Outline till Begravningsmuseum Online</a>
 				<li><a href="#lev02">Leverans 2: Skapa och Editera Museum Objekt</a>
 				<li><a href="#lev03">Leverans 3: Uppgradera till databas och SQLite</a>
+				<li><a href="#lev04">Leverans 4: Städa och styla, integrera med artiklar</a>
 			</ul>
 		</section>
 		
@@ -165,6 +166,49 @@ include("header_projekt.php");
 			slutet.
 			
 			<p>Nu närmar vi oss slutputsningen och slutrycket. Se till att vi har en bra grund att stå på.
+			</p>
+		</section>			
+		
+
+		<section id="lev04">
+			<hgroup>
+				<h2>Leverans 4: Städa och styla, integrera med artiklar</h2>
+				<h3>Syfte</h3>
+			</hgroup>
+			
+			<p>Leveransens huvudsakliga syfte är att:
+			<ul>
+				<li>Presentera ett antal artiklar i BMO och representera dem med de objekt som finns.
+				<li>Städa i koden och styla webbplatsen som en egen webbplats.
+				<li>Leverera första kompletta utkastet (allt innehåll på plats) till den slutliga webbplatsen.
+			</ul>
+				
+			<h3>Innehåll</h3>
+						
+			<p>Leveransens huvudsakliga innehåll är:
+			<ul>
+				<li><a href="museum_objekt_db_form.php">Samtliga museumobjekt</a> skall finnas med.
+				<li><a href="begravningsmuseum_artiklar.php">Samtliga artiklar</a> skall finns med.
+				<li><a href="begravningsmuseum_om.php">En info-sida som berättar om siten BMO</a>.
+				<li>Styla webbplatsen.
+				<li>Städa i koden.
+			</ul>
+
+			<h3>Tips från coachen</h3>
+			
+			<p><a href="begravningsmuseum_ladda_ned.php">Allt material till BMO går att ladda ned i en zip-fil</a>. Uppmärksamma att sökvägarna kan ha ändrats för
+			att förbättra katalogstrukturen.
+
+			<p>Gör Style-20 och se om du får inspiration till att städa i din kod och/eller inspiration till 
+			att styla din webbplats med CSS.
+			
+			<p>Detta är ditt första utkast till den slutliga webbplatsen. Allt innehåll finns nu på plats.
+			Integrera det i din webbplats. Styla efter behag och städa i koden.
+	
+			<p>Ditt BMO skall finnas på en egen webbplats. Den skall vara separerad från din me-sida med redovisningarna.
+			Se dock till att du länkar till ditt BMO från din me-sida.
+			
+			<p>Det kvarstår en leverans, sedan är det klart.
 			</p>
 		</section>			
 		

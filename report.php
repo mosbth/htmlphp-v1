@@ -11,8 +11,8 @@ include("header_kursen.php");
 	
 		<section>
 			<header>
-				<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-08-19">19:e 
-				augusti 2010</time></p>
+				<p class="byline">Av Mikael Roos, mos@bth.se, uppdaterad senast <time pubdate datetime="2010-10-14">14:e 
+				oktober 2010</time></p>
 				<hgroup>
 					<h1>Redovisning av htmlphp</h1>
 					<h2>Intro</h2>
@@ -24,6 +24,7 @@ include("header_kursen.php");
 					<li><a href="#kmom04">Kmom04: Projektet, CSS och PHP</a>
 					<li><a href="#kmom05">Kmom05: HTML Formulär och PHP</a>
 					<li><a href="#kmom06">Kmom06: PHP och SQLite</a>
+					<li><a href="#kmom07">Kmom07: CSS och Stylesheets</a>
 				</ul>
 			</header>
 			
@@ -198,6 +199,31 @@ include("header_kursen.php");
 					<li><a href='http://dbwebb.se/htmlphp/kmom06/instruction'>Instruktion för kursmomentet</a>
 					<li><a href='http://github.com/mosbth/me/tree/v6.01'>Källkod</a>
 					<li><a href='http://dbwebb.se/htmlphp/mom06/me/me.php'>Min Me-sida och kurssidan</a>
+				</ul>
+		</section>
+
+		<section id="kmom07">
+			<h2>Kmom07: CSS och Stylesheets</h2>
+	
+			<p>Kanske skulle detta kursmoment funnits på plats redan när projektet startades. Men så funkar det inte i
+			verkligheten. All information finns inte på plats och man har inte all kunskap när projektet startar.
+			Eftersom man jobbar så lär man sig mer och till slut finns allt framme och problemet ser inte så där 
+			svårt ut. Egentligen.
+			
+			<p>Kursmomentet blir därför en repetition av hur man kan bygga upp, strukturera och styla en webbplats. 
+			Det blir en resa i modulärt tänkande när man bygger stylesheets och det blir en möjlighet att testa
+			varianter på mer avancerade CSS-konstruktioner.
+			
+			<p>Style! äe ett verktyg som Rickard byggt och det används i guiden Style-20. Verktyget underlättar utveckling av 
+			html och css när man samarbeter via nätet. Tanken är att man skriver in sin kod och skickar en länk till 
+			kollegan som kan hjälpa till, felsöka eller uppdatera koden. Ett arbetsverktyg anpassat till
+			internet-åldern. Hoppas ni uppskattar verktyget. Det kommer även underlätta vår distansbaserade undervisning.
+				
+			<h3>Länkar till kursmaterialet</h3>
+				<ul>
+					<li><a href='http://dbwebb.se/htmlphp/kmom07/instruction'>Instruktion för kursmomentet</a>
+					<li><a href='http://github.com/mosbth/me/tree/v7.01'>Källkod</a>
+					<li><a href='http://dbwebb.se/htmlphp/mom07/me/me.php'>Min Me-sida och kurssidan</a>
 				</ul>
 		</section>
 

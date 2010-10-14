@@ -322,7 +322,10 @@ EOD;
 		bestående av <code>overflow:auto</code> som en tilltalande variant. Den tilltalar mig eftersom 
 		den är ren CSS och jag behöver inte skräpa ned min HTML-kod med extra fix-element.
 		
-		<p>Du kan läsa lite om problemställningen och olika varianter på lösningar i följande artikel.
+		<p>Du kan studera följande exempel på vad som skiljer mellan att använda en clearer eller ej.
+		<p><a href="http://dbwebb.se/style/?id=100">Exempel på användning av clearer eller ej</a>
+		
+		<p>Du kan läsa mer om problemställningen och olika varianter på lösningar i följande artikel.
 		Eller googla på "clear floats".
 
 		<blockquote>

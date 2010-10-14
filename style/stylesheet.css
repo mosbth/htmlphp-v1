@@ -89,6 +89,8 @@ body#proj-lev  	 a#proj-,
 body#begr-om 		  	a#begr-,
 body#begr-artiklar  a#begr-,
 body#begr-seder		  a#begr-,
+body#begr-konf		  a#begr-,
+body#begr-download	a#begr-,
 body#begr-obj   		a#begr-,
 body#begr-form  	 	a#begr-,
 body#begr-objdb 	 	a#begr-,
@@ -131,6 +133,8 @@ body#proj-lev  	 a#proj-lev,
 body#begr-om 		  	a#begr-om,
 body#begr-artiklar  a#begr-artiklar,
 body#begr-seder		  a#begr-artiklar,
+body#begr-konf		  a#begr-artiklar,
+body#begr-download  a#begr-download,
 body#begr-obj   		a#begr-obj,
 body#begr-form  	 	a#begr-form,
 body#begr-objdb 	 	a#begr-objdb,
@@ -314,6 +318,8 @@ footer#bottom nav a:link    { }
 footer#bottom nav a:visited { }
 footer#bottom nav a:hover   { text-decoration:underline;  color: #333333; background: none;}
 footer#bottom nav a:active  { }
+
+footer#bottom nav.clear-float {clear:both;}
 
 /* Final message in the footer */
 footer#bottom div.final {

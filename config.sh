@@ -29,7 +29,9 @@ chmod 755 example/sqlite/test_errors
 
 rm -rf download
 mkdir download
-zip -r download/img_begravningsmuseum.zip img/begravningmuseum/
+#zip -r download/img_begravningsmuseum.zip img/begravningmuseum/
 zip -r download/img_objekt.zip museum/img/
 zip -r download/objekt.zip museum/objects_fil/
 cp museum/db/museum.sqlite download
+zip -r download/artiklar.zip artikel_* museum/artikel
+zip -r download/bmo.zip museum artikel_*

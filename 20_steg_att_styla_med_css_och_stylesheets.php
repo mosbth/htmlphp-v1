@@ -147,7 +147,7 @@ include("header_guider.php");
 		
 		<p>Med floating kan du bestämma hur ett element "flyter" med och positionerar sig i förhållande till
 		övriga element. Du kan floata ett element till höger eller vänster. När du vill "stänga av" så
-		gör du <code>clear:float</code>.
+		gör du <code>clear:both</code>.
 		
 		<p>Studera följande exempel för att se hur float kan användas.
 		
