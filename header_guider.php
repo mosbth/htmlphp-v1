@@ -5,6 +5,6 @@
 			<a id="guide-php20"  		href="20_steg_for_att_komma_igang_med_php.php">PHP-20</a> 
 			<a id="guide-forms20" 	href="20_steg_for_att_komma_igang_med_formular.php">Forms-20</a>
 			<a id="guide-sqlite20" 	href="20_steg_for_att_komma_igang_med_sqlite.php">SQLite-20</a>
-			<a id="guide-stylse20" 	href="20_steg_att_styla_med_css_och_stylesheets.php">Style-20</a>
+			<a id="guide-style20" 	href="20_steg_att_styla_med_css_och_stylesheets.php">Style-20</a>
 		</nav>
 

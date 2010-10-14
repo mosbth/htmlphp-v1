@@ -13,12 +13,13 @@ $refToThisPage .= $_SERVER["SERVER_NAME"] . $serverPort . $_SERVER["REQUEST_URI"
 		<nav>
 			<h5>Verktyg</h5>
 			<a href="http://validator.w3.org/check/referer">HTML5</a> 
-			<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS3</a>
 			<a href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance">Unicorn</a>
 			<a href="http://www.w3.org/2009/cheatsheet/">Cheatsheet</a>
 			<a href="http://validator.w3.org/checklink?uri=<?php echo $refToThisPage; ?>">Link Checker</a>
+			<a href="http://qa-dev.w3.org/i18n-checker/index?async=false&docAddr=<?php echo $refToThisPage; ?>">i18n Checker</a>
+			<a href="http://web-sniffer.net/?url=<?php echo $refToThisPage; ?>">Check header</a>
 			<a href="source.php">source.php</a>
-
 	</nav>
 		
 		<nav>
