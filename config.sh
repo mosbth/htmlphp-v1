@@ -31,7 +31,7 @@ rm -rf download
 mkdir download
 #zip -r download/img_begravningsmuseum.zip img/begravningmuseum/
 zip -r download/bmo_img.zip museum/img/
-zip -r download/bmo_objekt.zip museum/objects_fil/
+zip -r download/bmo_objekt.zip museum/objects_fil/ museum/objects/
 cp museum/db/museum.sqlite download
 zip -r download/bmo_artiklar.zip artikel_* museum/artikel
 zip -r download/bmo.zip museum artikel_*
