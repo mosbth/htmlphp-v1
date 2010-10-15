@@ -11,6 +11,16 @@ include("header_guider.php");
 <!-- - - - - - - - - - - - - - - - - - aside        - - - - - - - - - - - - - - - - - -->
 <aside class="right">
 	<aside class=box>
+		<h4>Använd source.php</h4>
+		<p>Vid felsökning av PHP-kod så kan det ibland underlätta om någon kollega kan titta på felet.
+		Detta händer om och om igen i dessa kurser och i samtliga fall så gäller att skicka länken 
+		till ditt exempel som inte fungerar samt skicka länken till dess källkod. I kurserna används
+		ett PHP-skript som heter source.php. Med det kan du visa all källkod i en katalog. Använd det när
+		det handlar om felsökning, hjälp och handledning.
+		<p><a href="http://dbwebb.se/source">Senaste versionen av source.php på GitHub</a>
+		</p>
+	</aside>
+	<aside class=box>
 		<h4>PHP-manualen, din bästa vän</h4>
 		<p>Lär känna PHP-manualen och lär dig hitta i den. Både i innehållsförteckningen och via sökfunktionen.
 		Lär dig hur de olika funktionerna beskrivs
@@ -224,7 +234,7 @@ include("header_guider.php");
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s8">
 		<h2>8. Uttryck och operatorer</h2>			
-		<p>Uttryck en en grundsten i PHP såväl som i de flesta programmeringsspråk. Nästan allt som skrivs 
+		<p>Uttryck är en grundsten i de flesta programmeringsspråk såväl som i PHP. Nästan allt som skrivs 
 		är ett uttryck. Om du vill lägga ihop värdet av två variabler så är det ett uttryck och anropar
 		du en funktion så är det ett uttryck.
 		
@@ -304,7 +314,7 @@ include("header_guider.php");
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s12">
-		<h2>12. Filer och <code>include()</code</h2>			
+		<h2>12. Filer och <code>include()</code></h2>			
 		<p>När en fil blir för stor så är det dags att dela upp den i mindre filer. Det är ett bra sätt
 		att strukturera sin kod och underlättar återanvändning. En fil blir en modul av kod. Ett exempel 
 		på hur uppdelningen av kod kan fungera är style-väljaren. Koden för style-väljaren ligger i en
