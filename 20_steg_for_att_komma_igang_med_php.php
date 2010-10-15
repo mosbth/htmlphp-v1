@@ -320,9 +320,9 @@ include("header_guider.php");
 		på hur uppdelningen av kod kan fungera är style-väljaren. Koden för style-väljaren ligger i en
 		fil och det räcker att inkludera den filen för att få med dess funktion i en webbsida.
 		
-		<p><a href="source.php?dir=&file=header.php#L21">Se hur stilväljaren inkluderas i filen <code>header.php</code> (rad 21)</a> och
-		<a href="source.php?dir=&file=header.php#L53">hur den används längre ned i filen (rad 53)</a>
-		<p><a href="source.php?dir=&file=choose_style.php">Se källkoden för stilväljaren</a>
+		<p><a href="source.php?dir=&amp;file=header.php#L21">Se hur stilväljaren inkluderas i filen <code>header.php</code> (rad 21)</a> och
+		<a href="source.php?dir=&amp;file=header.php#L53">hur den används längre ned i filen (rad 53)</a>
+		<p><a href="source.php?dir=&amp;file=choose_style.php">Se källkoden för stilväljaren</a>
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
