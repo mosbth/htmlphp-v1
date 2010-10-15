@@ -692,7 +692,7 @@ EOD;
 				<li>&lt;em&gt;					
 				<li>&lt;code&gt;					
 				<li>&lt;time&gt;					
-				<li>Kommenterar i HTML görs med &lt!-- ... --&gt; 					
+				<li>Kommenterar i HTML görs med &lt;!-- ... --&gt; 					
 				<li>Verktyg för Link Checker 					
 			</ul>
 
