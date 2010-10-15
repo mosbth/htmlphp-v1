@@ -213,8 +213,8 @@ INSERT INTO "Jetty" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
 SELECT * FROM Jetty
 WHERE
 	boatType LIKE "%Buster%" AND
-	boatLength > 450 AND
-	boatWidth < 200;
+	boatLength &gt; 450 AND
+	boatWidth &lt; 200;
 		</blockquote>
 
 		<p>Klicka på fliken "Execute SQL" och testa ovanstående sats. Får du det förväntade svaret?
@@ -251,8 +251,8 @@ WHERE
 			<li><code>WHERE ownerName = "Adam"</code> (Visa båtar som Adam äger)
 			<li><code>WHERE ownerName LIKE "%a%"</code> (Visa båtar som ägs av någon som har ett 'a' i sitt namn)
 			<li><code>WHERE boatWidth = 164</code> (Visa båtar vars bredd är 164cm)
-			<li><code>WHERE boatWidth >= 164 AND boatWidth <= 186</code> (Visa båtar vars bredd är större än/lika med 164cm och mindre än/lika med 186cm)
-			<li><code>WHERE (boatWidth >= 164 AND boatWidth <= 186) OR boatWidth = 240</code> (samma som ovan men visar även båtar vars bredd är 240cm)
+			<li><code>WHERE boatWidth &gt;= 164 AND boatWidth &lt;= 186</code> (Visa båtar vars bredd är större än/lika med 164cm och mindre än/lika med 186cm)
+			<li><code>WHERE (boatWidth &gt;= 164 AND boatWidth &lt;= 186) OR boatWidth = 240</code> (samma som ovan men visar även båtar vars bredd är 240cm)
 		</ul>
 
 		<figure class="standard strict inline">
@@ -330,6 +330,7 @@ WHERE
 		<code>SELECT</code>-satserna.
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s8">
@@ -383,6 +384,7 @@ INSERT INTO "Jetty_mos" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
 		hur man kan utbyta information med ren SQL i text-filer.
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s9">
@@ -466,6 +468,7 @@ EOD;
 		Använd ovanstående PHP-kod för att kontrollera att PHP PDO och SQLite är installerat.
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s11">
@@ -483,6 +486,7 @@ EOD;
 		<p><a href="http://www.php.net/manual/en/pdo.prepared-statements.php">Läs stycket om prepared statements och studera översiktligt exemplen</a>.
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s12">
@@ -513,6 +517,7 @@ EOD;
 		om i <a href="http://www.php.net/manual/en/pdo.prepared-statements.php">stycket om prepared statements</a>.
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s13">
@@ -527,6 +532,7 @@ EOD;
 		förstå flödet i filen. Kopiera koden till din egna fil och gör ett eget exempel.
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s14">
@@ -552,6 +558,7 @@ EOD;
 		<p><a href="example/sqlite/sqlite4.php">Försöker skapa en tabell som redan finns (radera tabellen med DROP eller använd <code>CREATE TABLE IF NOT EXISTS</code></a>
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s15">
@@ -567,6 +574,7 @@ EOD;
 		förstå flödet i filen. Kopiera koden till din egna fil och gör ett eget exempel.
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s16">
@@ -583,6 +591,7 @@ EOD;
 		förstå flödet i filen. Kopiera koden till din egna fil och gör ett eget exempel.
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s17">
@@ -603,6 +612,7 @@ EOD;
 		förstå flödet i filen. Kopiera koden till din egna fil och gör ett eget exempel.
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s18">
@@ -622,6 +632,7 @@ EOD;
 		förstå flödet i filen. Kopiera koden till din egna fil och gör ett eget exempel.
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s19">
@@ -638,11 +649,12 @@ EOD;
 		<p>Studera källkoden för exemplet och försök förstå vad den gör. Läs kommentarerna. Försök 
 		förstå flödet i filen. Studera koden som gör jobbet mot databasen och studera koden som jobbar mot filer (bortkommenterad i exemplet).
 
-		<p><a href="source.php?dir=example/sqlite&file=sqlite13.php">Källkod för exemplet med PDO, SQL och SQLite kontra filhantering</a>
+		<p><a href="source.php?dir=example/sqlite&amp;file=sqlite13.php">Källkod för exemplet med PDO, SQL och SQLite kontra filhantering</a>
 
 		<p>Vilken kod tycker du verkar enklast att förstå och vilken verkar effektivast att använda?
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s20">
@@ -662,6 +674,7 @@ EOD;
 		<p>Bra jobbat!
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 
 

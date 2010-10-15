@@ -149,7 +149,7 @@ echo $theMasterPlan;
 		<?php echo $theMasterPlan; ?>
 		
 		<p><a href="example/form/form9.php">Formulär, nu städat i koden</a>
-		<p><a href="http://dev.phpersia.org/htmlphp/source.php?dir=example/form&file=functions.php">Funktionerna är flyttade till egen fil</a>
+		<p><a href="http://dev.phpersia.org/htmlphp/source.php?dir=example/form&amp;file=functions.php">Funktionerna är flyttade till egen fil</a>
 		
 		
 
