@@ -250,10 +250,13 @@ footer.byline {
 	padding: 1em;
 	color: #555555;
 	font-size: smaller;
+	font-style:italic;
 }
 
 footer.byline img {
 	float: right;
+	padding:2px;
+	outline:#999999 groove 1px;
 }
 
 
