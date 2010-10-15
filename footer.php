@@ -87,9 +87,9 @@ $refToThisPage .= $_SERVER["SERVER_NAME"] . $serverPort . $_SERVER["REQUEST_URI"
 
 		<div class="final">
 			<p>
-			Except where otherwise noted, content on this site is licensed under the
+			Innehållet på denna site är, om inte annat anges, licensierat enligt 
 			<a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Share-Alike License v3.0</a>
-			or any later version.
+			eller senare version.
 			</p>
 <pre>
  .                        

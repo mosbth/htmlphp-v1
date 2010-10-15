@@ -222,7 +222,7 @@ include("header_guider.php");
 		där snickaren Anders P. kan presentera sin firma och dess tjänster.
 		
 		<p>När vi är klara kommer det se ut så här: 
-		<a href="http://dbwebb.se/style/?id=95&htmlcss">Den färdiga webbplatsen för Anders P. Bygg</a>.
+		<a href="http://dbwebb.se/style/?id=95&amp;htmlcss">Den färdiga webbplatsen för Anders P. Bygg</a>.
 		
 		<p>Är du redo att bygga den webbplatsen steg för steg? Då kör vi.
 		
@@ -297,6 +297,7 @@ include("header_guider.php");
 		<p><a href="http://dbwebb.se/style/?id=76">Layout med article och aside-element.</a>
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s11">
@@ -312,6 +313,7 @@ include("header_guider.php");
 		<p><a href="http://dbwebb.se/style/?id=79">Nu börjar det likna en webbplats</a>
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s12">
@@ -328,6 +330,7 @@ include("header_guider.php");
 		SVG, Open Clip Art Library och Inkscape hjälpa dig</a>.
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s13">
@@ -350,6 +353,7 @@ include("header_guider.php");
 		<p>Till Anders P. bygg valdes en variant liknande Firefox. <a href="http://dbwebb.se/style/?id=93">Webbplats nu med en stylad navbar</a>. 
 
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s14">
@@ -369,6 +373,7 @@ include("header_guider.php");
 		<a href="artikel_begravningsseder_och_bruk.php">breadcrumb navigering i artiklarna om BMO</a>.
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s15">
@@ -386,6 +391,7 @@ include("header_guider.php");
 		att testa att validera koden. Testa att göra detta i Style!. Validerar sidan?
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s16">
@@ -403,6 +409,7 @@ include("header_guider.php");
 		kolla på den. Nästa gång det händer så kan du testa om Style! kan underlätta ditt arbete.
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - footer         - - - - - - - - - - - - - - - - - -->
 	<?php include("byline.php"); ?>
