@@ -405,6 +405,7 @@ INSERT INTO "Jetty_mos" VALUES(3,'Linder 440','Tohatsu 4hk',431,164,'Ceasar');
 		<p>Nu finns databasen tillgänglig på webbservern, men hur kommer vi nu åt den? 
 -->		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s10">
