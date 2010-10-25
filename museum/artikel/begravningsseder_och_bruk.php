@@ -45,7 +45,7 @@
 
 	<figure class="standard strict">
 		<img src="museum/img/maggy/dodsannonser.jpg" alt="[Bild: Dödsannononser]" width=280>
-		<figcaption>Dödsannonser var mycket exakta till en börja, de angav både år, månad och dagar som den döde levt.</figcaption>
+		<figcaption>Dödsannonser var mycket exakta till en början, de angav både år, månad och dagar som den döde levt.</figcaption>
 	</figure>
 
 	<figure class="standard strict">

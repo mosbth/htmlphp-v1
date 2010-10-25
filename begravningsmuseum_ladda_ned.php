@@ -27,9 +27,9 @@ include("header_begravning.php");
 	
 	<p><a href="download/museum.sqlite">Databasen med samtliga objekt</a>.
 
-	<p><a href="download/artiklar.zip">Texter till artiklarna </a>.
+	<p><a href="download/bmo_artiklar.zip">Texter till artiklarna </a>.
 
-	<p><a href="download/img_objekt.zip">Samtliga bilder som en zip-fil</a>. 
+	<p><a href="download/bmo_img.zip">Samtliga bilder som en zip-fil</a>. 
 	Filen är ca 23MB så den är lite större. Det kan ta lite tid att ladda ned den.
 
 	<p>Koden för att "resiza" bilderna till olika storlekar följer med. Det är ren överkurs och studeras
