@@ -136,7 +136,8 @@ i $_GET på samma sätt som du gjorde med $_SERVER.
 
 <h2>Vanliga felmeddelanden</h2>
 
-<p>Testa att generera följande felmeddelanden.
+<p>Testa att generera följande felmeddelanden. Studera felmeddelandena och se om du hade kunnat
+lista ut problemet.
 
 <p>1. Använder variabel som ännu inte fått ett värde.<br>
 <code>echo $q;</code>
