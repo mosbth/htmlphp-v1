@@ -8,6 +8,7 @@
 </head>
 
 <body>
+	<p><a href="../../source.php?dir=example/php&file=<?php echo basename(__FILE__); ?>"><em>Källkod</em></a></p>
 
 <?php 
 error_reporting(-1); 
@@ -21,6 +22,5 @@ echo "</pre>";
 ?>
 
 
-	<p><a href="../../source.php?dir=example/php&file=<?php echo basename(__FILE__); ?>"><em>Källkod</em></a>
 </body>
 </html>
