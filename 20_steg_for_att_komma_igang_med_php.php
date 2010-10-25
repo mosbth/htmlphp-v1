@@ -43,8 +43,8 @@ include("header_guider.php");
 	<header id="start">
 		<h1>20 steg för att komma igång med PHP</h1>
 
-			<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-09-20">20:e 
-			september 2010</time>
+			<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-10-25">uppdaterad den 25:e 
+			oktober 2010</time>
 
 			<p class="ingress">En introduktion till att komma igång med PHP på 20 steg.
 			
