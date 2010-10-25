@@ -8,6 +8,7 @@
 </head>
 
 <body>
+	<p><a href="../../source.php?dir=example/php&file=<?php echo basename(__FILE__); ?>"><em>Källkod</em></a></p>
 
 <?php 
 error_reporting(-1); 
@@ -37,6 +38,5 @@ printf("Did I miss an argument to this funktion %d?");
 ?>
 
 
-	<p><a href="../../source.php?dir=example/php&file=<?php echo basename(__FILE__); ?>"><em>Källkod</em></a>
 </body>
 </html>
