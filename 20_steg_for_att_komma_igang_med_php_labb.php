@@ -2,6 +2,7 @@
 $title = "20 steg för att komma igång med PHP, laboration";
 $bodyId = "php20";
 include("header.php");
+include("header_guider.php");
 ?>
 
 <!-- - - - - - - - - - - - - - - - - - wrap whole content - - - - - - - - - - - - - - -->
@@ -19,27 +20,27 @@ include("header.php");
 <p>Denna laboration har ett antal övningar som hjälper dig att praktiskt öva på det 
 som tas upp i <a href="20_steg_for_att_komma_igang_med_php.php">PHP-20</a>.
 
-<p>Man behöver koda själv för att lära sig. Man behöver öva. Sättet att lära sig
-är att först lösa små problem, därefter kan man sätta ihop lösningarna till att
-lösa större problem.
+<p>Information till hur du löser uppgifterna i denna labb hittar du i PHP-20. Ett bra tips är att
+ha både PHP-20 och denna labb uppe samtidigt och gå igenom båda dokumenten, steg för steg.
 
-<p>Apropå problemlösning. Om du har ett större problem så försök alltid att bryta ned det i dess beståndsdelar.
+<p>Apropå problemlösning: om du har ett större problem så försök alltid att bryta ned det i dess beståndsdelar.
 Det är enklare att lösa många små problem än ett stort.
 
 <h2>Kom igång</h2>
 
-<p>1. Skapa en tom sida med start och sluttag för php.
+<p>1. Skapa en tom sida med start och sluttag för php. Inget annat.
 
-<p>2. Skriv ut "Hello World"
+<p>2. Skriv ut "Hello World" med echo.
 
 <p>3. Se till att du sätter på felrapportering överst i filen med<br>
 <code>error_reporting(-1);</code>
 
-<p>4. Kolla att felmeddelanden skrivs ut genom att lägga in följande kod:<br> 
+<p>4. Kontrollera att felmeddelanden skrivs ut genom att lägga in följande kod:<br> 
 <code>echo $q;</code>
+<p>Ett fel av typen NOTICE skall skrivas ut.
 
 <p>5. Skriv en kommentar i koden<br> 
-<code>// detta är en enradskommentar</code>
+<code>// detta är en en-radskommentar</code>
 
 <p>6. Skriv ytterligare en kommentar i koden<br> 
 <code>/* denna kommentar har en starttag och en sluttag, allt därimellan är kommentar */</code>
@@ -47,7 +48,7 @@ Det är enklare att lösa många små problem än ett stort.
 
 <h2>Variabler strängar</h2>
 
-<p>1. Skapa en strängvariabel $s1 och tilldela "Hello". Skriv ut den.
+<p>1. Skapa en strängvariabel $s1 och tilldela "Hello". Skriv ut den med echo.
 
 <p>2. Skapa en strängvariabel $s2 och tilldela "World". Skriv ut den.
 
@@ -72,7 +73,7 @@ Skriv ut $s.
 
 <h2>If-satser</h2>
 
-<p>1. Gör en if-sats som testar om $t1 är lika med 42. Om sant, skriv ut '$t1 == 42', annars kriv ut 'FEL'.
+<p>1. Gör en if-sats som testar om $t1 är lika med 42. Om sant, skriv ut '$t1 == 42', annars skriv ut 'FEL'.
 
 <p>2. Gör en if-sats som testar om $s1 är lika med "World". Om sant, skriv ut 'FEL' annars skriv ut '$s1 != "World"'.
 
