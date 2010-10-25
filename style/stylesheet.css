@@ -140,7 +140,7 @@ figure.w300 			{width:300px;}
 figure img {display:block;margin:auto;}
 
 figure figcaption 					{display:block;margin:0 auto;padding:0.5em;}
-figure.standard figcaption 	{text-align:center;font-style:italic;font-size:normal;}
+figure.standard figcaption 	{text-align:center;font-style:italic;font-size:1em;}
 
 
 
