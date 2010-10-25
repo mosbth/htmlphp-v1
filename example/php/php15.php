@@ -8,6 +8,7 @@
 </head>
 
 <body>
+	<p><a href="../../source.php?dir=example/php&file=<?php echo basename(__FILE__); ?>"><em>Källkod</em></a></p>
 
 <?php 
 
@@ -40,6 +41,5 @@ echo 'f3($val) returns: ' . f3($val) . ' but $val is something else: ' . $val . 
 ?>
 
 
-	<p><a href="../../source.php?dir=example/php&file=<?php echo basename(__FILE__); ?>"><em>Källkod</em></a>
 </body>
 </html>

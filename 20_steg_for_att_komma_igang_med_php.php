@@ -79,12 +79,15 @@ include("header.php");
 				<li><a href="#s20">Grön programmering och kodstandarder</a>
 			</ol>
 			
+
+<!--
 			<p>Läs mer när du väl kommit igång. 
 			
 			<ul>
 				<li><a href="#form">PHP och HTML-formulär</a>
 			</ul>
-	
+-->
+
 	</header>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
@@ -183,7 +186,8 @@ include("header.php");
 		Börja alltid från toppen. Studera följande skript, det innehåller ett par vanliga fel. Gör en kopia av dess källkod 
 		och rätta koden så att den fungerar.
 		
-		<p><a href="example/php/php5.php">Sida med ett par vanliga felmeddelande, kan du rätta dem?</a>
+		<p><a href="example/php/php5.php">Sida med ett par vanliga felmeddelande</a> (<a href="source.php?dir=example/php&amp;file=php5.php">källkoden, kan du rätta felen?</a>)
+		
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
@@ -481,7 +485,7 @@ include("header.php");
 
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
-	<section id="form">
+<!--	<section id="form">
 		<h2>PHP och HTML-formulär</h2>			
 		<p>PHP används för att bearbeta och lagra information från HTML-formulär. När ett formulär
 		kommer till en php-sida finns dess innehåll antingen i <code>$_GET</code> eller i <code>$_POST</code>.
@@ -492,7 +496,7 @@ include("header.php");
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
-
+-->
 
 <!-- - - - - - - - - - - - - - - - - - footer         - - - - - - - - - - - - - - - - - -->
 	<?php include("byline.php"); ?>
