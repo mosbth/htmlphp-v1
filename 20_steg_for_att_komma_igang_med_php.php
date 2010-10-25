@@ -1,7 +1,8 @@
 <?php
 $title = "20 steg för att komma igång med PHP";
-$bodyId = "php20";
+$bodyId = "guide-php20";
 include("header.php");
+//include("header_guider.php");
 ?>
 
 <!-- - - - - - - - - - - - - - - - - - wrap whole content - - - - - - - - - - - - - - -->
@@ -9,6 +10,16 @@ include("header.php");
 
 <!-- - - - - - - - - - - - - - - - - - aside        - - - - - - - - - - - - - - - - - -->
 <aside class="right">
+	<aside class=box>
+		<h4>Använd source.php</h4>
+		<p>Vid felsökning av PHP-kod så kan det ibland underlätta om någon kollega kan titta på felet.
+		Detta händer om och om igen i dessa kurser och i samtliga fall så gäller att skicka länken 
+		till ditt exempel som inte fungerar samt skicka länken till dess källkod. I kurserna används
+		ett PHP-skript som heter source.php. Med det kan du visa all källkod i en katalog. Använd det när
+		det handlar om felsökning, hjälp och handledning.
+		<p><a href="http://dbwebb.se/source">Senaste versionen av source.php på GitHub</a>
+		</p>
+	</aside>
 	<aside class=box>
 		<h4>PHP-manualen, din bästa vän</h4>
 		<p>Lär känna PHP-manualen och lär dig hitta i den. Både i innehållsförteckningen och via sökfunktionen.
@@ -21,7 +32,7 @@ include("header.php");
 	<aside class=box>
 		<h4>W3Schools hjälper dig på vägen</h4>
 		<p>Här finns enkla guider som hjälper dig att komma igång. korta beskrivningar av det viktigaste
-		tillsammans med kodexempel. OM du är osäker så ta en titt i W3Schools tutorials och se om de kan hjälpa dig.</p>
+		tillsammans med kodexempel. Om du är osäker så ta en titt i W3Schools tutorials och se om de kan hjälpa dig.</p>
 		<p><a href="http://w3schools.com/PHP">PHP på W3Schools</a>
 		</p>
 	</aside>
@@ -32,10 +43,18 @@ include("header.php");
 	<header id="start">
 		<h1>20 steg för att komma igång med PHP</h1>
 
-			<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-09-20">20:e 
-			september 2010</time>
+			<p class="byline">Av Mikael Roos, mos@bth.se, <time pubdate datetime="2010-10-25">uppdaterad den 25:e 
+			oktober 2010</time>
 
 			<p class="ingress">En introduktion till att komma igång med PHP på 20 steg.
+			
+			<p>Bästa sättet att genomföra övningen är att du själv gör alla stegen och kopierar eller 
+			skriver om kodexemplen till ditt egna fungerande exempel. Läsa är bra men man måste göra 
+			själv, "kan själv", för att lära sig.
+			
+			<p><a href="20_steg_for_att_komma_igang_med_php_labb.php">Du kan använda följande övningar (labb) om du vill ha lite praktisk guidning till PHP</a>.
+			Svaren till övningarna hittar du i exempelkoden i detta dokument. Om du är praktiskt lagd så kan
+			det vara ett bra sätt att utgå i från labben och sedan försöka leta reda på svaren i PHP-20.
 			
 			<ol>
 				<li><a href="#s1">Om PHP</a>
@@ -59,6 +78,13 @@ include("header.php");
 				<li><a href="#s19">Vad är installerat med <code>phpinfo()</code></a>
 				<li><a href="#s20">Grön programmering och kodstandarder</a>
 			</ol>
+			
+			<p>Läs mer när du väl kommit igång. 
+			
+			<ul>
+				<li><a href="#form">PHP och HTML-formulär</a>
+			</ul>
+	
 	</header>
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
@@ -208,7 +234,7 @@ include("header.php");
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s8">
 		<h2>8. Uttryck och operatorer</h2>			
-		<p>Uttryck en en grundsten i PHP såväl som i de flesta programmeringsspråk. Nästan allt som skrivs 
+		<p>Uttryck är en grundsten i de flesta programmeringsspråk såväl som i PHP. Nästan allt som skrivs 
 		är ett uttryck. Om du vill lägga ihop värdet av två variabler så är det ett uttryck och anropar
 		du en funktion så är det ett uttryck.
 		
@@ -288,15 +314,15 @@ include("header.php");
 
 <!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
 	<section id="s12">
-		<h2>12. Filer och <code>include()</code</h2>			
+		<h2>12. Filer och <code>include()</code></h2>			
 		<p>När en fil blir för stor så är det dags att dela upp den i mindre filer. Det är ett bra sätt
 		att strukturera sin kod och underlättar återanvändning. En fil blir en modul av kod. Ett exempel 
 		på hur uppdelningen av kod kan fungera är style-väljaren. Koden för style-väljaren ligger i en
 		fil och det räcker att inkludera den filen för att få med dess funktion i en webbsida.
 		
-		<p><a href="source.php?dir=&file=header.php#L21">Se hur stilväljaren inkluderas i filen <code>header.php</code> (rad 21)</a> och
-		<a href="source.php?dir=&file=header.php#L53">hur den används längre ned i filen (rad 53)</a>
-		<p><a href="source.php?dir=&file=choose_style.php">Se källkoden för stilväljaren</a>
+		<p><a href="source.php?dir=&amp;file=header.php#L21">Se hur stilväljaren inkluderas i filen <code>header.php</code> (rad 21)</a> och
+		<a href="source.php?dir=&amp;file=header.php#L53">hur den används längre ned i filen (rad 53)</a>
+		<p><a href="source.php?dir=&amp;file=choose_style.php">Se källkoden för stilväljaren</a>
 		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
@@ -450,6 +476,20 @@ include("header.php");
 			
 		<p><a href="http://db-o-webb.blogspot.com/2010/03/gron-programmering-en.html">Programmeringsfilosofi och kodstandarder</a>
 
+		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
+	</section>
+
+
+<!-- - - - - - - - - - - - - - - - - - section       - - - - - - - - - - - - - - - - - -->
+	<section id="form">
+		<h2>PHP och HTML-formulär</h2>			
+		<p>PHP används för att bearbeta och lagra information från HTML-formulär. När ett formulär
+		kommer till en php-sida finns dess innehåll antingen i <code>$_GET</code> eller i <code>$_POST</code>.
+		
+		<p><a href="http://dbwebb.se/htmlphp/mom05/selfsubmit/">Exempel på ett formulär med <code>$_GET</code> och <code>$_POST</code></a>
+		
+		<p>Här följer <a href="example/php/php18.php">ytterligare ett exempel på ett formulär och hur dess innehåll skickas via <code>$_GET</code> eller <code>$_POST</code></a>.
+		
 		<p class="go-to-start"><a href="#start">Gå till toppen av artikeln</a></p>
 	</section>
 
