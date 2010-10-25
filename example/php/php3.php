@@ -8,6 +8,7 @@
 </head>
 
 <body>
+	<p><a href="../../source.php?dir=example/php&file=<?php echo basename(__FILE__); ?>"><em>Källkod</em></a></p>
 
 <?php
 
@@ -25,6 +26,5 @@ printf("I learned C back in %d, I see I can use that knowledge now. Nice.<br>", 
 
 ?>
 
-	<p><a href="../../source.php?dir=example/php&file=<?php echo basename(__FILE__); ?>"><em>Källkod</em></a>
 </body>
 </html>

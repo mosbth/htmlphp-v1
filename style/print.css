@@ -8,8 +8,15 @@
 
 /* -------------------------------------------------------------------------------------
 /* Make some changes */
-header#top { display:none; }
-footer#bottom {	display:none; }
-aside { display:none; }
-article { width: 100%; margin: 0; float: none;}
-.noprint {display:none;}
+body{background:white !important;font-size:12pt;}
+header#top,footer#bottom,aside,.noprint{display:none !important; }
+div#wrap,article,section{
+	width: auto !important;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	color: black; 
+	background: transparent;
+	float: none !important;
+	overflow: visible !important;
+}
