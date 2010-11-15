@@ -292,7 +292,7 @@ include("header_guider.php");
 		innehållet läggs i en article som har en fast bredd. Vid sidan kan det finns innehåll i aside som 
 		också har en fast bredd.
 		
-		<p>I praktiken så skiljer det sig så mycket från en kolumnlayout. Döm själva.
+		<p>I praktiken så skiljer det sig inte så mycket från en kolumnlayout. Döm själva.
 		
 		<p><a href="http://dbwebb.se/style/?id=76">Layout med article och aside-element.</a>
 		
