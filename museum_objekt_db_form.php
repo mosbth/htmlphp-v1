@@ -42,15 +42,9 @@ require_once("functions.php");
 //	http://php.net/manual/en/function.is-numeric.php
 //	http://php.net/manual/en/function.die.php
 //
-echo validateIncoming($_GET, 'id', 5);
 $id = validateIncoming($_GET, 'id', 0); 		// Get id from _GET or set it to 0 if not set
 $id = validateIncoming($_POST, 'id', $id);	// Get id again from _POST, use the previous value as default
 
-/*
-if($id == -1) {
-	$id = 0;
-}
-*/
 if(!is_numeric($id) || $id < 0) {
 	die("Id är ej giltigt.");
 }
