@@ -86,6 +86,7 @@ set_exception_handler('exceptionHandler');
 // $aSize: The size to prepend, should be a directory
 //
 function modifyImgUrl($aImg, $aSize) {
+	//if(empty($aImg)) { return "";}
 	$parts = pathinfo($aImg);
 	return $parts['dirname'] . "/$aSize/" . $parts['basename'];
 }

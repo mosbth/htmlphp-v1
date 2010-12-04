@@ -2,6 +2,12 @@
 #
 # Some default configurations needed for each new installation
 #
+
+# TODO clean.
+# bilder laddas upp, skall gå att rensa, även cahcade bilder i 80/250/550
+# hantera att filerna/objekten kan läggas till, rensa de som inte finns med från början.
+# kolla hur databasen skapas utifrån de filobjekt som finns, så att skräp inte kommer med.
+#
 chmod 777 museum/objects 
 chmod 644 museum/objects/*
 
